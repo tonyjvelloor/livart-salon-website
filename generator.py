@@ -27,14 +27,25 @@ ACADEMY_PHONE_TEL = "+919633211151"
 
 LOCAL_BUSINESS_SCHEMA = {
     "@context": "https://schema.org",
-    "@type": ["HairSalon", "BeautySalon", "HealthAndBeautyBusiness"],
+    "@type": ["HairSalon", "BeautySalon", "DaySpa", "HealthAndBeautyBusiness"],
     "name": "LivArt Salon & Make-Up Studio",
+    "alternateName": [
+        "LivArt Salon",
+        "LivArt Beauty Parlour",
+        "LivArt Salon Kakkanad",
+        "LivArt Hair and Makeup Studio",
+        "LivArt Bridal Studio Kakkanad"
+    ],
     "image": LOGO_URL,
     "@id": "https://livartsalon.com/#salon",
     "url": "https://livartsalon.com",
     "telephone": PHONE,
     "email": EMAIL,
     "priceRange": "₹₹",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Google Pay, PhonePe",
+    "knowsLanguage": ["en", "ml"],
+    "hasMap": "https://maps.google.com/?q=LivArt+Salon+Kakkanad",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "2nd floor, Anchorage business center, Seaport - Airport Road, NGO Quarters - Mavelipuram Rd",
@@ -48,6 +59,18 @@ LOCAL_BUSINESS_SCHEMA = {
         "latitude": 10.021406,
         "longitude": 76.342732
     },
+    "areaServed": [
+        {"@type": "AdministrativeArea", "name": "Kakkanad"},
+        {"@type": "AdministrativeArea", "name": "Infopark Kochi"},
+        {"@type": "AdministrativeArea", "name": "SmartCity Kochi"},
+        {"@type": "AdministrativeArea", "name": "Thrikkakara"},
+        {"@type": "AdministrativeArea", "name": "Edachira"},
+        {"@type": "AdministrativeArea", "name": "Rajagiri Valley"},
+        {"@type": "AdministrativeArea", "name": "Mavelipuram"},
+        {"@type": "AdministrativeArea", "name": "NGO Quarters Kakkanad"},
+        {"@type": "City", "name": "Kochi"},
+        {"@type": "AdministrativeArea", "name": "Ernakulam"}
+    ],
     "openingHoursSpecification": [
         {
             "@type": "OpeningHoursSpecification",
@@ -69,6 +92,48 @@ LOCAL_BUSINESS_SCHEMA = {
         ACADEMY_FOUNDER_URL,
         PRESS_FEATURE_URL
     ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "LivArt Salon & Beauty Parlour Services",
+        "itemListElement": [
+            {
+                "@type": "OfferCatalog",
+                "name": "Bridal Makeup & Wedding Makeovers",
+                "itemListElement": [
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "HD Bridal Makeup Artist Kakkanad"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Airbrush Bridal Makeup Kochi"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kerala Hindu Muhurtham Bridal Artistry"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Muslim Nikah & Reception Bridal Styling"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Christian Bridal Gown & Veil Makeup Styling"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bridal Saree Draping & Silhouette Styling"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Black Diamond Groom Wedding Package"}}
+                ]
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Hair Styling, Coloring & Rejuvenation Treatments",
+                "itemListElement": [
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hair Botox Anti-Aging Treatment Kakkanad"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Livart Majestic Keratin Smoothing Treatment"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "L'Oreal Glossy Hair Colouring & Dimensional Balayage"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Livart Permanent Hair Straightening & Rebonding"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "L'Oreal Lustrous Hair Spa Scalp Therapy"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Precision Haircuts & Runway Blowouts"}}
+                ]
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Clinical Skincare, Hydra Facials & Aesthetics",
+                "itemListElement": [
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Skin Miracle Hydra Facial Aesthetics"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "De-Tan + Skin Miracle Whitening Facial Combo"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cheryl's Cosmeceuticals Pro Facial Treatment"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deluxe Foot Reflexology & Pedicure Spa"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Herbal Waxing & Painless Eyebrow Threading"}}
+                ]
+            }
+        ]
+    },
     "founder": {
         "@type": "Person",
         "name": "Stephy Sebastian",
@@ -85,6 +150,7 @@ LOCAL_BUSINESS_SCHEMA = {
         "knowsAbout": [
             "Haute Couture Hair Styling",
             "HD Bridal Makeup Artistry",
+            "Airbrush Bridal Techniques",
             "Cosmetology & Aesthetic Education",
             "Balayage & Advanced Hair Color Correction",
             "Hair Botox & Keratin Rejuvenation",

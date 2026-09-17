@@ -79,8 +79,8 @@ def build_services_page():
     }
 
     html = render_head(
-        title="Exceptional Beauty Parlour & Salon Services in Kakkanad, Cochin | LivArt Salon",
-        description="Explore premium salon services at LivArt Kakkanad: Keratin Treatment (Rs.5000+), Hair Straightening (Rs.4000+), Hair Colouring (Rs.3000+), Hair Spa (Rs.1500+), Hydra Facial (Rs.4000).",
+        title="Best Salon & Beauty Parlour Services in Kakkanad, Kochi | LivArt",
+        description="Complete salon service price menu at LivArt Kakkanad: Keratin smoothing, hair botox, bridal makeup, L'Oreal hair spa, Hydra facials & hair colouring near Infopark.",
         canonical_path="/services/",
         extra_schema=faq_schema,
         root_prefix="../"
@@ -111,10 +111,10 @@ def build_services_page():
         Artisanal Beauty Sanctuary • Kakkanad, Kochi
       </span>
       <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">
-        Explore Exceptional Salon & Parlour Services in Cochin
+        Best Salon & Beauty Parlour Services in Kakkanad, Kochi
       </h1>
       <p class="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        Welcome to LivArt Salon, your premier destination for luxury hair design, rejuvenating treatments, and radiant skincare. Curated by master stylists with international experience.
+        Welcome to LivArt Salon, your premier destination for luxury hair design, rejuvenating treatments, and radiant skincare on Seaport-Airport Road. Curated by master stylists with international experience.
       </p>
     </div>
   </section>
@@ -322,8 +322,8 @@ def build_sub_services():
     sub_pages = [
         {
             "slug": "loreal-lustrous-hair-spa",
-            "title": "Hair Spa Near Me Kakkanad | Best Hair Care Services Kochi | Livart Salon",
-            "desc": "Restore damaged, dry hair with L'Oreal Lustrous Hair Spa at Livart Salon Kakkanad. Deep steam hydration, root stimulation & scalp acupressure massage from Rs. 1,200.",
+            "title": "Hair Spa in Kakkanad | L'Oreal Scalp Therapy & Relaxo Massage | LivArt Salon",
+            "desc": "Best hair spa in Kakkanad, Kochi. L'Oreal professional scalp therapy, steam deep-hydration & acupressure massage at LivArt Salon near Infopark from Rs. 1,200.",
             "heading": "L’Oreal Lustrous Hair Spa Scalp Therapy",
             "price": "From Rs. 1,500 (Offer: Rs. 1,200)",
             "category": "Scalp & Hair Health",
@@ -347,8 +347,8 @@ def build_sub_services():
         },
         {
             "slug": "livart-majestic-keratin-treatment",
-            "title": "Livart Majestic Keratin Treatment Kakkanad | Best Keratin Salon Kochi",
-            "desc": "Eliminate frizzy hair with the Livart Majestic Keratin Treatment in Kakkanad, Kochi. Long-lasting smoothness, mirror-like gloss, and formaldehyde-safe care from Rs. 5,000.",
+            "title": "Keratin Treatment in Kakkanad, Kochi | Anti-Frizz Smoothing | LivArt Salon",
+            "desc": "Eliminate frizzy hair with Livart Majestic Keratin Treatment in Kakkanad, Kochi. Formaldehyde-safe, mirror gloss and humidity-proof smoothness from Rs. 5,000.",
             "heading": "Livart Majestic Keratin Smoothing Treatment",
             "price": "From Rs. 5,000",
             "category": "Hair Smoothing & Restoration",
@@ -370,8 +370,8 @@ def build_sub_services():
         },
         {
             "slug": "livart-hair-straightening",
-            "title": "Permanent Hair Straightening Kakkanad | Livart Salon Kochi",
-            "desc": "Permanent hair straightening and rebonding at Livart Salon Kakkanad. Expert stylists and nourishing formulations for pin-straight, sleek hair from Rs. 4,000.",
+            "title": "Permanent Hair Straightening & Rebonding in Kakkanad | LivArt Salon Kochi",
+            "desc": "Permanent hair straightening and rebonding at LivArt Salon Kakkanad. Expert stylists and nourishing silk amino formulations for sleek hair from Rs. 4,000.",
             "heading": "Livart Permanent Hair Straightening & Rebonding",
             "price": "From Rs. 4,000",
             "category": "Thermal Rebonding",
@@ -388,8 +388,8 @@ def build_sub_services():
         },
         {
             "slug": "loreal-glossy-hair-colouring",
-            "title": "L'Oreal Glossy Hair Colouring & Balayage Kakkanad | Livart Salon Kochi",
-            "desc": "Seamless balayage, ombre, and global hair colouring with premium L'Oreal formulations at Livart Salon Kakkanad. Customized tones from Rs. 3,000.",
+            "title": "Balayage & Hair Colouring Salon in Kakkanad, Kochi | L'Oreal | LivArt",
+            "desc": "Top-rated hair colouring salon in Kakkanad. Seamless balayage, caramel highlights, and global hair colour with ammonia-free L'Oreal palettes from Rs. 3,000.",
             "heading": "L’Oreal Glossy Hair Colouring & Dimensional Balayage",
             "price": "From Rs. 3,000 (Balayage from Rs. 5,999)",
             "category": "Couture Hair Colouring",
@@ -406,8 +406,8 @@ def build_sub_services():
         },
         {
             "slug": "skin-miracle-hydra-facial",
-            "title": "Skin Miracle Hydra Facial Kakkanad | Advanced Skincare Livart Kochi",
-            "desc": "Experience the Skin Miracle Hydra Facial at Livart Salon Kakkanad. Deep pore extraction, hyaluronic hydration, and instant glass-skin radiance for Rs. 4,000.",
+            "title": "Hydra Facial in Kakkanad, Kochi | Skin Miracle Dermal Aesthetics | LivArt",
+            "desc": "Experience medical-grade Hydra Facial in Kakkanad at LivArt Salon. Painless vortex pore extraction, hyaluronic hydration, and bridal glass-skin glow for Rs. 4,000.",
             "heading": "Skin Miracle Hydra Facial Aesthetics",
             "price": "Rs. 4,000",
             "category": "Clinical Dermal Aesthetics",

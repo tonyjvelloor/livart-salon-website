@@ -15,19 +15,77 @@ def ensure_dir(path):
 # 1. HOMEPAGE GENERATION
 # -------------------------------------------------------------
 def build_homepage():
-    extra_schema = {
+    local_faq_schema = {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": BASE_URL,
-        "name": SITE_NAME,
-        "description": "Premier Destination Hair & Makeup Studio in Kakkanad, Kochi curated by World Class Stylists."
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Where is the best salon in Kakkanad located?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LivArt Salon & Make-Up Studio is located on the 2nd floor of Anchorage Business Center, Seaport-Airport Road, near NGO Quarters and Mavelipuram Road in Kakkanad, Kochi (Kerala 682030). We are conveniently located just 5 to 7 minutes from Infopark Kochi (Phase 1 & Phase 2) and SmartCity Kochi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is LivArt rated the best bridal makeup artist in Kakkanad & Kochi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LivArt Salon's bridal artistry is directed by founder Stephy Sebastian, a celebrity makeup artist and former national educator for L'Oréal Professionnel and Wella. LivArt specializes in 4K Ultra-HD and airbrush waterproof bridal makeup, bespoke saree draping, veil styling, and customized pre-bridal rejuvenation packages for Christian, Hindu Muhurtham, and Muslim Nikah weddings."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which salon in Kakkanad is best for Hair Botox, Keratin, and Hair Spa?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LivArt Salon Kakkanad is renowned for advanced hair rejuvenation therapies tailored to Kerala's humid coastal climate. We offer authentic formaldehyde-safe Hair Botox, LivArt Majestic Keratin smoothing, permanent hair straightening/rebonding, and nourishing L'Oréal Lustrous Hair Spa treatments starting from Rs. 1,200."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is LivArt a unisex salon near Infopark Kakkanad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, LivArt Salon is a luxury unisex salon and beauty parlour serving women, men, and families. Our master stylists provide precision haircuts, beard sculpting, de-tan facials, and the Black Diamond Groom Package, making it the preferred grooming salon for tech professionals working at Infopark and SmartCity."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the bridal makeup and salon service charges at LivArt Kakkanad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LivArt maintains transparent pricing with zero hidden costs: Hair Spa starts from Rs. 1,200; Hydra Facial is Rs. 4,000; De-Tan + Skin Miracle Combo is Rs. 2,499; Hair Botox is Rs. 5,999; and Silver, Gold, and Diamond Bridal Couture packages range from Rs. 12,000 to Rs. 25,000. Additionally, clients spending Rs. 1,000 receive a complimentary 1-Year 20% privilege membership card."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I book an appointment or bridal consultation at LivArt Salon Kakkanad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can book directly by calling +91 70120 59591 or messaging on WhatsApp. You can also use our instant booking button on the website or visit our salon on Seaport-Airport Road, Kakkanad. Walk-ins are welcomed, though advance booking is recommended for weekends and bridal trials."
+                }
+            }
+        ]
     }
+
+    extra_schemas = [
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": BASE_URL,
+            "name": SITE_NAME,
+            "description": "Best Salon in Kakkanad, Kochi for Bridal Makeup, Hair Botox, Keratin Smoothing & Clinical Skincare."
+        },
+        local_faq_schema
+    ]
     
     html = render_head(
-        title="LivArt Salon & Make-up Studio | Best Beauty Parlour in Kakkanad, Kochi",
-        description="LivArt Salon Kakkanad offers bespoke hair styling, bridal makeup, L'Oreal hair colouring & luxury skincare by Stephy Sebastian. Book your experience.",
+        title="Best Salon in Kakkanad, Kochi | Bridal Makeup, Hair & Beauty Parlour | LivArt",
+        description="Looking for the best salon in Kakkanad, Kochi? LivArt Salon & Beauty Parlour offers celebrity bridal makeup, hair botox, hydra facials, keratin & L'Oreal hair spa near Infopark. Rated 4.9★.",
         canonical_path="/",
-        extra_schema=extra_schema
+        extra_schema=extra_schemas
     )
     
     html += render_header(active_slug="home")
@@ -47,7 +105,7 @@ def build_homepage():
           4.9 Google Rated Sanctuary • Kakkanad, Kochi
         </span>
         <span class="hidden sm:inline text-muted-slate">•</span>
-        <span class="text-metallic-gold-light text-xs tracking-wider">Bespoke Atelier for Haute Couture Hair, Makeup & Aesthetics</span>
+        <span class="text-metallic-gold-light text-xs tracking-wider">Top Rated Salon & Bridal Makeover Studio near Infopark</span>
       </div>
 
       <!-- Hero Grid -->
@@ -55,14 +113,14 @@ def build_homepage():
         <!-- Left Column -->
         <div class="lg:col-span-7 flex flex-col items-start">
           <p class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase mb-2 font-semibold">
-            Discover Kakkanad’s Premier Destination Salon
+            Discover Kakkanad’s #1 Destination Salon & Bridal Studio
           </p>
           <h1 class="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl text-alabaster-cream leading-[1.15] mb-6 font-normal">
-            The Art of Radiant Hair <br class="hidden sm:inline" />
-            <span class="italic text-gold-gradient">and Flawless Glamour.</span>
+            Best Salon in Kakkanad <br class="hidden sm:inline" />
+            <span class="italic text-gold-gradient">for Radiant Hair & Bridal Artistry.</span>
           </h1>
           <p class="text-base sm:text-lg text-gray-300 max-w-xl mb-6 leading-relaxed">
-            LivArt Salon & Make Up Studio curates bespoke beauty rituals led by world-class stylists. Experience transformative hair coloring, radiant skincare therapies, and unforgettable bridal aesthetics crafted in an atmosphere of serene luxury.
+            LivArt Salon & Make-Up Studio is rated Kakkanad's best unisex salon and luxury beauty parlour on Seaport-Airport Road. Curated by master celebrity stylist Stephy Sebastian, we craft unforgettable bridal transformations, precision haircuts, balayage hair colouring, hair botox, and clinical Hydra facials just 5 minutes from Infopark and SmartCity Kochi.
           </p>
 
           <!-- Founder Quote -->
@@ -820,6 +878,179 @@ def build_homepage():
             <span class="material-symbols-outlined text-[15px] text-champagne-gold">call</span>
             <span>Call 096332 11151</span>
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HYPER-LOCAL SEARCH AUTHORITY & LOCAL FAQ SECTION (PAGE 1 GOOGLE DOMINATION) -->
+  <section class="w-full py-20 bg-ivory-surface" id="local-authority">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="font-label-caps text-xs text-warm-bronze tracking-[0.25em] uppercase font-bold block mb-2">
+          Hyper-Local Sanctuary • Seaport-Airport Road, Kakkanad
+        </span>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl text-obsidian-deep font-bold mb-4">
+          Why LivArt is Ranked the Best Salon & Bridal Studio in Kakkanad, Kochi
+        </h2>
+        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+          Situated at the Anchorage Business Center on Seaport-Airport Road, LivArt Salon & Make-Up Studio combines celebrity-grade bridal artistry with clinical hospital-grade sanitization. We are the preferred beauty destination for residents and professionals across Kakkanad, Infopark Phase 1 & 2, SmartCity Kochi, Rajagiri Valley, and Edachira.
+        </p>
+      </div>
+
+      <!-- Proximity & Distinction Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <!-- Card 1 -->
+        <div class="bg-surface-container-low p-7 rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">apartment</span>
+            </div>
+            <span class="font-label-caps text-[10px] text-warm-bronze tracking-widest uppercase font-bold block mb-1">5-7 Mins from IT Corridor</span>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Near Infopark & SmartCity</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Express blowouts, lunchtime grooming, and weekend hair therapies tailored for busy IT executives and creative professionals working in Infopark Kochi and SmartCity.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-black/5 flex items-center gap-1 text-[11px] text-warm-bronze font-bold">
+            <span class="material-symbols-outlined text-[14px]">near_me</span>
+            <span>Seaport-Airport Road Junction</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-surface-container-low p-7 rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">favorite</span>
+            </div>
+            <span class="font-label-caps text-[10px] text-warm-bronze tracking-widest uppercase font-bold block mb-1">Celebrity Bridal Direction</span>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Celebrity Bridal Artistry</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Curated by Stephy Sebastian. Flawless 4K Ultra-HD waterproof makeup, airbrush techniques, traditional saree draping, and veil fixing for Kerala Hindu, Christian, and Muslim brides.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-black/5 flex items-center gap-1 text-[11px] text-warm-bronze font-bold">
+            <span class="material-symbols-outlined text-[14px]">diamond</span>
+            <span>Private Bridal Dressing Suite</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-surface-container-low p-7 rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">water_drop</span>
+            </div>
+            <span class="font-label-caps text-[10px] text-warm-bronze tracking-widest uppercase font-bold block mb-1">Tropical Climate Defense</span>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Anti-Frizz Hair Botox & Keratin</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Master formulations engineered for Kochi's humid coastal air: authentic Hair Botox, Majestic Keratin smoothing, permanent hair straightening, and L'Oréal hair spa therapies.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-black/5 flex items-center gap-1 text-[11px] text-warm-bronze font-bold">
+            <span class="material-symbols-outlined text-[14px]">verified</span>
+            <span>100% Genuine L'Oréal Formulations</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-surface-container-low p-7 rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">local_parking</span>
+            </div>
+            <span class="font-label-caps text-[10px] text-warm-bronze tracking-widest uppercase font-bold block mb-1">Seamless Convenience</span>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Reserved Parking & Lounge</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Enjoy hassle-free reserved parking at Anchorage Business Center. Open 7 days a week with extended evening hours until 8:30 PM, complimentary Wi-Fi, and artisanal refreshments.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-black/5 flex items-center gap-1 text-[11px] text-warm-bronze font-bold">
+            <span class="material-symbols-outlined text-[14px]">schedule</span>
+            <span>Open 7 Days (9:30 AM - 8:30 PM)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hyper-Local FAQ Accordion -->
+      <div class="bg-surface-bright rounded-3xl p-8 sm:p-12 border border-black/5 shadow-sm max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-bold block mb-1">
+            Questions & Answers
+          </span>
+          <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep">
+            Frequently Asked Questions About Salon Services in Kakkanad
+          </h3>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <details class="faq-item group bg-surface-container-low rounded-xl p-5 border border-black/5 transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-serif-luxury text-base sm:text-lg font-bold text-obsidian-deep list-none select-none">
+              <span>Where is the best salon in Kakkanad located?</span>
+              <span class="faq-icon material-symbols-outlined text-warm-bronze transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+              LivArt Salon & Make-Up Studio is situated on the <strong>2nd floor of Anchorage Business Center, Seaport-Airport Road, Kakkanad, Kochi (Kerala 682030)</strong>, near NGO Quarters and Mavelipuram Road. We are positioned just 5 to 7 minutes from Infopark Kochi (Phase 1 & 2) and SmartCity, with accessible elevator facilities and dedicated client parking.
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq-item group bg-surface-container-low rounded-xl p-5 border border-black/5 transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-serif-luxury text-base sm:text-lg font-bold text-obsidian-deep list-none select-none">
+              <span>Why is LivArt rated the best bridal makeup artist in Kakkanad & Kochi?</span>
+              <span class="faq-icon material-symbols-outlined text-warm-bronze transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+              LivArt's bridal wing is spearheaded directly by <strong>Stephy Sebastian</strong>, an acclaimed celebrity makeup artist and former national educator for L'Oréal Professionnel and Wella. LivArt specializes in <strong>4K Ultra-HD and airbrush waterproof bridal makeup</strong>, traditional Kerala Nair Muhurtham looks, Syrian Christian bridal veil styling, and contemporary Muslim Nikah couture. All packages include pre-bridal skin therapy and trial sessions.
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq-item group bg-surface-container-low rounded-xl p-5 border border-black/5 transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-serif-luxury text-base sm:text-lg font-bold text-obsidian-deep list-none select-none">
+              <span>Which salon in Kakkanad is best for Hair Botox, Keratin, and Hair Spa?</span>
+              <span class="faq-icon material-symbols-outlined text-warm-bronze transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+              LivArt Salon is celebrated for anti-frizz capillary treatments engineered for Kerala’s humid climate. We offer <strong>Hair Botox Rejuvenation (Rs. 5,999)</strong>, <strong>Livart Majestic Keratin Smoothing (from Rs. 5,000)</strong>, <strong>Permanent Hair Straightening (from Rs. 4,000)</strong>, and <strong>L'Oréal Lustrous Hair Spa Scalp Therapy (Rs. 1,200)</strong> utilizing 100% authentic international products.
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="faq-item group bg-surface-container-low rounded-xl p-5 border border-black/5 transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-serif-luxury text-base sm:text-lg font-bold text-obsidian-deep list-none select-none">
+              <span>Is LivArt a unisex salon near Infopark Kakkanad?</span>
+              <span class="faq-icon material-symbols-outlined text-warm-bronze transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+              Yes, LivArt is a full-service luxury unisex salon and beauty parlour. In addition to our premier women’s bridal and hair studio, we feature dedicated executive male grooming services including structural haircuts, beard contouring, hot oil scalp massage, de-tan facials, and the signature <strong>Black Diamond Groom Package</strong>.
+            </div>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="faq-item group bg-surface-container-low rounded-xl p-5 border border-black/5 transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-serif-luxury text-base sm:text-lg font-bold text-obsidian-deep list-none select-none">
+              <span>What are the salon service and bridal package charges?</span>
+              <span class="faq-icon material-symbols-outlined text-warm-bronze transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+              We operate with transparent pricing: Hair Spa starts at Rs. 1,200; Skin Miracle Hydra Facial is Rs. 4,000; De-Tan Whitening Facial Combo is Rs. 2,499; Hair Botox is Rs. 5,999; and Bridal packages range from Rs. 12,000 (Silver) to Rs. 25,000 (Diamond Haute Couture). Plus, any client spending Rs. 1,000 or more receives a <strong>complimentary 1-Year 20% privilege membership card</strong> for all future visits!
+            </div>
+          </details>
+
+          <!-- FAQ 6 -->
+          <details class="faq-item group bg-surface-container-low rounded-xl p-5 border border-black/5 transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-serif-luxury text-base sm:text-lg font-bold text-obsidian-deep list-none select-none">
+              <span>How do I book an appointment or consultation at LivArt Kakkanad?</span>
+              <span class="faq-icon material-symbols-outlined text-warm-bronze transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+              You can call our concierge at <a href="tel:+917012059591" class="text-warm-bronze font-bold hover:underline">+91 70120 59591</a> or message via WhatsApp. You can also use the instant booking button on our website or visit us directly on Seaport-Airport Road. We welcome walk-in clients 7 days a week, though advance booking is advised for weekends and bridal consultations.
+            </div>
+          </details>
         </div>
       </div>
     </div>

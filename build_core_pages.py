@@ -297,8 +297,8 @@ def build_teams_page():
 def build_hair_page():
     ensure_dir(os.path.join(BASE_DIR, "hair-styling"))
     html = render_head(
-        title="Hair Styling, Balayage, Cuts & Hair Spa | LivArt Salon Kakkanad",
-        description="Expert haircuts, L'Oreal hair spa, creative balayage, hot oil massage, and keratin treatments at LivArt Salon Kakkanad. Handcrafted by master stylists in Kochi.",
+        title="Best Hair Salon in Kakkanad, Kochi | Haircuts, Balayage & Hair Botox | LivArt",
+        description="Top-rated hair salon in Kakkanad on Seaport-Airport Road. Precision haircuts, L'Oreal hair spa, balayage hair colouring, keratin and hair botox by master stylists.",
         canonical_path="/hair-styling/",
         root_prefix="../"
     )
@@ -341,9 +341,9 @@ def build_hair_page():
   <section class="bg-obsidian-deep text-alabaster-cream py-16">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase font-bold block mb-2">Couture Hair Craft</span>
-      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Hair Styling & Treatments in Kakkanad</h1>
+      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Best Hair Salon in Kakkanad: Haircuts, Balayage & Botox</h1>
       <p class="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        LivArt Salon specializes in hair artistry and is committed to creating art with your hair. State-of-the-art facilities and world-class stylists tailored to your unique hair type.
+        Welcome to LivArt Hair Atelier Kakkanad. From dimensional caramel balayage to anti-frizz Hair Botox, keratin smoothing, and relaxing L'Oréal hair spa, experience master styling 5 minutes from Infopark Kochi.
       </p>
     </div>
   </section>
@@ -368,8 +368,8 @@ def build_hair_page():
 def build_makeup_page():
     ensure_dir(os.path.join(BASE_DIR, "make-up"))
     html = render_head(
-        title="Bridal Makeup & Groom Packages in Kochi | LivArt Salon Kakkanad",
-        description="Best bridal makeup in Kochi curated by Stephy Sebastian. Silver, Gold & Diamond Bridal Packages, and Groom Black Diamond packages at LivArt Salon Kakkanad.",
+        title="Best Bridal Makeup Artist in Kakkanad, Kochi | HD & Airbrush Studio | LivArt",
+        description="Award-winning bridal makeup artist in Kakkanad, Kochi by Stephy Sebastian. Christian, Hindu, and Muslim bridal packages, saree draping, HD airbrush & groom styling.",
         canonical_path="/make-up/",
         root_prefix="../"
     )
@@ -462,9 +462,9 @@ def build_makeup_page():
   <section class="bg-obsidian-deep text-alabaster-cream py-16">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase font-bold block mb-2">Bespoke Bridal Sanctuary</span>
-      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Bridal & Groom Makeup Packages in Kochi</h1>
+      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Best Bridal Makeup Artist & Makeover Studio in Kakkanad</h1>
       <p class="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        Curated by Stephy Sebastian. Flawless HD and airbrush makeup designed to withstand long ceremonial hours and look breathtaking in high-resolution photography.
+        Curated by Stephy Sebastian. Flawless 4K Ultra-HD, airbrush waterproof bridal makeup, bespoke saree draping, and pre-bridal packages in Kakkanad, Kochi.
       </p>
     </div>
   </section>
@@ -597,8 +597,8 @@ def build_makeup_page():
 def build_skincare_page():
     ensure_dir(os.path.join(BASE_DIR, "skin-care"))
     html = render_head(
-        title="Skincare, Facials, Cheryl's & Pedicure | LivArt Salon Kakkanad",
-        description="Indulge in premium skincare at LivArt Salon Kakkanad. De-tan treatments, Hydra Facials, Cheryl's Pro Facials, deluxe pedicure/manicure, and our 1-Year 20% loyalty program.",
+        title="Best Skin Care Clinic & Beauty Parlour in Kakkanad | Hydra Facial & De-Tan | LivArt",
+        description="Advanced Hydra facials, de-tan whitening treatments, Cheryl's pro facials, and luxury pedicures at LivArt Salon Kakkanad. Reveal radiant, healthy skin.",
         canonical_path="/skin-care/",
         root_prefix="../"
     )
@@ -641,9 +641,9 @@ def build_skincare_page():
   <section class="bg-obsidian-deep text-alabaster-cream py-16">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase font-bold block mb-2">Clinical Dermal Aesthetics</span>
-      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Skincare & Facial Therapies in Kakkanad</h1>
+      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Clinical Skincare, Hydra Facials & Beauty Parlour in Kakkanad</h1>
       <p class="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        Discover exceptional skincare services designed to enhance the cellular health and radiance of your complexion. Safe, clinically tested formulations tailored to Kerala's climate.
+        Discover exceptional skincare services designed to enhance cellular health and reveal radiant luminosity. Medical-grade Hydra facials, de-tan whitening, Cheryl's cosmeceuticals, and deluxe pedicures 5 minutes from Infopark.
       </p>
     </div>
   </section>
@@ -688,8 +688,8 @@ def build_skincare_page():
 def build_packages_page():
     ensure_dir(os.path.join(BASE_DIR, "packages"))
     html = render_head(
-        title="Salon Packages & Pricing | LivArt Salon Kakkanad Kochi",
-        description="Transparent pricing on Bridal, Groom, Hair Care, and Skincare combo packages at LivArt Salon Kakkanad. Luxury services starting from Rs. 2,499.",
+        title="Best Salon Packages & Offers in Kakkanad, Kochi | LivArt Salon",
+        description="Explore exclusive beauty, hair, pre-bridal, and groom packages at LivArt Salon Kakkanad. Includes complimentary 1-Year 20% privilege membership card.",
         canonical_path="/packages/",
         root_prefix="../"
     )
@@ -700,9 +700,9 @@ def build_packages_page():
   <section class="bg-obsidian-deep text-alabaster-cream py-16">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase font-bold block mb-2">Curated Value Rituals</span>
-      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Exclusive LivArt Salon Packages</h1>
+      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Best Salon Packages & Exclusive Offers in Kakkanad</h1>
       <p class="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        Transparent, all-inclusive luxury salon packages combining our highest-rated hair therapies, bridal glamour, and restorative facials.
+        Transparent, all-inclusive luxury salon packages combining our highest-rated hair therapies, bridal glamour, and restorative facials on Seaport-Airport Road.
       </p>
     </div>
   </section>
@@ -913,8 +913,8 @@ def build_gallery_page():
 def build_contact_page():
     ensure_dir(os.path.join(BASE_DIR, "contact-us"))
     html = render_head(
-        title="Contact Us & Book Appointment | LivArt Salon Kakkanad Kochi",
-        description="Book your hair, makeup, or skincare appointment at LivArt Salon Kakkanad. Call +91 70120 59591 or visit Anchorage Business Center, Seaport-Airport Road.",
+        title="Salon Near Me in Kakkanad, Kochi | Contact, Location & Hours | LivArt Salon",
+        description="Visit LivArt Salon at Anchorage Business Center, Seaport-Airport Road, Kakkanad. 5 mins from Infopark & SmartCity Kochi. Call +91 70120 59591 to book.",
         canonical_path="/contact-us/",
         root_prefix="../"
     )
@@ -925,9 +925,9 @@ def build_contact_page():
   <section class="bg-obsidian-deep text-alabaster-cream py-16">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase font-bold block mb-2">Concierge & Studio</span>
-      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Connect With LivArt Salon</h1>
+      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">Connect With LivArt Salon Kakkanad</h1>
       <p class="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        Come to us & get sharp. We are located in the heart of Kakkanad on Seaport-Airport Road.
+        Come to us & get sharp. We are located on Seaport-Airport Road in Kakkanad, just 5 minutes from Infopark Phase 1 & 2 and SmartCity Kochi.
       </p>
     </div>
   </section>
@@ -1160,8 +1160,8 @@ def build_academy_page():
     }
 
     html = render_head(
-        title="LivArt Beauty Academy Kakkanad Kochi | Govt. Approved Beautician & Cosmetology Courses",
-        description="Kerala's premier beauty academy in Kakkanad, Kochi affiliated with B&WSSC. Professional diplomas in Cosmetology, Bridal Makeup, Hair Styling, and Skincare mentored by celebrity artist Stephy Sebastian.",
+        title="Best Beautician Course & Makeup Academy in Kakkanad, Kochi | LivArt Academy",
+        description="Join LivArt Beauty Academy in Kakkanad, Kochi. Govt B&WSSC accredited diploma courses in cosmetology, bridal makeup artistry, hair styling, and skincare aesthetics.",
         canonical_path="/academy/",
         extra_schema=extra_schema,
         root_prefix="../"
