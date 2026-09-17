@@ -441,12 +441,14 @@ def build_sub_services():
             ]
         }
 
+        og_img = p["img"].replace("../../", f"{BASE_URL}/")
         html = render_head(
             title=p["title"],
             description=p["desc"],
             canonical_path=f"/services/{p['slug']}/",
             extra_schema=breadcrumb_schema,
-            root_prefix="../../"
+            root_prefix="../../",
+            og_image=og_img
         )
         html += render_header(active_slug="services", root_prefix="../../")
 
@@ -485,7 +487,7 @@ def build_sub_services():
         <!-- Content Left -->
         <div class="lg:col-span-8">
           <div class="rounded-2xl overflow-hidden shadow-lg mb-8 max-h-[420px] bg-obsidian-deep">
-            <img src="{p['img']}" alt="{p['heading']} at LivArt Salon Kakkanad" class="w-full h-full object-cover" />
+            <img src="{p['img']}" alt="{p['heading']} at LivArt Salon Kakkanad" class="w-full h-full object-cover" loading="lazy" />
           </div>
 
           <div class="prose max-w-none text-gray-800">

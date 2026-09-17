@@ -584,8 +584,10 @@ def build_blog_system():
             title=f"{post['title']} | LivArt Salon Kakkanad",
             description=post["desc"],
             canonical_path=f"/{post['slug']}/",
-            extra_schema=article_schema,
-            root_prefix="../"
+            extra_schema=[article_schema, breadcrumb_schema],
+            root_prefix="../",
+            og_image=f"{BASE_URL}/{post['img']}",
+            og_type="article"
         )
         post_html += render_header(active_slug="blog", root_prefix="../")
 
@@ -624,7 +626,7 @@ def build_blog_system():
 
       <!-- Featured Image -->
       <div class="rounded-3xl overflow-hidden shadow-xl mb-10 max-h-[460px] bg-obsidian-deep">
-        <img src="../{post['img']}" alt="{post['title']}" class="w-full h-full object-cover" />
+        <img src="../{post['img']}" alt="{post['title']}" class="w-full h-full object-cover" loading="lazy" />
       </div>
 
       <!-- Content Body -->
@@ -638,7 +640,7 @@ def build_blog_system():
 
       <!-- Author Card & Booking CTA Box -->
       <div class="mt-12 p-8 bg-surface-container-low rounded-3xl border border-black/5 flex flex-col sm:flex-row items-center gap-6">
-        <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon and LivArt Beauty Academy" class="w-20 h-20 rounded-full object-cover shadow-md shrink-0" />
+        <img src="../assets/images/brand/stephy-sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon and LivArt Beauty Academy" class="w-20 h-20 rounded-full object-cover shadow-md shrink-0" loading="lazy" />
         <div class="text-center sm:text-left">
           <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
             <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze">Written by LivArt Founder</span>

@@ -24,7 +24,7 @@ def build_homepage():
     
     html = render_head(
         title="LivArt Salon & Make-up Studio | Best Beauty Parlour in Kakkanad, Kochi",
-        description="LivArt Salon Kakkanad offers world-class hair styling, balayage coloring, bridal makeup, hair botox, keratin, and skincare therapies. Book with Stephy Sebastian today.",
+        description="LivArt Salon Kakkanad offers bespoke hair styling, bridal makeup, L'Oreal hair colouring & luxury skincare by Stephy Sebastian. Book your experience.",
         canonical_path="/",
         extra_schema=extra_schema
     )
@@ -106,7 +106,7 @@ def build_homepage():
         <!-- Right Column: Visual Showcase -->
         <div class="lg:col-span-5 relative">
           <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-obsidian-surface border border-white/10">
-            <img src="assets/images/instagram/DZkDGP8N7ei.jpg" alt="Rithu Manthra Haute Couture Styling at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <img src="assets/images/instagram/DZkDGP8N7ei.jpg" alt="Rithu Manthra Haute Couture Styling at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" fetchpriority="high" />
             <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep via-transparent to-transparent opacity-80"></div>
             
             <div class="absolute bottom-6 left-6 right-6 p-4 bg-obsidian-deep/90 backdrop-blur-md rounded-xl border border-white/10 flex items-center justify-between">
@@ -177,7 +177,7 @@ def build_homepage():
         <!-- Deal 1: De-Tan + Skin Miracle (Featured) -->
         <div class="lg:col-span-2 bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-black/5 flex flex-col md:flex-row">
           <div class="md:w-1/2 relative min-h-[260px] bg-obsidian-deep">
-            <img src="https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster1_11-7-2023-1.jpg" alt="De-Tan and Skin Miracle Whitening Facial Combo LivArt Kakkanad" class="w-full h-full object-cover" />
+            <img src="assets/images/offers/offer-poster1.webp" alt="De-Tan and Skin Miracle Whitening Facial Combo LivArt Kakkanad" class="w-full h-full object-cover" loading="lazy" />
             <span class="absolute top-4 left-4 bg-obsidian-deep/90 text-champagne-gold px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase border border-champagne-gold/30">
               Most Requested
             </span>
@@ -218,7 +218,7 @@ def build_homepage():
               <span class="material-symbols-outlined text-champagne-gold">auto_awesome</span>
             </div>
             <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-obsidian-deep">
-              <img src="https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_-offer-poster2_11-7-2023-1.jpg" alt="Hair Botox Treatment LivArt Salon Kochi" class="w-full h-full object-cover" />
+              <img src="assets/images/offers/offer-poster2.webp" alt="Hair Botox Treatment LivArt Salon Kochi" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">
               Hair Botox Treatment
@@ -248,7 +248,7 @@ def build_homepage():
               <span class="material-symbols-outlined text-champagne-gold">palette</span>
             </div>
             <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-obsidian-deep">
-              <img src="https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster3_11-7-2023-1.jpg" alt="Hair Colouring Artistry LivArt Kakkanad" class="w-full h-full object-cover" />
+              <img src="assets/images/offers/offer-poster3.webp" alt="Hair Colouring Artistry LivArt Kakkanad" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">
               Hair Colouring Artistry
@@ -278,7 +278,7 @@ def build_homepage():
               <span class="material-symbols-outlined text-champagne-gold">air</span>
             </div>
             <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-obsidian-deep">
-              <img src="assets/images/instagram/Db7rJBtuj4B.jpg" alt="Amala Shaji Permanent Blow Dry at LivArt Salon Kochi" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <img src="assets/images/instagram/Db7rJBtuj4B.jpg" alt="Amala Shaji Permanent Blow Dry at LivArt Salon Kochi" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
             <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">
               Permanent Blow Dry
@@ -308,7 +308,7 @@ def build_homepage():
               <span class="material-symbols-outlined text-champagne-gold">water_drop</span>
             </div>
             <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-obsidian-deep">
-              <img src="assets/images/instagram/DEXOFvGTyDZ.jpg" alt="Actress Amala Rose Kurian L'Oreal Hair Spa at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <img src="assets/images/instagram/DEXOFvGTyDZ.jpg" alt="Actress Amala Rose Kurian L'Oreal Hair Spa at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
             <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">
               Revitalizing Hair Spa
@@ -382,13 +382,13 @@ def build_homepage():
         <!-- Images Left -->
         <div class="lg:col-span-6 grid grid-cols-2 gap-4">
           <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mt-6 bg-obsidian-deep">
-            <img src="assets/images/instagram/DbLJRauyFro.jpg" alt="Azmin Yasar Styled at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="assets/images/instagram/DbLJRauyFro.jpg" alt="Azmin Yasar Styled at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg -mt-6 bg-obsidian-deep">
-            <img src="assets/images/instagram/DRXFRQCEgpm.jpg" alt="Glass Skin Bridal & Aesthetic Glow at LivArt Salon" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="assets/images/instagram/DRXFRQCEgpm.jpg" alt="Glass Skin Bridal & Aesthetic Glow at LivArt Salon" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="col-span-2 aspect-[16/9] rounded-2xl overflow-hidden shadow-lg bg-obsidian-deep">
-            <img src="assets/images/instagram/DULWym5CHa0.jpg" alt="Master Bridal Makeup & Saree Draping by Stephy Sebastian LivArt Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="assets/images/instagram/DULWym5CHa0.jpg" alt="Master Bridal Makeup & Saree Draping by Stephy Sebastian LivArt Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
         </div>
 
@@ -512,7 +512,7 @@ def build_homepage():
       <div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md p-6 sm:p-10 lg:p-12 border border-black/5 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div class="lg:col-span-5 relative">
           <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-xl bg-obsidian-deep">
-            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon & LivArt Beauty Academy Kakkanad" class="w-full h-full object-cover" />
+            <img src="assets/images/brand/stephy-sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon & LivArt Beauty Academy Kakkanad" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <div class="absolute -bottom-4 -right-4 bg-obsidian-deep text-alabaster-cream p-4 rounded-xl shadow-xl hidden sm:block border border-champagne-gold/20">
             <span class="font-label-caps text-[10px] text-champagne-gold tracking-widest uppercase font-bold block">Founder • Director</span>

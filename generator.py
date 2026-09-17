@@ -15,7 +15,9 @@ HOURS = "Monday – Saturday: 9:30 AM – 8:30 PM | Sunday: 10:00 AM – 7:30 PM
 INSTAGRAM_HANDLE = "@Livart_salon"
 INSTAGRAM_URL = "https://www.instagram.com/Livart_salon/"
 FACEBOOK_URL = "https://www.facebook.com/livartsalon/"
-LOGO_URL = "https://livartsalon.com/wp-content/uploads/2022/10/logo1.jpg"
+LOGO_URL = f"{BASE_URL}/assets/images/brand/logo.jpg"
+OG_IMAGE_DEFAULT = f"{BASE_URL}/assets/images/og-share.jpg"
+STEPHY_IMAGE_URL = f"{BASE_URL}/assets/images/brand/stephy-sebastian.webp"
 
 ACADEMY_URL = "https://livart.co.in"
 ACADEMY_FOUNDER_URL = "https://livart.co.in/founder-makeup-academy/"
@@ -70,7 +72,7 @@ LOCAL_BUSINESS_SCHEMA = {
         "name": "Stephy Sebastian",
         "jobTitle": ["Founder & Creative Director", "Celebrity Hair & Makeup Artist", "Master Cosmetology Educator"],
         "url": ACADEMY_FOUNDER_URL,
-        "image": "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp",
+        "image": STEPHY_IMAGE_URL,
         "description": "Stephy Sebastian is a celebrated celebrity hair stylist, bridal makeup artist, former national educator for L'Oréal Professionnel and Wella, and founder of LivArt Hair & Makeup Studio and LivArt Beauty Academy.",
         "sameAs": [
             ACADEMY_FOUNDER_URL,
@@ -104,10 +106,79 @@ LOCAL_BUSINESS_SCHEMA = {
     }
 }
 
-def render_head(title, description, canonical_path, extra_schema=None, root_prefix=""):
+def render_head(title, description, canonical_path, extra_schema=None, root_prefix="", og_image=None, og_type="website"):
+    if not og_image:
+        og_image = OG_IMAGE_DEFAULT
+
     schemas = [LOCAL_BUSINESS_SCHEMA]
     if extra_schema:
-        schemas.append(extra_schema)
+        if isinstance(extra_schema, list):
+            schemas.extend(extra_schema)
+        else:
+            schemas.append(extra_schema)
+
+    # Automatically generate BreadcrumbList if not already present and not homepage
+    has_breadcrumbs = False
+    for s in schemas:
+        if isinstance(s, dict):
+            if s.get("@type") == "BreadcrumbList":
+                has_breadcrumbs = True
+                break
+            if "@graph" in s:
+                for item in s["@graph"]:
+                    if isinstance(item, dict) and item.get("@type") == "BreadcrumbList":
+                        has_breadcrumbs = True
+                        break
+
+    if not has_breadcrumbs and canonical_path and canonical_path != "/":
+        clean_path = canonical_path.strip("/")
+        parts = clean_path.split("/")
+        
+        breadcrumb_items = [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{BASE_URL}/"}
+        ]
+        
+        name_map = {
+            "services": "Services",
+            "hair-styling": "Hair Styling",
+            "make-up": "Makeup & Bridal",
+            "skin-care": "Skin Care",
+            "packages": "Luxury Packages",
+            "gallery": "Instagram & Celebrity Gallery",
+            "academy": "LivArt Beauty Academy",
+            "about-us": "About Us",
+            "teams": "Our Creative Team",
+            "contact-us": "Contact & Location",
+            "blog": "Beauty & Hair Journal",
+            "category": "Categories"
+        }
+        
+        accum_url = BASE_URL
+        for idx, part in enumerate(parts):
+            accum_url += f"/{part}/" if (idx < len(parts) - 1 or canonical_path.endswith("/")) else f"/{part}"
+            pos = idx + 2
+            if idx == len(parts) - 1:
+                leaf_name = title.split("|")[0].split(" - ")[0].strip()
+                breadcrumb_items.append({
+                    "@type": "ListItem",
+                    "position": pos,
+                    "name": leaf_name,
+                    "item": f"{BASE_URL}{canonical_path}"
+                })
+            else:
+                segment_name = name_map.get(part, part.replace("-", " ").title())
+                breadcrumb_items.append({
+                    "@type": "ListItem",
+                    "position": pos,
+                    "name": segment_name,
+                    "item": accum_url
+                })
+        
+        schemas.append({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": breadcrumb_items
+        })
 
     schema_script = f'<script type="application/ld+json">{json.dumps(schemas, indent=2)}</script>'
 
@@ -120,20 +191,30 @@ def render_head(title, description, canonical_path, extra_schema=None, root_pref
   <meta name="description" content="{description}" />
   <link rel="canonical" href="{BASE_URL}{canonical_path}" />
   
-  <!-- Open Graph -->
+  <!-- Favicons & Touch Icons -->
+  <link rel="icon" type="image/png" href="{root_prefix}favicon.png" sizes="32x32" />
+  <link rel="icon" href="{root_prefix}favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="{root_prefix}apple-touch-icon.png" />
+
+  <!-- Open Graph / WhatsApp / Facebook (1200x630 Share Card) -->
   <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="{og_type}" />
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{description}" />
   <meta property="og:url" content="{BASE_URL}{canonical_path}" />
   <meta property="og:site_name" content="{SITE_NAME}" />
-  <meta property="og:image" content="{LOGO_URL}" />
+  <meta property="og:image" content="{og_image}" />
+  <meta property="og:image:secure_url" content="{og_image}" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="{title}" />
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{title}" />
   <meta name="twitter:description" content="{description}" />
-  <meta name="twitter:image" content="{LOGO_URL}" />
+  <meta name="twitter:image" content="{og_image}" />
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -246,7 +327,7 @@ def render_header(active_slug="", root_prefix=""):
   <div class="max-w-[1360px] mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3">
     <!-- Brand Logo & Identity -->
     <a href="{root_prefix}index.html" class="flex items-center gap-2 sm:gap-3 shrink-0">
-      <img src="{LOGO_URL}" alt="LivArt Salon and Makeup Studio Kakkanad" class="h-8 sm:h-10 w-auto object-contain" />
+      <img src="{root_prefix}assets/images/brand/logo.jpg" alt="LivArt Salon and Makeup Studio Kakkanad" class="h-8 sm:h-10 w-auto object-contain rounded" />
       <div class="flex flex-col">
         <span class="font-serif-luxury text-lg sm:text-xl font-bold tracking-tight text-obsidian-deep">LivArt</span>
         <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.22em] text-warm-bronze font-semibold -mt-0.5">Salon & Makeup Studio</span>
@@ -286,7 +367,7 @@ def render_header(active_slug="", root_prefix=""):
   <div>
     <div class="flex items-center justify-between pb-5 border-b border-white/10">
       <div class="flex items-center gap-2.5">
-        <img src="{LOGO_URL}" alt="LivArt Salon" class="h-8 w-auto brightness-0 invert" />
+        <img src="{root_prefix}assets/images/brand/logo.jpg" alt="LivArt Salon" class="h-8 w-auto brightness-0 invert rounded" />
         <div class="flex flex-col">
           <span class="font-serif-luxury text-lg font-bold text-champagne-gold">LivArt</span>
           <span class="text-[8px] uppercase tracking-widest text-muted-slate">Kakkanad Atelier</span>
@@ -329,7 +410,7 @@ def render_footer(root_prefix=""):
       <!-- Col 1: Brand -->
       <div class="flex flex-col gap-4 lg:col-span-1">
         <a href="{root_prefix}index.html" class="flex items-center gap-3">
-          <img src="{LOGO_URL}" alt="LivArt Salon" class="h-9 w-auto brightness-0 invert" />
+          <img src="{root_prefix}assets/images/brand/logo.jpg" alt="LivArt Salon" class="h-9 w-auto brightness-0 invert rounded" />
           <div class="flex flex-col">
             <span class="font-serif-luxury text-xl font-bold text-alabaster-cream tracking-tight">LivArt</span>
             <span class="text-[9px] uppercase tracking-[0.25em] text-champagne-gold">Kakkanad Atelier</span>

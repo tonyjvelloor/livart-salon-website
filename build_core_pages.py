@@ -26,7 +26,7 @@ def build_about_page():
             "name": "Stephy Sebastian",
             "jobTitle": ["Founder & Creative Director", "Celebrity Hair & Makeup Artist", "Master Beauty Educator"],
             "url": ACADEMY_FOUNDER_URL,
-            "image": "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp",
+            "image": f"{BASE_URL}/assets/images/brand/stephy-sebastian.webp",
             "description": "Stephy Sebastian is a renowned hair stylist, bridal makeup artist, former national educator for L'Oréal Professionnel and Wella, and founder of LivArt Hair & Makeup Studio Kakkanad and LivArt Beauty Academy.",
             "sameAs": [
                 ACADEMY_FOUNDER_URL,
@@ -47,7 +47,7 @@ def build_about_page():
     html += render_header(active_slug="about-us", root_prefix="../")
     
     stylists = [
-        {"name": "Stephy Sebastian", "role": "Founder & Creative Director", "exp": "10+ Years", "spec": "Bridal Artistry & Hair Transformations", "img": "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp"},
+        {"name": "Stephy Sebastian", "role": "Founder & Creative Director", "exp": "10+ Years", "spec": "Bridal Artistry & Hair Transformations", "img": "../assets/images/brand/stephy-sebastian.webp"},
         {"name": "Arul Britto", "role": "Senior Hair Stylist & Educator", "exp": "8+ Years", "spec": "Precision Haircuts & Balayage", "img": "../assets/images/instagram/C7l9fP5P3u9.jpg"},
         {"name": "Roopa", "role": "Master Makeup Artist", "exp": "7+ Years", "spec": "HD Bridal Makeup & Saree Draping", "img": "../assets/images/instagram/DZSWz8wyz5i.jpg"},
         {"name": "Vipitha", "role": "Senior Skincare Aesthetician", "exp": "6+ Years", "spec": "Hydra Facials & Derma Therapies", "img": "../assets/images/instagram/C88tG9iSEKp.jpg"},
@@ -61,7 +61,7 @@ def build_about_page():
         team_html += f"""
         <div class="bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
           <div class="h-64 overflow-hidden bg-obsidian-deep">
-            <img src="{s['img']}" alt="{s['name']} - {s['role']} at LivArt Salon Kakkanad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
+            <img src="{s['img']}" alt="{s['name']} - {s['role']} at LivArt Salon Kakkanad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="p-6 flex flex-col justify-between flex-grow">
             <div>
@@ -91,7 +91,7 @@ def build_about_page():
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
         <div class="lg:col-span-6">
           <div class="rounded-3xl overflow-hidden shadow-2xl bg-obsidian-deep border border-black/10 relative">
-            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon & LivArt Beauty Academy Kakkanad" class="w-full h-full object-cover" />
+            <img src="../assets/images/brand/stephy-sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon & LivArt Beauty Academy Kakkanad" class="w-full h-full object-cover" loading="lazy" />
             <div class="absolute bottom-4 left-4 right-4 bg-obsidian-deep/85 backdrop-blur-md p-4 rounded-xl border border-white/10 text-alabaster-cream">
               <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block">Founder Spotlight</span>
               <span class="font-serif-luxury text-sm font-bold">Stephy Sebastian • Former National Trainer L'Oréal & Wella</span>
@@ -161,7 +161,7 @@ def build_teams_page():
             "name": "Stephy Sebastian",
             "jobTitle": ["Founder & Creative Director", "Celebrity Hair & Makeup Artist", "Master Cosmetology Educator"],
             "url": ACADEMY_FOUNDER_URL,
-            "image": "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp",
+            "image": f"{BASE_URL}/assets/images/brand/stephy-sebastian.webp",
             "description": "Stephy Sebastian is a celebrated celebrity hair stylist, bridal makeup artist, former national educator for L'Oréal Professionnel and Wella, and founder of LivArt Hair & Makeup Studio and LivArt Beauty Academy.",
             "sameAs": [
                 ACADEMY_FOUNDER_URL,
@@ -198,7 +198,7 @@ def build_teams_page():
       <div class="bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-black/5 shadow-md grid grid-cols-1 md:grid-cols-12 gap-10 items-center mb-16">
         <div class="md:col-span-5">
           <div class="rounded-2xl overflow-hidden shadow-xl bg-obsidian-deep">
-            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon & Beauty Academy" class="w-full h-full object-cover" />
+            <img src="../assets/images/brand/stephy-sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon & Beauty Academy" class="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
         <div class="md:col-span-7">
@@ -271,7 +271,7 @@ def build_hair_page():
         services_html += f"""
         <div class="bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
           <div class="h-48 overflow-hidden bg-obsidian-deep">
-            <img src="{img}" alt="{title} at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="{img}" alt="{title} at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="p-6 flex flex-col justify-between flex-grow">
             <div>
@@ -473,7 +473,7 @@ def build_skincare_page():
         services_html += f"""
         <div class="bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
           <div class="h-48 overflow-hidden bg-obsidian-deep">
-            <img src="{img}" alt="{title} at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="{img}" alt="{title} at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="p-6 flex flex-col justify-between flex-grow">
             <div>
@@ -1017,7 +1017,7 @@ def build_academy_page():
 
         <div class="lg:col-span-5 relative">
           <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-obsidian-surface">
-            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon and LivArt Beauty Academy Kakkanad" class="w-full h-full object-cover" />
+            <img src="../assets/images/brand/stephy-sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon and LivArt Beauty Academy Kakkanad" class="w-full h-full object-cover" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep via-transparent to-transparent"></div>
             <div class="absolute bottom-6 left-6 right-6">
               <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block mb-1">Master Cosmetology Educator</span>
