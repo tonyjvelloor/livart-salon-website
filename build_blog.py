@@ -77,7 +77,7 @@ BLOG_POSTS = [
         "date": "July 30, 2024",
         "read_time": "5 min read",
         "desc": "Complete summer skin and hair care guide for Indian tropical weather: sun protection, deep hydration, and anti-pigmentation rituals.",
-        "img": "assets/images/instagram/DUap-mOkvuu.jpg",
+        "img": "assets/images/offers/offer-poster1.webp",
         "content": """
         <p>High temperatures combined with intense coastal humidity present a double challenge: dehydration and excess sebum. Here is how to shield your skin and hair:</p>
         <h3>Barrier Repair & Broad Spectrum Defense</h3>
@@ -107,7 +107,7 @@ BLOG_POSTS = [
         "date": "June 25, 2024",
         "read_time": "5 min read",
         "desc": "Monsoon hair survival guide: combating humidity frizz, scalp fungal buildup, and breakage with LivArt Salon treatments.",
-        "img": "assets/images/instagram/C_hxrh3y5NY.jpg",
+        "img": "assets/images/instagram/C5pwjmOidQU.jpg",
         "content": """
         <p>Monsoons in Kerala bring 90%+ ambient humidity. Rainwater is acidic and collects atmospheric pollutants, weakening keratin bonds. A Keratin smoothing or Hair Botox treatment provides an impermeable hydrophobic shield that repels moisture.</p>
         """
@@ -226,7 +226,7 @@ BLOG_POSTS = [
         "date": "February 01, 2024",
         "read_time": "4 min read",
         "desc": "How to avoid white cast, reapply over makeup, and choose broad-spectrum sunscreens for Indian skin.",
-        "img": "assets/images/instagram/DQMWOO5jNhc.jpg",
+        "img": "assets/images/instagram/DRXFRQCEgpm.jpg",
         "content": """
         <p>Sun protection is the number one anti-aging secret. Explore sunscreen sticks, setting mists, and lightweight gel formulations that protect without greasy residue.</p>
         """
@@ -343,7 +343,7 @@ BLOG_POSTS = [
         "date": "September 24, 2023",
         "read_time": "4 min read",
         "desc": "The therapeutic science of warm oil Indian head massages: pressure points, stress relief, and root nourishment.",
-        "img": "assets/images/instagram/C5pwjmOidQU.jpg",
+        "img": "assets/images/instagram/DC9Ou8ETksn.jpg",
         "content": """
         <p>A traditional head massage activates marma pressure points, draining lymphatic congestion, lowering cortisol, and encouraging robust follicular health.</p>
         """
@@ -408,7 +408,7 @@ BLOG_POSTS = [
         "date": "July 14, 2023",
         "read_time": "5 min read",
         "desc": "Combat sweat, acne breakouts, and tanning with these 7 practical summer skincare guidelines from LivArt aestheticians.",
-        "img": "assets/images/instagram/DUap-mOkvuu.jpg",
+        "img": "assets/images/offers/offer-poster1.webp",
         "content": """
         <p>Double-cleansing, cooling aloe gels, chemical exfoliation with salicylic acid, and avoiding heavy mineral oils keep skin pristine in intense Indian summers.</p>
         """
@@ -434,7 +434,7 @@ BLOG_POSTS = [
         "date": "June 15, 2023",
         "read_time": "5 min read",
         "desc": "Why hiring a professional bridal artist guarantees stress-free wedding radiance, camera-proof longevity, and superior lighting response.",
-        "img": "assets/images/instagram/C7CYp17t9yd.jpg",
+        "img": "assets/images/instagram/DTc2O2fCFZI.jpg",
         "content": """
         <p>Wedding day lighting, HD camera flash, and tear-filled moments demand professional waterproof formulations, precision color matching, and structural setting powders.</p>
         """

@@ -46,29 +46,32 @@ def build_about_page():
     )
     html += render_header(active_slug="about-us", root_prefix="../")
     
-    stylists = [
-        {"name": "Stephy Sebastian", "role": "Founder & Creative Director", "exp": "10+ Years", "spec": "Bridal Artistry & Hair Transformations", "img": "../assets/images/brand/stephy-sebastian.webp"},
-        {"name": "Arul Britto", "role": "Senior Hair Stylist & Educator", "exp": "8+ Years", "spec": "Precision Haircuts & Balayage", "img": "../assets/images/instagram/C7l9fP5P3u9.jpg"},
-        {"name": "Roopa", "role": "Master Makeup Artist", "exp": "7+ Years", "spec": "HD Bridal Makeup & Saree Draping", "img": "../assets/images/instagram/DZSWz8wyz5i.jpg"},
-        {"name": "Vipitha", "role": "Senior Skincare Aesthetician", "exp": "6+ Years", "spec": "Hydra Facials & Derma Therapies", "img": "../assets/images/instagram/C88tG9iSEKp.jpg"},
-        {"name": "Abhishek", "role": "Creative Color Specialist", "exp": "5+ Years", "spec": "Ombre, Highlights & Keratin", "img": "../assets/images/instagram/DABMk4mtv8b.jpg"},
-        {"name": "Om Prakash", "role": "Senior Stylist & Grooming Expert", "exp": "6+ Years", "spec": "Groom Styling & Hair Texture", "img": "../assets/images/instagram/DXb3cLlEsmy.jpg"},
-        {"name": "Abhin", "role": "Hair Spa & Scalp Therapist", "exp": "5+ Years", "spec": "Deep Conditioning & Head Massages", "img": "../assets/images/instagram/DW1NAndDGuP.jpg"}
+    transformations = [
+        {"name": "Amala Shaji", "badge": "Influencer Spotlight", "service": "Permanent Blow Dry & Volume Styling", "desc": "Bouncy, effortless runway volume and structural blowout by LivArt senior stylists.", "img": "../assets/images/instagram/Db7rJBtuj4B.jpg"},
+        {"name": "Azmin Yasar", "badge": "Model & Anchor", "service": "Precision Haircut & Salon Finish", "desc": "Bespoke hair shaping and salon chair blowout tailored for camera readiness.", "img": "../assets/images/instagram/DbLJRauyFro.jpg"},
+        {"name": "Actress Amala Rose Kurian", "badge": "Film & Television", "service": "Hair Botox Rejuvenation Therapy", "desc": "Anti-frizz capillary deep conditioning restoring mirror-like silkiness and strength.", "img": "../assets/images/instagram/DW1NAndDGuP.jpg"},
+        {"name": "Anchor Shiju Abdul Rasheed", "badge": "News Anchor", "service": "Executive Precision Haircut & Grooming", "desc": "High-definition camera-ready precision haircut and beard contouring.", "img": "../assets/images/instagram/C7l9fP5P3u9.jpg"},
+        {"name": "RJ Soorya", "badge": "Radio Personality", "service": "Couture Balayage & Colouring", "desc": "Multi-dimensional L'Oreal hand-painted balayage with zero ammonia damage.", "img": "../assets/images/instagram/DABMk4mtv8b.jpg"},
+        {"name": "Anchor Meenakshi Sudheer", "badge": "TV Anchor", "service": "Deluxe Foot Reflexology & Pedicure Spa", "desc": "Relaxing dead-skin exfoliation, herbal soak, and therapeutic acupressure massage.", "img": "../assets/images/instagram/C88tG9iSEKp.jpg"},
+        {"name": "Model Shaluz Boon", "badge": "Fashion Model", "service": "Runway Waves & Texture Styling", "desc": "Voluminous textured curls and movement styling for high-fashion photoshoots.", "img": "../assets/images/instagram/CpsA0o_OSo5.jpg"},
+        {"name": "Distinguished Groom", "badge": "Groom Sanctuary", "service": "Black Diamond Groom Makeover", "desc": "Natural matte camera-ready complexion, beard grooming, and hair architecture.", "img": "../assets/images/instagram/DXb3cLlEsmy.jpg"}
     ]
 
-    team_html = ""
-    for s in stylists:
-        team_html += f"""
+    transformations_html = ""
+    for t in transformations:
+        transformations_html += f"""
         <div class="bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
-          <div class="h-64 overflow-hidden bg-obsidian-deep">
-            <img src="{s['img']}" alt="{s['name']} - {s['role']} at LivArt Salon Kakkanad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <div class="h-64 overflow-hidden bg-obsidian-deep relative">
+            <img src="{t['img']}" alt="{t['name']} - {t['service']} at LivArt Salon Kakkanad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <span class="absolute top-3 left-3 bg-obsidian-deep/80 text-champagne-gold px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border border-champagne-gold/20">
+              {t['badge']}
+            </span>
           </div>
-          <div class="p-6 flex flex-col justify-between flex-grow">
+          <div class="p-5 flex flex-col justify-between flex-grow">
             <div>
-              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze block mb-1">{s['exp']} Mastery</span>
-              <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-1">{s['name']}</h3>
-              <p class="text-xs text-gray-500 font-medium mb-3">{s['role']}</p>
-              <p class="text-xs text-gray-700 leading-relaxed"><strong class="text-obsidian-deep">Specialty:</strong> {s['spec']}</p>
+              <h3 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-1">{t['name']}</h3>
+              <p class="text-xs text-warm-bronze font-bold uppercase tracking-wider mb-2">{t['service']}</p>
+              <p class="text-xs text-gray-600 leading-relaxed">{t['desc']}</p>
             </div>
           </div>
         </div>
@@ -126,15 +129,15 @@ def build_about_page():
         </div>
       </div>
 
-      <!-- Team Grid -->
+      <!-- Transformations Grid -->
       <div class="border-t border-black/5 pt-16">
-        <div class="text-center max-w-xl mx-auto mb-12">
-          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-semibold block mb-1">Passionate Professionals</span>
-          <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep">Meet Our Master Stylists & Artists</h2>
-          <p class="text-xs text-muted-slate mt-2">Certified experts dedicated to perfecting your hair, skin, and bridal aesthetics.</p>
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-semibold block mb-1">Celebrity & Client Transformations</span>
+          <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep">Master Artistry by the LivArt Team</h2>
+          <p class="text-xs text-muted-slate mt-2">Celebrated media personalities, news anchors, and distinguished clients styled by our certified master artists in Kakkanad.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {team_html}
+          {transformations_html}
         </div>
       </div>
     </div>
@@ -181,6 +184,37 @@ def build_teams_page():
     )
     html += render_header(active_slug="about-us", root_prefix="../")
 
+    transformations = [
+        {"name": "Amala Shaji", "badge": "Influencer Spotlight", "service": "Permanent Blow Dry & Volume Styling", "desc": "Bouncy, effortless runway volume and structural blowout by LivArt senior stylists.", "img": "../assets/images/instagram/Db7rJBtuj4B.jpg"},
+        {"name": "Azmin Yasar", "badge": "Model & Anchor", "service": "Precision Haircut & Salon Finish", "desc": "Bespoke hair shaping and salon chair blowout tailored for camera readiness.", "img": "../assets/images/instagram/DbLJRauyFro.jpg"},
+        {"name": "Actress Amala Rose Kurian", "badge": "Film & Television", "service": "Hair Botox Rejuvenation Therapy", "desc": "Anti-frizz capillary deep conditioning restoring mirror-like silkiness and strength.", "img": "../assets/images/instagram/DW1NAndDGuP.jpg"},
+        {"name": "Anchor Shiju Abdul Rasheed", "badge": "News Anchor", "service": "Executive Precision Haircut & Grooming", "desc": "High-definition camera-ready precision haircut and beard contouring.", "img": "../assets/images/instagram/C7l9fP5P3u9.jpg"},
+        {"name": "RJ Soorya", "badge": "Radio Personality", "service": "Couture Balayage & Colouring", "desc": "Multi-dimensional L'Oreal hand-painted balayage with zero ammonia damage.", "img": "../assets/images/instagram/DABMk4mtv8b.jpg"},
+        {"name": "Anchor Meenakshi Sudheer", "badge": "TV Anchor", "service": "Deluxe Foot Reflexology & Pedicure Spa", "desc": "Relaxing dead-skin exfoliation, herbal soak, and therapeutic acupressure massage.", "img": "../assets/images/instagram/C88tG9iSEKp.jpg"},
+        {"name": "Model Shaluz Boon", "badge": "Fashion Model", "service": "Runway Waves & Texture Styling", "desc": "Voluminous textured curls and movement styling for high-fashion photoshoots.", "img": "../assets/images/instagram/CpsA0o_OSo5.jpg"},
+        {"name": "Distinguished Groom", "badge": "Groom Sanctuary", "service": "Black Diamond Groom Makeover", "desc": "Natural matte camera-ready complexion, beard grooming, and hair architecture.", "img": "../assets/images/instagram/DXb3cLlEsmy.jpg"}
+    ]
+
+    transformations_html = ""
+    for t in transformations:
+        transformations_html += f"""
+        <div class="bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div class="h-64 overflow-hidden bg-obsidian-deep relative">
+            <img src="{t['img']}" alt="{t['name']} - {t['service']} at LivArt Salon Kakkanad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <span class="absolute top-3 left-3 bg-obsidian-deep/80 text-champagne-gold px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border border-champagne-gold/20">
+              {t['badge']}
+            </span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-1">{t['name']}</h3>
+              <p class="text-xs text-warm-bronze font-bold uppercase tracking-wider mb-2">{t['service']}</p>
+              <p class="text-xs text-gray-600 leading-relaxed">{t['desc']}</p>
+            </div>
+          </div>
+        </div>
+        """
+
     html += f"""
 <main class="flex-grow">
   <section class="bg-obsidian-deep text-alabaster-cream py-16">
@@ -194,8 +228,8 @@ def build_teams_page():
   </section>
 
   <section class="py-16 bg-surface-bright">
-    <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-black/5 shadow-md grid grid-cols-1 md:grid-cols-12 gap-10 items-center mb-16">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[1100px] mx-auto bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-black/5 shadow-md grid grid-cols-1 md:grid-cols-12 gap-10 items-center mb-16">
         <div class="md:col-span-5">
           <div class="rounded-2xl overflow-hidden shadow-xl bg-obsidian-deep">
             <img src="../assets/images/brand/stephy-sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon & Beauty Academy" class="w-full h-full object-cover" loading="lazy" />
@@ -235,6 +269,18 @@ def build_teams_page():
           </div>
         </div>
       </div>
+
+      <!-- Transformations Grid -->
+      <div class="border-t border-black/5 pt-16">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-semibold block mb-1">Celebrity & Client Transformations</span>
+          <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep">Master Artistry by the LivArt Team</h2>
+          <p class="text-xs text-muted-slate mt-2">Celebrated media personalities, news anchors, and distinguished clients styled by our certified master artists in Kakkanad.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {transformations_html}
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -258,12 +304,12 @@ def build_hair_page():
     html += render_header(active_slug="hair-styling", root_prefix="../")
 
     hair_services = [
-        ("Relaxo Hot Oil Head Massage", "Let our expert staff soothe your senses with a hot oil head massage. Formulated to stimulate scalp micro-circulation, nourish deep hair follicles, and relieve cranial tension.", "From Rs. 850", "../assets/images/instagram/DEXOFvGTyDZ.jpg"),
-        ("L’Oreal Professional Hair Spa", "Deep steam infusion and therapeutic acupressure massage that repairs cuticle breakdown, cures dryness, and restores lustrous mirror-like gloss.", "Rs. 1,200 (Reg. 1800)", "../assets/images/instagram/C6F_GKgtlHk.jpg"),
+        ("Relaxo Hot Oil Head Massage", "Let our expert staff soothe your senses with a hot oil head massage. Formulated to stimulate scalp micro-circulation, nourish deep hair follicles, and relieve cranial tension.", "From Rs. 850", "../assets/images/instagram/DC9Ou8ETksn.jpg"),
+        ("L’Oreal Professional Hair Spa", "Deep steam infusion and therapeutic acupressure massage that repairs cuticle breakdown, cures dryness, and restores lustrous mirror-like gloss.", "Rs. 1,200 (Reg. 1800)", "../assets/images/instagram/DEXOFvGTyDZ.jpg"),
         ("Balayage & Dimensional Colouring", "Hand-painted dimensional hues tailored to your undertone. Seamless transitions, soft root melting, and zero ammonia damage.", "From Rs. 5,999", "../assets/images/instagram/DABMk4mtv8b.jpg"),
-        ("Precision Haircuts & Blowouts", "Structural haircutting customized to your bone structure and hair density, finished with our iconic runway bouncy blowout.", "From Rs. 850", "../assets/images/instagram/Db7rJBtuj4B.jpg"),
+        ("Precision Haircuts & Blowouts", "Structural haircutting customized to your bone structure and hair density, finished with our iconic runway bouncy blowout.", "From Rs. 850", "../assets/images/instagram/DbLJRauyFro.jpg"),
         ("Hair Botox Anti-Aging Treatment", "Fills structural keratin gaps in hair strands, eliminates 95% of frizz, and revitalizes damaged ends without harsh chemicals.", "Rs. 5,999", "../assets/images/instagram/DW1NAndDGuP.jpg"),
-        ("Permanent Hair Straightening", "Thermal rebonding and permanent straightening for mirror-like silky pin-straight hair that endures through any humidity.", "From Rs. 4,000", "../assets/images/instagram/CpsA0o_OSo5.jpg")
+        ("Permanent Hair Straightening", "Thermal rebonding and permanent straightening for mirror-like silky pin-straight hair that endures through any humidity.", "From Rs. 4,000", "../assets/images/instagram/C5pwjmOidQU.jpg")
     ]
 
     services_html = ""
@@ -422,8 +468,106 @@ def build_makeup_page():
     </div>
   </section>
 
+  <!-- BRIDAL TRADITIONS SHOWCASE -->
+  <section class="py-14 bg-ivory-surface border-b border-black/5">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-semibold block mb-1">
+          Atelier Bridal Masterpieces
+        </span>
+        <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep">
+          Four Traditions of Bridal Artistry
+        </h2>
+        <p class="text-xs text-muted-slate mt-2">
+          From sacred rituals to modern cocktail celebrations, Stephy Sebastian curates timeless bridal aesthetics tailored to every community and cultural tradition.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 1. Christian Bridal Couture -->
+        <div class="group bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col">
+          <div class="aspect-[3/4] overflow-hidden bg-obsidian-deep relative">
+            <img src="../assets/images/instagram/DYuASLuK_le.jpg" alt="Christian Bridal Makeover by Stephy Sebastian LivArt Kakkanad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-alabaster-cream">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block">Church Ceremony</span>
+              <h3 class="font-serif-luxury text-lg font-bold">Christian Bridal Couture</h3>
+            </div>
+          </div>
+          <div class="p-4 flex-grow flex flex-col justify-between">
+            <p class="text-xs text-gray-600 leading-relaxed mb-3">
+              Porcelain dewy skin, romantic soft smoky eyes, and meticulous cathedral veil anchoring designed to photograph exquisitely in church illumination.
+            </p>
+            <span class="text-[11px] font-bold text-warm-bronze uppercase tracking-wider">Diamond & Gold Packages</span>
+          </div>
+        </div>
+
+        <!-- 2. Traditional Hindu Muhurtham -->
+        <div class="group bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col">
+          <div class="aspect-[3/4] overflow-hidden bg-obsidian-deep relative">
+            <img src="../assets/images/instagram/DULWym5CHa0.jpg" alt="Traditional Hindu Muhurtham Bridal Makeup & Saree Draping LivArt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-alabaster-cream">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block">Sacred Muhurtham</span>
+              <h3 class="font-serif-luxury text-lg font-bold">Hindu Muhurtham Radiance</h3>
+            </div>
+          </div>
+          <div class="p-4 flex-grow flex flex-col justify-between">
+            <p class="text-xs text-gray-600 leading-relaxed mb-3">
+              Traditional South Indian gold eye shimmer, fresh jasmine hair braiding, and immaculate silk Kanchipuram saree pleating.
+            </p>
+            <span class="text-[11px] font-bold text-warm-bronze uppercase tracking-wider">Diamond & Gold Packages</span>
+          </div>
+        </div>
+
+        <!-- 3. Muslim Nikah Elegance -->
+        <div class="group bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col">
+          <div class="aspect-[3/4] overflow-hidden bg-obsidian-deep relative">
+            <img src="../assets/images/instagram/DTc2O2fCFZI.jpg" alt="Muslim Nikah Bespoke Bridal Makeup LivArt Salon Kochi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-alabaster-cream">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block">Nikah Ceremony</span>
+              <h3 class="font-serif-luxury text-lg font-bold">Muslim Nikah Elegance</h3>
+            </div>
+          </div>
+          <div class="p-4 flex-grow flex flex-col justify-between">
+            <p class="text-xs text-gray-600 leading-relaxed mb-3">
+              Flawless waterproof airbrush base, dramatic winged liner, and regal tiara and dupatta setting for majestic Nikah poise.
+            </p>
+            <span class="text-[11px] font-bold text-warm-bronze uppercase tracking-wider">Diamond & Gold Packages</span>
+          </div>
+        </div>
+
+        <!-- 4. Evening Reception Glamour -->
+        <div class="group bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col">
+          <div class="aspect-[3/4] overflow-hidden bg-obsidian-deep relative">
+            <img src="../assets/images/instagram/DX6qGl_SKf1.jpg" alt="Red Carpet Reception Glamour Makeup LivArt Salon Kakkanad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-alabaster-cream">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block">Cocktail & Party</span>
+              <h3 class="font-serif-luxury text-lg font-bold">Evening Reception Glam</h3>
+            </div>
+          </div>
+          <div class="p-4 flex-grow flex flex-col justify-between">
+            <p class="text-xs text-gray-600 leading-relaxed mb-3">
+              Sculpted cheekbone contouring, high-impact evening eyes, and tousled Hollywood waves crafted to turn heads on the dance floor.
+            </p>
+            <span class="text-[11px] font-bold text-warm-bronze uppercase tracking-wider">Reception Glamour Package</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES PRICING SECTION -->
   <section class="py-16 bg-surface-bright">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-semibold block mb-1">Couture Offerings</span>
+        <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep">Signature Bridal & Groom Packages</h2>
+        <p class="text-xs text-muted-slate mt-2">Comprehensive bridal and groom regimens combining skincare prep, hair artistry, and high-definition makeup.</p>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {pkgs_html}
       </div>
@@ -461,11 +605,11 @@ def build_skincare_page():
 
     skin_services = [
         ("Skin Miracle Hydra Facial", "Our advanced vortex extraction and hyaluronic infusion facial that clears congestion and restores dewy glass-skin luminosity.", "Rs. 4,000", "../assets/images/instagram/DRXFRQCEgpm.jpg"),
-        ("De-Tan + Skin Miracle Combo", "Signature dual ritual that erases sun tanning, lightens pigment spots, and floods the dermis in brightening vitamins.", "From Rs. 2,499", "../assets/images/instagram/DUap-mOkvuu.jpg"),
+        ("De-Tan + Skin Miracle Combo", "Signature dual ritual that erases sun tanning, lightens pigment spots, and floods the dermis in brightening vitamins.", "From Rs. 2,499", "../assets/images/offers/offer-poster1.webp"),
         ("Pro Facial by Cheryl’s Cosmeceuticals", "Clinically formulated protocols by Cheryl's designed specifically for Indian skin to treat active acne, uneven tone, and dullness.", "From Rs. 2,200", "../assets/images/instagram/DQMWOO5jNhc.jpg"),
         ("Deluxe Manicure & Pedicure Spa", "Deep dead-skin exfoliation, cuticle conditioning, relaxing foot reflexology massage, and precision nail shaping.", "From Rs. 1,400", "../assets/images/instagram/C88tG9iSEKp.jpg"),
-        ("Herbal Waxing & Threading", "Painless threading for brows and facial contours, alongside gentle honey and chocolate wax formulations that prevent irritation.", "From Rs. 100", "../assets/images/instagram/DSNGmIaEp4d.jpg"),
-        ("Skin Bleaching & Derma Glow", "Safe, ammonia-free dermatological bleaching rituals that illuminate the complexion for festive and wedding readiness.", "From Rs. 1,200", "../assets/images/instagram/DYFFX0RKhnx.jpg")
+        ("Herbal Waxing & Threading", "Painless threading for brows and facial contours, alongside gentle honey and chocolate wax formulations that prevent irritation.", "From Rs. 100", "../assets/images/instagram/DRXFRQCEgpm.jpg"),
+        ("Skin Bleaching & Derma Glow", "Safe, ammonia-free dermatological bleaching rituals that illuminate the complexion for festive and wedding readiness.", "From Rs. 1,200", "../assets/images/offers/offer-poster1.webp")
     ]
 
     services_html = ""
@@ -660,6 +804,68 @@ def build_gallery_page():
           <span>Follow {INSTAGRAM_HANDLE} on Instagram</span>
           <span class="material-symbols-outlined text-[16px]">open_in_new</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Photography Showcase -->
+  <section class="py-12 bg-ivory-surface border-b border-black/5">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-semibold block mb-1">Curated Portfolio</span>
+        <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep">Editorial Bridal & Hair Masterpieces</h2>
+        <p class="text-xs text-muted-slate mt-2">A high-definition glimpse into signature bridal traditions and hair color artistry handcrafted at LivArt.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <!-- Photo 1: Muslim Bride -->
+        <div class="group aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-obsidian-deep relative">
+          <img src="../assets/images/instagram/DTc2O2fCFZI.jpg" alt="Haute Couture Muslim Nikah Bride LivArt Kakkanad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-alabaster-cream">
+            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Nikah Bride</span>
+            <span class="text-xs font-bold font-serif-luxury">Bespoke Bridal Elegance</span>
+          </div>
+        </div>
+        <!-- Photo 2: Reception Glam -->
+        <div class="group aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-obsidian-deep relative">
+          <img src="../assets/images/instagram/DX6qGl_SKf1.jpg" alt="Evening Reception Glamour LivArt Salon Kochi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-alabaster-cream">
+            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Reception Glam</span>
+            <span class="text-xs font-bold font-serif-luxury">Red Carpet Shimmer</span>
+          </div>
+        </div>
+        <!-- Photo 3: Hindu Bride -->
+        <div class="group aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-obsidian-deep relative">
+          <img src="../assets/images/instagram/DULWym5CHa0.jpg" alt="Traditional Hindu Muhurtham Bride LivArt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-alabaster-cream">
+            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Muhurtham Bride</span>
+            <span class="text-xs font-bold font-serif-luxury">Temple Gold Radiance</span>
+          </div>
+        </div>
+        <!-- Photo 4: Christian Bride -->
+        <div class="group aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-obsidian-deep relative">
+          <img src="../assets/images/instagram/DYuASLuK_le.jpg" alt="Christian Bridal Lace & Veil Styling LivArt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-alabaster-cream">
+            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Christian Bride</span>
+            <span class="text-xs font-bold font-serif-luxury">Porcelain Lace Veil</span>
+          </div>
+        </div>
+        <!-- Photo 5: Hair Styling -->
+        <div class="group aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-obsidian-deep relative">
+          <img src="../assets/images/instagram/DbLJRauyFro.jpg" alt="Precision Haircut & Styling Azmin Yasar LivArt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-alabaster-cream">
+            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Precision Cut</span>
+            <span class="text-xs font-bold font-serif-luxury">Salon Chair Texture</span>
+          </div>
+        </div>
+        <!-- Photo 6: Balayage -->
+        <div class="group aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-obsidian-deep relative">
+          <img src="../assets/images/instagram/DABMk4mtv8b.jpg" alt="L'Oreal Balayage Hair Colouring RJ Soorya LivArt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-alabaster-cream">
+            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Couture Color</span>
+            <span class="text-xs font-bold font-serif-luxury">Glossy Balayage</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>

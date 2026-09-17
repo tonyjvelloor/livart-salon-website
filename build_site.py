@@ -106,7 +106,7 @@ def build_homepage():
         <!-- Right Column: Visual Showcase -->
         <div class="lg:col-span-5 relative">
           <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-obsidian-surface border border-white/10">
-            <img src="assets/images/instagram/DZkDGP8N7ei.jpg" alt="Rithu Manthra Haute Couture Styling at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" fetchpriority="high" />
+            <img src="assets/images/instagram/DTc2O2fCFZI.jpg" alt="Haute Couture Bridal Artistry by Stephy Sebastian at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" fetchpriority="high" />
             <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep via-transparent to-transparent opacity-80"></div>
             
             <div class="absolute bottom-6 left-6 right-6 p-4 bg-obsidian-deep/90 backdrop-blur-md rounded-xl border border-white/10 flex items-center justify-between">
@@ -382,10 +382,10 @@ def build_homepage():
         <!-- Images Left -->
         <div class="lg:col-span-6 grid grid-cols-2 gap-4">
           <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mt-6 bg-obsidian-deep">
-            <img src="assets/images/instagram/DbLJRauyFro.jpg" alt="Azmin Yasar Styled at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="assets/images/instagram/DbLJRauyFro.jpg" alt="Precision Styling & Haircut by LivArt Senior Stylists" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg -mt-6 bg-obsidian-deep">
-            <img src="assets/images/instagram/DRXFRQCEgpm.jpg" alt="Glass Skin Bridal & Aesthetic Glow at LivArt Salon" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="assets/images/instagram/DX6qGl_SKf1.jpg" alt="Red Carpet Reception Glamour & Hair Design at LivArt Atelier" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="col-span-2 aspect-[16/9] rounded-2xl overflow-hidden shadow-lg bg-obsidian-deep">
             <img src="assets/images/instagram/DULWym5CHa0.jpg" alt="Master Bridal Makeup & Saree Draping by Stephy Sebastian LivArt Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
