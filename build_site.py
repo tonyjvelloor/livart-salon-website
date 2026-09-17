@@ -1,0 +1,692 @@
+import os
+import json
+
+from generator import (
+    BASE_DIR, SITE_NAME, SITE_TAGLINE, BASE_URL, PHONE, PHONE_TEL, EMAIL, ADDRESS, HOURS,
+    INSTAGRAM_HANDLE, INSTAGRAM_URL, FACEBOOK_URL, LOGO_URL,
+    render_head, render_header, render_footer
+)
+
+def ensure_dir(path):
+    os.makedirs(path, exist_ok=True)
+
+# -------------------------------------------------------------
+# 1. HOMEPAGE GENERATION
+# -------------------------------------------------------------
+def build_homepage():
+    extra_schema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": BASE_URL,
+        "name": SITE_NAME,
+        "description": "Premier Destination Hair & Makeup Studio in Kakkanad, Kochi curated by World Class Stylists."
+    }
+    
+    html = render_head(
+        title="LivArt Salon & Make-up Studio | Best Beauty Parlour in Kakkanad, Kochi",
+        description="LivArt Salon Kakkanad offers world-class hair styling, balayage coloring, bridal makeup, hair botox, keratin, and skincare therapies. Book with Stephy Sebastian today.",
+        canonical_path="/",
+        extra_schema=extra_schema
+    )
+    
+    html += render_header(active_slug="home")
+    
+    html += f"""
+<main class="flex-grow">
+  <!-- HERO SANCTUARY -->
+  <section class="relative w-full bg-obsidian-deep text-alabaster-cream pt-16 pb-20 overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-champagne-gold/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-48 w-[500px] h-[500px] rounded-full bg-warm-bronze/10 blur-3xl pointer-events-none"></div>
+    
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Micro-Badge Row -->
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-obsidian-surface rounded-full text-champagne-gold text-[11px] font-bold tracking-widest uppercase border border-champagne-gold/20">
+          <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          4.9 Google Rated Sanctuary • Kakkanad, Kochi
+        </span>
+        <span class="hidden sm:inline text-muted-slate">•</span>
+        <span class="text-metallic-gold-light text-xs tracking-wider">Bespoke Atelier for Haute Couture Hair, Makeup & Aesthetics</span>
+      </div>
+
+      <!-- Hero Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Column -->
+        <div class="lg:col-span-7 flex flex-col items-start">
+          <p class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase mb-2 font-semibold">
+            Discover Kakkanad’s Premier Destination Salon
+          </p>
+          <h1 class="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl text-alabaster-cream leading-[1.15] mb-6 font-normal">
+            The Art of Radiant Hair <br class="hidden sm:inline" />
+            <span class="italic text-gold-gradient">and Flawless Glamour.</span>
+          </h1>
+          <p class="text-base sm:text-lg text-gray-300 max-w-xl mb-6 leading-relaxed">
+            LivArt Salon & Make Up Studio curates bespoke beauty rituals led by world-class stylists. Experience transformative hair coloring, radiant skincare therapies, and unforgettable bridal aesthetics crafted in an atmosphere of serene luxury.
+          </p>
+
+          <!-- Founder Quote -->
+          <div class="bg-obsidian-surface/90 border-l-2 border-champagne-gold p-4 sm:p-5 rounded-r-xl mb-8 max-w-xl shadow-lg">
+            <p class="font-serif-luxury text-base sm:text-lg text-alabaster-cream italic">
+              “We strive for outstanding professionalism and top quality in everything we do.”
+            </p>
+            <span class="block mt-2 font-label-caps text-[11px] text-champagne-gold tracking-widest uppercase">
+              — Stephy Sebastian, Founder & Creative Director
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+            <button data-open-booking class="inline-flex items-center justify-center gap-2 bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep px-7 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase shadow-xl transition-all">
+              <span>Book Your Experience</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </button>
+            <a href="services/index.html" class="inline-flex items-center justify-center gap-2 bg-obsidian-surface hover:bg-white/10 text-alabaster-cream px-7 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase border border-white/10 transition-all">
+              <span>Explore Services</span>
+              <span class="material-symbols-outlined text-[16px]">menu_book</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-3 gap-6 pt-10 mt-6 border-t border-white/10 w-full max-w-xl">
+            <div>
+              <span class="font-serif-luxury text-2xl sm:text-3xl font-bold text-champagne-gold block">10+</span>
+              <span class="text-xs text-muted-slate uppercase tracking-wider">Years Mastery</span>
+            </div>
+            <div>
+              <span class="font-serif-luxury text-2xl sm:text-3xl font-bold text-champagne-gold block">100%</span>
+              <span class="text-xs text-muted-slate uppercase tracking-wider">Pure Formulations</span>
+            </div>
+            <div>
+              <span class="font-serif-luxury text-2xl sm:text-3xl font-bold text-champagne-gold block">4,800+</span>
+              <span class="text-xs text-muted-slate uppercase tracking-wider">Transformations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-obsidian-surface border border-white/10">
+            <img src="https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg" alt="LivArt Bridal Hair and Makeup Studio Kakkanad" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep via-transparent to-transparent opacity-80"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 p-4 bg-obsidian-deep/90 backdrop-blur-md rounded-xl border border-white/10 flex items-center justify-between">
+              <div>
+                <span class="font-label-caps text-[10px] text-champagne-gold tracking-widest uppercase block">Kakkanad Sanctuary</span>
+                <span class="font-serif-luxury text-base text-alabaster-cream font-bold">Seaport-Airport Atelier</span>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-champagne-gold text-obsidian-deep flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">spa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Badge -->
+          <div class="absolute -top-5 -left-5 hidden sm:flex items-center gap-2 bg-obsidian-surface/95 backdrop-blur-md p-3.5 rounded-xl shadow-xl border border-champagne-gold/30">
+            <span class="material-symbols-outlined text-champagne-gold text-[22px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            <div class="flex flex-col pr-1">
+              <span class="text-[10px] font-bold text-metallic-gold-light uppercase tracking-wider">Certified Masters</span>
+              <span class="text-xs text-gray-300">Curated by World Class Stylists</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL 1-YEAR 20% OFF MEMBERSHIP BANNER -->
+  <section class="w-full bg-gold-gradient text-obsidian-deep py-4 shadow-inner">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-full bg-obsidian-deep text-champagne-gold flex items-center justify-center shrink-0 shadow-md">
+          <span class="material-symbols-outlined text-[24px]">card_membership</span>
+        </div>
+        <div>
+          <h2 class="font-serif-luxury text-xl font-bold leading-tight">
+            Complimentary 1-Year LivArt Privilege Membership
+          </h2>
+          <p class="text-xs sm:text-sm text-black/80 font-medium">
+            Avail any salon service worth <strong>Rs. 1,000</strong> and receive an exclusive <strong>1-Year Membership Card</strong> with <strong>20% discount</strong> on all future services!
+          </p>
+        </div>
+      </div>
+      <button data-open-booking data-service="1-Year 20% Membership Offer" class="shrink-0 bg-obsidian-deep hover:bg-obsidian-surface text-alabaster-cream px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-md">
+        Claim Membership
+      </button>
+    </div>
+  </section>
+
+  <!-- HOT DEALS FROM LIVART -->
+  <section class="w-full py-20 bg-surface-bright" id="hot-deals">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.25em] uppercase font-semibold block mb-1">
+            Exclusive Limited Offerings
+          </span>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl text-obsidian-deep font-bold">
+            Hot Deals from LivArt Kakkanad
+          </h2>
+        </div>
+        <p class="text-sm text-muted-slate max-w-md">
+          Indulge in our most sought-after salon rituals at promotional atelier pricing. Handcrafted using premium L'Oreal & Cheryl's professional formulations.
+        </p>
+      </div>
+
+      <!-- Hot Deals Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Deal 1: De-Tan + Skin Miracle (Featured) -->
+        <div class="lg:col-span-2 bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-black/5 flex flex-col md:flex-row">
+          <div class="md:w-1/2 relative min-h-[260px] bg-obsidian-deep">
+            <img src="https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster1_11-7-2023-1.jpg" alt="De-Tan and Skin Miracle Whitening Facial Combo LivArt Kakkanad" class="w-full h-full object-cover" />
+            <span class="absolute top-4 left-4 bg-obsidian-deep/90 text-champagne-gold px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase border border-champagne-gold/30">
+              Most Requested
+            </span>
+          </div>
+          <div class="md:w-1/2 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1.5 text-warm-bronze mb-2">
+                <span class="material-symbols-outlined text-[16px]">schedule</span>
+                <span class="text-[11px] font-bold uppercase tracking-wider">75 Min Signature Ritual</span>
+              </div>
+              <h3 class="font-serif-luxury text-2xl text-obsidian-deep font-bold mb-2">
+                De-Tan + Skin Miracle Whitening Facial Combo!
+              </h3>
+              <p class="text-sm text-muted-slate mb-4 leading-relaxed">
+                Our signature brightening facial ritual eradicates stubborn sun tanning, infuses cellular hydration, and revitalizes natural collagen. Includes free 1-Year 20% privilege membership card!
+              </p>
+            </div>
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-xs uppercase text-muted-slate font-medium">From</span>
+                <span class="font-serif-luxury text-2xl font-bold text-obsidian-deep">Rs. 2,499</span>
+                <span class="text-xs text-warm-bronze font-semibold">+ 20% Membership Perk</span>
+              </div>
+              <button data-open-booking data-service="De-Tan + Skin Miracle Whitening Combo (Rs. 2499)" class="w-full inline-flex items-center justify-center bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep py-2.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-md">
+                Book Offer Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deal 2: Hair Botox -->
+        <div class="bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-black/5 flex flex-col justify-between p-6 sm:p-7">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-champagne-gold/15 text-warm-bronze px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                Anti-Frizz Therapy
+              </span>
+              <span class="material-symbols-outlined text-champagne-gold">auto_awesome</span>
+            </div>
+            <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-obsidian-deep">
+              <img src="https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_-offer-poster2_11-7-2023-1.jpg" alt="Hair Botox Treatment LivArt Salon Kochi" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">
+              Hair Botox Treatment
+            </h3>
+            <p class="text-xs text-muted-slate mb-4 leading-relaxed">
+              Intensive deep-conditioning formula that fills hair fiber gaps, eliminates humidity frizz, and restores silky mirror-like luminosity.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5 mb-4">
+              <span class="font-serif-luxury text-2xl font-bold text-obsidian-deep">Rs. 5,999</span>
+              <span class="text-[11px] text-warm-bronze font-bold uppercase">Only</span>
+            </div>
+            <button data-open-booking data-service="Hair Botox Treatment (Rs. 5999)" class="w-full inline-flex items-center justify-center bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep py-2.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all">
+              Book Hair Botox
+            </button>
+          </div>
+        </div>
+
+        <!-- Deal 3: Hair Colouring -->
+        <div class="bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-black/5 flex flex-col justify-between p-6 sm:p-7">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-champagne-gold/15 text-warm-bronze px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                Couture Color
+              </span>
+              <span class="material-symbols-outlined text-champagne-gold">palette</span>
+            </div>
+            <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-obsidian-deep">
+              <img src="https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster3_11-7-2023-1.jpg" alt="Hair Colouring Artistry LivArt Kakkanad" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">
+              Hair Colouring Artistry
+            </h3>
+            <p class="text-xs text-muted-slate mb-4 leading-relaxed">
+              From seamless multidimensional balayage to rich global tinting, customized by senior colorists with premium L'Oreal formulations.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5 mb-4">
+              <span class="text-xs uppercase text-muted-slate">From</span>
+              <span class="font-serif-luxury text-2xl font-bold text-obsidian-deep">Rs. 5,999</span>
+            </div>
+            <button data-open-booking data-service="Hair Colouring Artistry (From Rs. 5999)" class="w-full inline-flex items-center justify-center bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep py-2.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all">
+              Book Hair Colour
+            </button>
+          </div>
+        </div>
+
+        <!-- Deal 4: Permanent Blow Dry -->
+        <div class="bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-black/5 flex flex-col justify-between p-6 sm:p-7">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-champagne-gold/15 text-warm-bronze px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                Long-Lasting
+              </span>
+              <span class="material-symbols-outlined text-champagne-gold">air</span>
+            </div>
+            <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-obsidian-deep">
+              <img src="https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg" alt="Permanent Blow Dry LivArt Kochi" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">
+              Permanent Blow Dry
+            </h3>
+            <p class="text-xs text-muted-slate mb-4 leading-relaxed">
+              Wake up with runway-ready bouncy, effortless volume every single morning without heat styling tools for months.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5 mb-4">
+              <span class="font-serif-luxury text-2xl font-bold text-obsidian-deep">Rs. 5,999</span>
+              <span class="text-[11px] text-warm-bronze font-bold uppercase">Special Rate</span>
+            </div>
+            <button data-open-booking data-service="Permanent Blow Dry (Rs. 5999)" class="w-full inline-flex items-center justify-center bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep py-2.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all">
+              Book Blow Dry
+            </button>
+          </div>
+        </div>
+
+        <!-- Deal 5: Hair Spa Special -->
+        <div class="bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-black/5 flex flex-col justify-between p-6 sm:p-7">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-champagne-gold text-obsidian-deep px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                33% Seasonal Off
+              </span>
+              <span class="material-symbols-outlined text-champagne-gold">water_drop</span>
+            </div>
+            <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-obsidian-deep">
+              <img src="https://livartsalon.com/wp-content/uploads/2023/05/livee11.jpg" alt="L'Oreal Hair Spa LivArt Salon Kakkanad" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">
+              Revitalizing Hair Spa
+            </h3>
+            <p class="text-xs text-muted-slate mb-4 leading-relaxed">
+              Intensive steam infusion and scalp acupressure massage targeting dryness, scalp tension, and root rejuvenation.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="font-serif-luxury text-2xl font-bold text-obsidian-deep">Rs. 1,200</span>
+              <span class="text-sm line-through text-muted-slate">Rs. 1,800</span>
+            </div>
+            <button data-open-booking data-service="Revitalizing Hair Spa (Rs. 1200)" class="w-full inline-flex items-center justify-center bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep py-2.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all">
+              Book Hair Spa
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM REELS & VIDEO COMMUNITY SHOWCASE -->
+  <section class="w-full py-20 bg-obsidian-deep text-alabaster-cream" id="instagram-showcase">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-champagne-gold mb-2">
+            <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+            <span class="font-label-caps text-xs tracking-[0.2em] uppercase font-bold">Live Atelier Creations</span>
+          </div>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl text-alabaster-cream font-bold">
+            Follow the Artistry on Instagram
+          </h2>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="{INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-95 text-white px-5 py-2.5 rounded-lg text-xs font-bold tracking-wider uppercase transition-all shadow-md">
+            <span>Follow {INSTAGRAM_HANDLE}</span>
+            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Instagram Grid Container -->
+      <div id="instagram-feed-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <!-- Injected via assets/js/instagram-feed.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE / FOUNDER STORY -->
+  <section class="w-full py-20 bg-ivory-surface">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Images Left -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mt-6">
+            <img src="https://livartsalon.com/wp-content/uploads/2022/10/banner18.jpg" alt="Hair and skin services Livart" class="w-full h-full object-cover" />
+          </div>
+          <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg -mt-6">
+            <img src="https://livartsalon.com/wp-content/uploads/2022/10/banner21.jpg" alt="Skin services Livart" class="w-full h-full object-cover" />
+          </div>
+          <div class="col-span-2 aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg" alt="Makeup Studio Livart" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Content Right -->
+        <div class="lg:col-span-6 flex flex-col items-start">
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.25em] uppercase font-semibold mb-2">
+            Atelier Identity • Kakkanad, Kochi
+          </span>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl text-obsidian-deep font-bold mb-6">
+            Who We Are
+          </h2>
+          <p class="text-base text-gray-700 leading-relaxed mb-4">
+            LivArt Hair and Makeup Studio is a destination salon in Kakkanad that offers top-of-the-line hair, makeup & skin services, with a focus on cutting-edge techniques and an unmatched level of customer service.
+          </p>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Having gained invaluable experience working with industry giants for over a decade, our founder <strong>Stephy Sebastian</strong> specializes in creating looks that will make you feel on top of the world.
+          </p>
+          <p class="text-sm text-gray-600 leading-relaxed mb-6">
+            Our team of experienced stylists is passionate about their craft and is always ready to help you find your perfect style, whether it’s for everyday wear or a special occasion. We provide customized services that cater to all skin and hair types, ensuring your personal style will always reflect who you truly are!
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 w-full bg-surface-container p-4 rounded-xl mb-8">
+            <div>
+              <span class="font-label-caps text-[10px] text-warm-bronze uppercase tracking-widest font-bold block mb-1">Philosophy</span>
+              <p class="text-xs text-gray-700">Beauty as a lifestyle, celebrating personal grace, inner well-being, and genuine radiance.</p>
+            </div>
+            <div>
+              <span class="font-label-caps text-[10px] text-warm-bronze uppercase tracking-widest font-bold block mb-1">Kochi Sanctuary</span>
+              <p class="text-xs text-gray-700">Anchorage Business Center, Seaport-Airport Road, Kakkanad.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a href="about-us/index.html" class="inline-flex items-center gap-2 bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep px-6 py-3 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-md">
+              <span>Read Full Story</span>
+              <span class="material-symbols-outlined text-[16px]">north_east</span>
+            </a>
+            <button data-open-booking class="inline-flex items-center gap-2 border border-obsidian-deep/20 hover:bg-black/5 px-6 py-3 rounded-lg text-xs font-bold tracking-widest uppercase transition-all">
+              <span>Consult Stylists</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 PILLARS OF LIVART -->
+  <section class="w-full py-20 bg-obsidian-deep text-alabaster-cream">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-16">
+        <span class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase font-bold block mb-2">
+          The Atelier Standard
+        </span>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl text-alabaster-cream font-bold mb-4">
+          Why LivArt is Kakkanad’s Preferred Choice
+        </h2>
+        <p class="text-base text-gray-300 leading-relaxed">
+          At LivArt Salon, we believe beauty is a lifestyle. We are dedicated to helping you express your unique individuality through flawless technique, serene hospitality, and remarkable transformations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-obsidian-surface p-6 rounded-2xl border border-white/5 flex flex-col justify-between hover:border-champagne-gold/40 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/15 text-champagne-gold flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-alabaster-cream mb-2">Expert Artists & Stylists</h3>
+            <p class="text-xs text-muted-slate leading-relaxed">
+              Our team has extensive working experience with advanced techniques and premium products, creating a look that perfectly reflects your personal style.
+            </p>
+          </div>
+          <span class="pt-6 text-champagne-gold font-label-caps text-[10px] tracking-widest uppercase font-bold">• Global Standards</span>
+        </div>
+
+        <div class="bg-obsidian-surface p-6 rounded-2xl border border-white/5 flex flex-col justify-between hover:border-champagne-gold/40 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/15 text-champagne-gold flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[24px]">weekend</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-alabaster-cream mb-2">Unmatched Comfort</h3>
+            <p class="text-xs text-muted-slate leading-relaxed">
+              We go beyond haircuts and makeup to offer a relaxing, luxurious experience where you can lounge, unwind, and indulge in attentive care.
+            </p>
+          </div>
+          <span class="pt-6 text-champagne-gold font-label-caps text-[10px] tracking-widest uppercase font-bold">• Pure Sanctuary</span>
+        </div>
+
+        <div class="bg-obsidian-surface p-6 rounded-2xl border border-white/5 flex flex-col justify-between hover:border-champagne-gold/40 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/15 text-champagne-gold flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[24px]">sanitizer</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-alabaster-cream mb-2">Radiant Formulations</h3>
+            <p class="text-xs text-muted-slate leading-relaxed">
+              We exclusively use top-quality skin and hair products that nourish and freshen up your looks while promoting long-term biological hair health.
+            </p>
+          </div>
+          <span class="pt-6 text-champagne-gold font-label-caps text-[10px] tracking-widest uppercase font-bold">• Certified Products</span>
+        </div>
+
+        <div class="bg-obsidian-surface p-6 rounded-2xl border border-white/5 flex flex-col justify-between hover:border-champagne-gold/40 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/15 text-champagne-gold flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[24px]">psychology_alt</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-alabaster-cream mb-2">Empowered Confidence</h3>
+            <p class="text-xs text-muted-slate leading-relaxed">
+              We follow a client-centric approach and actively seek your input throughout every session so you leave feeling positive, empowered, and confident.
+            </p>
+          </div>
+          <span class="pt-6 text-champagne-gold font-label-caps text-[10px] tracking-widest uppercase font-bold">• Inner Well-Being</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER SPOTLIGHT -->
+  <section class="w-full py-20 bg-surface-container-low">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md p-6 sm:p-10 lg:p-12 border border-black/5 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5 relative">
+          <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-xl bg-obsidian-deep">
+            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian Livart Founder" class="w-full h-full object-cover" />
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-obsidian-deep text-alabaster-cream p-4 rounded-xl shadow-xl hidden sm:block border border-champagne-gold/20">
+            <span class="font-label-caps text-[10px] text-champagne-gold tracking-widest uppercase font-bold block">Founder • Director</span>
+            <span class="font-serif-luxury text-sm font-bold">10+ Years of Artistry</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 flex flex-col items-start">
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.25em] uppercase font-semibold mb-1">
+            Visionary Behind LivArt
+          </span>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl text-obsidian-deep font-bold mb-2">
+            Stephy Sebastian
+          </h2>
+          <span class="font-serif-luxury text-lg text-warm-bronze mb-4 font-semibold">
+            Founder & Master Hair & Makeup Artist
+          </span>
+          <p class="text-base text-gray-700 leading-relaxed mb-4">
+            Stephy serves as the visionary pillar of LivArt Hair and Makeup Studio, portraying the qualities of a true stylist curated from genuine passion for the craft. A former nurse who served in demanding medical conditions, Stephy made the bold career transition to hair and makeup artistry to dedicate her life to what she loves most.
+          </p>
+          <p class="text-sm text-gray-600 leading-relaxed mb-6">
+            In 2021, Stephy established the <strong>LivArt Academy</strong>, training aspiring artists across Kerala. At LivArt Kakkanad, she leads a team dedicated to elevating your natural beauty and inspiring self-confidence. In other words, Stephy is a character who gets things done, fulfills her dreams, and <em>LIVes the ART</em>.
+          </p>
+          
+          <div class="grid grid-cols-3 gap-4 w-full py-4 mb-6 border-y border-black/5">
+            <div>
+              <span class="font-serif-luxury text-xl font-bold text-obsidian-deep block">10+ Yrs</span>
+              <span class="text-[11px] text-muted-slate uppercase">Experience</span>
+            </div>
+            <div>
+              <span class="font-serif-luxury text-xl font-bold text-obsidian-deep block">5,000+</span>
+              <span class="text-[11px] text-muted-slate uppercase">Clients Styled</span>
+            </div>
+            <div>
+              <span class="font-serif-luxury text-xl font-bold text-obsidian-deep block">100%</span>
+              <span class="text-[11px] text-muted-slate uppercase">Hygiene & Safety</span>
+            </div>
+          </div>
+
+          <button data-open-booking data-service="Personal Consultation with Founder Stephy Sebastian" class="inline-flex items-center gap-2 bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep px-6 py-3 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-md">
+            <span>Schedule Consultation with Stephy</span>
+            <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFIED GOOGLE CLIENT REVIEWS -->
+  <section class="w-full py-20 bg-surface-bright" id="reviews">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="flex items-center gap-1 mb-2 text-champagne-gold">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="text-xs text-obsidian-deep font-bold uppercase tracking-wider ml-1">4.9 / 5.0 Google Reviews</span>
+          </div>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl text-obsidian-deep font-bold">
+            What Our Patrons Say
+          </h2>
+        </div>
+        <p class="text-sm text-muted-slate max-w-sm">
+          Hear directly from Kakkanad patrons and brides whose special milestones were elevated by LivArt's attentive touch.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-surface-container-low p-8 rounded-2xl shadow-sm border border-black/5 flex flex-col justify-between">
+          <div>
+            <div class="text-champagne-gold mb-3">
+              <span class="material-symbols-outlined text-[32px]">format_quote</span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed italic mb-6">
+              “Stephy and her team at LivArt Kakkanad made my wedding day unforgettable. The bridal makeup stayed pristine through tears and 10 hours of celebrations. Truly world-class styling!”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-black/5">
+            <span class="font-serif-luxury text-base font-bold text-obsidian-deep block">Ananya R. Nair</span>
+            <span class="text-xs text-muted-slate">Bridal Package Client • Infopark, Kakkanad</span>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-low p-8 rounded-2xl shadow-sm border border-black/5 flex flex-col justify-between">
+          <div>
+            <div class="text-champagne-gold mb-3">
+              <span class="material-symbols-outlined text-[32px]">format_quote</span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed italic mb-6">
+              “The Hair Botox and De-Tan Facial combo is unmatched value. My frizzy humidity hair feels like liquid silk. The salon space is serene, clean, and smells heavenly.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-black/5">
+            <span class="font-serif-luxury text-base font-bold text-obsidian-deep block">Dr. Priya Menon</span>
+            <span class="text-xs text-muted-slate">Verified Reviewer • Kochi</span>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-low p-8 rounded-2xl shadow-sm border border-black/5 flex flex-col justify-between">
+          <div>
+            <div class="text-champagne-gold mb-3">
+              <span class="material-symbols-outlined text-[32px]">format_quote</span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed italic mb-6">
+              “Took their permanent blow dry service and got the 1-year free membership card. Courteous staff who listen to what you want without rushing. 10/10 recommend LivArt!”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-black/5">
+            <span class="font-serif-luxury text-base font-bold text-obsidian-deep block">Sarah Thomas</span>
+            <span class="text-xs text-muted-slate">Premium Member • Kakkanad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & CONTACT EMBED -->
+  <section class="w-full py-20 bg-ivory-surface">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7 bg-obsidian-deep text-alabaster-cream p-8 sm:p-10 rounded-3xl shadow-xl">
+          <span class="font-label-caps text-xs text-champagne-gold tracking-widest uppercase font-bold block mb-2">
+            Visit Our Kakkanad Atelier
+          </span>
+          <h3 class="font-serif-luxury text-3xl font-bold text-alabaster-cream mb-6">
+            Anchorage Business Center Sanctuary
+          </h3>
+          
+          <div class="space-y-6 text-sm text-gray-300">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-champagne-gold text-[24px] mt-0.5">location_on</span>
+              <div>
+                <p class="text-white font-medium mb-1">LivArt Salon & Make-up Studio</p>
+                <p class="leading-relaxed">{ADDRESS}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-champagne-gold text-[24px] mt-0.5">call</span>
+              <div>
+                <a href="tel:{PHONE_TEL}" class="text-white hover:text-champagne-gold text-lg font-bold block">{PHONE}</a>
+                <span class="text-xs text-muted-slate">Direct Appointments & WhatsApp Consultations</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-champagne-gold text-[24px] mt-0.5">schedule</span>
+              <div>
+                <p class="text-white font-medium">{HOURS}</p>
+                <span class="text-xs text-muted-slate">Open 7 days a week for your beauty convenience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-white/10 flex flex-wrap gap-4">
+            <button data-open-booking class="bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep px-6 py-3 rounded-lg text-xs font-bold tracking-widest uppercase transition-all">
+              Book Appointment
+            </button>
+            <a href="https://maps.google.com/?q=LivArt+Salon+Kakkanad" target="_blank" rel="noopener noreferrer" class="border border-white/20 hover:bg-white/10 text-white px-6 py-3 rounded-lg text-xs font-bold tracking-widest uppercase transition-all flex items-center gap-1.5">
+              <span>Open Google Maps</span>
+              <span class="material-symbols-outlined text-[16px]">directions</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 h-[420px] rounded-3xl overflow-hidden shadow-xl border border-black/5 bg-surface-container">
+          <iframe 
+            src="https://maps.google.com/maps?q=Livart%20Salon%20-%20Best%20Beauty%20Parlour%20in%20Kakkanad&t=m&z=14&output=embed&iwloc=near" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            title="LivArt Salon Kakkanad Google Maps Location"
+            aria-label="LivArt Salon Kakkanad Google Maps Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+"""
+    html += render_footer()
+    
+    with open(os.path.join(BASE_DIR, "index.html"), "w") as f:
+        f.write(html)
+    print("✓ index.html built")
+
+if __name__ == "__main__":
+    build_homepage()

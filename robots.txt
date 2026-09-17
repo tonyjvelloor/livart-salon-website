@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-includes/
+Disallow: /aapaa/
+Disallow: /lp_business_gift
+
+Sitemap: https://livartsalon.com/sitemap.xml

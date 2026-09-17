@@ -1,0 +1,21 @@
+# LivArt Salon — Clean Redirection & Security Rules
+RewriteEngine On
+
+# Redirect /hair-works/ to /hair-styling/
+RewriteRule ^hair-works/?$ /hair-styling/ [R=301,L]
+
+# Return 410 Gone for known malicious spam URLs
+RewriteRule ^kto-vladelec-kosmolot.*$ - [G,L]
+RewriteRule ^kosmolot.*$ - [G,L]
+RewriteRule ^oprovergaem-mify.*$ - [G,L]
+RewriteRule ^chto-osobennogo.*$ - [G,L]
+RewriteRule ^aapaa.*$ - [G,L]
+RewriteRule ^lp_business_gift.*$ - [G,L]
+
+# Security Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

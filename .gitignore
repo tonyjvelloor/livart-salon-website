@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python bytecode & cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Scratch & temporary logs
+*.log

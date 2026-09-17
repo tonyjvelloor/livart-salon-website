@@ -1,0 +1,23 @@
+# 301 Permanent Redirects for Broken/Moved Links
+/hair-works/* /hair-styling/ 301
+/hair-works /hair-styling/ 301
+/services/livart-hair-straightening /services/livart-hair-straightening/ 301
+/services/loreal-glossy-hair-colouring /services/loreal-glossy-hair-colouring/ 301
+/services/loreal-lustrous-hair-spa /services/loreal-lustrous-hair-spa/ 301
+/services/livart-majestic-keratin-treatment /services/livart-majestic-keratin-treatment/ 301
+/services/skin-miracle-hydra-facial /services/skin-miracle-hydra-facial/ 301
+
+# 410 Gone for Russian/Ukrainian Gambling Spam & Injected Backdoors
+/kto-vladelec-kosmolot-obzor-sobstvennikov-kompanii/* / 410
+/kosmolot-kto-hozjain-informacija-o-sobstvennikah/* / 410
+/kosmolot-licenzija-jak-kompanija-stala-pershim/* / 410
+/kosmolot-ukraina-nadijnij-partner-derzhavi-v/* / 410
+/kosmolot-v-ukraine-lider-igornoj-industrii/* / 410
+/kosmolot-ua-pershij-licenzovanij-onlajn-operator/* / 410
+/oprovergaem-mify-pochemu-kosmolot-razvod/* / 410
+/kosmolot-ne-vyvodit-dengi-razveivaem-mif-o/* / 410
+/kosmolot-reklama-unikalnij-pidhid-do-medijnih/* / 410
+/chto-osobennogo-v-reklame-cosmolot-socialnaja/* / 410
+/kosmolot-otzyvy-sotrudnikov-razvitie-it-sektora-i/* / 410
+/aapaa/* / 410
+/lp_business_gift* / 410
