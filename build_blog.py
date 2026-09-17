@@ -549,7 +549,15 @@ def build_blog_system():
             "dateModified": "2026-09-17",
             "author": {
                 "@type": "Person",
-                "name": "Stephy Sebastian"
+                "name": "Stephy Sebastian",
+                "jobTitle": ["Founder & Creative Director", "Celebrity Hair & Makeup Artist", "Master Cosmetology Educator"],
+                "url": "https://livart.co.in/founder-makeup-academy/",
+                "sameAs": [
+                    "https://livart.co.in/founder-makeup-academy/",
+                    "https://businessperiscope.com/stephy-sebastian-founder-of-livart-beauty-academy/",
+                    "https://www.instagram.com/livart_salon/",
+                    "https://www.facebook.com/livartsalon/"
+                ]
             },
             "publisher": {
                 "@type": "Organization",
@@ -630,13 +638,28 @@ def build_blog_system():
 
       <!-- Author Card & Booking CTA Box -->
       <div class="mt-12 p-8 bg-surface-container-low rounded-3xl border border-black/5 flex flex-col sm:flex-row items-center gap-6">
-        <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian" class="w-20 h-20 rounded-full object-cover shadow-md shrink-0" />
+        <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon and LivArt Beauty Academy" class="w-20 h-20 rounded-full object-cover shadow-md shrink-0" />
         <div class="text-center sm:text-left">
-          <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze">Written by LivArt Founder</span>
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze">Written by LivArt Founder</span>
+            <span class="text-muted-slate text-xs hidden sm:inline">•</span>
+            <span class="text-[9px] uppercase tracking-wider font-semibold text-champagne-gold bg-obsidian-deep px-2 py-0.5 rounded">Former National Educator L'Oréal & Wella</span>
+          </div>
           <h4 class="font-serif-luxury text-xl font-bold text-obsidian-deep">Stephy Sebastian</h4>
-          <p class="text-xs text-gray-600 mt-1 leading-relaxed">
-            Founder & Master Artist at LivArt Salon & Makeup Studio Kakkanad, and mentor at LivArt Academy.
+          <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+            Founder & Master Artist at LivArt Salon Kakkanad, and founder of <a href="https://livart.co.in/" target="_blank" rel="noopener noreferrer" class="text-warm-bronze font-bold hover:underline">LivArt Beauty Academy (livart.co.in)</a>, affiliated with the Government of India B&WSSC.
           </p>
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 mt-3">
+            <a href="../academy/index.html" class="text-xs font-semibold text-champagne-gold hover:underline flex items-center gap-1">
+              <span>Explore LivArt Academy</span>
+              <span class="material-symbols-outlined text-[14px]">school</span>
+            </a>
+            <span class="text-gray-300">•</span>
+            <a href="https://livart.co.in/founder-makeup-academy/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-gray-600 hover:text-obsidian-deep flex items-center gap-1">
+              <span>Founder Story on livart.co.in</span>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -811,6 +834,7 @@ RewriteRule ^lp_business_gift.*$ - [G,L]
     all_urls = [
         ("/", "1.0"),
         ("/services/", "0.9"),
+        ("/academy/", "0.9"),
         ("/services/loreal-lustrous-hair-spa/", "0.9"),
         ("/services/livart-majestic-keratin-treatment/", "0.8"),
         ("/services/livart-hair-straightening/", "0.8"),

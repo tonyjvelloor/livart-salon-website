@@ -3,6 +3,7 @@ import json
 from generator import (
     BASE_DIR, SITE_NAME, BASE_URL, PHONE, PHONE_TEL, EMAIL, ADDRESS, HOURS,
     INSTAGRAM_HANDLE, INSTAGRAM_URL, FACEBOOK_URL, LOGO_URL,
+    ACADEMY_URL, ACADEMY_FOUNDER_URL, PRESS_FEATURE_URL,
     render_head, render_header, render_footer
 )
 
@@ -15,10 +16,32 @@ def ensure_dir(path):
 def build_about_page():
     ensure_dir(os.path.join(BASE_DIR, "about-us"))
     
+    extra_schema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About LivArt Salon & Beauty Academy",
+        "description": "Learn about LivArt Salon & Beauty Academy founded by Stephy Sebastian and Nipun Conso in Kakkanad, Kochi.",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Stephy Sebastian",
+            "jobTitle": ["Founder & Creative Director", "Celebrity Hair & Makeup Artist", "Master Beauty Educator"],
+            "url": ACADEMY_FOUNDER_URL,
+            "image": "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp",
+            "description": "Stephy Sebastian is a renowned hair stylist, bridal makeup artist, former national educator for L'Oréal Professionnel and Wella, and founder of LivArt Hair & Makeup Studio Kakkanad and LivArt Beauty Academy.",
+            "sameAs": [
+                ACADEMY_FOUNDER_URL,
+                PRESS_FEATURE_URL,
+                INSTAGRAM_URL,
+                FACEBOOK_URL
+            ]
+        }
+    }
+
     html = render_head(
-        title="About Us | LivArt Salon & Make-Up Studio Kakkanad Kochi",
-        description="Learn about LivArt Salon founded by Stephy Sebastian and Nipun Conso. World-class hair stylists, bridal makeup artists, and clinical skincare in Kakkanad, Kochi.",
+        title="About Us & Founder Stephy Sebastian | LivArt Salon Kakkanad Kochi",
+        description="Learn about LivArt Salon founded by Stephy Sebastian and Nipun Conso. Former nurse and L'Oréal national trainer curating world-class hair, bridal makeup, and beauty education in Kochi.",
         canonical_path="/about-us/",
+        extra_schema=extra_schema,
         root_prefix="../"
     )
     html += render_header(active_slug="about-us", root_prefix="../")
@@ -58,7 +81,7 @@ def build_about_page():
       <span class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase font-bold block mb-2">Our Heritage & Craft</span>
       <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-alabaster-cream mb-4">About LivArt Salon & Make-Up Studio</h1>
       <p class="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        Where passion meets mastery. Founded by Stephy Sebastian and Nipun Conso to establish Cochin's premier haute couture beauty studio.
+        Where passion meets mastery. Founded by Stephy Sebastian and Nipun Conso to establish Cochin's premier haute couture beauty studio and Government-affiliated academy.
       </p>
     </div>
   </section>
@@ -67,25 +90,39 @@ def build_about_page():
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
         <div class="lg:col-span-6">
-          <div class="rounded-3xl overflow-hidden shadow-2xl bg-obsidian-deep border border-black/10">
-            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian LivArt Founder" class="w-full h-full object-cover" />
+          <div class="rounded-3xl overflow-hidden shadow-2xl bg-obsidian-deep border border-black/10 relative">
+            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon & LivArt Beauty Academy Kakkanad" class="w-full h-full object-cover" />
+            <div class="absolute bottom-4 left-4 right-4 bg-obsidian-deep/85 backdrop-blur-md p-4 rounded-xl border border-white/10 text-alabaster-cream">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block">Founder Spotlight</span>
+              <span class="font-serif-luxury text-sm font-bold">Stephy Sebastian • Former National Trainer L'Oréal & Wella</span>
+            </div>
           </div>
         </div>
         <div class="lg:col-span-6">
-          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-semibold block mb-2">Our Genesis</span>
-          <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-obsidian-deep mb-6">Built on Artistry, Humanity & World-Class Standards</h2>
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-semibold block mb-2">Our Genesis & Heritage</span>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-obsidian-deep mb-6">Built on Artistry, Healthcare Ethics & World-Class Standards</h2>
           <p class="text-base text-gray-700 leading-relaxed mb-4">
-            LivArt Hair and Makeup Studio was established by <strong>Stephy Sebastian</strong> and <strong>Nipun Conso</strong> as a destination salon in Kakkanad that offers top-of-the-line hair, makeup & skin services, with a resolute focus on cutting-edge international techniques and unmatched customer hospitality.
+            LivArt Hair and Makeup Studio was established by <strong>Stephy Sebastian</strong> and <strong>Nipun Conso</strong> as a premier destination sanctuary in Kakkanad, Kochi. What sets LivArt apart is Stephy's extraordinary foundation: she worked for <strong>5 years as a professional healthcare nurse</strong> before pursuing her lifelong calling in hair and makeup artistry.
           </p>
           <p class="text-sm text-gray-600 leading-relaxed mb-4">
-            Having gained invaluable experience working with industry leaders for over a decade, our founder Stephy Sebastian specializes in looks that make you feel truly on top of the world. In 2021, she expanded her vision by launching the <strong>LivArt Academy</strong>, mentoring the next generation of hair and makeup professionals.
+            Her mother, hailing from Kuttanadu in Alappuzha, used to groom young village brides with deep love and care, sparking Stephy's early aesthetic passion. Her medical background instilled hospital-grade hygiene, scientific skin diagnostics, and gentle empathy into every LivArt treatment.
           </p>
-          <p class="text-sm text-gray-600 leading-relaxed mb-6">
-            We provide customized beauty services tailored to all skin tones and hair textures, ensuring that every transformation is authentic to your personal essence.
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Stephy went on to head training at a national level for global beauty titans <strong>L'Oréal Professionnel and Wella</strong>, mentoring hundreds of elite stylists across India. In 2021, she expanded that educational commitment by founding <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="text-warm-bronze font-bold hover:underline">LivArt Beauty Academy (livart.co.in)</a>, affiliated with the <strong>B&WSSC (Beauty & Wellness Sector Skill Council)</strong> of India.
           </p>
-          <button data-open-booking class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-6 py-3 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-md">
-            Consult Our Team
-          </button>
+          <div class="flex flex-wrap items-center gap-3 pt-2 mb-4">
+            <button data-open-booking class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-6 py-3 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-md">
+              Consult Our Team
+            </button>
+            <a href="../academy/index.html" class="bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep px-5 py-3 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-md flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">school</span>
+              <span>Beauty Academy Hub</span>
+            </a>
+            <a href="{ACADEMY_FOUNDER_URL}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-muted-slate hover:text-obsidian-deep px-3 py-2 border border-black/10 rounded-lg transition-colors flex items-center gap-1">
+              <span>Read Bio on livart.co.in</span>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -114,10 +151,32 @@ def build_about_page():
 # -------------------------------------------------------------
 def build_teams_page():
     ensure_dir(os.path.join(BASE_DIR, "teams"))
+    
+    extra_schema = {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "name": "Meet Stephy Sebastian & Master Artists at LivArt",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Stephy Sebastian",
+            "jobTitle": ["Founder & Creative Director", "Celebrity Hair & Makeup Artist", "Master Cosmetology Educator"],
+            "url": ACADEMY_FOUNDER_URL,
+            "image": "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp",
+            "description": "Stephy Sebastian is a celebrated celebrity hair stylist, bridal makeup artist, former national educator for L'Oréal Professionnel and Wella, and founder of LivArt Hair & Makeup Studio and LivArt Beauty Academy.",
+            "sameAs": [
+                ACADEMY_FOUNDER_URL,
+                PRESS_FEATURE_URL,
+                INSTAGRAM_URL,
+                FACEBOOK_URL
+            ]
+        }
+    }
+
     html = render_head(
-        title="Meet Our Founder & Stylists | LivArt Salon Kakkanad",
-        description="Get to know Stephy Sebastian, founder of LivArt Hair & Makeup Studio and LivArt Academy. Former nurse turned master stylist curating luxury beauty in Kochi.",
+        title="Meet Stephy Sebastian & Master Artists | LivArt Salon Kakkanad",
+        description="Get to know Stephy Sebastian, founder of LivArt Hair & Makeup Studio and LivArt Academy. Former nurse, L'Oréal national trainer, and celebrity stylist in Kochi.",
         canonical_path="/teams/",
+        extra_schema=extra_schema,
         root_prefix="../"
     )
     html += render_header(active_slug="about-us", root_prefix="../")
@@ -139,32 +198,38 @@ def build_teams_page():
       <div class="bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-black/5 shadow-md grid grid-cols-1 md:grid-cols-12 gap-10 items-center mb-16">
         <div class="md:col-span-5">
           <div class="rounded-2xl overflow-hidden shadow-xl bg-obsidian-deep">
-            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian Livart Founder" class="w-full h-full object-cover" />
+            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon & Beauty Academy" class="w-full h-full object-cover" />
           </div>
         </div>
         <div class="md:col-span-7">
           <span class="text-xs font-bold uppercase tracking-widest text-warm-bronze block mb-1">Founder & Creative Director</span>
-          <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep mb-4">Stephy Sebastian</h2>
+          <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep mb-2">Stephy Sebastian</h2>
+          <span class="text-xs font-semibold text-champagne-gold bg-obsidian-deep px-2.5 py-0.5 rounded-full inline-block mb-4">Former National Educator L'Oréal & Wella</span>
+          
           <div class="prose text-sm text-gray-700 space-y-3 leading-relaxed">
             <p>
-              Stephy serves as the visionary pillar of LivArt Hair and Makeup Studio, portraying the qualities of a true stylist curated from genuine passion and love for the artistry. As a former nurse, Stephy served in demanding medical conditions that forged her unmatched resilience and compassion—traits that make her an inspiration to all who meet her.
+              Stephy serves as the visionary pillar of LivArt Hair and Makeup Studio, portraying the qualities of a true stylist curated from genuine passion and love for the artistry. As a former nurse of 5 years, Stephy served in demanding medical conditions that forged her unmatched resilience and compassion—traits that make her an inspiration to all who meet her.
             </p>
             <p>
-              Her transition from nursing to hair and makeup artistry was fueled by a lifelong commitment to pursuing what she loves most. Stephy completed her master education under the industry's finest mentors and has spent over a decade honing her craft.
+              Her transition from healthcare to hair and makeup artistry was fueled by a lifelong commitment to pursuing what she loves most. Stephy completed her master education under the industry's finest mentors and headed national technical training for global cosmetic giants <strong>L'Oréal Professionnel and Wella</strong>.
             </p>
             <p>
-              In 2021, she established the <strong>LivArt Academy</strong>, where she has successfully trained hundreds of emerging beauty professionals. Stephy's mother taught her to give back to the younger generation, and that spirit continues to guide LivArt's mentorship ethos today.
+              In 2021, she established the <strong>LivArt Beauty Academy (<a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="underline text-obsidian-deep font-semibold">livart.co.in</a>)</strong>, affiliated with the <strong>B&WSSC (Beauty and Wellness Sector Skill Council)</strong> of India, training hundreds of emerging beauty professionals with hands-on salon floor apprenticeship.
             </p>
             <p class="italic text-obsidian-deep font-serif-luxury text-base pt-2">
-              “In other words, Stephy is a character who gets things done, fulfills her dreams, and LIVes the ART.”
+              “If your mind can think it, you can achieve it. If I can, you can too.”
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-black/5 flex gap-4">
+          <div class="mt-6 pt-4 border-t border-black/5 flex flex-wrap gap-3">
             <button data-open-booking data-service="Personal Consultation with Founder Stephy Sebastian" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all">
               Book with Stephy
             </button>
-            <a href="{INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" class="border border-black/10 hover:bg-black/5 px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-obsidian-deep transition-all flex items-center gap-1.5">
-              <span>View On Instagram</span>
+            <a href="../academy/index.html" class="bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1">
+              <span class="material-symbols-outlined text-[15px]">school</span>
+              <span>Beauty Academy</span>
+            </a>
+            <a href="{PRESS_FEATURE_URL}" target="_blank" rel="noopener noreferrer" class="border border-black/10 hover:bg-black/5 px-4 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-obsidian-deep transition-all flex items-center gap-1.5">
+              <span>Business Periscope Feature</span>
               <span class="material-symbols-outlined text-[15px]">open_in_new</span>
             </a>
           </div>
@@ -750,6 +815,560 @@ def build_contact_page():
         f.write(html)
     print("✓ contact-us/index.html built")
 
+# -------------------------------------------------------------
+# 9. LIVART BEAUTY ACADEMY PAGE (/academy/)
+# -------------------------------------------------------------
+def build_academy_page():
+    ensure_dir(os.path.join(BASE_DIR, "academy"))
+
+    extra_schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "EducationalOrganization",
+                "@id": f"{ACADEMY_URL}/#academy",
+                "name": "LivArt Beauty Academy",
+                "url": ACADEMY_URL,
+                "logo": LOGO_URL,
+                "description": "Government-approved beauty and cosmetology academy affiliated with B&WSSC (Beauty & Wellness Sector Skill Council of India), offering professional diplomas in cosmetology, bridal makeup, hair styling, and clinical skincare aesthetics.",
+                "telephone": PHONE,
+                "email": EMAIL,
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "2nd Floor, Anchorage Business Center, Seaport - Airport Road, NGO Quarters – Mavelipuram Rd",
+                    "addressLocality": "Kakkanad, Kochi",
+                    "addressRegion": "Kerala",
+                    "postalCode": "682030",
+                    "addressCountry": "IN"
+                },
+                "founder": {
+                    "@type": "Person",
+                    "name": "Stephy Sebastian",
+                    "jobTitle": ["Founder & Creative Director", "Celebrity Hair & Makeup Artist", "Master Cosmetology Educator"],
+                    "url": ACADEMY_FOUNDER_URL,
+                    "sameAs": [
+                        ACADEMY_FOUNDER_URL,
+                        PRESS_FEATURE_URL,
+                        INSTAGRAM_URL,
+                        FACEBOOK_URL
+                    ]
+                },
+                "sameAs": [
+                    ACADEMY_URL,
+                    PRESS_FEATURE_URL
+                ]
+            },
+            {
+                "@type": "Course",
+                "name": "Diploma in Cosmetology (Comprehensive Hair, Skin & Makeup)",
+                "description": "Comprehensive 6-month government-accredited beautician diploma covering hair designing, clinical aesthetics, HD bridal makeup, and salon management with live salon floor practice.",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "LivArt Beauty Academy",
+                    "sameAs": ACADEMY_URL
+                },
+                "url": f"{ACADEMY_URL}/certification-course-in-cosmetology/"
+            },
+            {
+                "@type": "Course",
+                "name": "Professional Bridal Makeup Course",
+                "description": "Intensive 2-month bridal makeup certification covering 4K HD foundation, airbrush artistry, traditional and contemporary South Indian bridal looks, and couture saree draping.",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "LivArt Beauty Academy",
+                    "sameAs": ACADEMY_URL
+                },
+                "url": f"{ACADEMY_URL}/bridal-makeup-course/"
+            },
+            {
+                "@type": "Course",
+                "name": "Professional Hair Styling & Haircuts Course",
+                "description": "Advanced 4-month hair styling and cutting program teaching geometric precision cuts, balayage coloring, keratin, hair botox, and nanoplastia.",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "LivArt Beauty Academy",
+                    "sameAs": ACADEMY_URL
+                },
+                "url": f"{ACADEMY_URL}/hair-styling-course/"
+            },
+            {
+                "@type": "Course",
+                "name": "Skin Care & Advanced Aesthetics Course",
+                "description": "4-month clinical dermal aesthetics course training students in Hydra facials, chemical peels, ultrasonic skin treatments, and acne solutions.",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "LivArt Beauty Academy",
+                    "sameAs": ACADEMY_URL
+                },
+                "url": f"{ACADEMY_URL}/skin-care-course/"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL + "/"},
+                    {"@type": "ListItem", "position": 2, "name": "LivArt Beauty Academy", "item": BASE_URL + "/academy/"}
+                ]
+            }
+        ]
+    }
+
+    html = render_head(
+        title="LivArt Beauty Academy Kakkanad Kochi | Govt. Approved Beautician & Cosmetology Courses",
+        description="Kerala's premier beauty academy in Kakkanad, Kochi affiliated with B&WSSC. Professional diplomas in Cosmetology, Bridal Makeup, Hair Styling, and Skincare mentored by celebrity artist Stephy Sebastian.",
+        canonical_path="/academy/",
+        extra_schema=extra_schema,
+        root_prefix="../"
+    )
+    html += render_header(active_slug="academy", root_prefix="../")
+
+    html += f"""
+<main class="flex-grow">
+  <!-- Breadcrumb Navigation -->
+  <div class="bg-surface-container py-3 border-b border-black/5">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-xs text-muted-slate flex items-center gap-2">
+      <a href="../index.html" class="hover:text-obsidian-deep transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-obsidian-deep font-semibold">LivArt Beauty Academy (Govt. Affiliated)</span>
+    </div>
+  </div>
+
+  <!-- Hero Sanctuary -->
+  <section class="relative w-full bg-obsidian-deep text-alabaster-cream pt-16 pb-20 overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-champagne-gold/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-48 w-[500px] h-[500px] rounded-full bg-warm-bronze/10 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Badge Row -->
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-champagne-gold text-obsidian-deep rounded-full text-[11px] font-bold tracking-widest uppercase">
+          <span class="material-symbols-outlined text-[14px]">verified</span>
+          Affiliated with B&WSSC • Skill India
+        </span>
+        <span class="hidden sm:inline text-muted-slate">•</span>
+        <span class="text-metallic-gold-light text-xs tracking-wider">Govt. Recognized Beautician & Cosmetology Diplomas in Kakkanad, Kochi</span>
+      </div>
+
+      <!-- Hero Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 flex flex-col items-start">
+          <p class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase mb-2 font-semibold">
+            Official Academy Portal: <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">livart.co.in ↗</a>
+          </p>
+          <h1 class="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl text-alabaster-cream leading-[1.15] mb-6 font-normal">
+            LivArt Beauty Academy <br />
+            <span class="italic text-gold-gradient">Where Passion Becomes Mastery.</span>
+          </h1>
+          <p class="text-base sm:text-lg text-gray-300 max-w-xl mb-6 leading-relaxed">
+            Train under Master Stylist & Celebrity Artist <strong>Stephy Sebastian</strong> (former National Educator for L'Oréal Professionnel & Wella). Experience 100% live salon floor apprenticeship, master international chemical formulations, and earn Government-approved certifications valid across India and the Gulf.
+          </p>
+
+          <div class="bg-obsidian-surface/90 border-l-2 border-champagne-gold p-4 sm:p-5 rounded-r-xl mb-8 max-w-xl shadow-lg">
+            <p class="font-serif-luxury text-base sm:text-lg text-alabaster-cream italic">
+              “If your mind can think it, you can achieve it. If I can, you can too.”
+            </p>
+            <span class="block mt-2 font-label-caps text-[11px] text-champagne-gold tracking-widest uppercase">
+              — Stephy Sebastian, Founder & Creative Director
+            </span>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+            <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep px-7 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase shadow-xl transition-all">
+              <span>Visit livart.co.in Official Site</span>
+              <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+            </a>
+            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20would%20like%20to%20inquire%20about%20your%20beautician%20courses" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase transition-all shadow-lg">
+              <span class="material-symbols-outlined text-[16px]">chat</span>
+              <span>WhatsApp Admission Desk</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-3 gap-6 pt-10 mt-6 border-t border-white/10 w-full max-w-xl">
+            <div>
+              <span class="font-serif-luxury text-2xl sm:text-3xl font-bold text-champagne-gold block">100%</span>
+              <span class="text-xs text-muted-slate uppercase tracking-wider">Live Model Practical</span>
+            </div>
+            <div>
+              <span class="font-serif-luxury text-2xl sm:text-3xl font-bold text-champagne-gold block">B&WSSC</span>
+              <span class="text-xs text-muted-slate uppercase tracking-wider">Govt. Affiliation</span>
+            </div>
+            <div>
+              <span class="font-serif-luxury text-2xl sm:text-3xl font-bold text-champagne-gold block">Gulf & UK</span>
+              <span class="text-xs text-muted-slate uppercase tracking-wider">Valid Certification</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-obsidian-surface">
+            <img src="https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp" alt="Stephy Sebastian - Founder of LivArt Salon and LivArt Beauty Academy Kakkanad" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block mb-1">Master Cosmetology Educator</span>
+              <h3 class="font-serif-luxury text-2xl font-bold text-white mb-2">Stephy Sebastian</h3>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Former National Trainer for L'Oréal Professionnel & Wella. 5 years of healthcare nursing background shaping clinical hygiene excellence.
+              </p>
+              <div class="flex items-center gap-3">
+                <a href="{ACADEMY_FOUNDER_URL}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-champagne-gold hover:underline flex items-center gap-1">
+                  <span>Read Full Bio on livart.co.in</span>
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B&WSSC Government Credential Section -->
+  <section class="py-16 bg-surface-bright border-b border-black/5">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-4 bg-obsidian-deep text-alabaster-cream p-8 rounded-3xl shadow-xl border border-champagne-gold/20">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block mb-2">National Skill Qualification</span>
+          <h3 class="font-serif-luxury text-2xl font-bold text-white mb-4">Why B&WSSC Affiliation Matters</h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-4">
+            LivArt Beauty Academy is proud to offer government-approved beautician and cosmetology courses affiliated with the <strong>Beauty and Wellness Sector Skill Council (B&WSSC)</strong> under the Ministry of Skill Development and Entrepreneurship (MSDE), Government of India.
+          </p>
+          <div class="space-y-2 text-xs text-metallic-gold-light border-t border-white/10 pt-4">
+            <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span> Legally licensed salon entrepreneurship in India</p>
+            <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span> Recognized for Gulf employment visas (UAE, Qatar, Saudi)</p>
+            <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span> Credit transfer eligibility for UK, Canada & Europe</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-surface-container-low p-6 rounded-2xl border border-black/5 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-champagne-gold/15 text-warm-bronze flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-[24px]">school</span>
+              </div>
+              <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-2">Govt. Recognized Certification</h4>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Diplomas and certificates issued carry Government of India seals, giving your resume instant credibility across domestic and global recruiters.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-warm-bronze pt-4 block">• Certified Credibility</span>
+          </div>
+
+          <div class="bg-surface-container-low p-6 rounded-2xl border border-black/5 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-champagne-gold/15 text-warm-bronze flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-[24px]">flight_takeoff</span>
+              </div>
+              <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-2">Gulf & Global Placement</h4>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                High demand in top salons across Dubai, Abu Dhabi, Doha, and Muscat. We assist in preparing portfolio decks and international interview prep.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-warm-bronze pt-4 block">• Global Mobility</span>
+          </div>
+
+          <div class="bg-surface-container-low p-6 rounded-2xl border border-black/5 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-champagne-gold/15 text-warm-bronze flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-[24px]">storefront</span>
+              </div>
+              <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-2">Salon Entrepreneurship</h4>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Learn how to launch your own beauty salon, navigate business registration, vendor sourcing, staff management, and client retention strategies.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-warm-bronze pt-4 block">• Business Mastery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Courses Catalog -->
+  <section class="py-20 bg-ivory-surface" id="courses">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="font-label-caps text-xs text-warm-bronze tracking-[0.25em] uppercase font-bold block mb-2">
+          Professional Course Catalog
+        </span>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl text-obsidian-deep font-bold mb-4">
+          Government Affiliated Diplomas & Masterclasses
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+          From full 6-month Cosmetology Diplomas to specialized Bridal Makeup and Hair Texturing certifications. Full curriculum details available at <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="text-warm-bronze font-bold hover:underline">livart.co.in</a>.
+        </p>
+      </div>
+
+      <!-- Course Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Course 1: Cosmetology -->
+        <div class="bg-surface-bright rounded-3xl p-8 border border-black/5 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4 pb-4 border-b border-black/5">
+              <span class="text-[11px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-3 py-1 rounded-full">Flagship Program</span>
+              <span class="text-xs font-mono text-gray-500 font-semibold">6 Months • Full Diploma</span>
+            </div>
+            <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep mb-3">
+              Diploma in Cosmetology
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Our all-inclusive master diploma designed for candidates who aspire to become complete salon professionals or salon owners. Covers the entire spectrum of hair cutting, hair coloring, clinical skin aesthetics, HD bridal makeup, and business administration.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-700 mb-6 bg-surface-container-low p-4 rounded-xl">
+              <div>
+                <strong class="text-obsidian-deep block mb-1">Hair Modules:</strong>
+                <p>Precision Haircuts, Balayage, Keratin, Hair Botox, Scalp SPA</p>
+              </div>
+              <div>
+                <strong class="text-obsidian-deep block mb-1">Skin & Makeup:</strong>
+                <p>Hydra Facial, Chemical Peels, Bridal HD Makeup, Saree Draping</p>
+              </div>
+            </div>
+
+            <ul class="text-xs text-gray-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> Govt. B&WSSC Affiliated Certification</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> 100% Practical Training on LivArt Salon Floor</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> Complete Professional Tool Kit & Product Kit Included</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-black/5">
+            <a href="{ACADEMY_URL}/certification-course-in-cosmetology/" target="_blank" rel="noopener noreferrer" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
+              <span>View Full Syllabus on livart.co.in</span>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </a>
+            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Diploma%20in%20Cosmetology" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
+              <span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp Inquiries
+            </a>
+          </div>
+        </div>
+
+        <!-- Course 2: Bridal Makeup -->
+        <div class="bg-surface-bright rounded-3xl p-8 border border-black/5 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4 pb-4 border-b border-black/5">
+              <span class="text-[11px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-3 py-1 rounded-full">Artistry Masterclass</span>
+              <span class="text-xs font-mono text-gray-500 font-semibold">2 Months • Intensive</span>
+            </div>
+            <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep mb-3">
+              Professional Bridal Makeup Course
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Mentored directly by Stephy Sebastian. Master 4K Ultra HD cameras and lighting aesthetics, high-definition airbrush foundation application, traditional Kerala Nair, Syrian Christian, and Muslim bridal looks, and modern couture fusion styling.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-700 mb-6 bg-surface-container-low p-4 rounded-xl">
+              <div>
+                <strong class="text-obsidian-deep block mb-1">Techniques:</strong>
+                <p>Airbrush, Cut-Crease Eye Art, Contour & Strobing, Lash Applications</p>
+              </div>
+              <div>
+                <strong class="text-obsidian-deep block mb-1">Bridal Protocols:</strong>
+                <p>Traditional & Modern Saree Draping, Veil Fixing, Big-Day Vanity</p>
+              </div>
+            </div>
+
+            <ul class="text-xs text-gray-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> Stephy Sebastian Personal Feedback & Mentorship</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> Professional Model Photoshoot for Your Social Portfolio</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> Bridal Client Communication & Pricing Strategy</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-black/5">
+            <a href="{ACADEMY_URL}/bridal-makeup-course/" target="_blank" rel="noopener noreferrer" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
+              <span>View Full Syllabus on livart.co.in</span>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </a>
+            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Bridal%20Makeup%20Course" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
+              <span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp Inquiries
+            </a>
+          </div>
+        </div>
+
+        <!-- Course 3: Hair Styling & Cuts -->
+        <div class="bg-surface-bright rounded-3xl p-8 border border-black/5 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4 pb-4 border-b border-black/5">
+              <span class="text-[11px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-3 py-1 rounded-full">Hair Science</span>
+              <span class="text-xs font-mono text-gray-500 font-semibold">4 Months • Certified</span>
+            </div>
+            <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep mb-3">
+              Professional Hair Styling & Haircuts
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Learn advanced hair cutting techniques and color formulations benchmarked to international L'Oréal Professionnel and Wella protocols. Covers precision shears handling, sectioning geometry, creative balayage, hair botox, and straightening treatments.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-700 mb-6 bg-surface-container-low p-4 rounded-xl">
+              <div>
+                <strong class="text-obsidian-deep block mb-1">Haircuts & Texturing:</strong>
+                <p>Bobs, Pixie, Graduated Layers, Texturizing Shears, Fade Art</p>
+              </div>
+              <div>
+                <strong class="text-obsidian-deep block mb-1">Color & Chemistry:</strong>
+                <p>Global Colour, Foilyage, Root Smudge, Neutralizing Undertones</p>
+              </div>
+            </div>
+
+            <ul class="text-xs text-gray-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> International Brand Standard Protocols (L'Oréal & Wella)</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> Hands-on Chemical Texturing (Keratin, Botox, Straightening)</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> High-Demand Skill for Salons across India & Gulf</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-black/5">
+            <a href="{ACADEMY_URL}/hair-styling-course/" target="_blank" rel="noopener noreferrer" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
+              <span>View Full Syllabus on livart.co.in</span>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </a>
+            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Hair%20Styling%20Course" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
+              <span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp Inquiries
+            </a>
+          </div>
+        </div>
+
+        <!-- Course 4: Skin Care & Aesthetics -->
+        <div class="bg-surface-bright rounded-3xl p-8 border border-black/5 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4 pb-4 border-b border-black/5">
+              <span class="text-[11px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-3 py-1 rounded-full">Dermal Aesthetics</span>
+              <span class="text-xs font-mono text-gray-500 font-semibold">4 Months • Certified</span>
+            </div>
+            <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep mb-3">
+              Skin Care & Advanced Aesthetics
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              A comprehensive clinical aesthetic curriculum rooted in Stephy Sebastian's medical nursing principles. Train on advanced aesthetic machines, Hydra facials, ultrasonic extractions, enzyme peeling, and derma care for hyperpigmentation and acne.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-700 mb-6 bg-surface-container-low p-4 rounded-xl">
+              <div>
+                <strong class="text-obsidian-deep block mb-1">Clinical Skin Science:</strong>
+                <p>Fitzpatrick Skin Types, Dermal Layers, Acne Pathologies, De-Tan</p>
+              </div>
+              <div>
+                <strong class="text-obsidian-deep block mb-1">Machine Handling:</strong>
+                <p>Hydra Vacuum Systems, High Frequency, Galvanic, Ultrasonic Scrubber</p>
+              </div>
+            </div>
+
+            <ul class="text-xs text-gray-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> Hospital-Grade Clinical Sanitization & Safety Ethics</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> Training with Cheryl's Cosmeceuticals & Dermalogica</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-emerald-600">verified</span> Practical Diagnosis on Live Clients at Kakkanad</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-black/5">
+            <a href="{ACADEMY_URL}/skin-care-course/" target="_blank" rel="noopener noreferrer" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
+              <span>View Full Syllabus on livart.co.in</span>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </a>
+            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Skin%20Care%20Course" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
+              <span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp Inquiries
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The LivArt Advantage -->
+  <section class="py-20 bg-surface-bright">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="font-label-caps text-xs text-warm-bronze tracking-[0.25em] uppercase font-bold block mb-2">The Finishing Edge</span>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-obsidian-deep">Why Study at LivArt Beauty Academy?</h2>
+        <p class="text-xs text-muted-slate mt-2">Discover how our active salon floor pedagogy accelerates your career beyond theory.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-surface-container-low p-6 rounded-2xl border border-black/5">
+          <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[24px]">group_work</span>
+          </div>
+          <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-2">Active Salon Floor</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Students do not just practice on dummy heads. You assist senior stylists on genuine salon clients inside LivArt Kakkanad, learning real client pressure, handling, and bedside manner.
+          </p>
+        </div>
+
+        <div class="bg-surface-container-low p-6 rounded-2xl border border-black/5">
+          <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[24px]">verified_user</span>
+          </div>
+          <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-2">Clinical Discipline</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Founded by a former healthcare nurse, LivArt trains you in clinical-grade disinfection, scalp pathology identification, and safe chemical texturing practices.
+          </p>
+        </div>
+
+        <div class="bg-surface-container-low p-6 rounded-2xl border border-black/5">
+          <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[24px]">photo_camera</span>
+          </div>
+          <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-2">Portfolio Building</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Graduates leave with an enviable Instagram-ready digital portfolio of professional photoshoots showcasing their hair transformations and bridal looks.
+          </p>
+        </div>
+
+        <div class="bg-surface-container-low p-6 rounded-2xl border border-black/5">
+          <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[24px]">work</span>
+          </div>
+          <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-2">100% Placement Support</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Strong alumni network across premium salons in Kochi, Bangalore, Chennai, and Gulf countries. Many graduates also open thriving boutique salons.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admission & Contact CTA -->
+  <section class="py-20 bg-obsidian-deep text-alabaster-cream relative overflow-hidden">
+    <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-obsidian-surface border border-champagne-gold/30 rounded-3xl p-8 sm:p-12 text-center">
+        <span class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase font-bold block mb-2">
+          New Batch Admissions Open
+        </span>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-white mb-4">
+          Begin Your Cosmetology Career Today
+        </h2>
+        <p class="text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
+          Limited seats per batch to guarantee personal mentorship by Stephy Sebastian and senior educators. Visit our campus at Anchorage Business Center, Kakkanad or reach out directly.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep px-8 py-3.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-xl flex items-center gap-2">
+            <span>Visit Academy Portal (livart.co.in)</span>
+            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+          </a>
+          <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20would%20like%20to%20apply%20for%20the%20upcoming%20batch" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white px-7 py-3.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-xl flex items-center gap-2">
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>WhatsApp Admissions (+91 70120 59591)</span>
+          </a>
+          <a href="tel:{PHONE_TEL}" class="border border-white/20 hover:border-white text-white px-6 py-3.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all">
+            Direct Call Desk
+          </a>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-white/10 text-xs text-gray-400">
+          <p><strong>Campus Address:</strong> 2nd Floor, Anchorage Business Center, Seaport-Airport Road, Kakkanad, Kochi, Kerala 682030</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+"""
+    html += render_footer(root_prefix="../")
+    with open(os.path.join(BASE_DIR, "academy", "index.html"), "w") as f:
+        f.write(html)
+    print("✓ academy/index.html built")
+
 if __name__ == "__main__":
     build_about_page()
     build_teams_page()
@@ -759,3 +1378,5 @@ if __name__ == "__main__":
     build_packages_page()
     build_gallery_page()
     build_contact_page()
+    build_academy_page()
+

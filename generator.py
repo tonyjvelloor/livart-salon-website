@@ -17,9 +17,13 @@ INSTAGRAM_URL = "https://www.instagram.com/Livart_salon/"
 FACEBOOK_URL = "https://www.facebook.com/livartsalon/"
 LOGO_URL = "https://livartsalon.com/wp-content/uploads/2022/10/logo1.jpg"
 
+ACADEMY_URL = "https://livart.co.in"
+ACADEMY_FOUNDER_URL = "https://livart.co.in/founder-makeup-academy/"
+PRESS_FEATURE_URL = "https://businessperiscope.com/stephy-sebastian-founder-of-livart-beauty-academy/"
+
 LOCAL_BUSINESS_SCHEMA = {
     "@context": "https://schema.org",
-    "@type": ["HairSalon", "BeautySalon"],
+    "@type": ["HairSalon", "BeautySalon", "HealthAndBeautyBusiness"],
     "name": "LivArt Salon & Make-Up Studio",
     "image": LOGO_URL,
     "@id": "https://livartsalon.com/#salon",
@@ -56,8 +60,43 @@ LOCAL_BUSINESS_SCHEMA = {
     ],
     "sameAs": [
         INSTAGRAM_URL,
-        FACEBOOK_URL
+        FACEBOOK_URL,
+        ACADEMY_URL,
+        ACADEMY_FOUNDER_URL,
+        PRESS_FEATURE_URL
     ],
+    "founder": {
+        "@type": "Person",
+        "name": "Stephy Sebastian",
+        "jobTitle": ["Founder & Creative Director", "Celebrity Hair & Makeup Artist", "Master Cosmetology Educator"],
+        "url": ACADEMY_FOUNDER_URL,
+        "image": "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp",
+        "description": "Stephy Sebastian is a celebrated celebrity hair stylist, bridal makeup artist, former national educator for L'Oréal Professionnel and Wella, and founder of LivArt Hair & Makeup Studio and LivArt Beauty Academy.",
+        "sameAs": [
+            ACADEMY_FOUNDER_URL,
+            PRESS_FEATURE_URL,
+            INSTAGRAM_URL,
+            FACEBOOK_URL
+        ],
+        "knowsAbout": [
+            "Haute Couture Hair Styling",
+            "HD Bridal Makeup Artistry",
+            "Cosmetology & Aesthetic Education",
+            "Balayage & Advanced Hair Color Correction",
+            "Hair Botox & Keratin Rejuvenation",
+            "Clinical Skincare Aesthetics"
+        ]
+    },
+    "subOrganization": {
+        "@type": "EducationalOrganization",
+        "name": "LivArt Beauty Academy",
+        "url": ACADEMY_URL,
+        "description": "Government-affiliated beauty and cosmetology academy accredited with B&WSSC (Beauty & Wellness Sector Skill Council of India), offering professional diplomas in cosmetology, bridal makeup, hair styling, and aesthetic skincare.",
+        "sameAs": [
+            ACADEMY_URL,
+            PRESS_FEATURE_URL
+        ]
+    },
     "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -158,6 +197,7 @@ def render_header(active_slug="", root_prefix=""):
         ("Skincare", f"{root_prefix}skin-care/index.html", "skin-care"),
         ("Packages", f"{root_prefix}packages/index.html", "packages"),
         ("Instagram & Gallery", f"{root_prefix}gallery/index.html", "gallery"),
+        ("Academy", f"{root_prefix}academy/index.html", "academy"),
         ("About & Founder", f"{root_prefix}about-us/index.html", "about-us"),
         ("Blog", f"{root_prefix}blog/index.html", "blog"),
         ("Contact", f"{root_prefix}contact-us/index.html", "contact-us")
@@ -167,19 +207,25 @@ def render_header(active_slug="", root_prefix=""):
     for label, url, slug in nav_links:
         is_active = (active_slug == slug) or (slug == "" and active_slug == "home")
         active_cls = "text-champagne-gold font-bold" if is_active else "text-muted-slate hover:text-obsidian-deep"
-        links_html += f'<a href="{url}" class="font-body-sm text-[13px] tracking-wide transition-colors {active_cls}">{label}</a>\n'
+        badge = ""
+        if slug == "academy":
+            badge = '<span class="ml-1 text-[9px] uppercase tracking-widest bg-champagne-gold/20 text-warm-bronze font-bold px-1.5 py-0.5 rounded">Govt Affiliated</span>'
+        links_html += f'<a href="{url}" class="font-body-sm text-[12.5px] tracking-wide transition-colors flex items-center {active_cls}">{label}{badge}</a>\n'
 
     drawer_links_html = ""
     for label, url, slug in nav_links:
         is_active = (active_slug == slug) or (slug == "" and active_slug == "home")
         active_cls = "text-champagne-gold font-bold bg-obsidian-surface/60" if is_active else "text-alabaster-cream hover:text-champagne-gold"
-        drawer_links_html += f'<a href="{url}" class="block px-4 py-3 rounded-lg text-sm tracking-wider uppercase {active_cls} transition-colors">{label}</a>\n'
+        badge = ""
+        if slug == "academy":
+            badge = '<span class="ml-2 text-[9px] bg-champagne-gold text-obsidian-deep font-bold px-1.5 py-0.5 rounded">B&WSSC</span>'
+        drawer_links_html += f'<a href="{url}" class="flex items-center justify-between px-4 py-3 rounded-lg text-sm tracking-wider uppercase {active_cls} transition-colors"><span>{label}</span>{badge}</a>\n'
 
     return f"""
 <!-- Luxury Top Announcement Ticker -->
 <div class="bg-obsidian-deep text-metallic-gold-light py-2 px-4 text-center font-label-caps text-[11px] tracking-widest flex items-center justify-center gap-2 border-b border-white/5 relative z-50">
   <span class="inline-block w-2 h-2 rounded-full bg-champagne-gold animate-pulse"></span>
-  <span>Exclusive Atelier Offer: De-Tan + Skin Miracle Whitening Combo <strong>Rs. 2,499</strong> | Kakkanad, Kochi | Call <a href="tel:{PHONE_TEL}" class="underline hover:text-white">{PHONE}</a></span>
+  <span>Exclusive Atelier Offer: De-Tan + Skin Miracle Whitening Combo <strong>Rs. 2,499</strong> | Beautician Courses Affiliated with B&WSSC at <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="underline text-champagne-gold hover:text-white">LivArt Academy (livart.co.in)</a> | Call <a href="tel:{PHONE_TEL}" class="underline hover:text-white">{PHONE}</a></span>
 </div>
 
 <!-- Main Sticky Header -->
@@ -195,12 +241,12 @@ def render_header(active_slug="", root_prefix=""):
     </a>
 
     <!-- Desktop Navigation Menu -->
-    <nav class="hidden xl:flex items-center gap-6">
+    <nav class="hidden xl:flex items-center gap-4 2xl:gap-5">
       {links_html}
     </nav>
 
     <!-- Header Actions -->
-    <div class="flex items-center gap-3 shrink-0">
+    <div class="flex items-center gap-2.5 shrink-0">
       <a href="tel:{PHONE_TEL}" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-obsidian-deep hover:text-warm-bronze transition-colors px-3 py-1.5 rounded-md border border-black/10">
         <span class="material-symbols-outlined text-[16px] text-champagne-gold">call</span>
         <span>{PHONE}</span>
@@ -209,7 +255,7 @@ def render_header(active_slug="", root_prefix=""):
         <span class="material-symbols-outlined text-[16px] text-emerald-600">chat</span>
         <span>WhatsApp</span>
       </a>
-      <button data-open-booking class="bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep px-4 py-2 rounded-lg font-label-caps text-[11px] font-bold tracking-widest uppercase transition-all shadow-md">
+      <button data-open-booking class="bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep px-3.5 py-2 rounded-lg font-label-caps text-[11px] font-bold tracking-widest uppercase transition-all shadow-md">
         Book Appointment
       </button>
       
@@ -243,6 +289,9 @@ def render_header(active_slug="", root_prefix=""):
     <a href="tel:{PHONE_TEL}" class="flex items-center justify-center gap-2 py-2.5 rounded-lg border border-champagne-gold/30 text-champagne-gold text-xs font-semibold tracking-wider uppercase">
       <span class="material-symbols-outlined text-[16px]">call</span> Call +91 70120 59591
     </a>
+    <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-2.5 rounded-lg border border-white/20 text-white text-xs font-semibold tracking-wider uppercase hover:border-champagne-gold hover:text-champagne-gold transition-colors">
+      <span class="material-symbols-outlined text-[16px]">school</span> LivArt Academy (livart.co.in) ↗
+    </a>
     <button data-open-booking class="w-full bg-champagne-gold text-obsidian-deep py-2.5 rounded-lg text-xs font-bold tracking-widest uppercase hover:bg-metallic-gold-light transition-all">
       Book Appointment
     </button>
@@ -255,9 +304,9 @@ def render_footer(root_prefix=""):
 <!-- Global Luxury Footer -->
 <footer class="w-full bg-obsidian-deep text-alabaster-cream pt-16 pb-12 border-t border-white/5 mt-auto">
   <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
       <!-- Col 1: Brand -->
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 lg:col-span-1">
         <a href="{root_prefix}index.html" class="flex items-center gap-3">
           <img src="{LOGO_URL}" alt="LivArt Salon" class="h-9 w-auto brightness-0 invert" />
           <div class="flex flex-col">
@@ -266,7 +315,7 @@ def render_footer(root_prefix=""):
           </div>
         </a>
         <p class="text-xs text-muted-slate leading-relaxed">
-          Haute couture aesthetics and bespoke beauty rituals curated by world-class stylists and master makeup artists in Kakkanad, Kochi.
+          Haute couture aesthetics and bespoke beauty rituals curated by master artists in Kakkanad, Kochi. Co-founded by Stephy Sebastian and Nipun Conso.
         </p>
         <div class="flex items-center gap-3 pt-2">
           <a href="{INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-obsidian-surface flex items-center justify-center text-metallic-gold-light hover:bg-champagne-gold hover:text-obsidian-deep transition-all" aria-label="LivArt Instagram">
@@ -294,9 +343,28 @@ def render_footer(root_prefix=""):
         </ul>
       </div>
 
-      <!-- Col 3: Studio Sanctuary & Hours -->
+      <!-- Col 3: LivArt Beauty Academy (Affiliated with B&WSSC) -->
       <div class="flex flex-col gap-3">
-        <span class="font-serif-luxury text-base text-metallic-gold-light tracking-wide">Sanctuary Hours & Location</span>
+        <div class="flex items-center gap-1.5">
+          <span class="font-serif-luxury text-base text-metallic-gold-light tracking-wide">LivArt Academy</span>
+          <span class="text-[9px] bg-champagne-gold text-obsidian-deep font-bold px-1.5 py-0.5 rounded tracking-widest uppercase">Govt Affiliated</span>
+        </div>
+        <p class="text-xs text-muted-slate leading-relaxed">
+          Kerala's premier beauty academy offering Government-approved B&WSSC certified cosmetology courses mentored by Stephy Sebastian.
+        </p>
+        <ul class="flex flex-col gap-2 text-xs text-muted-slate">
+          <li><a href="{root_prefix}academy/index.html" class="text-champagne-gold hover:text-white transition-colors font-medium flex items-center gap-1">Academy Overview Hub ↗</a></li>
+          <li><a href="{ACADEMY_URL}/certification-course-in-cosmetology/" target="_blank" rel="noopener noreferrer" class="hover:text-champagne-gold transition-colors">Diploma in Cosmetology (livart.co.in) ↗</a></li>
+          <li><a href="{ACADEMY_URL}/bridal-makeup-course/" target="_blank" rel="noopener noreferrer" class="hover:text-champagne-gold transition-colors">Professional Bridal Makeup (livart.co.in) ↗</a></li>
+          <li><a href="{ACADEMY_URL}/hair-styling-course/" target="_blank" rel="noopener noreferrer" class="hover:text-champagne-gold transition-colors">Hair Styling & Haircuts Course ↗</a></li>
+          <li><a href="{ACADEMY_URL}/skin-care-course/" target="_blank" rel="noopener noreferrer" class="hover:text-champagne-gold transition-colors">Skin Care & Aesthetics Course ↗</a></li>
+          <li><a href="{ACADEMY_FOUNDER_URL}" target="_blank" rel="noopener noreferrer" class="hover:text-champagne-gold transition-colors">Founder Stephy Sebastian Bio ↗</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Studio Sanctuary & Hours -->
+      <div class="flex flex-col gap-3">
+        <span class="font-serif-luxury text-base text-metallic-gold-light tracking-wide">Sanctuary & Hours</span>
         <div class="text-xs text-muted-slate leading-relaxed">
           <p class="text-alabaster-cream font-medium mb-1">Anchorage Business Center</p>
           <p>2nd Floor, Seaport-Airport Road, NGO Quarters – Mavelipuram Rd, Kakkanad, Kochi, Kerala 682030</p>
@@ -307,11 +375,11 @@ def render_footer(root_prefix=""):
         </div>
       </div>
 
-      <!-- Col 4: Contact & Concierge -->
+      <!-- Col 5: Direct Concierge -->
       <div class="flex flex-col gap-3">
         <span class="font-serif-luxury text-base text-metallic-gold-light tracking-wide">Direct Concierge</span>
         <p class="text-xs text-muted-slate leading-relaxed">
-          Pre-book your consultations with founder Stephy Sebastian or senior styling masters.
+          Pre-book appointments with founder Stephy Sebastian or senior styling masters.
         </p>
         <div class="flex flex-col gap-1.5 pt-1 text-xs">
           <a href="tel:{PHONE_TEL}" class="text-champagne-gold hover:text-metallic-gold-light transition-colors font-semibold flex items-center gap-1.5">
@@ -330,9 +398,11 @@ def render_footer(root_prefix=""):
     <!-- Copyright & Legal -->
     <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-slate">
       <p>© 2026 {SITE_NAME}, Kakkanad, Kochi. All rights reserved.</p>
-      <div class="flex items-center gap-6 font-label-caps text-[10px] tracking-wider uppercase">
+      <div class="flex flex-wrap items-center gap-4 sm:gap-6 font-label-caps text-[10px] tracking-wider uppercase">
         <a href="{root_prefix}services/index.html" class="hover:text-champagne-gold">All Services</a>
         <a href="{root_prefix}packages/index.html" class="hover:text-champagne-gold">Packages</a>
+        <a href="{root_prefix}academy/index.html" class="text-champagne-gold hover:underline">Beauty Academy</a>
+        <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="text-metallic-gold-light hover:underline">livart.co.in ↗</a>
         <a href="{root_prefix}gallery/index.html" class="hover:text-champagne-gold">Instagram Feed</a>
         <a href="{root_prefix}blog/index.html" class="hover:text-champagne-gold">Beauty Journal</a>
         <a href="{root_prefix}contact-us/index.html" class="hover:text-champagne-gold">Locate Us</a>
