@@ -94,7 +94,7 @@ BLOG_POSTS = [
         "date": "July 18, 2024",
         "read_time": "4 min read",
         "desc": "How to achieve luminous, glass skin during summer months without oiliness or breakouts.",
-        "img": "assets/images/instagram/DRXFRQCEgpm.jpg",
+        "img": "assets/images/instagram/DIYwMqNSFPo.jpg",
         "content": """
         <p>Summer glow should come from deep cellular hydration, not grease. Incorporate hyaluronic serums and antioxidant Vitamin C topicals to protect skin collagen from sun stress.</p>
         """
@@ -148,7 +148,7 @@ BLOG_POSTS = [
         "date": "May 05, 2024",
         "read_time": "5 min read",
         "desc": "Stylist advice on preparing your hair for color, maintaining vibrancy, and avoiding tone fade.",
-        "img": "assets/images/instagram/DDYbKpnTbKk.jpg",
+        "img": "assets/images/instagram/DABMk4mtv8b.jpg",
         "content": """
         <p>Do opt for ammonia-free L'Oreal formulations. Don't wash hair with piping hot water. Do use color-protecting sulfate-free shampoo to seal the outer cuticle.</p>
         """
@@ -226,7 +226,7 @@ BLOG_POSTS = [
         "date": "February 01, 2024",
         "read_time": "4 min read",
         "desc": "How to avoid white cast, reapply over makeup, and choose broad-spectrum sunscreens for Indian skin.",
-        "img": "assets/images/instagram/DRXFRQCEgpm.jpg",
+        "img": "assets/images/instagram/Da8Hb68SA5B.jpg",
         "content": """
         <p>Sun protection is the number one anti-aging secret. Explore sunscreen sticks, setting mists, and lightweight gel formulations that protect without greasy residue.</p>
         """
@@ -343,7 +343,7 @@ BLOG_POSTS = [
         "date": "September 24, 2023",
         "read_time": "4 min read",
         "desc": "The therapeutic science of warm oil Indian head massages: pressure points, stress relief, and root nourishment.",
-        "img": "assets/images/instagram/DC9Ou8ETksn.jpg",
+        "img": "assets/images/instagram/DIoW2P5TF7G.jpg",
         "content": """
         <p>A traditional head massage activates marma pressure points, draining lymphatic congestion, lowering cortisol, and encouraging robust follicular health.</p>
         """
@@ -369,7 +369,7 @@ BLOG_POSTS = [
         "date": "August 25, 2023",
         "read_time": "5 min read",
         "desc": "Guide to choosing between Hydra Facials, De-Tan Whitening, Gold Glow, and Cheryl's Pro Facials for your specific skin concerns.",
-        "img": "assets/images/instagram/DRXFRQCEgpm.jpg",
+        "img": "assets/images/instagram/DMDB3b4Nm0p.jpg",
         "content": """
         <p>Not all facials are created equal. Understand the clinical difference between clarifying extraction facials, hydrating treatments, and anti-pigmentation rituals.</p>
         """

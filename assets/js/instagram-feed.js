@@ -522,7 +522,9 @@ const CONTAINER_CONFIGS = {
 function generateDirectEmbedCard(reel) {
   const isCeleb = reel.category === "celebrity";
   const badgeColor = isCeleb ? "text-amber-300 border-amber-400/40 bg-amber-950/40" : "text-rose-300 border-rose-400/40 bg-rose-950/40";
-  const subLabel = reel.handle || reel.desc || "@livart_salon";
+  const isSubpage = (window.location.pathname.includes('/gallery') || window.location.pathname.includes('/services') || window.location.pathname.includes('/about-us') || window.location.pathname.includes('/teams') || window.location.pathname.includes('/blog') || window.location.pathname.includes('/packages') || window.location.pathname.includes('/make-up') || window.location.pathname.includes('/hair-styling') || window.location.pathname.includes('/skin-care') || window.location.pathname.includes('/academy') || window.location.pathname.includes('/contact-us'));
+  const rootPrefix = isSubpage ? '../' : '';
+  const posterSrc = rootPrefix + 'assets/images/instagram/' + reel.code + '.jpg';
 
   return `
   <div class="direct-embed-card bg-obsidian-surface rounded-2xl border border-white/10 shadow-2xl p-3 sm:p-4 flex flex-col justify-between hover:border-champagne-gold/50 transition-all duration-300">
@@ -540,7 +542,7 @@ function generateDirectEmbedCard(reel) {
     <!-- Direct Official Instagram Player: Renders Authentic Instagram Reel Thumbnail & Player (0ms delay, no raw text) -->
     <div class="instagram-embed-box relative w-full h-[460px] sm:h-[520px] bg-black rounded-xl overflow-hidden my-2 shadow-inner">
       <!-- Authentic Instagram Cover Image Background while iframe loads -->
-      <img src="${reel.poster || '/assets/images/instagram/' + reel.code + '.jpg'}" alt="${reel.title}" class="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none transition-opacity duration-500" loading="lazy" />
+      <img src="${posterSrc}" alt="${reel.title}" class="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none transition-opacity duration-500" loading="lazy" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40 pointer-events-none flex flex-col items-center justify-center gap-2">
         <div class="w-10 h-10 rounded-full border-2 border-champagne-gold/40 border-t-champagne-gold animate-spin"></div>
         <span class="text-[10px] text-champagne-gold font-bold uppercase tracking-wider bg-black/60 px-2.5 py-0.5 rounded-full backdrop-blur-sm">Instagram Direct Player</span>

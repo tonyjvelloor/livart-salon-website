@@ -305,12 +305,12 @@ def build_hair_page():
     html += render_header(active_slug="hair-styling", root_prefix="../")
 
     hair_services = [
-        ("Relaxo Hot Oil Head Massage", "Let our expert staff soothe your senses with a hot oil head massage. Formulated to stimulate scalp micro-circulation, nourish deep hair follicles, and relieve cranial tension.", "From Rs. 850", "../assets/images/instagram/DC9Ou8ETksn.jpg"),
+        ("Relaxo Hot Oil Head Massage", "Let our expert staff soothe your senses with a hot oil head massage. Formulated to stimulate scalp micro-circulation, nourish deep hair follicles, and relieve cranial tension.", "From Rs. 850", "../assets/images/instagram/CpsA0o_OSo5.jpg"),
         ("L’Oreal Professional Hair Spa", "Deep steam infusion and therapeutic acupressure massage that repairs cuticle breakdown, cures dryness, and restores lustrous mirror-like gloss.", "Rs. 1,200 (Reg. 1800)", "../assets/images/instagram/DEXOFvGTyDZ.jpg"),
-        ("Balayage & Dimensional Colouring", "Hand-painted dimensional hues tailored to your undertone. Seamless transitions, soft root melting, and zero ammonia damage.", "From Rs. 5,999", "../assets/images/instagram/DABMk4mtv8b.jpg"),
-        ("Precision Haircuts & Blowouts", "Structural haircutting customized to your bone structure and hair density, finished with our iconic runway bouncy blowout.", "From Rs. 850", "../assets/images/instagram/DbLJRauyFro.jpg"),
+        ("Balayage & Dimensional Colouring", "Hand-painted dimensional hues tailored to your undertone. Seamless transitions, soft root melting, and zero ammonia damage.", "From Rs. 5,999", "../assets/images/instagram/C5pwjmOidQU.jpg"),
+        ("Precision Haircuts & Blowouts", "Structural haircutting customized to your bone structure and hair density, finished with our iconic runway bouncy blowout.", "From Rs. 850", "../assets/images/instagram/C6F_GKgtlHk.jpg"),
         ("Hair Botox Anti-Aging Treatment", "Fills structural keratin gaps in hair strands, eliminates 95% of frizz, and revitalizes damaged ends without harsh chemicals.", "Rs. 5,999", "../assets/images/instagram/DW1NAndDGuP.jpg"),
-        ("Permanent Hair Straightening", "Thermal rebonding and permanent straightening for mirror-like silky pin-straight hair that endures through any humidity.", "From Rs. 4,000", "../assets/images/instagram/C5pwjmOidQU.jpg")
+        ("Permanent Hair Straightening", "Thermal rebonding and permanent straightening for mirror-like silky pin-straight hair that endures through any humidity.", "From Rs. 4,000", "../assets/images/instagram/Db7rJBtuj4B.jpg")
     ]
 
     services_html = ""
@@ -607,10 +607,10 @@ def build_skincare_page():
     skin_services = [
         ("Skin Miracle Hydra Facial", "Our advanced vortex extraction and hyaluronic infusion facial that clears congestion and restores dewy glass-skin luminosity.", "Rs. 4,000", "../assets/images/instagram/DRXFRQCEgpm.jpg"),
         ("De-Tan + Skin Miracle Combo", "Signature dual ritual that erases sun tanning, lightens pigment spots, and floods the dermis in brightening vitamins.", "From Rs. 2,499", "../assets/images/offers/offer-poster1.webp"),
-        ("Pro Facial by Cheryl’s Cosmeceuticals", "Clinically formulated protocols by Cheryl's designed specifically for Indian skin to treat active acne, uneven tone, and dullness.", "From Rs. 2,200", "../assets/images/instagram/DQMWOO5jNhc.jpg"),
+        ("Pro Facial by Cheryl’s Cosmeceuticals", "Clinically formulated protocols by Cheryl's designed specifically for Indian skin to treat active acne, uneven tone, and dullness.", "From Rs. 2,200", "../assets/images/instagram/DIYwMqNSFPo.jpg"),
         ("Deluxe Manicure & Pedicure Spa", "Deep dead-skin exfoliation, cuticle conditioning, relaxing foot reflexology massage, and precision nail shaping.", "From Rs. 1,400", "../assets/images/instagram/C88tG9iSEKp.jpg"),
-        ("Herbal Waxing & Threading", "Painless threading for brows and facial contours, alongside gentle honey and chocolate wax formulations that prevent irritation.", "From Rs. 100", "../assets/images/instagram/DRXFRQCEgpm.jpg"),
-        ("Skin Bleaching & Derma Glow", "Safe, ammonia-free dermatological bleaching rituals that illuminate the complexion for festive and wedding readiness.", "From Rs. 1,200", "../assets/images/offers/offer-poster1.webp")
+        ("Herbal Waxing & Threading", "Painless threading for brows and facial contours, alongside gentle honey and chocolate wax formulations that prevent irritation.", "From Rs. 100", "../assets/images/instagram/Da8Hb68SA5B.jpg"),
+        ("Skin Bleaching & Derma Glow", "Safe, ammonia-free dermatological bleaching rituals that illuminate the complexion for festive and wedding readiness.", "From Rs. 1,200", "../assets/images/instagram/DIoW2P5TF7G.jpg")
     ]
 
     services_html = ""
@@ -853,18 +853,18 @@ def build_gallery_page():
         </div>
         <!-- Photo 5: Hair Styling -->
         <div class="group aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-obsidian-deep relative">
-          <img src="../assets/images/instagram/DbLJRauyFro.jpg" alt="Precision Haircut & Styling Azmin Yasar LivArt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+          <img src="../assets/images/instagram/C5pwjmOidQU.jpg" alt="Couture Balayage and Hair Styling at LivArt Salon Kakkanad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-alabaster-cream">
-            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Precision Cut</span>
-            <span class="text-xs font-bold font-serif-luxury">Salon Chair Texture</span>
+            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Couture Balayage</span>
+            <span class="text-xs font-bold font-serif-luxury">L'Oreal Caramel Curls</span>
           </div>
         </div>
         <!-- Photo 6: Balayage -->
         <div class="group aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-obsidian-deep relative">
-          <img src="../assets/images/instagram/DABMk4mtv8b.jpg" alt="L'Oreal Balayage Hair Colouring RJ Soorya LivArt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+          <img src="../assets/images/instagram/Db7rJBtuj4B.jpg" alt="Precision Runway Blowout and Layered Cut Amala Shaji LivArt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-alabaster-cream">
-            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Couture Color</span>
-            <span class="text-xs font-bold font-serif-luxury">Glossy Balayage</span>
+            <span class="text-[9px] font-bold uppercase tracking-wider text-champagne-gold">Runway Blowout</span>
+            <span class="text-xs font-bold font-serif-luxury">Precision Layered Finish</span>
           </div>
         </div>
       </div>
