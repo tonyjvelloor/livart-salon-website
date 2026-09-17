@@ -14,7 +14,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Makeover",
     badge: "Influencer Spotlight",
     service: "Permanent Blow Dry & Styling",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg"
+    poster: "/assets/images/instagram/Db7rJBtuj4B.jpg"
   },
   {
     title: "Azmin Yasar Styled at Salon",
@@ -25,7 +25,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Makeover",
     badge: "Hair Styling",
     service: "Hair Styling & Texture",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner14.jpg"
+    poster: "/assets/images/instagram/DbLJRauyFro.jpg"
   },
   {
     title: "Rithu Manthra Styled at Salon",
@@ -36,7 +36,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Visit",
     badge: "Model & Actress",
     service: "Haute Couture Hair & Makeup",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"
+    poster: "/assets/images/instagram/DZkDGP8N7ei.jpg"
   },
   {
     title: "Madona Tixeira - IPL Anchor Hairstyle",
@@ -47,7 +47,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Makeover",
     badge: "IPL Anchor",
     service: "Runway Blow Dry & Styling",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg"
+    poster: "/assets/images/instagram/DYv8wyxMjAl.jpg"
   },
   {
     title: "Actress Amala Rose Kurian Review - Hair Botox",
@@ -58,7 +58,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Review",
     badge: "Hair Botox",
     service: "Hair Botox Treatment (Rs. 5999)",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_-offer-poster2_11-7-2023-1.jpg"
+    poster: "/assets/images/instagram/DW1NAndDGuP.jpg"
   },
   {
     title: "Client Madona Tixeira Thank-You",
@@ -69,7 +69,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Visit",
     badge: "Client Love",
     service: "Salon Styling Experience",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner18.jpg"
+    poster: "/assets/images/instagram/DOajrjXkqH_.jpg"
   },
   {
     title: "Poomaram Actress Sangeetha at Salon",
@@ -80,7 +80,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Visit",
     badge: "Film Star",
     service: "Personalized Beauty Ritual",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner26.jpg"
+    poster: "/assets/images/instagram/DIYwMqNSFPo.jpg"
   },
   {
     title: "Actress Amala Rose Kurian Salon Session",
@@ -91,7 +91,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Visit",
     badge: "Couture Styling",
     service: "Hair Styling & Hair Spa",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/05/livee11.jpg"
+    poster: "/assets/images/instagram/DEXOFvGTyDZ.jpg"
   },
   {
     title: "Anchor Meenakshi Sudheer Makeover",
@@ -102,7 +102,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Makeover",
     badge: "TV Anchor",
     service: "Camera-Ready Glamour Makeover",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"
+    poster: "/assets/images/instagram/DD09-1GTd2F.jpg"
   },
   {
     title: "Makeover for Madona Tixeira",
@@ -113,7 +113,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Makeover",
     badge: "Anchor Makeover",
     service: "Hair Styling & Makeup",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/DDYbKpnTbKk.jpg"
   },
   {
     title: "RJ Soorya Hair Colouring Artistry",
@@ -124,7 +124,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Makeover",
     badge: "RJ Glam",
     service: "L'Oreal Glossy Hair Colouring",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster3_11-7-2023-1.jpg"
+    poster: "/assets/images/instagram/DABMk4mtv8b.jpg"
   },
   {
     title: "RJ Surya Festive Onam Look",
@@ -135,7 +135,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Festive",
     badge: "Onam Glam",
     service: "Festive Saree Draping & Makeup",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/C_hxrh3y5NY.jpg"
   },
   {
     title: "Anchor Meenakshi Sudheer Detox Pedicure",
@@ -146,7 +146,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Visit",
     badge: "Foot Spa",
     service: "Deluxe Pedicure Spa",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner23.jpg"
+    poster: "/assets/images/instagram/C88tG9iSEKp.jpg"
   },
   {
     title: "News Anchor Shiju Abdul Rasheed Haircut",
@@ -157,7 +157,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Visit",
     badge: "News Anchor",
     service: "Precision Haircut & Grooming",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner14.jpg"
+    poster: "/assets/images/instagram/C7l9fP5P3u9.jpg"
   },
   {
     title: "Client RJ Bincy Compliment & Review",
@@ -168,7 +168,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Review",
     badge: "Verified Patrons",
     service: "Signature Salon Ritual",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner18.jpg"
+    poster: "/assets/images/instagram/C6F_GKgtlHk.jpg"
   },
   {
     title: "RJ Bincy Hair Makeover",
@@ -179,7 +179,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Makeover",
     badge: "Hair Rebirth",
     service: "Hair Styling & Keratin Treatment",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner19.jpg"
+    poster: "/assets/images/instagram/C5pwjmOidQU.jpg"
   },
   {
     title: "Ms. Ajmi - Icon of the Year Awardee",
@@ -190,7 +190,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Visit",
     badge: "Award Recipient",
     service: "Red Carpet Makeup & Styling",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner26.jpg"
+    poster: "/assets/images/instagram/C4VCBeStpUM.jpg"
   },
   {
     title: "Actress Suvarna Menon Hair Botox Review",
@@ -201,7 +201,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Review",
     badge: "Actress Favorite",
     service: "Hair Botox Treatment (Rs. 5999)",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_-offer-poster2_11-7-2023-1.jpg"
+    poster: "/assets/images/instagram/Cujo9fqpEsB.jpg"
   },
   {
     title: "Actress Shivani Menon Viral New Look",
@@ -212,7 +212,7 @@ const CELEBRITY_REELS = [
     tag: "Viral Sensation",
     badge: "🔥 99K Likes Viral",
     service: "Signature Haircut & Balayage",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster3_11-7-2023-1.jpg"
+    poster: "/assets/images/instagram/CsQ-ptyuuv-.jpg"
   },
   {
     title: "RJ Soorya Festive Vishu Look",
@@ -223,7 +223,7 @@ const CELEBRITY_REELS = [
     tag: "Celebrity Festive",
     badge: "Vishu Radiance",
     service: "Traditional Kerala Kasavu Styling",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/CrAzwEnJ8FV.jpg"
   },
   {
     title: "Model Shaluz Boon Viral Hair Styling",
@@ -234,7 +234,7 @@ const CELEBRITY_REELS = [
     tag: "Viral Sensation",
     badge: "🔥 13K Likes Viral",
     service: "Model Haircut & Runway Finish",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg"
+    poster: "/assets/images/instagram/CpsA0o_OSo5.jpg"
   }
 ];
 
@@ -247,7 +247,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Special Bridal Offer",
     service: "Gold Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/DdOmdkItPmF.jpg"
   },
   {
     title: "LivArt Academy Student Bride",
@@ -257,7 +257,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Academy Bride",
     service: "Bridal Makeup & Hair",
-    poster: "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp"
+    poster: "/assets/images/instagram/Da8Hb68SA5B.jpg"
   },
   {
     title: "Hindu Bride Soft Glow Look",
@@ -267,7 +267,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Hindu Bridal",
     service: "Diamond Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/DZSWz8wyz5i.jpg"
   },
   {
     title: "Christian Bridal Look by Stephy Sebastian",
@@ -277,7 +277,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Christian Bridal",
     service: "Christian Bridal Couture",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"
+    poster: "/assets/images/instagram/DYuASLuK_le.jpg"
   },
   {
     title: "Wedding Reception Glam (Deepika)",
@@ -287,7 +287,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Reception Glam",
     service: "Reception Glam Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner26.jpg"
+    poster: "/assets/images/instagram/DYFFX0RKhnx.jpg"
   },
   {
     title: "Reception Look Red Carpet Glam",
@@ -297,7 +297,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Evening Glam",
     service: "Evening Bridal Reception",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"
+    poster: "/assets/images/instagram/DX6qGl_SKf1.jpg"
   },
   {
     title: "Distinguished Groom Makeup & Styling",
@@ -307,7 +307,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Groom Sanctuary",
     service: "Black Diamond Groom Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg"
+    poster: "/assets/images/instagram/DXb3cLlEsmy.jpg"
   },
   {
     title: "Reception Glam Transformation",
@@ -317,7 +317,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Reception Glam",
     service: "Reception Makeup Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner26.jpg"
+    poster: "/assets/images/instagram/DWtk05cjLnI.jpg"
   },
   {
     title: "Bridal Look Recreation (Part 1 Story)",
@@ -327,7 +327,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Bridal Story",
     service: "Custom Bridal Consultation",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/DVyTy0qDJEN.jpg"
   },
   {
     title: "Pre-Wedding High Definition (HD) Makeup",
@@ -337,7 +337,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "HD Pre-Wedding",
     service: "Pre-Wedding HD Makeup",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"
+    poster: "/assets/images/instagram/DUap-mOkvuu.jpg"
   },
   {
     title: "Hindu Bridal Complete Makeover",
@@ -347,7 +347,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Hindu Bride",
     service: "Diamond Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/DULWym5CHa0.jpg"
   },
   {
     title: "Bridal Look with Designer Lehenga",
@@ -357,7 +357,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Lehenga Bride",
     service: "Gold Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner26.jpg"
+    poster: "/assets/images/instagram/DT7y-uAkh47.jpg"
   },
   {
     title: "Christian Bridal Makeover (2 Looks)",
@@ -367,7 +367,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "2-Look Bride",
     service: "Diamond Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"
+    poster: "/assets/images/instagram/DTu8FlyknZz.jpg"
   },
   {
     title: "Muslim Bride Bespoke Makeup",
@@ -377,7 +377,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Muslim Bride",
     service: "Gold Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/DTc2O2fCFZI.jpg"
   },
   {
     title: "Christian Bridal Transformation",
@@ -387,7 +387,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Christian Bride",
     service: "Christian Bridal Couture",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"
+    poster: "/assets/images/instagram/DSpYR2dCJ5-.jpg"
   },
   {
     title: "Bride Natural Skin & Simple Aesthetic",
@@ -397,7 +397,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Natural Minimalist",
     service: "Silver Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner21.jpg"
+    poster: "/assets/images/instagram/DSNGmIaEp4d.jpg"
   },
   {
     title: "Glass Skin Bridal Makeup Kerala",
@@ -407,7 +407,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Glass Skin",
     service: "Skin Miracle Hydra Glow Bridal",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster1_11-7-2023-1.jpg"
+    poster: "/assets/images/instagram/DRXFRQCEgpm.jpg"
   },
   {
     title: "Engagement Makeover (Personal Story)",
@@ -417,7 +417,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Engagement",
     service: "Engagement Glam Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner26.jpg"
+    poster: "/assets/images/instagram/DQ1XHMIjLJ8.jpg"
   },
   {
     title: "Bride Alka Engagement Look",
@@ -427,7 +427,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Real Bride Alka",
     service: "Engagement Makeup",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/DQMWOO5jNhc.jpg"
   },
   {
     title: "Bridal Makeup Glow",
@@ -437,7 +437,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Warm Glow",
     service: "Gold Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"
+    poster: "/assets/images/instagram/DMDB3b4Nm0p.jpg"
   },
   {
     title: "Signature Bridal Transformation",
@@ -447,7 +447,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Master Transformation",
     service: "Diamond Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/DK13xiot6zA.jpg"
   },
   {
     title: "Bridal & Party Hairstyle Volume Trick",
@@ -457,7 +457,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Stylist Secret",
     service: "Bridal Hair Styling",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg"
+    poster: "/assets/images/instagram/DJrQLH3Tk0n.jpg"
   },
   {
     title: "Bride Trial Makeup Session",
@@ -467,7 +467,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Trial Session",
     service: "Bridal Trial Consultation",
-    poster: "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp"
+    poster: "/assets/images/instagram/DIoW2P5TF7G.jpg"
   },
   {
     title: "Bridal Beauty at its Finest",
@@ -477,7 +477,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Haute Couture",
     service: "Diamond Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/DIED9XjSKku.jpg"
   },
   {
     title: "Signature Bridal Makeup Artistry",
@@ -487,7 +487,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Bridal Art",
     service: "Gold Bridal Package",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"
+    poster: "/assets/images/instagram/DGVbSkPSXIi.jpg"
   },
   {
     title: "Essential Bridal Hair Tip for To-Be Brides",
@@ -497,7 +497,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Hair Secret",
     service: "L'Oreal Hair Spa & Prep",
-    poster: "https://livartsalon.com/wp-content/uploads/2023/05/livee11.jpg"
+    poster: "/assets/images/instagram/DC9Ou8ETksn.jpg"
   },
   {
     title: "Christian Bride Niby Katherine",
@@ -507,7 +507,7 @@ const BRIDAL_REELS = [
     category: "bridal",
     badge: "Real Bride Niby",
     service: "Christian Bridal Couture",
-    poster: "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"
+    poster: "/assets/images/instagram/C7CYp17t9yd.jpg"
   }
 ];
 
@@ -539,10 +539,11 @@ function generateDirectEmbedCard(reel) {
 
     <!-- Direct Official Instagram Player: Renders Authentic Instagram Reel Thumbnail & Player (0ms delay, no raw text) -->
     <div class="instagram-embed-box relative w-full h-[460px] sm:h-[520px] bg-black rounded-xl overflow-hidden my-2 shadow-inner">
-      <!-- Dark Shimmer Placeholder underneath iframe while loading -->
-      <div class="absolute inset-0 flex flex-col items-center justify-center bg-[#0d0d0f] text-gray-400 gap-2 pointer-events-none">
-        <div class="w-10 h-10 rounded-full border-2 border-champagne-gold/30 border-t-champagne-gold animate-spin"></div>
-        <span class="text-[10px] text-champagne-gold font-bold uppercase tracking-wider">Instagram Direct Embed</span>
+      <!-- Authentic Instagram Cover Image Background while iframe loads -->
+      <img src="${reel.poster || '/assets/images/instagram/' + reel.code + '.jpg'}" alt="${reel.title}" class="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none transition-opacity duration-500" loading="lazy" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40 pointer-events-none flex flex-col items-center justify-center gap-2">
+        <div class="w-10 h-10 rounded-full border-2 border-champagne-gold/40 border-t-champagne-gold animate-spin"></div>
+        <span class="text-[10px] text-champagne-gold font-bold uppercase tracking-wider bg-black/60 px-2.5 py-0.5 rounded-full backdrop-blur-sm">Instagram Direct Player</span>
       </div>
 
       <!-- Direct Official Embed Iframe (Meta Instagram) -->

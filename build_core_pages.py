@@ -48,12 +48,12 @@ def build_about_page():
     
     stylists = [
         {"name": "Stephy Sebastian", "role": "Founder & Creative Director", "exp": "10+ Years", "spec": "Bridal Artistry & Hair Transformations", "img": "https://livartsalon.com/wp-content/uploads/2024/02/Stephy-Sebastian.webp"},
-        {"name": "Arul Britto", "role": "Senior Hair Stylist & Educator", "exp": "8+ Years", "spec": "Precision Haircuts & Balayage", "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner14.jpg"},
-        {"name": "Roopa", "role": "Master Makeup Artist", "exp": "7+ Years", "spec": "HD Bridal Makeup & Saree Draping", "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg"},
-        {"name": "Vipitha", "role": "Senior Skincare Aesthetician", "exp": "6+ Years", "spec": "Hydra Facials & Derma Therapies", "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner21.jpg"},
-        {"name": "Abhishek", "role": "Creative Color Specialist", "exp": "5+ Years", "spec": "Ombre, Highlights & Keratin", "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner19.jpg"},
-        {"name": "Om Prakash", "role": "Senior Stylist & Grooming Expert", "exp": "6+ Years", "spec": "Groom Styling & Hair Texture", "img": "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg"},
-        {"name": "Abhin", "role": "Hair Spa & Scalp Therapist", "exp": "5+ Years", "spec": "Deep Conditioning & Head Massages", "img": "https://livartsalon.com/wp-content/uploads/2023/05/livee11.jpg"}
+        {"name": "Arul Britto", "role": "Senior Hair Stylist & Educator", "exp": "8+ Years", "spec": "Precision Haircuts & Balayage", "img": "../assets/images/instagram/C7l9fP5P3u9.jpg"},
+        {"name": "Roopa", "role": "Master Makeup Artist", "exp": "7+ Years", "spec": "HD Bridal Makeup & Saree Draping", "img": "../assets/images/instagram/DZSWz8wyz5i.jpg"},
+        {"name": "Vipitha", "role": "Senior Skincare Aesthetician", "exp": "6+ Years", "spec": "Hydra Facials & Derma Therapies", "img": "../assets/images/instagram/C88tG9iSEKp.jpg"},
+        {"name": "Abhishek", "role": "Creative Color Specialist", "exp": "5+ Years", "spec": "Ombre, Highlights & Keratin", "img": "../assets/images/instagram/DABMk4mtv8b.jpg"},
+        {"name": "Om Prakash", "role": "Senior Stylist & Grooming Expert", "exp": "6+ Years", "spec": "Groom Styling & Hair Texture", "img": "../assets/images/instagram/DXb3cLlEsmy.jpg"},
+        {"name": "Abhin", "role": "Hair Spa & Scalp Therapist", "exp": "5+ Years", "spec": "Deep Conditioning & Head Massages", "img": "../assets/images/instagram/DW1NAndDGuP.jpg"}
     ]
 
     team_html = ""
@@ -258,12 +258,12 @@ def build_hair_page():
     html += render_header(active_slug="hair-styling", root_prefix="../")
 
     hair_services = [
-        ("Relaxo Hot Oil Head Massage", "Let our expert staff soothe your senses with a hot oil head massage. Formulated to stimulate scalp micro-circulation, nourish deep hair follicles, and relieve cranial tension.", "From Rs. 850", "https://livartsalon.com/wp-content/uploads/2022/10/banner18.jpg"),
-        ("L’Oreal Professional Hair Spa", "Deep steam infusion and therapeutic acupressure massage that repairs cuticle breakdown, cures dryness, and restores lustrous mirror-like gloss.", "Rs. 1,200 (Reg. 1800)", "https://livartsalon.com/wp-content/uploads/2023/05/livee11.jpg"),
-        ("Balayage & Dimensional Colouring", "Hand-painted dimensional hues tailored to your undertone. Seamless transitions, soft root melting, and zero ammonia damage.", "From Rs. 5,999", "https://livartsalon.com/wp-content/uploads/2022/10/banner19.jpg"),
-        ("Precision Haircuts & Blowouts", "Structural haircutting customized to your bone structure and hair density, finished with our iconic runway bouncy blowout.", "From Rs. 850", "https://livartsalon.com/wp-content/uploads/2022/10/banner14.jpg"),
-        ("Hair Botox Anti-Aging Treatment", "Fills structural keratin gaps in hair strands, eliminates 95% of frizz, and revitalizes damaged ends without harsh chemicals.", "Rs. 5,999", "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_-offer-poster2_11-7-2023-1.jpg"),
-        ("Permanent Hair Straightening", "Thermal rebonding and permanent straightening for mirror-like silky pin-straight hair that endures through any humidity.", "From Rs. 4,000", "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg")
+        ("Relaxo Hot Oil Head Massage", "Let our expert staff soothe your senses with a hot oil head massage. Formulated to stimulate scalp micro-circulation, nourish deep hair follicles, and relieve cranial tension.", "From Rs. 850", "../assets/images/instagram/DEXOFvGTyDZ.jpg"),
+        ("L’Oreal Professional Hair Spa", "Deep steam infusion and therapeutic acupressure massage that repairs cuticle breakdown, cures dryness, and restores lustrous mirror-like gloss.", "Rs. 1,200 (Reg. 1800)", "../assets/images/instagram/C6F_GKgtlHk.jpg"),
+        ("Balayage & Dimensional Colouring", "Hand-painted dimensional hues tailored to your undertone. Seamless transitions, soft root melting, and zero ammonia damage.", "From Rs. 5,999", "../assets/images/instagram/DABMk4mtv8b.jpg"),
+        ("Precision Haircuts & Blowouts", "Structural haircutting customized to your bone structure and hair density, finished with our iconic runway bouncy blowout.", "From Rs. 850", "../assets/images/instagram/Db7rJBtuj4B.jpg"),
+        ("Hair Botox Anti-Aging Treatment", "Fills structural keratin gaps in hair strands, eliminates 95% of frizz, and revitalizes damaged ends without harsh chemicals.", "Rs. 5,999", "../assets/images/instagram/DW1NAndDGuP.jpg"),
+        ("Permanent Hair Straightening", "Thermal rebonding and permanent straightening for mirror-like silky pin-straight hair that endures through any humidity.", "From Rs. 4,000", "../assets/images/instagram/CpsA0o_OSo5.jpg")
     ]
 
     services_html = ""
@@ -460,12 +460,12 @@ def build_skincare_page():
     html += render_header(active_slug="skin-care", root_prefix="../")
 
     skin_services = [
-        ("Skin Miracle Hydra Facial", "Our advanced vortex extraction and hyaluronic infusion facial that clears congestion and restores dewy glass-skin luminosity.", "Rs. 4,000", "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster1_11-7-2023-1.jpg"),
-        ("De-Tan + Skin Miracle Combo", "Signature dual ritual that erases sun tanning, lightens pigment spots, and floods the dermis in brightening vitamins.", "From Rs. 2,499", "https://livartsalon.com/wp-content/uploads/2022/10/banner21.jpg"),
-        ("Pro Facial by Cheryl’s Cosmeceuticals", "Clinically formulated protocols by Cheryl's designed specifically for Indian skin to treat active acne, uneven tone, and dullness.", "From Rs. 2,200", "https://livartsalon.com/wp-content/uploads/2022/10/banner22.jpg"),
-        ("Deluxe Manicure & Pedicure Spa", "Deep dead-skin exfoliation, cuticle conditioning, relaxing foot reflexology massage, and precision nail shaping.", "From Rs. 1,400", "https://livartsalon.com/wp-content/uploads/2022/10/banner23.jpg"),
-        ("Herbal Waxing & Threading", "Painless threading for brows and facial contours, alongside gentle honey and chocolate wax formulations that prevent irritation.", "From Rs. 100", "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg"),
-        ("Skin Bleaching & Derma Glow", "Safe, ammonia-free dermatological bleaching rituals that illuminate the complexion for festive and wedding readiness.", "From Rs. 1,200", "https://livartsalon.com/wp-content/uploads/2022/10/banner26.jpg")
+        ("Skin Miracle Hydra Facial", "Our advanced vortex extraction and hyaluronic infusion facial that clears congestion and restores dewy glass-skin luminosity.", "Rs. 4,000", "../assets/images/instagram/DRXFRQCEgpm.jpg"),
+        ("De-Tan + Skin Miracle Combo", "Signature dual ritual that erases sun tanning, lightens pigment spots, and floods the dermis in brightening vitamins.", "From Rs. 2,499", "../assets/images/instagram/DUap-mOkvuu.jpg"),
+        ("Pro Facial by Cheryl’s Cosmeceuticals", "Clinically formulated protocols by Cheryl's designed specifically for Indian skin to treat active acne, uneven tone, and dullness.", "From Rs. 2,200", "../assets/images/instagram/DQMWOO5jNhc.jpg"),
+        ("Deluxe Manicure & Pedicure Spa", "Deep dead-skin exfoliation, cuticle conditioning, relaxing foot reflexology massage, and precision nail shaping.", "From Rs. 1,400", "../assets/images/instagram/C88tG9iSEKp.jpg"),
+        ("Herbal Waxing & Threading", "Painless threading for brows and facial contours, alongside gentle honey and chocolate wax formulations that prevent irritation.", "From Rs. 100", "../assets/images/instagram/DSNGmIaEp4d.jpg"),
+        ("Skin Bleaching & Derma Glow", "Safe, ammonia-free dermatological bleaching rituals that illuminate the complexion for festive and wedding readiness.", "From Rs. 1,200", "../assets/images/instagram/DYFFX0RKhnx.jpg")
     ]
 
     services_html = ""

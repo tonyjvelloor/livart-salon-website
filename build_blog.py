@@ -18,7 +18,7 @@ BLOG_POSTS = [
         "date": "September 12, 2024",
         "read_time": "5 min read",
         "desc": "Key factors to evaluate when choosing a salon in Kochi: stylist certification, hygiene standards, product authenticity, and customer consultations.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner14.jpg",
+        "img": "assets/images/instagram/DOajrjXkqH_.jpg",
         "content": """
         <p>Finding the right salon is about discovering a trusted team that understands your individual hair texture, skin sensitivity, and aesthetic ambitions. Here is what discerning clients look for:</p>
         <h3>1. In-Depth Stylist Consultation</h3>
@@ -37,7 +37,7 @@ BLOG_POSTS = [
         "date": "August 28, 2024",
         "read_time": "4 min read",
         "desc": "Master artist Stephy Sebastian shares essential everyday makeup bag items for Indian humidity and tropical skin tones.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner26.jpg",
+        "img": "assets/images/instagram/DSNGmIaEp4d.jpg",
         "content": """
         <p>Curating the ideal daily beauty kit doesn't require dozens of products—it requires formulas tailored to Indian skin undertones and humid weather:</p>
         <h3>1. Lightweight Matte Primer & Tint</h3>
@@ -56,7 +56,7 @@ BLOG_POSTS = [
         "date": "August 15, 2024",
         "read_time": "6 min read",
         "desc": "Understand balayage hair color technique, difference from highlights, maintenance tips, and top shades for Indian hair at LivArt Kakkanad.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner19.jpg",
+        "img": "assets/images/instagram/DABMk4mtv8b.jpg",
         "content": """
         <p>Originating from the French word meaning 'to sweep', Balayage is a freehand hair coloring technique where master colorists hand-paint highlights onto sections of hair, creating a sun-kissed, graduated gradient.</p>
         <h3>Balayage vs. Traditional Foil Highlights</h3>
@@ -77,7 +77,7 @@ BLOG_POSTS = [
         "date": "July 30, 2024",
         "read_time": "5 min read",
         "desc": "Complete summer skin and hair care guide for Indian tropical weather: sun protection, deep hydration, and anti-pigmentation rituals.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner21.jpg",
+        "img": "assets/images/instagram/DUap-mOkvuu.jpg",
         "content": """
         <p>High temperatures combined with intense coastal humidity present a double challenge: dehydration and excess sebum. Here is how to shield your skin and hair:</p>
         <h3>Barrier Repair & Broad Spectrum Defense</h3>
@@ -94,7 +94,7 @@ BLOG_POSTS = [
         "date": "July 18, 2024",
         "read_time": "4 min read",
         "desc": "How to achieve luminous, glass skin during summer months without oiliness or breakouts.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner22.jpg",
+        "img": "assets/images/instagram/DRXFRQCEgpm.jpg",
         "content": """
         <p>Summer glow should come from deep cellular hydration, not grease. Incorporate hyaluronic serums and antioxidant Vitamin C topicals to protect skin collagen from sun stress.</p>
         """
@@ -107,7 +107,7 @@ BLOG_POSTS = [
         "date": "June 25, 2024",
         "read_time": "5 min read",
         "desc": "Monsoon hair survival guide: combating humidity frizz, scalp fungal buildup, and breakage with LivArt Salon treatments.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_-offer-poster2_11-7-2023-1.jpg",
+        "img": "assets/images/instagram/C_hxrh3y5NY.jpg",
         "content": """
         <p>Monsoons in Kerala bring 90%+ ambient humidity. Rainwater is acidic and collects atmospheric pollutants, weakening keratin bonds. A Keratin smoothing or Hair Botox treatment provides an impermeable hydrophobic shield that repels moisture.</p>
         """
@@ -120,7 +120,7 @@ BLOG_POSTS = [
         "date": "June 10, 2024",
         "read_time": "4 min read",
         "desc": "Chic, easy-to-manage haircuts and updos that look polished and stay frizz-free throughout rainy days.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg",
+        "img": "assets/images/instagram/DbLJRauyFro.jpg",
         "content": """
         <p>Keep your tresses chic and tangle-free with textured lob cuts, high braided ponytails, messy French twists, and permanent blowouts that hold structure naturally.</p>
         """
@@ -133,7 +133,7 @@ BLOG_POSTS = [
         "date": "May 22, 2024",
         "read_time": "6 min read",
         "desc": "Comprehensive guide to Hair Botox: how it works, active ingredients, differences from Keratin, and why it's Kochi's top anti-frizz treatment.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_-offer-poster2_11-7-2023-1.jpg",
+        "img": "assets/images/instagram/DW1NAndDGuP.jpg",
         "content": """
         <p>Despite its name, Hair Botox contains zero botulinum toxin. It is a deep-conditioning, anti-aging capillary treatment designed to 'fill in' cracks in hair fibers like cosmetic botox fills skin wrinkles.</p>
         <h3>Active Nourishing Agents</h3>
@@ -148,7 +148,7 @@ BLOG_POSTS = [
         "date": "May 05, 2024",
         "read_time": "5 min read",
         "desc": "Stylist advice on preparing your hair for color, maintaining vibrancy, and avoiding tone fade.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster3_11-7-2023-1.jpg",
+        "img": "assets/images/instagram/DDYbKpnTbKk.jpg",
         "content": """
         <p>Do opt for ammonia-free L'Oreal formulations. Don't wash hair with piping hot water. Do use color-protecting sulfate-free shampoo to seal the outer cuticle.</p>
         """
@@ -161,7 +161,7 @@ BLOG_POSTS = [
         "date": "April 20, 2024",
         "read_time": "6 min read",
         "desc": "How Hydra Facial combines vortex extraction, lactic exfoliation, and hyaluronic infusion for poreless, red-carpet radiance.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster1_11-7-2023-1.jpg",
+        "img": "assets/images/instagram/DRXFRQCEgpm.jpg",
         "content": """
         <p>Discover why the Skin Miracle Hydra Facial is Kakkanad's most booked pre-event aesthetic ritual. With zero downtime, pores are painlessly vacuumed clean while antioxidants infuse into fresh dermal layers.</p>
         """
@@ -174,7 +174,7 @@ BLOG_POSTS = [
         "date": "April 02, 2024",
         "read_time": "7 min read",
         "desc": "Stephy Sebastian's 6-month bridal beauty timeline: pre-bridal facials, hair spa schedules, makeup trials, and big-day preparations.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg",
+        "img": "assets/images/instagram/DYFFX0RKhnx.jpg",
         "content": """
         <p>A flawless wedding day glow begins months before walking down the aisle. Follow Stephy Sebastian's proven milestone calendar to ensure your skin and hair look breathtaking in 4K photography.</p>
         """
@@ -187,7 +187,7 @@ BLOG_POSTS = [
         "date": "March 18, 2024",
         "read_time": "5 min read",
         "desc": "Expert face shape analysis: round, oval, square, and heart face haircut recommendations by LivArt senior stylists.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner14.jpg",
+        "img": "assets/images/instagram/DYv8wyxMjAl.jpg",
         "content": """
         <p>Discover how layering, face-framing curtain bangs, and blunt lob cuts balance facial proportions and highlight cheekbones and jawlines.</p>
         """
@@ -200,7 +200,7 @@ BLOG_POSTS = [
         "date": "March 01, 2024",
         "read_time": "5 min read",
         "desc": "Scientifically backed daily and weekly hair care rituals designed specifically for Indian hair density, oil production, and hard water conditions.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/05/livee11.jpg",
+        "img": "assets/images/instagram/CpsA0o_OSo5.jpg",
         "content": """
         <p>Indian hair tends to be coarse and prone to humidity frizz. Balancing traditional scalp oil massage with modern sulfate-free clarifying washes keeps follicles robust and shiny.</p>
         """
@@ -213,7 +213,7 @@ BLOG_POSTS = [
         "date": "February 15, 2024",
         "read_time": "4 min read",
         "desc": "The difference between Ombre and Balayage, color pairing ideas, and aftercare for radiant dark-to-light hair gradients.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner19.jpg",
+        "img": "assets/images/instagram/DABMk4mtv8b.jpg",
         "content": """
         <p>Ombre creates a dramatic two-tone transition from deep roots into striking lighter ends. Learn how LivArt colorists blend seamless gradients that preserve hair strength.</p>
         """
@@ -226,7 +226,7 @@ BLOG_POSTS = [
         "date": "February 01, 2024",
         "read_time": "4 min read",
         "desc": "How to avoid white cast, reapply over makeup, and choose broad-spectrum sunscreens for Indian skin.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner21.jpg",
+        "img": "assets/images/instagram/DQMWOO5jNhc.jpg",
         "content": """
         <p>Sun protection is the number one anti-aging secret. Explore sunscreen sticks, setting mists, and lightweight gel formulations that protect without greasy residue.</p>
         """
@@ -239,7 +239,7 @@ BLOG_POSTS = [
         "date": "January 20, 2024",
         "read_time": "5 min read",
         "desc": "Salon experts bust common hair myths: trimming frequency, split ends repair, gray hair plucking, and daily shampooing truths.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner18.jpg",
+        "img": "assets/images/instagram/CsQ-ptyuuv-.jpg",
         "content": """
         <p>Separating hair science from folklore. Learn the truth about frequent haircuts, heat protectants, and why professional salon treatments make all the difference.</p>
         """
@@ -252,7 +252,7 @@ BLOG_POSTS = [
         "date": "January 05, 2024",
         "read_time": "5 min read",
         "desc": "Beyond pretty nails: the medical and relaxation benefits of regular professional pedicures for blood circulation and foot health.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner23.jpg",
+        "img": "assets/images/instagram/C88tG9iSEKp.jpg",
         "content": """
         <p>Your feet bear the weight of your entire day. Professional pedicures eliminate cracked heels, prevent fungal infections, and stimulate acupressure zones.</p>
         """
@@ -265,7 +265,7 @@ BLOG_POSTS = [
         "date": "December 18, 2023",
         "read_time": "4 min read",
         "desc": "How to extend your salon blowout, keep balayage bright, and retain moisture between salon visits.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg",
+        "img": "assets/images/instagram/C6F_GKgtlHk.jpg",
         "content": """
         <p>Silk pillowcases, leave-in serums, cool water rinses, and gentle micro-fiber drying extend that fresh-out-of-the-salon glow for weeks.</p>
         """
@@ -278,7 +278,7 @@ BLOG_POSTS = [
         "date": "December 02, 2023",
         "read_time": "6 min read",
         "desc": "10 proven benefits of professional salon hair spa therapies: scalp detox, follicle stimulation, dandruff control, and deep mental stress reduction.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/05/livee11.jpg",
+        "img": "assets/images/instagram/DEXOFvGTyDZ.jpg",
         "content": """
         <p>A professional hair spa goes far beyond home conditioning. High-temperature steam opens the hair cuticle, driving active nutrients into the cortex while acupressure relieves cranial tension.</p>
         """
@@ -291,7 +291,7 @@ BLOG_POSTS = [
         "date": "November 19, 2023",
         "read_time": "4 min read",
         "desc": "Indulge in LivArt's deluxe foot spa ritual featuring herbal soaks, sea salt exfoliation, and relaxing reflexology massage.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner23.jpg",
+        "img": "assets/images/instagram/C88tG9iSEKp.jpg",
         "content": """
         <p>Experience the ultimate foot pampering session at LivArt Salon Kakkanad. Our deluxe pedicure leaves your feet baby-soft and completely rejuvenated.</p>
         """
@@ -304,7 +304,7 @@ BLOG_POSTS = [
         "date": "November 05, 2023",
         "read_time": "6 min read",
         "desc": "How to choose your bridal makeup artist in Kochi, ask the right trial questions, and articulate your vision for a timeless wedding look.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg",
+        "img": "assets/images/instagram/DULWym5CHa0.jpg",
         "content": """
         <p>Choosing your bridal artist is one of the most critical decisions of your wedding. Learn what portfolio cues to look for and how Stephy Sebastian personalizes bridal aesthetics.</p>
         """
@@ -317,7 +317,7 @@ BLOG_POSTS = [
         "date": "October 22, 2023",
         "read_time": "5 min read",
         "desc": "Inspirational wedding hairstyles: traditional South Indian jasmine braids, romantic textured low buns, and glamorous Hollywood waves.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg",
+        "img": "assets/images/instagram/DJrQLH3Tk0n.jpg",
         "content": """
         <p>From traditional Kerala kasavu saree braids adorned with fresh temple flowers to contemporary Christian bridal veils with soft tousled waves, explore top bridal hair trends.</p>
         """
@@ -330,7 +330,7 @@ BLOG_POSTS = [
         "date": "October 08, 2023",
         "read_time": "5 min read",
         "desc": "Insider beauty parlour tips from LivArt stylists: color correcting dark circles, setting powder secrets, and natural eyebrow feathering.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner26.jpg",
+        "img": "assets/images/instagram/DIYwMqNSFPo.jpg",
         "content": """
         <p>Learn the professional hacks used by senior makeup artists to achieve seamless blending, crease-free concealer, and lipstick that lasts all day.</p>
         """
@@ -343,7 +343,7 @@ BLOG_POSTS = [
         "date": "September 24, 2023",
         "read_time": "4 min read",
         "desc": "The therapeutic science of warm oil Indian head massages: pressure points, stress relief, and root nourishment.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner18.jpg",
+        "img": "assets/images/instagram/C5pwjmOidQU.jpg",
         "content": """
         <p>A traditional head massage activates marma pressure points, draining lymphatic congestion, lowering cortisol, and encouraging robust follicular health.</p>
         """
@@ -356,7 +356,7 @@ BLOG_POSTS = [
         "date": "September 10, 2023",
         "read_time": "5 min read",
         "desc": "Discover modern dry cutting, point cutting, and texturizing techniques practiced by LivArt Salon stylists in Kakkanad.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner14.jpg",
+        "img": "assets/images/instagram/C7l9fP5P3u9.jpg",
         "content": """
         <p>A great haircut is engineered to fall into place with minimal effort at home. Learn how precision texturizing removes bulk while maintaining bouncy movement.</p>
         """
@@ -369,7 +369,7 @@ BLOG_POSTS = [
         "date": "August 25, 2023",
         "read_time": "5 min read",
         "desc": "Guide to choosing between Hydra Facials, De-Tan Whitening, Gold Glow, and Cheryl's Pro Facials for your specific skin concerns.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner21.jpg",
+        "img": "assets/images/instagram/DRXFRQCEgpm.jpg",
         "content": """
         <p>Not all facials are created equal. Understand the clinical difference between clarifying extraction facials, hydrating treatments, and anti-pigmentation rituals.</p>
         """
@@ -382,7 +382,7 @@ BLOG_POSTS = [
         "date": "August 12, 2023",
         "read_time": "4 min read",
         "desc": "How to harmonize your makeup with a new pixie cut, bob, long layers, or vibrant balayage color transformation.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner25.jpg",
+        "img": "assets/images/instagram/DD09-1GTd2F.jpg",
         "content": """
         <p>A drastic haircut alters your facial focal points. Discover how adjusting your brow structure, eye contouring, and lip tones complements your new hairstyle.</p>
         """
@@ -395,7 +395,7 @@ BLOG_POSTS = [
         "date": "July 28, 2023",
         "read_time": "6 min read",
         "desc": "Rebonding vs Keratin vs Nanoplastia vs Botox: A stylist comparison of popular hair straightening and smoothing treatments in Kochi.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg",
+        "img": "assets/images/instagram/Db7rJBtuj4B.jpg",
         "content": """
         <p>Permanent straightening rebonds sulfur links for pin-straight locks, while Keratin and Hair Botox smooth frizz without altering your natural curl structure permanently.</p>
         """
@@ -408,7 +408,7 @@ BLOG_POSTS = [
         "date": "July 14, 2023",
         "read_time": "5 min read",
         "desc": "Combat sweat, acne breakouts, and tanning with these 7 practical summer skincare guidelines from LivArt aestheticians.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner22.jpg",
+        "img": "assets/images/instagram/DUap-mOkvuu.jpg",
         "content": """
         <p>Double-cleansing, cooling aloe gels, chemical exfoliation with salicylic acid, and avoiding heavy mineral oils keep skin pristine in intense Indian summers.</p>
         """
@@ -421,7 +421,7 @@ BLOG_POSTS = [
         "date": "June 29, 2023",
         "read_time": "6 min read",
         "desc": "14 expert stylist rules to protect hair color vibrancy, prevent brassiness, and retain moisture long after your salon appointment.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster3_11-7-2023-1.jpg",
+        "img": "assets/images/instagram/DABMk4mtv8b.jpg",
         "content": """
         <p>Maintain that rich salon color with purple toning shampoos, weekly deep conditioning masks, heat protection sprays, and UV filtering leave-in treatments.</p>
         """
@@ -434,7 +434,7 @@ BLOG_POSTS = [
         "date": "June 15, 2023",
         "read_time": "5 min read",
         "desc": "Why hiring a professional bridal artist guarantees stress-free wedding radiance, camera-proof longevity, and superior lighting response.",
-        "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner24.jpg",
+        "img": "assets/images/instagram/C7CYp17t9yd.jpg",
         "content": """
         <p>Wedding day lighting, HD camera flash, and tear-filled moments demand professional waterproof formulations, precision color matching, and structural setting powders.</p>
         """
@@ -447,7 +447,7 @@ BLOG_POSTS = [
         "date": "May 30, 2023",
         "read_time": "6 min read",
         "desc": "Step-by-step bridal skincare plan: exfoliation, hydration, de-tan therapies, and why you should avoid new chemical peels right before the wedding.",
-        "img": "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster1_11-7-2023-1.jpg",
+        "img": "assets/images/instagram/DMDB3b4Nm0p.jpg",
         "content": """
         <p>Achieving radiant bridal skin requires strategic timing. Discover which facials to book 4 weeks out and which gentle hydrating treatments to reserve for the wedding week.</p>
         """
@@ -463,7 +463,7 @@ def build_blog_system():
         blog_cards_html += f"""
         <article class="bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="{post['cat_slug']}">
           <div class="h-48 overflow-hidden bg-obsidian-deep">
-            <img src="{post['img']}" alt="{post['title']}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="../{post['img']}" alt="{post['title']}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="p-6 flex flex-col justify-between flex-grow">
             <div>
@@ -544,7 +544,7 @@ def build_blog_system():
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": post["title"],
-            "image": post["img"],
+            "image": f"{BASE_URL}/{post['img']}",
             "datePublished": "2024-05-01",
             "dateModified": "2026-09-17",
             "author": {
@@ -624,7 +624,7 @@ def build_blog_system():
 
       <!-- Featured Image -->
       <div class="rounded-3xl overflow-hidden shadow-xl mb-10 max-h-[460px] bg-obsidian-deep">
-        <img src="{post['img']}" alt="{post['title']}" class="w-full h-full object-cover" />
+        <img src="../{post['img']}" alt="{post['title']}" class="w-full h-full object-cover" />
       </div>
 
       <!-- Content Body -->
@@ -704,7 +704,7 @@ def build_category_pages():
             cards_html += f"""
             <article class="bg-surface-container-low rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
               <div class="h-48 overflow-hidden bg-obsidian-deep">
-                <img src="{post['img']}" alt="{post['title']}" class="w-full h-full object-cover" loading="lazy" />
+                <img src="../../{post['img']}" alt="{post['title']}" class="w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6 flex flex-col justify-between flex-grow">
                 <div>

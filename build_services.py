@@ -327,7 +327,7 @@ def build_sub_services():
             "heading": "L’Oreal Lustrous Hair Spa Scalp Therapy",
             "price": "From Rs. 1,500 (Offer: Rs. 1,200)",
             "category": "Scalp & Hair Health",
-            "img": "https://livartsalon.com/wp-content/uploads/2023/05/livee11.jpg",
+            "img": "../../assets/images/instagram/DEXOFvGTyDZ.jpg",
             "body": """
             <p class="text-base text-gray-700 leading-relaxed mb-4">
               Is your hair feeling brittle, lifeless, or stressed from Kochi’s tropical humidity and hard water? The <strong>L’Oreal Lustrous Hair Spa</strong> at LivArt Salon Kakkanad is engineered to provide intensive nourishment straight to your follicles, revitalizing dull strands and repairing deep environmental damage.
@@ -352,7 +352,7 @@ def build_sub_services():
             "heading": "Livart Majestic Keratin Smoothing Treatment",
             "price": "From Rs. 5,000",
             "category": "Hair Smoothing & Restoration",
-            "img": "https://livartsalon.com/wp-content/uploads/2022/10/banner18.jpg",
+            "img": "../../assets/images/instagram/C5pwjmOidQU.jpg",
             "body": """
             <p class="text-base text-gray-700 leading-relaxed mb-4">
               The <strong>Livart Majestic Keratin Treatment</strong> is our flagship hair smoothing therapy, formulated to tame unruly textures, eliminate 95% of frizz, and give you effortless runway-sleek hair every single morning.
@@ -375,7 +375,7 @@ def build_sub_services():
             "heading": "Livart Permanent Hair Straightening & Rebonding",
             "price": "From Rs. 4,000",
             "category": "Thermal Rebonding",
-            "img": "https://livartsalon.com/wp-content/uploads/2023/05/poster1.jpg",
+            "img": "../../assets/images/instagram/Db7rJBtuj4B.jpg",
             "body": """
             <p class="text-base text-gray-700 leading-relaxed mb-4">
               For those seeking pin-straight, ultra-sleek, and impeccably aligned locks, <strong>Livart Hair Straightening</strong> delivers permanent, silky transformations that stay smooth permanently until natural roots grow out.
@@ -393,7 +393,7 @@ def build_sub_services():
             "heading": "L’Oreal Glossy Hair Colouring & Dimensional Balayage",
             "price": "From Rs. 3,000 (Balayage from Rs. 5,999)",
             "category": "Couture Hair Colouring",
-            "img": "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster3_11-7-2023-1.jpg",
+            "img": "../../assets/images/instagram/DABMk4mtv8b.jpg",
             "body": """
             <p class="text-base text-gray-700 leading-relaxed mb-4">
               Transform your look with <strong>L’Oreal Glossy Hair Colouring</strong> at LivArt Kakkanad. Whether you desire subtle warm caramel babylights, dramatic honey-blonde balayage, or rich mocha global coverage, our certified colorists hand-paint dimensions tailored to your skin undertones.
@@ -411,7 +411,7 @@ def build_sub_services():
             "heading": "Skin Miracle Hydra Facial Aesthetics",
             "price": "Rs. 4,000",
             "category": "Clinical Dermal Aesthetics",
-            "img": "https://livartsalon.com/wp-content/uploads/2023/07/livart-salon_offer-poster1_11-7-2023-1.jpg",
+            "img": "../../assets/images/instagram/DRXFRQCEgpm.jpg",
             "body": """
             <p class="text-base text-gray-700 leading-relaxed mb-4">
               The <strong>Skin Miracle Hydra Facial</strong> is an advanced clinical aesthetic treatment that cleanses, exfoliates, extracts impurities, and hydrates the skin simultaneously using vortex suction and specialized peptide serums.
