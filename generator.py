@@ -22,6 +22,8 @@ STEPHY_IMAGE_URL = f"{BASE_URL}/assets/images/brand/stephy-sebastian.webp"
 ACADEMY_URL = "https://livart.co.in"
 ACADEMY_FOUNDER_URL = "https://livart.co.in/founder-makeup-academy/"
 PRESS_FEATURE_URL = "https://businessperiscope.com/stephy-sebastian-founder-of-livart-beauty-academy/"
+ACADEMY_PHONE = "+91 96332 11151"
+ACADEMY_PHONE_TEL = "+919633211151"
 
 LOCAL_BUSINESS_SCHEMA = {
     "@context": "https://schema.org",
@@ -93,6 +95,7 @@ LOCAL_BUSINESS_SCHEMA = {
         "@type": "EducationalOrganization",
         "name": "LivArt Beauty Academy",
         "url": ACADEMY_URL,
+        "telephone": ACADEMY_PHONE,
         "description": "Government-affiliated beauty and cosmetology academy accredited with B&WSSC (Beauty & Wellness Sector Skill Council of India), offering professional diplomas in cosmetology, bridal makeup, hair styling, and aesthetic skincare.",
         "sameAs": [
             ACADEMY_URL,
@@ -461,6 +464,14 @@ def render_footer(root_prefix=""):
           <li><a href="{ACADEMY_URL}/hair-styling-course/" target="_blank" rel="noopener noreferrer" class="hover:text-champagne-gold transition-colors">Hair Styling & Haircuts Course ↗</a></li>
           <li><a href="{ACADEMY_URL}/skin-care-course/" target="_blank" rel="noopener noreferrer" class="hover:text-champagne-gold transition-colors">Skin Care & Aesthetics Course ↗</a></li>
           <li><a href="{ACADEMY_FOUNDER_URL}" target="_blank" rel="noopener noreferrer" class="hover:text-champagne-gold transition-colors">Founder Stephy Sebastian Bio ↗</a></li>
+          <li class="pt-2 border-t border-white/10 flex items-center gap-1.5 text-alabaster-cream font-medium">
+            <span class="material-symbols-outlined text-[15px] text-champagne-gold">call</span>
+            <span>Admissions: <a href="tel:{ACADEMY_PHONE_TEL}" class="text-champagne-gold hover:underline">{ACADEMY_PHONE}</a></span>
+          </li>
+          <li class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[15px] text-emerald-400">chat</span>
+            <a href="https://wa.me/919633211151?text=Hello%20LivArt%20Beauty%20Academy,%20I%20would%20like%20to%20inquire%20about%20admissions" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline">WhatsApp Admissions ↗</a>
+          </li>
         </ul>
       </div>
 

@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBookingModal();
   initServiceFilter();
   initStickyHeader();
+  initHeroSlideshow();
 });
 
 // Mobile Navigation Toggle
@@ -157,26 +158,177 @@ function initBookingModal() {
         confirmation.classList.remove('hidden');
       }
 
+      // Differentiate Salon Services vs Academy Courses
+      const isAcademy = service.toLowerCase().includes('academy') || service.toLowerCase().includes('course');
+      const targetPhone = isAcademy ? '919633211151' : '917012059591';
+      const greeting = isAcademy ? 'Hello LivArt Beauty Academy Kakkanad!' : 'Hello LivArt Salon & Makeup Studio Kakkanad!';
+
       // Build WhatsApp message
       const msg = [
-        "Hello LivArt Salon & Makeup Studio Kakkanad!",
+        greeting,
         "",
-        "I would like to reserve an appointment:",
+        isAcademy ? "I would like to inquire about course admissions:" : "I would like to reserve an appointment:",
         `• Name: ${name}`,
         `• Phone: ${phone}`,
-        `• Service / Package: ${service}`,
+        `• Inquiring For: ${service}`,
         `• Preferred Date: ${date}`,
         `• Preferred Time: ${time}`,
         notes ? `• Special Notes: ${notes}` : "",
         "",
-        "Please confirm my appointment slot. Thank you!"
+        isAcademy ? "Please share course fees, syllabus, and upcoming batch details. Thank you!" : "Please confirm my appointment slot. Thank you!"
       ].filter(line => line !== null).join("\n");
 
-      const waUrl = `https://wa.me/917012059591?text=${encodeURIComponent(msg)}`;
+      const waUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(msg)}`;
 
       setTimeout(() => {
         window.open(waUrl, '_blank');
       }, 600);
     });
   }
+}
+
+// Hero Visual Showcase Slideshow
+function initHeroSlideshow() {
+  const container = document.getElementById('hero-showcase-container');
+  if (!container) return;
+
+  const slides = container.querySelectorAll('.hero-slide');
+  const dots = container.querySelectorAll('.hero-dot');
+  const prevBtn = document.getElementById('hero-slide-prev');
+  const nextBtn = document.getElementById('hero-slide-next');
+  const tagEl = document.getElementById('hero-slider-tag');
+  const titleEl = document.getElementById('hero-slider-title');
+  const counterEl = document.getElementById('hero-slider-counter');
+
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let timer = null;
+  const slideCount = slides.length;
+  const intervalTime = 3800;
+
+  function showSlide(index) {
+    if (index < 0) index = slideCount - 1;
+    if (index >= slideCount) index = 0;
+    currentIndex = index;
+
+    slides.forEach((s, idx) => {
+      if (idx === currentIndex) {
+        s.classList.add('active');
+      } else {
+        s.classList.remove('active');
+      }
+    });
+
+    dots.forEach((d, idx) => {
+      if (idx === currentIndex) {
+        d.classList.add('bg-champagne-gold', 'w-4');
+        d.classList.remove('bg-white/40', 'w-2');
+      } else {
+        d.classList.remove('bg-champagne-gold', 'w-4');
+        d.classList.add('bg-white/40', 'w-2');
+      }
+    });
+
+    const activeSlide = slides[currentIndex];
+    if (activeSlide) {
+      const tag = activeSlide.getAttribute('data-tag') || 'Kakkanad Sanctuary';
+      const title = activeSlide.getAttribute('data-title') || 'Seaport-Airport Atelier';
+
+      if (tagEl) {
+        tagEl.style.opacity = '0';
+        setTimeout(() => {
+          tagEl.textContent = tag;
+          tagEl.style.opacity = '1';
+        }, 150);
+      }
+      if (titleEl) {
+        titleEl.style.opacity = '0';
+        setTimeout(() => {
+          titleEl.textContent = title;
+          titleEl.style.opacity = '1';
+        }, 150);
+      }
+      if (counterEl) {
+        counterEl.textContent = `${currentIndex + 1}/${slideCount}`;
+      }
+    }
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    timer = setInterval(nextSlide, intervalTime);
+  }
+
+  function stopAutoPlay() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  // Navigation Event Listeners
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextSlide();
+      startAutoPlay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevSlide();
+      startAutoPlay();
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const idx = parseInt(dot.getAttribute('data-index'), 10);
+      if (!isNaN(idx)) {
+        showSlide(idx);
+        startAutoPlay();
+      }
+    });
+  });
+
+  // Pause on hover
+  container.addEventListener('mouseenter', stopAutoPlay);
+  container.addEventListener('mouseleave', startAutoPlay);
+
+  // Touch Swipe Support for Mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  container.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoPlay();
+  }, { passive: true });
+
+  container.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+    startAutoPlay();
+  }, { passive: true });
+
+  // Initial Autoplay start
+  startAutoPlay();
 }

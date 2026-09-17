@@ -4,6 +4,7 @@ import json
 from generator import (
     BASE_DIR, SITE_NAME, SITE_TAGLINE, BASE_URL, PHONE, PHONE_TEL, EMAIL, ADDRESS, HOURS,
     INSTAGRAM_HANDLE, INSTAGRAM_URL, FACEBOOK_URL, LOGO_URL,
+    ACADEMY_PHONE, ACADEMY_PHONE_TEL,
     render_head, render_header, render_footer
 )
 
@@ -103,25 +104,72 @@ def build_homepage():
           </div>
         </div>
 
-        <!-- Right Column: Visual Showcase -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-obsidian-surface border border-white/10">
-            <img src="assets/images/instagram/DTc2O2fCFZI.jpg" alt="Haute Couture Bridal Artistry by Stephy Sebastian at LivArt Salon Kakkanad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" fetchpriority="high" />
-            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep via-transparent to-transparent opacity-80"></div>
+        <!-- Right Column: Visual Showcase Slideshow -->
+        <div class="lg:col-span-5 relative" id="hero-showcase-container">
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-obsidian-surface border border-white/10 group select-none">
             
-            <div class="absolute bottom-6 left-6 right-6 p-4 bg-obsidian-deep/90 backdrop-blur-md rounded-xl border border-white/10 flex items-center justify-between">
-              <div>
-                <span class="font-label-caps text-[10px] text-champagne-gold tracking-widest uppercase block">Kakkanad Sanctuary</span>
-                <span class="font-serif-luxury text-base text-alabaster-cream font-bold">Seaport-Airport Atelier</span>
+            <!-- Slide 1: Muslim Nikah Bride -->
+            <div class="hero-slide active" data-index="0" data-tag="Nikah Ceremony" data-title="Bespoke Muslim Bridal Couture">
+              <img src="assets/images/instagram/DTc2O2fCFZI.jpg" alt="Haute Couture Muslim Nikah Bride Artistry by Stephy Sebastian" class="w-full h-full object-cover" fetchpriority="high" />
+            </div>
+
+            <!-- Slide 2: Reception Glamour -->
+            <div class="hero-slide" data-index="1" data-tag="Cocktail & Party" data-title="Red Carpet Evening Glamour">
+              <img src="assets/images/instagram/DX6qGl_SKf1.jpg" alt="Red Carpet Reception Glamour at LivArt Salon Kakkanad" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+
+            <!-- Slide 3: Hindu Muhurtham Bride -->
+            <div class="hero-slide" data-index="2" data-tag="Sacred Muhurtham" data-title="Traditional South Indian Radiance">
+              <img src="assets/images/instagram/DULWym5CHa0.jpg" alt="Traditional Hindu Muhurtham Bride by Stephy Sebastian" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+
+            <!-- Slide 4: Christian Bride -->
+            <div class="hero-slide" data-index="3" data-tag="Church Ceremony" data-title="Porcelain Christian Bridal Grace">
+              <img src="assets/images/instagram/DYuASLuK_le.jpg" alt="Christian Bridal Gown and Veil Styling LivArt Salon" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+
+            <!-- Slide 5: Hair Styling & Blowout -->
+            <div class="hero-slide" data-index="4" data-tag="Precision Styling" data-title="Couture Haircut & Runway Blowout">
+              <img src="assets/images/instagram/DbLJRauyFro.jpg" alt="Precision Haircut and Salon Styling by LivArt Senior Stylists" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+
+            <!-- Subtle Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep/90 via-transparent to-black/20 pointer-events-none z-[3]"></div>
+
+            <!-- Slide Navigation Chevrons (Prev / Next) -->
+            <button id="hero-slide-prev" aria-label="Previous Slide" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-obsidian-deep/70 hover:bg-champagne-gold hover:text-obsidian-deep text-alabaster-cream flex items-center justify-center backdrop-blur-sm border border-white/15 opacity-0 group-hover:opacity-100 transition-all duration-300 z-[5]">
+              <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+            </button>
+            <button id="hero-slide-next" aria-label="Next Slide" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-obsidian-deep/70 hover:bg-champagne-gold hover:text-obsidian-deep text-alabaster-cream flex items-center justify-center backdrop-blur-sm border border-white/15 opacity-0 group-hover:opacity-100 transition-all duration-300 z-[5]">
+              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            </button>
+
+            <!-- Slide Progress Indicators (Dots) -->
+            <div class="absolute top-4 right-4 flex items-center gap-1.5 z-[5] bg-obsidian-deep/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+              <button class="hero-dot w-4 h-2 rounded-full transition-all bg-champagne-gold" data-index="0" aria-label="Slide 1"></button>
+              <button class="hero-dot w-2 h-2 rounded-full transition-all bg-white/40 hover:bg-white/70" data-index="1" aria-label="Slide 2"></button>
+              <button class="hero-dot w-2 h-2 rounded-full transition-all bg-white/40 hover:bg-white/70" data-index="2" aria-label="Slide 3"></button>
+              <button class="hero-dot w-2 h-2 rounded-full transition-all bg-white/40 hover:bg-white/70" data-index="3" aria-label="Slide 4"></button>
+              <button class="hero-dot w-2 h-2 rounded-full transition-all bg-white/40 hover:bg-white/70" data-index="4" aria-label="Slide 5"></button>
+            </div>
+
+            <!-- Bottom Glassmorphic Caption Card -->
+            <div class="absolute bottom-6 left-6 right-6 p-4 bg-obsidian-deep/90 backdrop-blur-md rounded-xl border border-white/10 flex items-center justify-between z-[4] shadow-xl">
+              <div class="overflow-hidden pr-2">
+                <span id="hero-slider-tag" class="font-label-caps text-[10px] text-champagne-gold tracking-widest uppercase block transition-all duration-300">Nikah Ceremony</span>
+                <span id="hero-slider-title" class="font-serif-luxury text-base text-alabaster-cream font-bold truncate block transition-all duration-300">Bespoke Muslim Bridal Couture</span>
               </div>
-              <div class="w-10 h-10 rounded-full bg-champagne-gold text-obsidian-deep flex items-center justify-center">
-                <span class="material-symbols-outlined text-[20px]">spa</span>
+              <div class="flex items-center gap-2.5 shrink-0">
+                <span id="hero-slider-counter" class="text-[11px] font-bold text-metallic-gold-light tracking-wider font-mono">1/5</span>
+                <div class="w-9 h-9 rounded-full bg-champagne-gold text-obsidian-deep flex items-center justify-center shadow-md">
+                  <span class="material-symbols-outlined text-[18px]">spa</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Floating Badge -->
-          <div class="absolute -top-5 -left-5 hidden sm:flex items-center gap-2 bg-obsidian-surface/95 backdrop-blur-md p-3.5 rounded-xl shadow-xl border border-champagne-gold/30">
+          <div class="absolute -top-5 -left-5 hidden sm:flex items-center gap-2 bg-obsidian-surface/95 backdrop-blur-md p-3.5 rounded-xl shadow-xl border border-champagne-gold/30 z-[6]">
             <span class="material-symbols-outlined text-champagne-gold text-[22px]" style="font-variation-settings: 'FILL' 1;">verified</span>
             <div class="flex flex-col pr-1">
               <span class="text-[10px] font-bold text-metallic-gold-light uppercase tracking-wider">Certified Masters</span>
@@ -764,12 +812,13 @@ def build_homepage():
           </div>
         </div>
         <div class="flex items-center gap-3 shrink-0">
-          <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20beautician%20and%20cosmetology%20courses" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
+          <a href="https://wa.me/919633211151?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20beautician%20and%20cosmetology%20courses" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
             <span class="material-symbols-outlined text-[16px]">chat</span>
             <span>WhatsApp Admissions</span>
           </a>
-          <a href="tel:+917012059591" class="border border-white/20 hover:border-white text-white px-4 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all">
-            Call Desk
+          <a href="tel:{ACADEMY_PHONE_TEL}" class="border border-white/20 hover:border-champagne-gold text-white hover:text-champagne-gold px-4 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[15px] text-champagne-gold">call</span>
+            <span>Call 096332 11151</span>
           </a>
         </div>
       </div>

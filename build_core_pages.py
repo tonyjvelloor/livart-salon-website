@@ -4,6 +4,7 @@ from generator import (
     BASE_DIR, SITE_NAME, BASE_URL, PHONE, PHONE_TEL, EMAIL, ADDRESS, HOURS,
     INSTAGRAM_HANDLE, INSTAGRAM_URL, FACEBOOK_URL, LOGO_URL,
     ACADEMY_URL, ACADEMY_FOUNDER_URL, PRESS_FEATURE_URL,
+    ACADEMY_PHONE, ACADEMY_PHONE_TEL,
     render_head, render_header, render_footer
 )
 
@@ -996,21 +997,45 @@ def build_contact_page():
         <!-- Info Right -->
         <div class="lg:col-span-5 flex flex-col gap-6">
           <div class="bg-obsidian-deep text-alabaster-cream p-8 rounded-3xl shadow-xl">
-            <span class="text-xs font-bold uppercase tracking-widest text-champagne-gold block mb-2">Our Locations</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-champagne-gold block mb-2">Salon & Make-Up Studio</span>
             <h3 class="font-serif-luxury text-2xl font-bold text-white mb-4">LivArt Kakkanad Studio</h3>
             <div class="space-y-4 text-xs text-gray-300">
               <p><strong class="text-white">Address:</strong><br />{ADDRESS}</p>
-              <p><strong class="text-white">Direct Phone:</strong><br /><a href="tel:{PHONE_TEL}" class="text-champagne-gold text-sm font-bold">{PHONE}</a></p>
+              <p><strong class="text-white">Salon Direct Phone:</strong><br /><a href="tel:{PHONE_TEL}" class="text-champagne-gold text-sm font-bold">{PHONE}</a></p>
               <p><strong class="text-white">Email:</strong><br /><a href="mailto:{EMAIL}" class="hover:underline">{EMAIL}</a></p>
               <p><strong class="text-white">Opening Hours:</strong><br />{HOURS}</p>
             </div>
 
             <div class="mt-6 pt-6 border-t border-white/10 flex gap-3">
               <a href="https://wa.me/917012059591" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-1.5">
-                <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp
+                <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp Salon
               </a>
               <a href="tel:{PHONE_TEL}" class="flex-1 bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-1.5">
-                <span class="material-symbols-outlined text-[16px]">call</span> Call Desk
+                <span class="material-symbols-outlined text-[16px]">call</span> Call Salon
+              </a>
+            </div>
+          </div>
+
+          <!-- Dedicated LivArt Beauty Academy Admissions -->
+          <div class="bg-obsidian-surface border border-champagne-gold/30 text-alabaster-cream p-6 rounded-3xl shadow-xl">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold bg-champagne-gold/15 px-2.5 py-1 rounded-full">Govt. Affiliated Academy</span>
+              <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="text-xs text-champagne-gold hover:underline flex items-center gap-1">livart.co.in ↗</a>
+            </div>
+            <h4 class="font-serif-luxury text-xl font-bold text-white mb-2">LivArt Beauty Academy</h4>
+            <p class="text-xs text-gray-300 mb-4 leading-relaxed">
+              Course admissions, syllabus queries, and B&WSSC government certification inquiries:
+            </p>
+            <div class="space-y-2 text-xs text-gray-300 mb-4 bg-obsidian-deep/60 p-3 rounded-xl border border-white/5">
+              <p><strong class="text-white">Direct Admissions Desk:</strong><br /><a href="tel:{ACADEMY_PHONE_TEL}" class="text-champagne-gold text-sm font-bold">{ACADEMY_PHONE}</a></p>
+              <p><strong class="text-white">Academy Portal:</strong> <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="text-champagne-gold hover:underline">livart.co.in</a></p>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://wa.me/919633211151?text=Hello%20LivArt%20Beauty%20Academy,%20I%20would%20like%20to%20inquire%20about%20courses" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-1.5">
+                <span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp ({ACADEMY_PHONE})
+              </a>
+              <a href="tel:{ACADEMY_PHONE_TEL}" class="flex-1 border border-champagne-gold/40 hover:bg-champagne-gold hover:text-obsidian-deep text-champagne-gold py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-1.5">
+                <span class="material-symbols-outlined text-[15px]">call</span> Call Desk
               </a>
             </div>
           </div>
@@ -1053,7 +1078,7 @@ def build_academy_page():
                 "url": ACADEMY_URL,
                 "logo": LOGO_URL,
                 "description": "Government-approved beauty and cosmetology academy affiliated with B&WSSC (Beauty & Wellness Sector Skill Council of India), offering professional diplomas in cosmetology, bridal makeup, hair styling, and clinical skincare aesthetics.",
-                "telephone": PHONE,
+                "telephone": ACADEMY_PHONE,
                 "email": EMAIL,
                 "address": {
                     "@type": "PostalAddress",
@@ -1194,13 +1219,17 @@ def build_academy_page():
           </div>
 
           <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-            <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep px-7 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase shadow-xl transition-all">
-              <span>Visit livart.co.in Official Site</span>
+            <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep px-6 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase shadow-xl transition-all">
+              <span>Visit livart.co.in</span>
               <span class="material-symbols-outlined text-[16px]">open_in_new</span>
             </a>
-            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20would%20like%20to%20inquire%20about%20your%20beautician%20courses" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase transition-all shadow-lg">
+            <a href="https://wa.me/919633211151?text=Hi%20LivArt%20Academy,%20I%20would%20like%20to%20inquire%20about%20your%20beautician%20courses" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase transition-all shadow-lg">
               <span class="material-symbols-outlined text-[16px]">chat</span>
-              <span>WhatsApp Admission Desk</span>
+              <span>WhatsApp Admissions</span>
+            </a>
+            <a href="tel:{ACADEMY_PHONE_TEL}" class="inline-flex items-center justify-center gap-2 border border-champagne-gold/40 hover:bg-champagne-gold hover:text-obsidian-deep text-champagne-gold px-6 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase transition-all shadow-lg">
+              <span class="material-symbols-outlined text-[16px]">call</span>
+              <span>Call 096332 11151</span>
             </a>
           </div>
 
@@ -1359,7 +1388,7 @@ def build_academy_page():
               <span>View Full Syllabus on livart.co.in</span>
               <span class="material-symbols-outlined text-[14px]">open_in_new</span>
             </a>
-            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Diploma%20in%20Cosmetology" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
+            <a href="https://wa.me/919633211151?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Diploma%20in%20Cosmetology" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
               <span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp Inquiries
             </a>
           </div>
@@ -1402,7 +1431,7 @@ def build_academy_page():
               <span>View Full Syllabus on livart.co.in</span>
               <span class="material-symbols-outlined text-[14px]">open_in_new</span>
             </a>
-            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Bridal%20Makeup%20Course" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
+            <a href="https://wa.me/919633211151?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Bridal%20Makeup%20Course" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
               <span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp Inquiries
             </a>
           </div>
@@ -1445,7 +1474,7 @@ def build_academy_page():
               <span>View Full Syllabus on livart.co.in</span>
               <span class="material-symbols-outlined text-[14px]">open_in_new</span>
             </a>
-            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Hair%20Styling%20Course" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
+            <a href="https://wa.me/919633211151?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Hair%20Styling%20Course" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
               <span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp Inquiries
             </a>
           </div>
@@ -1488,7 +1517,7 @@ def build_academy_page():
               <span>View Full Syllabus on livart.co.in</span>
               <span class="material-symbols-outlined text-[14px]">open_in_new</span>
             </a>
-            <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Skin%20Care%20Course" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
+            <a href="https://wa.me/919633211151?text=Hi%20LivArt%20Academy,%20I%20am%20interested%20in%20the%20Skin%20Care%20Course" target="_blank" rel="noopener noreferrer" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1">
               <span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp Inquiries
             </a>
           </div>
@@ -1569,12 +1598,13 @@ def build_academy_page():
             <span>Visit Academy Portal (livart.co.in)</span>
             <span class="material-symbols-outlined text-[16px]">open_in_new</span>
           </a>
-          <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Academy,%20I%20would%20like%20to%20apply%20for%20the%20upcoming%20batch" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white px-7 py-3.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-xl flex items-center gap-2">
+          <a href="https://wa.me/919633211151?text=Hi%20LivArt%20Academy,%20I%20would%20like%20to%20apply%20for%20the%20upcoming%20batch" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white px-7 py-3.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-xl flex items-center gap-2">
             <span class="material-symbols-outlined text-[16px]">chat</span>
-            <span>WhatsApp Admissions (+91 70120 59591)</span>
+            <span>WhatsApp Admissions ({ACADEMY_PHONE})</span>
           </a>
-          <a href="tel:{PHONE_TEL}" class="border border-white/20 hover:border-white text-white px-6 py-3.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all">
-            Direct Call Desk
+          <a href="tel:{ACADEMY_PHONE_TEL}" class="border border-white/20 hover:border-champagne-gold text-white hover:text-champagne-gold px-6 py-3.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all flex items-center gap-2">
+            <span class="material-symbols-outlined text-[16px] text-champagne-gold">call</span>
+            <span>Call 096332 11151</span>
           </a>
         </div>
 
