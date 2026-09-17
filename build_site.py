@@ -75,12 +75,12 @@ def build_homepage():
           </div>
 
           <!-- CTAs -->
-          <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-            <button data-open-booking class="inline-flex items-center justify-center gap-2 bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep px-7 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase shadow-xl transition-all">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
+            <button data-open-booking class="inline-flex items-center justify-center gap-2 bg-champagne-gold hover:bg-metallic-gold-light active:scale-95 text-obsidian-deep px-7 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase shadow-xl transition-all min-h-[44px]">
               <span>Book Your Experience</span>
               <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
             </button>
-            <a href="services/index.html" class="inline-flex items-center justify-center gap-2 bg-obsidian-surface hover:bg-white/10 text-alabaster-cream px-7 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase border border-white/10 transition-all">
+            <a href="services/index.html" class="inline-flex items-center justify-center gap-2 bg-obsidian-surface hover:bg-white/10 active:scale-95 text-alabaster-cream px-7 py-3.5 rounded-lg font-label-caps text-xs font-bold tracking-widest uppercase border border-white/10 transition-all min-h-[44px]">
               <span>Explore Services</span>
               <span class="material-symbols-outlined text-[16px]">menu_book</span>
             </a>
@@ -332,9 +332,9 @@ def build_homepage():
   </section>
 
   <!-- INSTAGRAM REELS & VIDEO COMMUNITY SHOWCASE -->
-  <section class="w-full py-20 bg-obsidian-deep text-alabaster-cream" id="instagram-showcase">
+  <section class="w-full py-16 sm:py-20 bg-obsidian-deep text-alabaster-cream" id="instagram-showcase">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
         <div>
           <div class="flex items-center gap-2 text-champagne-gold mb-2">
             <span class="material-symbols-outlined text-[20px]">photo_camera</span>
@@ -345,15 +345,31 @@ def build_homepage():
           </h2>
         </div>
         <div class="flex items-center gap-4">
-          <a href="{INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-95 text-white px-5 py-2.5 rounded-lg text-xs font-bold tracking-wider uppercase transition-all shadow-md">
+          <a href="{INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto justify-center inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-95 active:scale-95 text-white px-5 py-3 sm:py-2.5 rounded-lg text-xs font-bold tracking-wider uppercase transition-all shadow-md min-h-[44px] sm:min-h-[auto]">
             <span>Follow {INSTAGRAM_HANDLE}</span>
             <span class="material-symbols-outlined text-[16px]">open_in_new</span>
           </a>
         </div>
       </div>
 
+      <!-- Touch-Friendly Category Filter Tabs (Swipeable on Mobile) -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar touch-scroll py-2 px-1 -mx-4 px-4 sm:mx-0 sm:justify-center mb-8">
+        <button onclick="filterReelsCategory('all', 'instagram-feed-grid')" data-category="all" class="reel-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-champagne-gold text-obsidian-deep min-h-[40px] shadow-sm flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+          <span>All 48 Curated Reels</span>
+        </button>
+        <button onclick="filterReelsCategory('celebrity', 'instagram-feed-grid')" data-category="celebrity" class="reel-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[40px] flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">star</span>
+          <span>Celebrity Visits (21)</span>
+        </button>
+        <button onclick="filterReelsCategory('bridal', 'instagram-feed-grid')" data-category="bridal" class="reel-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[40px] flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">favorite</span>
+          <span>Bridal Works (27)</span>
+        </button>
+      </div>
+
       <!-- Instagram Grid Container -->
-      <div id="instagram-feed-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div id="instagram-feed-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6">
         <!-- Injected via assets/js/instagram-feed.js -->
       </div>
     </div>

@@ -538,7 +538,7 @@ function generateDirectEmbedCard(reel) {
     </div>
 
     <!-- Direct Official Instagram Player: Renders Authentic Instagram Reel Thumbnail & Player (0ms delay, no raw text) -->
-    <div class="instagram-embed-box relative w-full h-[520px] bg-black rounded-xl overflow-hidden my-2 shadow-inner">
+    <div class="instagram-embed-box relative w-full h-[460px] sm:h-[520px] bg-black rounded-xl overflow-hidden my-2 shadow-inner">
       <!-- Dark Shimmer Placeholder underneath iframe while loading -->
       <div class="absolute inset-0 flex flex-col items-center justify-center bg-[#0d0d0f] text-gray-400 gap-2 pointer-events-none">
         <div class="w-10 h-10 rounded-full border-2 border-champagne-gold/30 border-t-champagne-gold animate-spin"></div>
@@ -567,10 +567,10 @@ function generateDirectEmbedCard(reel) {
         <span class="text-[10px] text-gray-400 truncate block">${reel.service}</span>
       </div>
       <div class="flex items-center gap-1.5 shrink-0">
-        <a href="${reel.url}" target="_blank" rel="noopener noreferrer" class="bg-white/15 hover:bg-white/25 text-white p-1.5 rounded-lg transition-all flex items-center justify-center" title="Watch on Instagram App / Web">
-          <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+        <a href="${reel.url}" target="_blank" rel="noopener noreferrer" class="bg-white/15 hover:bg-white/25 text-white p-2 sm:p-1.5 rounded-lg transition-all flex items-center justify-center min-w-[36px] min-h-[36px]" title="Watch on Instagram App / Web" aria-label="Watch on Instagram">
+          <span class="material-symbols-outlined text-[16px] sm:text-[14px]">open_in_new</span>
         </a>
-        <button onclick="openBookingModal('${reel.service}')" class="bg-champagne-gold hover:bg-white text-obsidian-deep py-1.5 px-3 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all shadow-md">
+        <button onclick="openBookingModal('${reel.service}')" class="bg-champagne-gold hover:bg-white active:scale-95 text-obsidian-deep py-2 px-3.5 sm:py-1.5 sm:px-3 rounded-lg text-[11px] sm:text-[10px] font-bold uppercase tracking-wider transition-all shadow-md min-h-[36px]">
           Book Look
         </button>
       </div>
@@ -607,15 +607,15 @@ function renderDirectEmbedReels(containerId = "instagram-feed-grid") {
   if (!expandBar) {
     expandBar = document.createElement('div');
     expandBar.id = containerId + '-expand-bar';
-    expandBar.className = 'mt-10 text-center w-full flex justify-center';
+    expandBar.className = 'mt-10 text-center w-full flex justify-center px-4 sm:px-0';
     container.parentNode.insertBefore(expandBar, container.nextSibling);
   }
 
   const stepCount = Math.min(config.step, totalCount - shownCount);
 
   expandBar.innerHTML = `
-    <div class="inline-flex flex-wrap items-center justify-center gap-3 p-3 bg-obsidian-surface border border-champagne-gold/30 rounded-2xl shadow-2xl">
-      <div class="flex items-center gap-2 px-3 py-1">
+    <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 p-3 bg-obsidian-surface border border-champagne-gold/30 rounded-2xl shadow-2xl w-full sm:w-auto">
+      <div class="flex items-center gap-2 px-3 py-1 text-center justify-center">
         <span class="w-2 h-2 rounded-full bg-champagne-gold animate-pulse"></span>
         <span class="text-xs text-gray-200 font-medium">
           Showing <strong class="text-champagne-gold">${shownCount}</strong> of <strong class="text-white">${totalCount}</strong> Video Reels
@@ -623,25 +623,25 @@ function renderDirectEmbedReels(containerId = "instagram-feed-grid") {
       </div>
 
       ${hasMore ? `
-      <button onclick="window.expandReels('${containerId}', ${config.step})" class="bg-champagne-gold hover:bg-white text-obsidian-deep px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-[16px]">expand_more</span>
+      <button onclick="window.expandReels('${containerId}', ${config.step})" class="w-full sm:w-auto justify-center bg-champagne-gold hover:bg-white active:scale-95 text-obsidian-deep px-5 py-3 sm:py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center gap-1.5 min-h-[44px] sm:min-h-[auto]">
+        <span class="material-symbols-outlined text-[18px] sm:text-[16px]">expand_more</span>
         <span>Expand (+${stepCount} More Videos)</span>
       </button>
 
-      <button onclick="window.expandAllReels('${containerId}')" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-[16px]">fullscreen</span>
+      <button onclick="window.expandAllReels('${containerId}')" class="w-full sm:w-auto justify-center bg-white/10 hover:bg-white/20 active:scale-95 text-white border border-white/20 px-4 py-3 sm:py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 min-h-[44px] sm:min-h-[auto]">
+        <span class="material-symbols-outlined text-[18px] sm:text-[16px]">fullscreen</span>
         <span>Expand All (${totalCount})</span>
       </button>
       ` : `
-      <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs font-bold">
+      <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs font-bold">
         <span class="material-symbols-outlined text-[16px]">check_circle</span>
         <span>All ${totalCount} Video Reels Loaded</span>
       </span>
       `}
 
       ${isExpanded ? `
-      <button onclick="window.collapseReels('${containerId}')" class="bg-white/5 hover:bg-white/15 text-gray-300 hover:text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1 border border-white/10">
-        <span class="material-symbols-outlined text-[16px]">expand_less</span>
+      <button onclick="window.collapseReels('${containerId}')" class="w-full sm:w-auto justify-center bg-white/5 hover:bg-white/15 active:scale-95 text-gray-300 hover:text-white px-4 py-3 sm:py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1 border border-white/10 min-h-[44px] sm:min-h-[auto]">
+        <span class="material-symbols-outlined text-[18px] sm:text-[16px]">expand_less</span>
         <span>Collapse to Limited View (6)</span>
       </button>
       ` : ''}

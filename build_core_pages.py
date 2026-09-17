@@ -667,12 +667,28 @@ def build_gallery_page():
   <!-- Interactive Feed Section -->
   <section class="py-16 bg-surface-bright">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-10 text-center">
+      <div class="mb-8 text-center">
         <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep mb-2">Featured Instagram Reels & Client Transformations</h2>
-        <p class="text-xs text-muted-slate">Click any reel to watch, read styling details, and instantly book that exact look with our stylists.</p>
+        <p class="text-xs text-muted-slate mb-6">Click any reel to watch, read styling details, and instantly book that exact look with our stylists.</p>
+        
+        <!-- Touch-Friendly Category Filter Tabs (Swipeable on Mobile) -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar touch-scroll py-2 px-1 -mx-4 px-4 sm:mx-0 sm:justify-center">
+          <button onclick="filterReelsCategory('all', 'instagram-feed-grid')" data-category="all" class="reel-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-champagne-gold text-obsidian-deep min-h-[40px] shadow-sm flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+            <span>All 48 Curated Reels</span>
+          </button>
+          <button onclick="filterReelsCategory('celebrity', 'instagram-feed-grid')" data-category="celebrity" class="reel-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[40px] flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">star</span>
+            <span>Celebrity Visits (21)</span>
+          </button>
+          <button onclick="filterReelsCategory('bridal', 'instagram-feed-grid')" data-category="bridal" class="reel-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[40px] flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">favorite</span>
+            <span>Bridal Works (27)</span>
+          </button>
+        </div>
       </div>
 
-      <div id="instagram-feed-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div id="instagram-feed-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6">
         <!-- Populated via assets/js/instagram-feed.js -->
       </div>
     </div>
