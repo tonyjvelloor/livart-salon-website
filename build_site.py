@@ -12,6 +12,376 @@ def ensure_dir(path):
     os.makedirs(path, exist_ok=True)
 
 # -------------------------------------------------------------
+# INTERACTIVE BEFORE/AFTER TRANSFORMATION SLIDER
+# -------------------------------------------------------------
+def render_transformations_section():
+    return """
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE BEFORE/AFTER TRANSFORMATION SLIDER (HIGH CONVERSION SHOWCASE) -->
+  <!-- ========================================================================= -->
+  <section class="w-full py-20 bg-[#0B0A09] text-alabaster-cream relative overflow-hidden border-t border-b border-champagne-gold/20" id="transformations">
+    <!-- Ambient subtle background glow -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-champagne-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-warm-bronze/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-champagne-gold/10 border border-champagne-gold/30 text-champagne-gold mb-3">
+          <span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+          <span class="font-label-caps text-[10px] sm:text-xs tracking-[0.25em] uppercase font-bold">Atelier Proof & Real Results</span>
+        </div>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-alabaster-cream font-bold mb-4">
+          Witness the LivArt Transformation
+        </h2>
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
+          Slide to reveal real client results crafted by Stephy Sebastian and our master stylists in Kakkanad. Real hair, real brides, authentic salon transformations.
+        </p>
+      </div>
+
+      <!-- Transformation Switcher Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10" id="trans-tabs">
+        <button type="button" data-trans-tab="botox" class="trans-tab-btn px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-champagne-gold text-obsidian-deep shadow-lg shadow-champagne-gold/20 scale-105 border border-champagne-gold">
+          Anti-Frizz Hair Botox
+        </button>
+        <button type="button" data-trans-tab="bridal" class="trans-tab-btn px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white/10 text-alabaster-cream hover:bg-white/20 border border-white/10">
+          HD Bridal Artistry
+        </button>
+        <button type="button" data-trans-tab="blowdry" class="trans-tab-btn px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white/10 text-alabaster-cream hover:bg-white/20 border border-white/10">
+          Permanent Blow Dry
+        </button>
+      </div>
+
+      <!-- Main Showcase Grid (Slider Left, Story Right) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Interactive Slider Left (6 cols on lg) -->
+        <div class="lg:col-span-6 flex flex-col items-center">
+          <div class="relative w-full max-w-[500px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-2 border-champagne-gold/40 select-none bg-black group" id="trans-slider-container">
+            <!-- AFTER Image (Underneath, Full) -->
+            <img id="trans-after-img" 
+                 src="assets/images/transformations/hair_botox_after.jpg" 
+                 alt="After Transformation Result at LivArt Salon Kakkanad" 
+                 class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none transition-opacity duration-300" 
+                 loading="lazy" />
+
+            <!-- BEFORE Image (Overlaid with clip-path) -->
+            <img id="trans-before-img" 
+                 src="assets/images/transformations/hair_botox_before.jpg" 
+                 alt="Before Transformation at LivArt Salon Kakkanad" 
+                 class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none transition-opacity duration-300" 
+                 style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);" 
+                 loading="lazy" />
+
+            <!-- Floating Pill Badges -->
+            <div class="absolute top-4 left-4 z-20 pointer-events-none">
+              <span class="bg-black/80 backdrop-blur-md text-white border border-white/20 text-[10px] sm:text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+                BEFORE
+              </span>
+            </div>
+            <div class="absolute top-4 right-4 z-20 pointer-events-none">
+              <span class="bg-champagne-gold text-obsidian-deep font-bold text-[10px] sm:text-xs tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-800"></span>
+                AFTER
+              </span>
+            </div>
+
+            <!-- Draggable Gold Divider Line -->
+            <div id="trans-divider" class="absolute top-0 bottom-0 w-1 bg-champagne-gold z-20 pointer-events-none shadow-[0_0_16px_rgba(212,175,55,0.9)]" style="left: 50%; transform: translateX(-50%);">
+              <!-- Circular Gold Handle -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 bg-champagne-gold text-obsidian-deep rounded-full flex items-center justify-center shadow-[0_4px_25px_rgba(0,0,0,0.7)] border-2 border-white ring-2 ring-champagne-gold/50 cursor-ew-resize active:scale-95 transition-transform">
+                <span class="material-symbols-outlined text-[20px] font-bold">compare_arrows</span>
+              </div>
+            </div>
+
+            <!-- Native Accessible Transparent Range Input -->
+            <input type="range" 
+                   min="0" 
+                   max="100" 
+                   value="50" 
+                   id="trans-range-slider" 
+                   class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30 touch-none m-0 p-0" 
+                   aria-label="Interactive before and after comparison slider" 
+                   aria-valuemin="0" 
+                   aria-valuemax="100" 
+                   aria-valuenow="50" />
+
+            <!-- Interaction Prompt Hint -->
+            <div id="trans-hint" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none bg-black/75 backdrop-blur-md text-champagne-gold text-[10px] sm:text-xs font-medium tracking-wider px-4 py-1.5 rounded-full border border-champagne-gold/40 flex items-center gap-1.5 shadow-lg transition-opacity duration-500">
+              <span class="material-symbols-outlined text-[15px]">swipe</span>
+              <span>Drag slider left & right</span>
+            </div>
+          </div>
+
+          <!-- Quick instructions below slider for accessibility -->
+          <p class="text-[11px] text-gray-400 mt-3 text-center flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[14px] text-champagne-gold">touch_app</span>
+            <span>Touch or drag anywhere on the image to compare the transformation</span>
+          </p>
+        </div>
+
+        <!-- Dynamic Transformation Details Right (6 cols on lg) -->
+        <div class="lg:col-span-6 bg-[#161311] p-6 sm:p-8 md:p-10 rounded-2xl border border-champagne-gold/25 shadow-2xl flex flex-col justify-between transition-all duration-300" id="trans-details-card">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span id="trans-badge" class="bg-champagne-gold/15 text-champagne-gold px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border border-champagne-gold/30">
+                Anti-Frizz Hair Botox
+              </span>
+              <span id="trans-client" class="text-xs text-gray-400 font-medium">
+                Verified Client: RJ Bincy (@rjbincy)
+              </span>
+            </div>
+
+            <h3 id="trans-title" class="font-serif-luxury text-2xl sm:text-3xl text-alabaster-cream font-bold mb-3 leading-snug">
+              Intensive Anti-Frizz Hair Botox Rejuvenation
+            </h3>
+
+            <p id="trans-desc" class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6">
+              Watch stubborn humidity frizz vanish into mirror-glossy, weightless silk. This deep restorative ritual fills porous hair fibers with essential proteins and botanical lipids without damaging chemical relaxers.
+            </p>
+
+            <!-- Before vs After Breakdown Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <!-- Before State -->
+              <div class="bg-black/30 p-4 rounded-xl border border-white/5">
+                <div class="flex items-center gap-1.5 text-rose-400 text-xs font-bold uppercase tracking-wider mb-2">
+                  <span class="material-symbols-outlined text-[16px]">close</span>
+                  <span>Before State</span>
+                </div>
+                <ul id="trans-before-points" class="text-xs text-gray-300 space-y-1.5">
+                  <li class="flex items-start gap-1.5">
+                    <span class="text-rose-400/80">•</span>
+                    <span>Humidity-induced frizz & flyaways</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <span class="text-rose-400/80">•</span>
+                    <span>Dull cuticle & dehydrated ends</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <span class="text-rose-400/80">•</span>
+                    <span>45-min exhausting daily heat styling</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- After State -->
+              <div class="bg-champagne-gold/5 p-4 rounded-xl border border-champagne-gold/20">
+                <div class="flex items-center gap-1.5 text-champagne-gold text-xs font-bold uppercase tracking-wider mb-2">
+                  <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  <span>After Result</span>
+                </div>
+                <ul id="trans-after-points" class="text-xs text-gray-200 space-y-1.5">
+                  <li class="flex items-start gap-1.5">
+                    <span class="text-champagne-gold">•</span>
+                    <span>100% frizz eradication & glass shine</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <span class="text-champagne-gold">•</span>
+                    <span>Deeply nourished & sealed hair fiber</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <span class="text-champagne-gold">•</span>
+                    <span>Effortless wash-and-go for 4–5 months</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Feature Badges -->
+            <div id="trans-tags" class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-[11px] text-gray-300">Formaldehyde Free</span>
+              <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-[11px] text-gray-300">Lasts 4–5 Months</span>
+              <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-[11px] text-gray-300">0 Daily Heat Needed</span>
+            </div>
+          </div>
+
+          <!-- Bottom Price & CTAs -->
+          <div class="pt-6 border-t border-white/10">
+            <div class="flex items-baseline justify-between mb-4">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-gray-400 block" id="trans-price-note">Promotional Atelier Pricing</span>
+                <span class="font-serif-luxury text-3xl font-bold text-champagne-gold" id="trans-price">Rs. 5,999</span>
+              </div>
+              <span class="text-[11px] text-warm-bronze font-semibold bg-champagne-gold/10 px-3 py-1 rounded-full border border-champagne-gold/25">
+                Stephy Sebastian Atelier
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <button data-open-booking 
+                      data-service="Hair Botox Treatment (Rs. 5999)" 
+                      id="trans-book-btn" 
+                      class="w-full inline-flex items-center justify-center gap-2 bg-champagne-gold hover:bg-metallic-gold-light text-obsidian-deep py-3 px-4 rounded-xl text-xs font-bold tracking-widest uppercase transition-all shadow-lg active:scale-95">
+                <span>Book This Transformation</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+              <a id="trans-wa-btn" 
+                 href="https://wa.me/917012059591?text=Hi%20LivArt%20Salon,%20I%20saw%20the%20Hair%20Botox%20transformation%20on%20your%20website%20and%20would%20like%20to%20consult" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="w-full inline-flex items-center justify-center gap-2 bg-emerald-700/80 hover:bg-emerald-600 text-white py-3 px-4 rounded-xl text-xs font-bold tracking-wider uppercase transition-all border border-emerald-500/30">
+                <span class="material-symbols-outlined text-[16px]">chat</span>
+                <span>WhatsApp Stylist</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSFORMATION CONTROLLER SCRIPT -->
+  <script>
+  (function() {
+    const transData = {
+      botox: {
+        beforeImg: "assets/images/transformations/hair_botox_before.jpg",
+        afterImg: "assets/images/transformations/hair_botox_after.jpg",
+        badge: "Anti-Frizz Hair Botox",
+        client: "Verified Client: RJ Bincy (@rjbincy)",
+        title: "Intensive Anti-Frizz Hair Botox Rejuvenation",
+        desc: "Watch stubborn humidity frizz vanish into mirror-glossy, weightless silk. This deep restorative ritual fills porous hair fibers with essential proteins and botanical lipids without damaging chemical relaxers.",
+        beforePoints: [
+          "Humidity-induced frizz & flyaways",
+          "Dull cuticle & dehydrated ends",
+          "45-min exhausting daily heat styling"
+        ],
+        afterPoints: [
+          "100% frizz eradication & glass shine",
+          "Deeply nourished & sealed hair fiber",
+          "Effortless wash-and-go for 4–5 months"
+        ],
+        tags: ["Formaldehyde Free", "Lasts 4–5 Months", "0 Daily Heat Needed"],
+        price: "Rs. 5,999",
+        priceNote: "Promotional Atelier Pricing",
+        service: "Hair Botox Treatment (Rs. 5999)",
+        waText: "Hi LivArt Salon, I saw the Hair Botox transformation on your website and would like to consult"
+      },
+      bridal: {
+        beforeImg: "assets/images/transformations/bridal_before.jpg",
+        afterImg: "assets/images/transformations/bridal_hindu_after.jpg",
+        badge: "HD Bridal & Muhurtham",
+        client: "Real LivArt Bride • Kochi Atelier",
+        title: "18-Hour Waterproof HD Bridal Couture Makeover",
+        desc: "From raw, unadorned pre-bridal trial consultation to royal wedding day magnificence. Masterfully contoured to enhance your natural bone structure, withstand emotional moments and tropical climate, finished with bespoke jewelry and saree pleating.",
+        beforePoints: [
+          "Natural bare skin & unstyled hair",
+          "Uneven tone & bridal stress fatigue",
+          "Pre-event consultation trial stage"
+        ],
+        afterPoints: [
+          "Camera-ready 18-hour HD flawless glow",
+          "Waterproof, sweat-proof tear-resistant base",
+          "Sculpted Muhurtham hair & floral setting"
+        ],
+        tags: ["18-Hour Longevity", "Tear & Sweat Proof", "Customized Draping"],
+        price: "From Rs. 9,999",
+        priceNote: "Silver, Gold & Diamond Packages",
+        service: "Bridal Couture Silver/Gold/Diamond Package",
+        waText: "Hi LivArt Salon, I saw the HD Bridal transformation on your website and would like to check bridal dates"
+      },
+      blowdry: {
+        beforeImg: "assets/images/transformations/blowdry_before.jpg",
+        afterImg: "assets/images/transformations/blowdry_after.jpg",
+        badge: "Permanent Blow Dry",
+        client: "Influencer Spotlight: Amala Shaji (@amalashaji)",
+        title: "Runway Bouncy Permanent Blow Dry & Volume",
+        desc: "Transform limp, unruly hair into salon-styled bouncy perfection that lasts for months. Formulated with heat-activated keratin polymers that memorise voluminous blowout curves without needing round brushes every morning.",
+        beforePoints: [
+          "Flat roots & unruly tangled texture",
+          "Lacks movement, bounce, and shape",
+          "Requires daily blow dry heat damage"
+        ],
+        afterPoints: [
+          "Natural salon bounce & voluminous body",
+          "Mirror-reflective healthy light bounce",
+          "Wake up camera-ready every morning"
+        ],
+        tags: ["Heat-Memory Polymers", "Bouncy Volume", "Lasts 3–4 Months"],
+        price: "Rs. 5,999",
+        priceNote: "Special Atelier Rate",
+        service: "Permanent Blow Dry (Rs. 5999)",
+        waText: "Hi LivArt Salon, I saw the Permanent Blow Dry transformation on your website and would like to book"
+      }
+    };
+
+    const range = document.getElementById('trans-range-slider');
+    const beforeImg = document.getElementById('trans-before-img');
+    const afterImg = document.getElementById('trans-after-img');
+    const divider = document.getElementById('trans-divider');
+    const hint = document.getElementById('trans-hint');
+    const tabs = document.querySelectorAll('.trans-tab-btn');
+
+    if (!range || !beforeImg || !divider) return;
+
+    function setSliderPosition(val) {
+      beforeImg.style.clipPath = "polygon(0 0, " + val + "% 0, " + val + "% 100%, 0 100%)";
+      divider.style.left = val + "%";
+      range.setAttribute('aria-valuenow', val);
+    }
+
+    range.addEventListener('input', function() {
+      setSliderPosition(this.value);
+      if (hint) hint.style.opacity = '0';
+    });
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const key = this.getAttribute('data-trans-tab');
+        const data = transData[key];
+        if (!data) return;
+
+        tabs.forEach(t => {
+          t.className = 'trans-tab-btn px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white/10 text-alabaster-cream hover:bg-white/20 border border-white/10';
+        });
+        this.className = 'trans-tab-btn px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-champagne-gold text-obsidian-deep shadow-lg shadow-champagne-gold/20 scale-105 border border-champagne-gold';
+
+        beforeImg.style.opacity = '0';
+        afterImg.style.opacity = '0';
+        setTimeout(() => {
+          beforeImg.src = data.beforeImg;
+          afterImg.src = data.afterImg;
+          beforeImg.style.opacity = '1';
+          afterImg.style.opacity = '1';
+          range.value = 50;
+          setSliderPosition(50);
+          if (hint) hint.style.opacity = '1';
+        }, 200);
+
+        document.getElementById('trans-badge').textContent = data.badge;
+        document.getElementById('trans-client').textContent = data.client;
+        document.getElementById('trans-title').textContent = data.title;
+        document.getElementById('trans-desc').textContent = data.desc;
+        document.getElementById('trans-price').textContent = data.price;
+        document.getElementById('trans-price-note').textContent = data.priceNote;
+
+        const beforeList = document.getElementById('trans-before-points');
+        beforeList.innerHTML = data.beforePoints.map(p => 
+          '<li class="flex items-start gap-1.5"><span class="text-rose-400/80">•</span><span>' + p + '</span></li>'
+        ).join('');
+
+        const afterList = document.getElementById('trans-after-points');
+        afterList.innerHTML = data.afterPoints.map(p => 
+          '<li class="flex items-start gap-1.5"><span class="text-champagne-gold">•</span><span>' + p + '</span></li>'
+        ).join('');
+
+        const tagsContainer = document.getElementById('trans-tags');
+        tagsContainer.innerHTML = data.tags.map(t => 
+          '<span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-[11px] text-gray-300">' + t + '</span>'
+        ).join('');
+
+        const bookBtn = document.getElementById('trans-book-btn');
+        bookBtn.setAttribute('data-service', data.service);
+
+        const waBtn = document.getElementById('trans-wa-btn');
+        waBtn.href = 'https://wa.me/917012059591?text=' + encodeURIComponent(data.waText);
+      });
+    });
+  })();
+  </script>
+"""
+
+# -------------------------------------------------------------
 # 1. HOMEPAGE GENERATION
 # -------------------------------------------------------------
 def build_homepage():
@@ -436,7 +806,11 @@ def build_homepage():
       </div>
     </div>
   </section>
+"""
 
+    html += render_transformations_section()
+
+    html += f"""
   <!-- INSTAGRAM REELS & VIDEO COMMUNITY SHOWCASE -->
   <section class="w-full py-16 sm:py-20 bg-obsidian-deep text-alabaster-cream" id="instagram-showcase">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
