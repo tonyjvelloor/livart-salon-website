@@ -3631,7 +3631,7 @@ function renderServiceCard(service) {
   }
 
   const cleanTitle = service.name.replace(/["']/g, "");
-  const bookMsg = encodeURIComponent("Hi LivArt Salon, I would like to book " + cleanTitle + " (" + standardPriceDisplay + ") at your Kakkanad atelier.");
+  const bookMsg = encodeURIComponent("Hello LivArt Salon Kakkanad!\n\nI would like to book an appointment for:\n• Service: " + cleanTitle + " (" + standardPriceDisplay + ")\n\nPlease let me know your available slots. Thank you!");
   const waUrl = "https://wa.me/917012059591?text=" + bookMsg;
 
   return `
@@ -3669,13 +3669,11 @@ function renderServiceCard(service) {
         <div>
           ${priceHtml}
         </div>
-        <div class="flex items-center gap-2 shrink-0">
-          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center transition-all" title="Inquire on WhatsApp" aria-label="WhatsApp">
-            <span class="material-symbols-outlined text-[16px]">chat</span>
+        <div class="flex items-center shrink-0">
+          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white px-3.5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-md">
+            <span class="material-symbols-outlined text-[15px]">chat</span>
+            <span>Book Now</span>
           </a>
-          <button onclick="openBookingModal('${cleanTitle} (${standardPriceDisplay})')" class="bg-champagne-gold hover:bg-white active:scale-95 text-obsidian-deep px-3.5 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider transition-all shadow-md">
-            Book
-          </button>
         </div>
       </div>
     </div>

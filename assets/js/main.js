@@ -89,6 +89,62 @@ function initServiceFilter() {
   });
 }
 
+// Direct WhatsApp Booking Handler
+window.openWhatsAppBooking = function(service = '') {
+  const serviceLower = (service || '').toLowerCase();
+  const isAcademy = serviceLower.includes('academy') || 
+                    serviceLower.includes('course') || 
+                    serviceLower.includes('beautician') || 
+                    window.location.pathname.includes('/academy/');
+  
+  const targetPhone = isAcademy ? '919633211151' : '917012059591';
+  const salonName = isAcademy ? 'LivArt Beauty Academy Kakkanad' : 'LivArt Salon & Makeup Studio Kakkanad';
+
+  let message = '';
+  const cleanService = (service || '').trim();
+
+  if (cleanService) {
+    if (isAcademy) {
+      message = `Hello ${salonName}!\n\nI would like to inquire about course admissions for:\n• Program: ${cleanService}\n\nPlease share the syllabus, fees, and upcoming batch schedule. Thank you!`;
+    } else if (cleanService.toLowerCase().includes('privilege') || cleanService.toLowerCase().includes('card')) {
+      message = `Hello ${salonName}!\n\nI would like to get / activate the:\n• ${cleanService}\n\nPlease guide me on the membership benefits and activation. Thank you!`;
+    } else {
+      message = `Hello ${salonName}!\n\nI would like to book an appointment for:\n• Service: ${cleanService}\n\nPlease let me know your available slots. Thank you!`;
+    }
+  } else {
+    // Contextual detection if no specific service was passed
+    const h1 = document.querySelector('h1')?.textContent?.trim() || '';
+    const isServicePage = window.location.pathname.includes('/services/') && h1 && !h1.toLowerCase().includes('all services');
+    const isBridalPage = window.location.pathname.includes('/make-up/');
+    const isHairPage = window.location.pathname.includes('/hair-styling/');
+    const isSkinPage = window.location.pathname.includes('/skin-care/');
+
+    if (isAcademy) {
+      message = `Hello ${salonName}!\n\nI would like to inquire about professional beautician courses. Please share the course details, fees, and admission schedule. Thank you!`;
+    } else if (isServicePage) {
+      message = `Hello ${salonName}!\n\nI would like to book an appointment for:\n• Service: ${h1}\n\nPlease let me know your available slots. Thank you!`;
+    } else if (isBridalPage) {
+      message = `Hello ${salonName}!\n\nI would like to inquire about Bridal Makeup & Wedding styling packages at LivArt Kakkanad. Please let me know your consultation availability. Thank you!`;
+    } else if (isHairPage) {
+      message = `Hello ${salonName}!\n\nI would like to book an appointment for Hair Styling / Treatments at LivArt Kakkanad. Please let me know your available slots. Thank you!`;
+    } else if (isSkinPage) {
+      message = `Hello ${salonName}!\n\nI would like to book an appointment for Skin Care & Facial rituals at LivArt Kakkanad. Please let me know your available slots. Thank you!`;
+    } else {
+      message = `Hello ${salonName}!\n\nI would like to book an appointment at your Kakkanad atelier. Please let me know your available slots and treatments. Thank you!`;
+    }
+  }
+
+  const waUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(message)}`;
+  const isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (isMobile) {
+    window.location.href = waUrl;
+  } else {
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+  }
+};
+
+window.openBookingModal = window.openWhatsAppBooking;
+
 // Booking Modal & WhatsApp Concierge
 function initBookingModal() {
   const modal = document.getElementById('booking-modal');
@@ -104,23 +160,6 @@ function initBookingModal() {
     dateInput.value = today;
   }
 
-  window.openBookingModal = function(servicePreselect = '') {
-    if (!modal) return;
-    if (servicePreselect) {
-      const select = document.getElementById('book-service');
-      if (select) {
-        for (let opt of select.options) {
-          if (opt.value === servicePreselect || opt.text.toLowerCase().includes(servicePreselect.toLowerCase())) {
-            opt.selected = true;
-            break;
-          }
-        }
-      }
-    }
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  };
-
   window.closeBookingModal = function() {
     if (!modal) return;
     modal.classList.add('hidden');
@@ -131,7 +170,7 @@ function initBookingModal() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const service = btn.getAttribute('data-service') || '';
-      window.openBookingModal(service);
+      window.openWhatsAppBooking(service);
     });
   });
 
