@@ -522,8 +522,24 @@ const CONTAINER_CONFIGS = {
 function generateDirectEmbedCard(reel) {
   const isCeleb = reel.category === "celebrity";
   const badgeColor = isCeleb ? "text-amber-300 border-amber-400/40 bg-amber-950/40" : "text-rose-300 border-rose-400/40 bg-rose-950/40";
-  const isSubpage = (window.location.pathname.includes('/gallery') || window.location.pathname.includes('/services') || window.location.pathname.includes('/about-us') || window.location.pathname.includes('/teams') || window.location.pathname.includes('/blog') || window.location.pathname.includes('/packages') || window.location.pathname.includes('/make-up') || window.location.pathname.includes('/hair-styling') || window.location.pathname.includes('/skin-care') || window.location.pathname.includes('/academy') || window.location.pathname.includes('/contact-us'));
-  const rootPrefix = isSubpage ? '../' : '';
+  const subLabel = reel.handle || (isCeleb ? "@livart_salon" : (reel.badge || "Real Bride"));
+
+  // Universal root prefix determination (works at root, 1 level deep, or 2+ levels deep)
+  let rootPrefix = '';
+  const scriptTag = typeof document !== 'undefined' && document.querySelector ? document.querySelector('script[src*="instagram-feed.js"]') : null;
+  if (scriptTag) {
+    const src = scriptTag.getAttribute('src') || '';
+    const idx = src.indexOf('assets/js/instagram-feed.js');
+    if (idx !== -1) {
+      rootPrefix = src.substring(0, idx);
+    }
+  }
+  if (!rootPrefix && typeof window !== 'undefined' && window.location && window.location.pathname) {
+    const isSubpage = (window.location.pathname.includes('/gallery') || window.location.pathname.includes('/services') || window.location.pathname.includes('/about-us') || window.location.pathname.includes('/teams') || window.location.pathname.includes('/blog') || window.location.pathname.includes('/packages') || window.location.pathname.includes('/make-up') || window.location.pathname.includes('/hair-styling') || window.location.pathname.includes('/skin-care') || window.location.pathname.includes('/academy') || window.location.pathname.includes('/contact-us'));
+    const isNestedService = window.location.pathname.includes('/services/') || window.location.pathname.includes('/category/');
+    rootPrefix = isNestedService ? '../../' : (isSubpage ? '../' : '');
+  }
+
   const posterSrc = rootPrefix + 'assets/images/instagram/' + reel.code + '.jpg';
 
   return `
@@ -543,7 +559,7 @@ function generateDirectEmbedCard(reel) {
     <div class="instagram-embed-box relative w-full h-[460px] sm:h-[520px] bg-black rounded-xl overflow-hidden my-2 shadow-inner">
       <!-- Authentic Instagram Cover Image Background while iframe loads -->
       <img src="${posterSrc}" alt="${reel.title}" class="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none transition-opacity duration-500" loading="lazy" />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40 pointer-events-none flex flex-col items-center justify-center gap-2">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40 pointer-events-none flex flex-col items-center justify-center gap-2 transition-opacity duration-300">
         <div class="w-10 h-10 rounded-full border-2 border-champagne-gold/40 border-t-champagne-gold animate-spin"></div>
         <span class="text-[10px] text-champagne-gold font-bold uppercase tracking-wider bg-black/60 px-2.5 py-0.5 rounded-full backdrop-blur-sm">Instagram Direct Player</span>
       </div>
@@ -557,6 +573,7 @@ function generateDirectEmbedCard(reel) {
         allowtransparency="true" 
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         loading="lazy"
+        onload="var sp = this.previousElementSibling; if(sp) sp.style.display='none';"
         title="${reel.title}">
       </iframe>
     </div>
@@ -714,7 +731,7 @@ window.filterReelsCategory = function(cat, containerId = "instagram-feed-grid") 
 window.renderDirectEmbedReels = renderDirectEmbedReels;
 window.renderCategorizedReels = renderDirectEmbedReels;
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAllReelGrids() {
   if (document.getElementById('instagram-feed-grid')) {
     renderDirectEmbedReels('instagram-feed-grid');
   }
@@ -724,4 +741,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('bridal-reels-grid')) {
     renderDirectEmbedReels('bridal-reels-grid');
   }
-});
+}
+
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAllReelGrids);
+  } else {
+    initAllReelGrids();
+  }
+}
