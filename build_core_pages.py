@@ -305,12 +305,12 @@ def build_hair_page():
     html += render_header(active_slug="hair-styling", root_prefix="../")
 
     hair_services = [
-        ("Relaxo Hot Oil Head Massage", "Let our expert staff soothe your senses with a hot oil head massage. Formulated to stimulate scalp micro-circulation, nourish deep hair follicles, and relieve cranial tension.", "From Rs. 850", "../assets/images/instagram/CpsA0o_OSo5.jpg"),
-        ("L’Oreal Professional Hair Spa", "Deep steam infusion and therapeutic acupressure massage that repairs cuticle breakdown, cures dryness, and restores lustrous mirror-like gloss.", "Rs. 1,200 (Reg. 1800)", "../assets/images/instagram/DEXOFvGTyDZ.jpg"),
-        ("Balayage & Dimensional Colouring", "Hand-painted dimensional hues tailored to your undertone. Seamless transitions, soft root melting, and zero ammonia damage.", "From Rs. 5,999", "../assets/images/instagram/C5pwjmOidQU.jpg"),
-        ("Precision Haircuts & Blowouts", "Structural haircutting customized to your bone structure and hair density, finished with our iconic runway bouncy blowout.", "From Rs. 850", "../assets/images/instagram/C6F_GKgtlHk.jpg"),
-        ("Hair Botox Anti-Aging Treatment", "Fills structural keratin gaps in hair strands, eliminates 95% of frizz, and revitalizes damaged ends without harsh chemicals.", "Rs. 5,999", "../assets/images/instagram/DW1NAndDGuP.jpg"),
-        ("Permanent Hair Straightening", "Thermal rebonding and permanent straightening for mirror-like silky pin-straight hair that endures through any humidity.", "From Rs. 4,000", "../assets/images/instagram/Db7rJBtuj4B.jpg")
+        ("Relaxo Hot Oil Head Massage & Spa", "Soothe your senses with a revitalizing hot oil head massage and steam infusion. Formulated to stimulate scalp micro-circulation, nourish deep hair follicles, and relieve cranial tension.", "From Rs. 700 (Member Rs. 525)", "../assets/images/instagram/CpsA0o_OSo5.jpg"),
+        ("L’Oreal Professional Hair Spa", "Deep steam infusion and therapeutic acupressure massage that repairs cuticle breakdown, cures dryness, and restores lustrous mirror-like gloss.", "From Rs. 800 (Member Rs. 600)", "../assets/images/instagram/DEXOFvGTyDZ.jpg"),
+        ("Balayage & Dimensional Colouring", "Hand-painted dimensional hues tailored to your undertone. Seamless transitions, soft root melting, and zero ammonia damage with L'Oreal Majirel & Inoa.", "From Rs. 2,500", "../assets/images/instagram/C5pwjmOidQU.jpg"),
+        ("Precision Haircuts & Blowouts", "Structural haircutting customized to your bone structure and hair density by senior stylists or Founder Stephy Sebastian, finished with our iconic runway bouncy blowout.", "From Rs. 400 (Gents) / Rs. 800 (Women)", "../assets/images/instagram/C6F_GKgtlHk.jpg"),
+        ("Hair Botox Anti-Aging Treatment", "Fills structural keratin gaps in hair strands, eliminates 95% of humidity frizz, and revitalizes damaged ends without harsh chemicals.", "Rs. 5,999 (Member Rs. 4,499)", "../assets/images/instagram/DW1NAndDGuP.jpg"),
+        ("Permanent Hair Straightening & Rebonding", "Thermal rebonding and permanent straightening for mirror-like silky pin-straight hair that endures through any Kerala humidity.", "From Rs. 5,000 (Member Rs. 3,750)", "../assets/images/instagram/Db7rJBtuj4B.jpg")
     ]
 
     services_html = ""
@@ -350,8 +350,30 @@ def build_hair_page():
 
   <section class="py-16 bg-surface-bright">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {services_html}
+      </div>
+
+      <!-- Complete Rate Card CTA -->
+      <div class="p-8 sm:p-10 bg-obsidian-deep rounded-3xl border border-champagne-gold/30 text-center max-w-3xl mx-auto shadow-2xl text-alabaster-cream">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-champagne-gold/10 border border-champagne-gold/30 text-champagne-gold text-[10px] font-bold uppercase tracking-widest mb-3">
+          <span class="material-symbols-outlined text-[14px]">menu_book</span>
+          <span>Official 2026 Price Menu</span>
+        </div>
+        <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-white mb-2">Looking for Our Complete Hair Rate Card?</h3>
+        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6 max-w-xl mx-auto">
+          Explore all haircuts, kids styling, Kerasmooth, Botox, creative director sessions with Stephy Sebastian, and privilege member rates on our master service menu.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../services/index.html#catalog" class="bg-champagne-gold text-obsidian-deep px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-md flex items-center gap-2 font-bold">
+            <span>Browse All 234 Services & Prices</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+          <a href="https://store.zylu.co/livart-salon-kakkanad" target="_blank" rel="noopener noreferrer" class="border border-white/20 hover:bg-white/10 text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all flex items-center gap-1.5">
+            <span>Direct Zylu Booking</span>
+            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -573,7 +595,7 @@ def build_makeup_page():
         {pkgs_html}
       </div>
 
-      <div class="mt-16 p-8 bg-ivory-surface rounded-3xl border border-black/5 text-center max-w-3xl mx-auto">
+      <div class="mt-16 p-8 bg-ivory-surface rounded-3xl border border-black/5 text-center max-w-3xl mx-auto mb-16">
         <h3 class="font-serif-luxury text-2xl font-bold text-obsidian-deep mb-2">Planning a Destination Wedding in Kerala?</h3>
         <p class="text-xs text-gray-600 leading-relaxed mb-6">
           Stephy Sebastian and her senior bridal team travel for destination weddings across Kochi, Kumarakom, Munnar, and Kovalam. We customize group styling for bridesmaids and family members.
@@ -581,6 +603,123 @@ def build_makeup_page():
         <button data-open-booking data-service="Destination Bridal Consultation" class="bg-champagne-gold text-obsidian-deep px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-metallic-gold-light transition-all shadow-md">
           Request Destination Bridal Quote
         </button>
+      </div>
+
+      <!-- A La Carte Bridal & Makeup Rate Card (Direct from Zylu) -->
+      <div class="p-8 sm:p-12 bg-obsidian-deep rounded-3xl border border-champagne-gold/30 shadow-2xl text-alabaster-cream">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-champagne-gold/10 border border-champagne-gold/30 text-champagne-gold text-[10px] font-bold uppercase tracking-widest mb-3">
+            <span class="material-symbols-outlined text-[14px]">verified</span>
+            <span>Official 2026 Atelier Rate Card • Zylu Verified</span>
+          </div>
+          <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-white mb-2">A La Carte Bridal & Event Makeup Menu</h3>
+          <p class="text-xs sm:text-sm text-gray-300">
+            Direct pricing for individual wedding functions, party makeovers, and professional saree draping.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          <div class="bg-obsidian-surface p-5 rounded-2xl border border-white/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-bold text-champagne-gold uppercase tracking-wider">Indoor Ceremony</span>
+                <span class="text-xs font-bold text-emerald-400">Save ₹6,250 with Grand Card</span>
+              </div>
+              <h4 class="font-serif-luxury text-lg font-bold text-white mb-1">HD Bridal Makeup (Indoor)</h4>
+              <p class="text-xs text-gray-400 mb-4">4K camera-ready base, eye artistry, lash application & setting.</p>
+            </div>
+            <div class="flex items-baseline justify-between pt-3 border-t border-white/10">
+              <span class="text-xl font-bold text-champagne-gold">₹25,000</span>
+              <span class="text-xs text-gray-400">Member: ₹18,750</span>
+            </div>
+          </div>
+
+          <div class="bg-obsidian-surface p-5 rounded-2xl border border-white/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-bold text-champagne-gold uppercase tracking-wider">Outdoor Venue</span>
+                <span class="text-xs font-bold text-gray-400">Natural Daylight Prep</span>
+              </div>
+              <h4 class="font-serif-luxury text-lg font-bold text-white mb-1">HD Bridal Makeup (Outdoor)</h4>
+              <p class="text-xs text-gray-400 mb-4">Waterproof, sweat-resistant formulation for outdoor Kerala climates.</p>
+            </div>
+            <div class="flex items-baseline justify-between pt-3 border-t border-white/10">
+              <span class="text-xl font-bold text-champagne-gold">₹30,000</span>
+              <span class="text-xs text-gray-400">Member: ₹22,500</span>
+            </div>
+          </div>
+
+          <div class="bg-obsidian-surface p-5 rounded-2xl border border-champagne-gold/40 flex flex-col justify-between relative">
+            <span class="absolute -top-2.5 right-4 bg-champagne-gold text-obsidian-deep text-[9px] font-bold uppercase px-2 py-0.5 rounded-full">Haute Couture</span>
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-bold text-champagne-gold uppercase tracking-wider">Airbrush Luxury</span>
+                <span class="text-xs font-bold text-gray-400">Flawless 16hr Wear</span>
+              </div>
+              <h4 class="font-serif-luxury text-lg font-bold text-white mb-1">Airbrush Bridal Makeup</h4>
+              <p class="text-xs text-gray-400 mb-4">Micro-misted silicone-based pigment. Weightless and transfer-proof.</p>
+            </div>
+            <div class="flex items-baseline justify-between pt-3 border-t border-white/10">
+              <span class="text-xl font-bold text-champagne-gold">₹50,000</span>
+              <span class="text-xs text-gray-400">Outdoor: ₹60,000</span>
+            </div>
+          </div>
+
+          <div class="bg-obsidian-surface p-5 rounded-2xl border border-white/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Pre-Wedding Event</span>
+                <span class="text-xs font-bold text-gray-400">Indoor / Outdoor</span>
+              </div>
+              <h4 class="font-serif-luxury text-lg font-bold text-white mb-1">Engagement & Haldi Makeup</h4>
+              <p class="text-xs text-gray-400 mb-4">Vibrant, luminous aesthetics crafted for engagement & Haldi celebrations.</p>
+            </div>
+            <div class="flex items-baseline justify-between pt-3 border-t border-white/10">
+              <span class="text-xl font-bold text-champagne-gold">₹15,000</span>
+              <span class="text-xs text-gray-400">Outdoor: ₹20,000</span>
+            </div>
+          </div>
+
+          <div class="bg-obsidian-surface p-5 rounded-2xl border border-white/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Guest & Party</span>
+                <span class="text-xs font-bold text-gray-400">Event Glamour</span>
+              </div>
+              <h4 class="font-serif-luxury text-lg font-bold text-white mb-1">Party & Minimal Makeup</h4>
+              <p class="text-xs text-gray-400 mb-4">Red-carpet party glam or soft subtle dewy minimal makeup for bridesmaids.</p>
+            </div>
+            <div class="flex items-baseline justify-between pt-3 border-t border-white/10">
+              <span class="text-xl font-bold text-champagne-gold">₹2,500 – ₹5,000</span>
+              <span class="text-xs text-gray-400">Groom: ₹5,000</span>
+            </div>
+          </div>
+
+          <div class="bg-obsidian-surface p-5 rounded-2xl border border-white/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Draping Craft</span>
+                <span class="text-xs font-bold text-gray-400">Precision Pleating</span>
+              </div>
+              <h4 class="font-serif-luxury text-lg font-bold text-white mb-1">Saree Draping & Styling</h4>
+              <p class="text-xs text-gray-400 mb-4">Pre-pleated draping (₹1,000), box folding (₹1,000), or on-client draping (₹1,500).</p>
+            </div>
+            <div class="flex items-baseline justify-between pt-3 border-t border-white/10">
+              <span class="text-xl font-bold text-champagne-gold">₹1,000 – ₹1,500</span>
+              <span class="text-xs text-gray-400">Member from: ₹750</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-4">
+          <a href="../services/index.html#catalog" class="bg-champagne-gold text-obsidian-deep px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-md flex items-center gap-2">
+            <span>Browse Complete 234 Service Menu</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+          <button data-open-booking data-service="Hd Makeup (Indoor)" class="border border-white/20 hover:bg-white/10 text-white px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all">
+            Book Bridal Consultation
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -605,12 +744,12 @@ def build_skincare_page():
     html += render_header(active_slug="skin-care", root_prefix="../")
 
     skin_services = [
-        ("Skin Miracle Hydra Facial", "Our advanced vortex extraction and hyaluronic infusion facial that clears congestion and restores dewy glass-skin luminosity.", "Rs. 4,000", "../assets/images/instagram/DRXFRQCEgpm.jpg"),
+        ("Skin Miracle Hydra Facial", "Our advanced vortex extraction and hyaluronic infusion facial that clears congestion and restores dewy glass-skin luminosity.", "Rs. 4,000 (Member Rs. 3,000)", "../assets/images/instagram/DRXFRQCEgpm.jpg"),
         ("De-Tan + Skin Miracle Combo", "Signature dual ritual that erases sun tanning, lightens pigment spots, and floods the dermis in brightening vitamins.", "From Rs. 2,499", "../assets/images/offers/offer-poster1.webp"),
-        ("Pro Facial by Cheryl’s Cosmeceuticals", "Clinically formulated protocols by Cheryl's designed specifically for Indian skin to treat active acne, uneven tone, and dullness.", "From Rs. 2,200", "../assets/images/instagram/DIYwMqNSFPo.jpg"),
-        ("Deluxe Manicure & Pedicure Spa", "Deep dead-skin exfoliation, cuticle conditioning, relaxing foot reflexology massage, and precision nail shaping.", "From Rs. 1,400", "../assets/images/instagram/C88tG9iSEKp.jpg"),
+        ("O3+ Whitening & Brightening Facial", "Clinical brightening formulation with high-potency Vitamin C and botanical actives to reverse tropical pigmentation and dullness.", "Rs. 3,000 (Member Rs. 2,250)", "../assets/images/instagram/DIYwMqNSFPo.jpg"),
+        ("Deluxe Manicure & Pedicure Spa", "Deep dead-skin exfoliation, cuticle conditioning, relaxing foot reflexology massage, and precision nail shaping.", "From Rs. 1,000 (Member Rs. 750)", "../assets/images/instagram/C88tG9iSEKp.jpg"),
         ("Herbal Waxing & Threading", "Painless threading for brows and facial contours, alongside gentle honey and chocolate wax formulations that prevent irritation.", "From Rs. 100", "../assets/images/instagram/Da8Hb68SA5B.jpg"),
-        ("Skin Bleaching & Derma Glow", "Safe, ammonia-free dermatological bleaching rituals that illuminate the complexion for festive and wedding readiness.", "From Rs. 1,200", "../assets/images/instagram/DIoW2P5TF7G.jpg")
+        ("Casmara Spanish Luxury Facials", "World-renowned Casmara algae peel-off masks, retinol renewal, and antioxidant purifying therapies from Spain.", "From Rs. 5,000", "../assets/images/instagram/DIoW2P5TF7G.jpg")
     ]
 
     services_html = ""
@@ -648,7 +787,7 @@ def build_skincare_page():
     </div>
   </section>
 
-  <!-- Loyalty Program Callout Banner (Clean & Genuine) -->
+  <!-- Loyalty Program Callout Banner (Official Club LivArt Tiers) -->
   <section class="w-full bg-gold-gradient py-6">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-4">
@@ -656,22 +795,44 @@ def build_skincare_page():
           <span class="material-symbols-outlined text-[24px]">verified</span>
         </div>
         <div>
-          <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep">LivArt Salon Loyalty Privilege Program</h3>
+          <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep">Club LivArt Privilege Membership Cards</h3>
           <p class="text-xs text-black/80 font-medium">
-            Spend <strong>Rs. 1,000</strong> on any skincare or salon service and receive an exclusive <strong>1-Year Privilege Membership Card</strong> offering <strong>20% discount</strong> on all future visits.
+            Join Club LivArt and enjoy <strong>up to 25% OFF</strong> all 234 salon treatments, hair spa, and clinical skincare for 1 full year. Grand, Premium, and Classic tiers available.
           </p>
         </div>
       </div>
-      <button data-open-booking data-service="1-Year 20% Membership Offer" class="shrink-0 bg-obsidian-deep text-white hover:bg-obsidian-surface px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all">
-        Claim 20% Membership
-      </button>
+      <a href="../packages/index.html#memberships" class="shrink-0 bg-obsidian-deep text-white hover:bg-obsidian-surface px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all">
+        Explore Privilege Cards
+      </a>
     </div>
   </section>
 
   <section class="py-16 bg-surface-bright">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {services_html}
+      </div>
+
+      <!-- Complete Rate Card CTA -->
+      <div class="p-8 sm:p-10 bg-obsidian-deep rounded-3xl border border-champagne-gold/30 text-center max-w-3xl mx-auto shadow-2xl text-alabaster-cream">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-champagne-gold/10 border border-champagne-gold/30 text-champagne-gold text-[10px] font-bold uppercase tracking-widest mb-3">
+          <span class="material-symbols-outlined text-[14px]">menu_book</span>
+          <span>Official 2026 Price Menu</span>
+        </div>
+        <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-white mb-2">Looking for Our Complete Skincare Rate Card?</h3>
+        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6 max-w-xl mx-auto">
+          Explore all 234 treatments: Cheryl's pro facials, Casmara luxury algae treatments, Hydra Facial tiers, de-tan therapies, body waxing, and privilege rates.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../services/index.html#catalog" class="bg-champagne-gold text-obsidian-deep px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-md flex items-center gap-2 font-bold">
+            <span>Browse All 234 Services & Prices</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+          <a href="https://store.zylu.co/livart-salon-kakkanad" target="_blank" rel="noopener noreferrer" class="border border-white/20 hover:bg-white/10 text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all flex items-center gap-1.5">
+            <span>Direct Zylu Booking</span>
+            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -769,6 +930,160 @@ def build_packages_page():
           </button>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CLUB LIVART PRIVILEGE MEMBERSHIPS (OFFICIAL ZYLU TIERS) -->
+  <section class="py-20 bg-obsidian-deep text-alabaster-cream border-t border-champagne-gold/20" id="memberships">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="font-label-caps text-xs text-champagne-gold tracking-[0.25em] uppercase font-bold block mb-2">
+          Exclusive Atelier Club
+        </span>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          Club LivArt Privilege Cards
+        </h2>
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed">
+          Unlock wholesale savings across all 234 salon treatments, styling sessions, and bridal rituals for a full 365 days. Synced seamlessly to your client profile in our Zylu system.
+        </p>
+      </div>
+
+      <!-- Membership Tiers Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12">
+        
+        <!-- Tier 1: Classic 10% -->
+        <div class="bg-obsidian-surface rounded-3xl p-8 border border-white/10 hover:border-white/20 shadow-xl flex flex-col justify-between transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">Everyday Grooming</span>
+              <span class="text-xs text-champagne-gold font-bold">1-Year Pass</span>
+            </div>
+            <h3 class="font-serif-luxury text-2xl font-bold text-white mb-2">Classic Privilege</h3>
+            <div class="font-serif-luxury text-3xl sm:text-4xl font-bold text-white mb-4">
+              ₹1,000 <span class="text-xs text-gray-400 font-normal">/ year</span>
+            </div>
+            <p class="text-xs text-gray-400 mb-6 leading-relaxed">
+              Ideal for regular haircuts, beard shaping, blowouts, and monthly salon upkeep.
+            </p>
+            <ul class="space-y-3 text-xs text-gray-300 border-t border-white/10 pt-6 mb-8">
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span>
+                <span><strong>10% OFF</strong> all haircuts, beard & hair styling</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span>
+                <span><strong>10% OFF</strong> threading, waxing & cleanups</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span>
+                <span>Valid on all 234 treatments for 1 full year</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span>
+                <span>No minimum visits or restrictions</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Classic 10% Privilege Card (₹1,000/yr)')" class="w-full bg-white/10 hover:bg-white/20 active:scale-95 text-white py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all border border-white/20">
+            Get Classic Card
+          </button>
+        </div>
+
+        <!-- Tier 2: Grand 25% (Featured) -->
+        <div class="bg-obsidian-surface rounded-3xl p-8 border-2 border-champagne-gold shadow-2xl relative flex flex-col justify-between transition-all transform lg:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-champagne-gold text-obsidian-deep px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">star</span>
+            <span>Most Popular • Maximum Savings</span>
+          </div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold bg-champagne-gold/20 px-3 py-1 rounded-full border border-champagne-gold/40">VIP Atelier Tier</span>
+              <span class="text-xs text-champagne-gold font-bold">1-Year Pass</span>
+            </div>
+            <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-white mb-2">Grand Privilege</h3>
+            <div class="font-serif-luxury text-3xl sm:text-4xl font-bold text-champagne-gold mb-4">
+              ₹3,000 <span class="text-xs text-gray-400 font-normal">/ year</span>
+            </div>
+            <p class="text-xs text-gray-300 mb-6 leading-relaxed">
+              Our highest tier VIP card. Pays for itself in a single bridal booking or chemical therapy.
+            </p>
+            <ul class="space-y-3 text-xs text-gray-200 border-t border-white/10 pt-6 mb-8">
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">verified</span>
+                <span><strong>Save ₹6,250</strong> on HD Bridal (₹18,750 vs ₹25,000)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">verified</span>
+                <span><strong>Save ₹1,250</strong> on Smoothing/Rebonding (₹3,750 vs ₹5,000)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">verified</span>
+                <span><strong>Save ₹750</strong> on O3+ Whitening Facial (₹2,250 vs ₹3,000)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">verified</span>
+                <span><strong>Flat 25% OFF</strong> all 234 treatments for 365 days</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">verified</span>
+                <span>Priority peak-weekend appointment scheduling</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Grand 25% Privilege Card (₹3,000/yr)')" class="w-full bg-champagne-gold hover:bg-white active:scale-95 text-obsidian-deep py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all shadow-xl font-bold">
+            Get Grand 25% Card
+          </button>
+        </div>
+
+        <!-- Tier 3: Premium 15% -->
+        <div class="bg-obsidian-surface rounded-3xl p-8 border border-white/10 hover:border-white/20 shadow-xl flex flex-col justify-between transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">Frequent Visitor</span>
+              <span class="text-xs text-champagne-gold font-bold">1-Year Pass</span>
+            </div>
+            <h3 class="font-serif-luxury text-2xl font-bold text-white mb-2">Premium Privilege</h3>
+            <div class="font-serif-luxury text-3xl sm:text-4xl font-bold text-white mb-4">
+              ₹2,000 <span class="text-xs text-gray-400 font-normal">/ year</span>
+            </div>
+            <p class="text-xs text-gray-400 mb-6 leading-relaxed">
+              Designed for clients who indulge monthly in revitalizing hair spa, coloring, and facials.
+            </p>
+            <ul class="space-y-3 text-xs text-gray-300 border-t border-white/10 pt-6 mb-8">
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span>
+                <span><strong>15% OFF</strong> all hair spa & scalp therapy</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span>
+                <span><strong>15% OFF</strong> hair colouring, balayage & highlights</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span>
+                <span><strong>15% OFF</strong> all clinical facials & aesthetics</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[16px] text-champagne-gold">check_circle</span>
+                <span>Valid across all 234 salon services for 1 year</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Premium 15% Privilege Card (₹2,000/yr)')" class="w-full bg-white/10 hover:bg-white/20 active:scale-95 text-white py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all border border-white/20">
+            Get Premium Card
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Quick Zylu Store Link Callout -->
+      <div class="text-center">
+        <p class="text-xs text-gray-400">
+          Already a LivArt client? Check your active membership status and book online anytime at 
+          <a href="https://store.zylu.co/livart-salon-kakkanad" target="_blank" rel="noopener noreferrer" class="text-champagne-gold hover:underline font-bold">store.zylu.co/livart-salon-kakkanad ↗</a>
+        </p>
+      </div>
+
     </div>
   </section>
 </main>
@@ -955,13 +1270,27 @@ def build_contact_page():
             <div>
               <label class="block text-xs font-bold uppercase tracking-wider text-obsidian-deep mb-1">Select Service</label>
               <select id="book-service" class="w-full px-3.5 py-2.5 text-sm bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne-gold border border-black/5">
-                <option value="De-Tan + Skin Miracle Whitening Combo (Rs. 2499)">De-Tan + Skin Miracle Whitening Combo (Rs. 2499)</option>
-                <option value="Hair Colouring & Balayage">Hair Colouring & Balayage</option>
-                <option value="Hair Botox Treatment">Hair Botox Treatment</option>
-                <option value="Permanent Blow Dry">Permanent Blow Dry</option>
-                <option value="L'Oreal Hair Spa">L'Oreal Hair Spa</option>
-                <option value="Bridal Makeup Consultation">Bridal Makeup Consultation</option>
-                <option value="Groom Package">Groom Package</option>
+                <option value="De-Tan + Skin Miracle Whitening Combo (Rs. 2499)">De-Tan + Skin Miracle Whitening Combo (Rs. 2,499)</option>
+                <option value="Hair Botox Treatment (Rs. 5999)">Anti-Frizz Hair Botox Rejuvenation (Rs. 5,999 | Member Rs. 4,499)</option>
+                <option value="Permanent Blow Dry (Rs. 5999)">Permanent Blow Dry & Volume (Rs. 5,999)</option>
+                <option value="Skin Miracle Hydra Facial (Rs. 4000)">Skin Miracle Hydra Facial (Rs. 4,000 | Member Rs. 3,000)</option>
+                <option value="Livart Majestic Keratin Treatment (From Rs. 5000)">LivArt Majestic Keratin Smoothing (From Rs. 5,000 | Member Rs. 3,750)</option>
+                <option value="Livart Permanent Hair Straightening (From Rs. 4000)">Permanent Hair Straightening / Rebonding (From Rs. 5,000 | Member Rs. 3,750)</option>
+                <option value="Loreal Hair Spa For Men Short">L'Oreal / Matrix Hair Spa Scalp Therapy (From Rs. 700 | Member Rs. 525)</option>
+                <option value="Hair Colouring Artistry (From Rs. 5999)">L'Oreal Hair Colouring & Balayage (From Rs. 2,500)</option>
+                <option value="Women Layer Cut / Styling">Women Haircut & Runway Styling (From Rs. 800 | Member Rs. 600)</option>
+                <option value="Gents Haircut & Grooming">Men's Precision Haircut & Beard (From Rs. 400 | Member Rs. 300)</option>
+                <option value="O3+ Whitening Facial (Rs. 3000)">O3+ Whitening / Brightening Facial (Rs. 3,000 | Member Rs. 2,250)</option>
+                <option value="Anti-Aging Facial (Rs. 4000)">Anti-Aging Collagen Facial (Rs. 4,000 | Member Rs. 3,000)</option>
+                <option value="Casmara Luxury Facial Treatment">Casmara Spanish Luxury Facial (From Rs. 5,000)</option>
+                <option value="Silver Bridal Package">Silver Bridal Package (Rs. 12,000)</option>
+                <option value="Gold Bridal Package">Gold Bridal Package (Rs. 18,000)</option>
+                <option value="Diamond Bridal Couture Package">Diamond Bridal Couture Package (Rs. 25,000)</option>
+                <option value="Hd Makeup (Indoor)">Signature HD Bridal Artistry (Rs. 25,000 | Member Rs. 18,750)</option>
+                <option value="Air Brush Makeup (Indoor)">Airbrush HD Bridal Luxury (Rs. 50,000)</option>
+                <option value="Grand 25% Privilege Card (₹3,000/yr)">Club LivArt Grand 25% Privilege Card (₹3,000/yr)</option>
+                <option value="Personal Consultation with Founder Stephy Sebastian">Personal Consultation with Founder Stephy Sebastian</option>
+                <option value="LivArt Beauty Academy Beautician Courses Admission">LivArt Beauty Academy Beautician Courses Admission</option>
               </select>
             </div>
 

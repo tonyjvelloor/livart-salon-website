@@ -272,6 +272,169 @@ def build_services_page():
     </div>
   </section>
 
+  <!-- COMPLETE ATELIER SERVICE DIRECTORY & PRICE MENU (POWERED BY ZYLU) -->
+  <section class="py-20 bg-obsidian-deep text-alabaster-cream" id="catalog">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-champagne-gold/10 border border-champagne-gold/30 text-champagne-gold text-[10px] font-bold uppercase tracking-widest mb-3">
+          <span class="material-symbols-outlined text-[14px]">verified</span>
+          <span>Official 2026 Atelier Rate Card • 234 Verified Services</span>
+        </div>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          Complete Salon Menu & Transparent Pricing
+        </h2>
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed">
+          Browse our entire bespoke service catalog directly synced with our appointment desk. Instant online booking, clear durations, and exclusive privilege card discounts up to 25% OFF.
+        </p>
+      </div>
+
+      <!-- Controls & Filter Dashboard -->
+      <div class="bg-obsidian-surface rounded-3xl p-5 sm:p-7 border border-white/10 shadow-2xl mb-10">
+        <!-- Top Row: Search Bar & Privilege Toggle -->
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 pb-6 border-b border-white/10">
+          
+          <!-- Search Bar -->
+          <div class="relative flex-1">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-champagne-gold text-[20px]">search</span>
+            <input 
+              id="services-search-input" 
+              type="text" 
+              oninput="window.onSearchServices(this.value)" 
+              placeholder="Search by treatment (e.g. Hair Botox, Balayage, Hydra Facial, Beard, Layers)..." 
+              class="w-full bg-black/40 border border-white/15 focus:border-champagne-gold rounded-xl pl-11 pr-10 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none transition-all"
+            />
+            <button onclick="window.resetServiceFilters()" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white p-1 text-xs" title="Clear Search">
+              ✕
+            </button>
+          </div>
+
+          <!-- Member Pricing Toggle -->
+          <div class="flex items-center justify-between sm:justify-end gap-3 bg-black/30 border border-white/10 rounded-2xl px-4 py-2.5 shrink-0">
+            <div class="flex flex-col text-left">
+              <span class="text-xs font-bold text-white flex items-center gap-1">
+                <span class="material-symbols-outlined text-[15px] text-champagne-gold">card_membership</span>
+                <span>Grand Privilege Card</span>
+              </span>
+              <span id="member-pricing-badge" class="text-[10px] text-champagne-gold font-medium">
+                Show Privilege Rates (25% OFF)
+              </span>
+            </div>
+            
+            <button 
+              id="member-pricing-toggle" 
+              onclick="window.toggleMemberPricing()" 
+              type="button" 
+              class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-700 transition-colors duration-200 ease-in-out focus:outline-none" 
+              role="switch" 
+              aria-checked="false">
+              <span class="toggle-dot pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Middle Row: Category Tabs (Horizontal scroll on mobile) -->
+        <div class="pt-5 pb-3">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400 block mb-2.5">Filter by Service Category:</span>
+          <div class="flex items-center gap-2 overflow-x-auto pb-2 touch-scroll no-scrollbar">
+            <button onclick="window.setServiceTab('all')" data-tab="all" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-champagne-gold text-obsidian-deep min-h-[38px]">
+              All Services (234)
+            </button>
+            <button onclick="window.setServiceTab('haircuts')" data-tab="haircuts" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[38px]">
+              Haircuts & Trims
+            </button>
+            <button onclick="window.setServiceTab('hair-color')" data-tab="hair-color" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[38px]">
+              Color & Balayage
+            </button>
+            <button onclick="window.setServiceTab('hair-treatments')" data-tab="hair-treatments" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[38px]">
+              Botox & Keratin
+            </button>
+            <button onclick="window.setServiceTab('hair-styling')" data-tab="hair-styling" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[38px]">
+              Styling & Blowout
+            </button>
+            <button onclick="window.setServiceTab('skincare-facials')" data-tab="skincare-facials" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[38px]">
+              Facials & Skincare
+            </button>
+            <button onclick="window.setServiceTab('bridal-makeup')" data-tab="bridal-makeup" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[38px]">
+              Bridal & Makeup
+            </button>
+            <button onclick="window.setServiceTab('manicure-pedicure')" data-tab="manicure-pedicure" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[38px]">
+              Mani, Pedi & Nails
+            </button>
+            <button onclick="window.setServiceTab('waxing-threading')" data-tab="waxing-threading" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[38px]">
+              Waxing & Threading
+            </button>
+            <button onclick="window.setServiceTab('mens-grooming')" data-tab="mens-grooming" class="service-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-obsidian-surface text-gray-300 border border-white/10 hover:border-champagne-gold min-h-[38px]">
+              Beard & Men
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom Row: Gender Filters & Active Count -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-3 border-t border-white/10 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="text-gray-400 font-medium">Guest:</span>
+            <div class="inline-flex rounded-lg bg-black/40 p-0.5 border border-white/10">
+              <button onclick="window.setServiceGender('all')" data-gender="all" class="service-gender-btn px-2.5 py-1 rounded-md text-[11px] font-bold bg-champagne-gold text-obsidian-deep transition-all">All</button>
+              <button onclick="window.setServiceGender('Female')" data-gender="Female" class="service-gender-btn px-2.5 py-1 rounded-md text-[11px] font-medium text-gray-400 hover:text-white transition-all">Women</button>
+              <button onclick="window.setServiceGender('Male')" data-gender="Male" class="service-gender-btn px-2.5 py-1 rounded-md text-[11px] font-medium text-gray-400 hover:text-white transition-all">Men</button>
+              <button onclick="window.setServiceGender('Kids')" data-gender="Kids" class="service-gender-btn px-2.5 py-1 rounded-md text-[11px] font-medium text-gray-400 hover:text-white transition-all">Kids</button>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+            <span id="services-count-display" class="text-gray-400 font-medium text-[11px]">
+              Loading services...
+            </span>
+            <a href="https://store.zylu.co/livart-salon-kakkanad" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] font-bold text-champagne-gold hover:underline">
+              <span>Direct Zylu Booking</span>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Grid (Populated via assets/js/services-catalog.js) -->
+      <div id="services-catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <!-- Injected via JS -->
+      </div>
+
+      <!-- Load More / Expand Bar -->
+      <div id="services-load-more-container" class="mt-12 text-center w-full flex justify-center">
+        <!-- Injected via JS -->
+      </div>
+
+      <!-- Zylu Online Booking Notice Banner -->
+      <div class="mt-16 p-6 sm:p-8 bg-gradient-to-r from-obsidian-surface via-obsidian-deep to-obsidian-surface rounded-3xl border border-champagne-gold/30 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4 text-left">
+          <div class="w-12 h-12 rounded-2xl bg-champagne-gold/20 border border-champagne-gold/40 flex items-center justify-center shrink-0 text-champagne-gold">
+            <span class="material-symbols-outlined text-[24px]">calendar_month</span>
+          </div>
+          <div>
+            <h4 class="font-serif-luxury text-lg font-bold text-white mb-0.5">
+              Live Real-Time Salon Scheduling via Zylu Store
+            </h4>
+            <p class="text-xs text-gray-300 leading-relaxed max-w-xl">
+              Book your preferred stylist, pick exact time slots, and explore authentic real-time availability at our Anchorage Business Centre studio.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 shrink-0 w-full md:w-auto justify-center">
+          <a href="https://store.zylu.co/livart-salon-kakkanad" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-champagne-gold hover:bg-white active:scale-95 text-obsidian-deep px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all shadow-md flex items-center justify-center gap-2">
+            <span>Book on Zylu Store</span>
+            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+          </a>
+          <a href="https://wa.me/917012059591?text=Hi%20LivArt%20Salon,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-950/60 hover:bg-emerald-900 border border-emerald-500/40 text-emerald-300 px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>WhatsApp Desk</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- 13-QUESTION FAQ SECTION (HIGH-LEVERAGE SEO ASSET) -->
   <section class="py-20 bg-ivory-surface" id="faq">
     <div class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -309,7 +472,7 @@ def build_services_page():
   </section>
 </main>
 """
-    html += render_footer(root_prefix="../")
+    html += render_footer(root_prefix="../", extra_scripts='<script src="../assets/js/services-catalog.js"></script>')
 
     with open(os.path.join(BASE_DIR, "services", "index.html"), "w") as f:
         f.write(html)

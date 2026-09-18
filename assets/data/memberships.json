@@ -1,0 +1,53 @@
+[
+  {
+    "id": "grand-25",
+    "name": "Grand Privilege Card (25% OFF)",
+    "badge": "Maximum Atelier Savings",
+    "price": 3000,
+    "discountPercent": 25,
+    "period": "1 Year All-Access",
+    "popular": true,
+    "description": "Our highest tier VIP privilege membership. Enjoy a flat 25% discount across all 230+ salon treatments, hair therapies, facials, and bridal makeovers for an entire year.",
+    "perks": [
+      "Flat 25% discount on all 234 salon services",
+      "Save \u20b96,250 on HD Bridal Makeover (\u20b918,750 vs \u20b925,000)",
+      "Save \u20b91,250 on Hair Smoothing / Rebonding (\u20b93,750 vs \u20b95,000)",
+      "Save \u20b9750 on O3+ Whitening Facials (\u20b92,250 vs \u20b93,000)",
+      "Priority weekend appointment booking",
+      "Valid across all stylists and creative directors"
+    ]
+  },
+  {
+    "id": "premium-15",
+    "name": "Premium Privilege Card (15% OFF)",
+    "badge": "Frequent Visitor Choice",
+    "price": 2000,
+    "discountPercent": 15,
+    "period": "1 Year All-Access",
+    "popular": false,
+    "description": "Perfect for clients who visit monthly for hair spa, coloring, and revitalizing facials.",
+    "perks": [
+      "Flat 15% discount on all 234 salon services",
+      "Save \u20b9750 on Keratin Smoothing Treatment",
+      "Save \u20b9600 on Luxury Facials & De-Tan",
+      "Save \u20b9300 on Hair Spa & Styling",
+      "Valid for 1 full year with no minimum visit requirement"
+    ]
+  },
+  {
+    "id": "classic-10",
+    "name": "Classic Privilege Card (10% OFF)",
+    "badge": "Everyday Grooming",
+    "price": 1000,
+    "discountPercent": 10,
+    "period": "1 Year All-Access",
+    "popular": false,
+    "description": "Essential grooming membership for haircuts, beard shaping, blowouts, and regular maintenance.",
+    "perks": [
+      "Flat 10% discount on all 234 salon services",
+      "Discounts apply to haircuts, threading, waxing, and blowouts",
+      "Valid for 1 full year",
+      "Great gift card for family and friends"
+    ]
+  }
+]

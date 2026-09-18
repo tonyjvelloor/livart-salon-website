@@ -426,7 +426,7 @@ def build_homepage():
                 "name": "What are the bridal makeup and salon service charges at LivArt Kakkanad?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "LivArt maintains transparent pricing with zero hidden costs: Hair Spa starts from Rs. 1,200; Hydra Facial is Rs. 4,000; De-Tan + Skin Miracle Combo is Rs. 2,499; Hair Botox is Rs. 5,999; and Silver, Gold, and Diamond Bridal Couture packages range from Rs. 12,000 to Rs. 25,000. Additionally, clients spending Rs. 1,000 receive a complimentary 1-Year 20% privilege membership card."
+                    "text": "LivArt maintains transparent pricing with zero hidden costs across 234 verified services: Haircuts from Rs. 400 (Gents) / Rs. 800 (Women); Hair Spa starts from Rs. 700; Hydra Facial is Rs. 4,000; De-Tan + Skin Miracle Combo is Rs. 2,499; Hair Botox is Rs. 5,999; and HD Bridal Makeup starts from Rs. 25,000. Additionally, Club LivArt Privilege Members enjoy up to 25% OFF all 234 services for 1 full year."
                 }
             },
             {
@@ -609,7 +609,7 @@ def build_homepage():
     </div>
   </section>
 
-  <!-- SPECIAL 1-YEAR 20% OFF MEMBERSHIP BANNER -->
+  <!-- CLUB LIVART PRIVILEGE MEMBERSHIP BANNER -->
   <section class="w-full bg-gold-gradient text-obsidian-deep py-4 shadow-inner">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-4">
@@ -618,16 +618,19 @@ def build_homepage():
         </div>
         <div>
           <h2 class="font-serif-luxury text-xl font-bold leading-tight">
-            Complimentary 1-Year LivArt Privilege Membership
+            Club LivArt Privilege Membership Cards
           </h2>
           <p class="text-xs sm:text-sm text-black/80 font-medium">
-            Avail any salon service worth <strong>Rs. 1,000</strong> and receive an exclusive <strong>1-Year Membership Card</strong> with <strong>20% discount</strong> on all future services!
+            Unlock up to <strong>25% OFF</strong> on all 234 salon, bridal, and hair services for 365 days with Grand, Premium & Classic cards!
           </p>
         </div>
       </div>
-      <button data-open-booking data-service="1-Year 20% Membership Offer" class="shrink-0 bg-obsidian-deep hover:bg-obsidian-surface text-alabaster-cream px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-md">
-        Claim Membership
-      </button>
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="packages/index.html#memberships" class="inline-flex items-center gap-1.5 bg-obsidian-deep hover:bg-obsidian-surface text-alabaster-cream px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-md">
+          <span>View Cards & Savings</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -668,14 +671,14 @@ def build_homepage():
                 De-Tan + Skin Miracle Whitening Facial Combo!
               </h3>
               <p class="text-sm text-muted-slate mb-4 leading-relaxed">
-                Our signature brightening facial ritual eradicates stubborn sun tanning, infuses cellular hydration, and revitalizes natural collagen. Includes free 1-Year 20% privilege membership card!
+                Our signature brightening facial ritual eradicates stubborn sun tanning, infuses cellular hydration, and revitalizes natural collagen. Eligible for Club LivArt Privilege discounts!
               </p>
             </div>
             <div>
               <div class="flex items-baseline gap-2 mb-4">
                 <span class="text-xs uppercase text-muted-slate font-medium">From</span>
                 <span class="font-serif-luxury text-2xl font-bold text-obsidian-deep">Rs. 2,499</span>
-                <span class="text-xs text-warm-bronze font-semibold">+ 20% Membership Perk</span>
+                <span class="text-xs text-warm-bronze font-semibold">+ Privilege Member Savings</span>
               </div>
               <button data-open-booking data-service="De-Tan + Skin Miracle Whitening Combo (Rs. 2499)" class="w-full inline-flex items-center justify-center bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep py-2.5 rounded-lg text-xs font-bold tracking-widest uppercase transition-all shadow-md">
                 Book Offer Now
@@ -804,6 +807,17 @@ def build_homepage():
           </div>
         </div>
       </div>
+
+      <!-- Browse Full 234 Catalog CTA -->
+      <div class="mt-14 text-center">
+        <a href="services/index.html#catalog" class="inline-flex items-center gap-3 bg-obsidian-deep hover:bg-champagne-gold text-alabaster-cream hover:text-obsidian-deep px-8 py-4 rounded-xl text-sm font-bold tracking-wider uppercase transition-all shadow-xl group">
+          <span class="material-symbols-outlined text-[22px] text-champagne-gold group-hover:text-obsidian-deep">menu_book</span>
+          <span>Browse All 234 Salon Services & Privilege Rates</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <p class="text-xs text-muted-slate mt-3">Filter by Hair, Skin, Bridal, Nails, Spa, Beard & Grooming with instant WhatsApp booking</p>
+      </div>
+
     </div>
   </section>
 """
@@ -1407,11 +1421,11 @@ def build_homepage():
           <!-- FAQ 5 -->
           <details class="faq-item group bg-surface-container-low rounded-xl p-5 border border-black/5 transition-all">
             <summary class="flex items-center justify-between cursor-pointer font-serif-luxury text-base sm:text-lg font-bold text-obsidian-deep list-none select-none">
-              <span>What are the salon service and bridal package charges?</span>
+              <span>What are the salon service charges and privilege member rates?</span>
               <span class="faq-icon material-symbols-outlined text-warm-bronze transition-transform duration-300">expand_more</span>
             </summary>
             <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
-              We operate with transparent pricing: Hair Spa starts at Rs. 1,200; Skin Miracle Hydra Facial is Rs. 4,000; De-Tan Whitening Facial Combo is Rs. 2,499; Hair Botox is Rs. 5,999; and Bridal packages range from Rs. 12,000 (Silver) to Rs. 25,000 (Diamond Haute Couture). Plus, any client spending Rs. 1,000 or more receives a <strong>complimentary 1-Year 20% privilege membership card</strong> for all future visits!
+              LivArt maintains transparent, authentic pricing across all 234 salon services: Men's Haircuts from ₹400 (Member ₹300), Women's Layer Cut ₹800 (Member ₹600), L'Oréal & Wella Hair Spa from ₹700 (Member ₹525), Anti-Frizz Hair Botox ₹5,999 (Member ₹4,499), Keratin Smoothing from ₹5,000, Skin Miracle Hydra Facial ₹4,000, Casmara Spanish Facials from ₹5,000, and 4K Ultra-HD Bridal Makeup at ₹25,000 (Grand Member ₹18,750). Plus, with <strong>Club LivArt Privilege Cards</strong> (Grand 25%, Premium 15%, Classic 10%), members save on every appointment! <a href="services/index.html#catalog" class="text-warm-bronze font-bold hover:underline">Explore our full 234 service catalog & rates here ↗</a>
             </div>
           </details>
 
