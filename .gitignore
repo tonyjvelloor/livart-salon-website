@@ -9,3 +9,4 @@ __pycache__/
 
 # Scratch & temporary logs
 *.log
+*.zip
