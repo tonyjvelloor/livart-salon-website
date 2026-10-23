@@ -927,7 +927,26 @@ RewriteRule ^lp_business_gift.*$ - [G,L]
         ("/category/makeup/", "0.7"),
         ("/category/skin-care/", "0.7"),
         ("/llms.txt", "0.8"),
-        ("/pricing.md", "0.8")
+        ("/pricing.md", "0.8"),
+        # Programmatic High-Margin Services
+        ("/services/hair-botox-treatment/", "0.9"),
+        ("/services/bridal-makeup-artist/", "0.9"),
+        ("/services/airbrush-bridal-makeup/", "0.9"),
+        ("/services/balayage-hair-colouring/", "0.8"),
+        ("/services/casmara-facial/", "0.8"),
+        ("/services/groom-makeup-package/", "0.8"),
+        ("/services/saree-draping-service/", "0.8"),
+        ("/services/deluxe-pedicure-spa/", "0.8"),
+        # Programmatic Hyper-Local Neighborhood Hubs
+        ("/locations/", "0.9"),
+        ("/locations/infopark-kochi/", "0.9"),
+        ("/locations/smartcity-kochi/", "0.8"),
+        ("/locations/kakkanad/", "0.9"),
+        ("/locations/thrikkakara/", "0.8"),
+        ("/locations/palarivattom/", "0.8"),
+        ("/locations/kalamassery/", "0.8"),
+        ("/locations/edachira/", "0.8"),
+        ("/locations/vazhakkala/", "0.8")
     ]
 
     for p in BLOG_POSTS:

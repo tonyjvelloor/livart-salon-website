@@ -1362,6 +1362,67 @@ def build_homepage():
         </div>
       </div>
 
+      <!-- Neighborhoods Hub Callout (Programmatic SEO Directory) -->
+      <div class="mb-16 bg-surface-container-low rounded-3xl p-8 sm:p-10 border border-black/5 shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-bold block mb-1">
+              Greater Kochi Service Matrix
+            </span>
+            <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep">
+              Serving Clients Across Kochi's Key Tech & Residential Hubs
+            </h3>
+          </div>
+          <a href="locations/index.html" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-champagne-gold hover:text-obsidian-deep transition-colors shrink-0">
+            <span>View All Regional Hubs</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+          <a href="locations/infopark-kochi/index.html" class="p-4 bg-white/60 hover:bg-white rounded-2xl border border-black/5 hover:border-champagne-gold/50 shadow-sm transition-all group">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-0.5">4-6 mins</span>
+            <h4 class="font-serif-luxury text-base font-bold text-obsidian-deep group-hover:text-champagne-gold transition-colors">Infopark Kochi</h4>
+            <p class="text-[11px] text-gray-500 mt-1">Lulu Cyber Tower & Phase 1/2</p>
+          </a>
+          <a href="locations/smartcity-kochi/index.html" class="p-4 bg-white/60 hover:bg-white rounded-2xl border border-black/5 hover:border-champagne-gold/50 shadow-sm transition-all group">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-0.5">6-8 mins</span>
+            <h4 class="font-serif-luxury text-base font-bold text-obsidian-deep group-hover:text-champagne-gold transition-colors">SmartCity Kochi</h4>
+            <p class="text-[11px] text-gray-500 mt-1">Corporate & Tech Campus</p>
+          </a>
+          <a href="locations/kakkanad/index.html" class="p-4 bg-white/60 hover:bg-white rounded-2xl border border-black/5 hover:border-champagne-gold/50 shadow-sm transition-all group">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-0.5">Flagship</span>
+            <h4 class="font-serif-luxury text-base font-bold text-obsidian-deep group-hover:text-champagne-gold transition-colors">Kakkanad Central</h4>
+            <p class="text-[11px] text-gray-500 mt-1">Seaport-Airport Rd Studio</p>
+          </a>
+          <a href="locations/thrikkakara/index.html" class="p-4 bg-white/60 hover:bg-white rounded-2xl border border-black/5 hover:border-champagne-gold/50 shadow-sm transition-all group">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-0.5">5 mins</span>
+            <h4 class="font-serif-luxury text-base font-bold text-obsidian-deep group-hover:text-champagne-gold transition-colors">Thrikkakara</h4>
+            <p class="text-[11px] text-gray-500 mt-1">Temple & College Corridor</p>
+          </a>
+          <a href="locations/palarivattom/index.html" class="p-4 bg-white/60 hover:bg-white rounded-2xl border border-black/5 hover:border-champagne-gold/50 shadow-sm transition-all group">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-0.5">10 mins</span>
+            <h4 class="font-serif-luxury text-base font-bold text-obsidian-deep group-hover:text-champagne-gold transition-colors">Palarivattom</h4>
+            <p class="text-[11px] text-gray-500 mt-1">Civil Station Rd Access</p>
+          </a>
+          <a href="locations/kalamassery/index.html" class="p-4 bg-white/60 hover:bg-white rounded-2xl border border-black/5 hover:border-champagne-gold/50 shadow-sm transition-all group">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-0.5">10-12 mins</span>
+            <h4 class="font-serif-luxury text-base font-bold text-obsidian-deep group-hover:text-champagne-gold transition-colors">Kalamassery</h4>
+            <p class="text-[11px] text-gray-500 mt-1">CUSAT & Premier Junction</p>
+          </a>
+          <a href="locations/edachira/index.html" class="p-4 bg-white/60 hover:bg-white rounded-2xl border border-black/5 hover:border-champagne-gold/50 shadow-sm transition-all group">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-0.5">3 mins</span>
+            <h4 class="font-serif-luxury text-base font-bold text-obsidian-deep group-hover:text-champagne-gold transition-colors">Edachira</h4>
+            <p class="text-[11px] text-gray-500 mt-1">DLF & Infopark North Gate</p>
+          </a>
+          <a href="locations/vazhakkala/index.html" class="p-4 bg-white/60 hover:bg-white rounded-2xl border border-black/5 hover:border-champagne-gold/50 shadow-sm transition-all group">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-0.5">7 mins</span>
+            <h4 class="font-serif-luxury text-base font-bold text-obsidian-deep group-hover:text-champagne-gold transition-colors">Vazhakkala</h4>
+            <p class="text-[11px] text-gray-500 mt-1">Padamughal Residential Hub</p>
+          </a>
+        </div>
+      </div>
+
       <!-- Hyper-Local FAQ Accordion -->
       <div class="bg-surface-bright rounded-3xl p-8 sm:p-12 border border-black/5 shadow-sm max-w-4xl mx-auto">
         <div class="text-center mb-8">

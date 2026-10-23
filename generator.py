@@ -219,7 +219,8 @@ def render_head(title, description, canonical_path, extra_schema=None, root_pref
             "teams": "Our Creative Team",
             "contact-us": "Contact & Location",
             "blog": "Beauty & Hair Journal",
-            "category": "Categories"
+            "category": "Categories",
+            "locations": "Kochi Neighborhoods"
         }
         
         accum_url = BASE_URL
@@ -349,10 +350,11 @@ def render_header(active_slug="", root_prefix=""):
         ("Hair", f"{root_prefix}hair-styling/index.html", "hair-styling", "content_cut"),
         ("Makeup & Bridal", f"{root_prefix}make-up/index.html", "make-up", "brush"),
         ("Skincare", f"{root_prefix}skin-care/index.html", "skin-care", "face"),
+        ("Locations", f"{root_prefix}locations/index.html", "locations", "near_me"),
         ("Packages", f"{root_prefix}packages/index.html", "packages", "card_membership"),
-        ("Instagram & Gallery", f"{root_prefix}gallery/index.html", "gallery", "photo_camera"),
+        ("Gallery", f"{root_prefix}gallery/index.html", "gallery", "photo_camera"),
         ("Academy", f"{root_prefix}academy/index.html", "academy", "school"),
-        ("About & Founder", f"{root_prefix}about-us/index.html", "about-us", "person"),
+        ("About", f"{root_prefix}about-us/index.html", "about-us", "person"),
         ("Blog", f"{root_prefix}blog/index.html", "blog", "auto_stories"),
         ("Contact", f"{root_prefix}contact-us/index.html", "contact-us", "pin_drop")
     ]
@@ -525,6 +527,7 @@ def render_footer(root_prefix="", extra_scripts=""):
           <li><a href="{root_prefix}about-us/index.html" class="hover:text-champagne-gold transition-colors">About Us & Founder</a></li>
           <li><a href="{root_prefix}teams/index.html" class="hover:text-champagne-gold transition-colors">Senior Styling Masters</a></li>
           <li><a href="{root_prefix}services/index.html" class="hover:text-champagne-gold transition-colors">Salon Menu & Rates</a></li>
+          <li><a href="{root_prefix}locations/index.html" class="hover:text-champagne-gold transition-colors font-semibold text-champagne-gold">Kochi Locations ↗</a></li>
           <li><a href="{root_prefix}packages/index.html" class="hover:text-champagne-gold transition-colors">Packages & Privilege Cards</a></li>
           <li><a href="{root_prefix}gallery/index.html" class="hover:text-champagne-gold transition-colors">Real Client Transformations</a></li>
           <li><a href="{root_prefix}blog/index.html" class="hover:text-champagne-gold transition-colors">Beauty & Hair Care Journal</a></li>
@@ -589,6 +592,7 @@ def render_footer(root_prefix="", extra_scripts=""):
       </div>
       <div class="flex flex-wrap items-center gap-4 sm:gap-6 font-label-caps text-[10px] tracking-wider uppercase">
         <a href="{root_prefix}services/index.html" class="hover:text-champagne-gold">All Services</a>
+        <a href="{root_prefix}locations/index.html" class="hover:text-champagne-gold text-champagne-gold font-bold">Locations</a>
         <a href="{root_prefix}packages/index.html" class="hover:text-champagne-gold">Packages</a>
         <a href="{root_prefix}pricing.md" class="hover:text-champagne-gold">Rate Card (MD)</a>
         <a href="{root_prefix}llms.txt" class="hover:text-champagne-gold">AI Context (LLMs)</a>

@@ -41,6 +41,31 @@ LivArt operates with transparent menu pricing covering 234 certified salon servi
 - Beauty & Hair Science Journal: https://livartsalon.com/blog/
 - LivArt Beauty Academy (Admissions): https://livartsalon.com/academy/
 
+## Programmatic High-Intent Service Landing Pages
+- Capillary Hair Botox Rejuvenation: https://livartsalon.com/services/hair-botox-treatment/
+- 4K Ultra-HD Bridal Makeup Studio: https://livartsalon.com/services/bridal-makeup-artist/
+- 16-Hour Waterproof Airbrush Bridal: https://livartsalon.com/services/airbrush-bridal-makeup/
+- French Balayage & Ammonia-Free Color: https://livartsalon.com/services/balayage-hair-colouring/
+- Casmara Spanish Alginate Peel-Off Facial: https://livartsalon.com/services/casmara-facial/
+- Black Diamond Groom Wedding Package: https://livartsalon.com/services/groom-makeup-package/
+- Professional Saree Draping & Box Pleating: https://livartsalon.com/services/saree-draping-service/
+- Deluxe Foot Reflexology & Pedicure Spa: https://livartsalon.com/services/deluxe-pedicure-spa/
+- Skin Miracle Hydra Facial: https://livartsalon.com/services/skin-miracle-hydra-facial/
+- L'Oréal Lustrous Hair Spa: https://livartsalon.com/services/loreal-lustrous-hair-spa/
+- LivArt Majestic Keratin Smoothing: https://livartsalon.com/services/livart-majestic-keratin-treatment/
+- Permanent Hair Straightening: https://livartsalon.com/services/livart-hair-straightening/
+
+## Kochi Neighborhood Directory & Commute Hubs (/locations/)
+- Locations Directory: https://livartsalon.com/locations/
+- Infopark Kochi (1.8 km / 5 min commute): https://livartsalon.com/locations/infopark-kochi/
+- SmartCity Kochi (2.4 km / 7 min commute): https://livartsalon.com/locations/smartcity-kochi/
+- Kakkanad Flagship Atelier: https://livartsalon.com/locations/kakkanad/
+- Thrikkakara (2.2 km / 5 min commute): https://livartsalon.com/locations/thrikkakara/
+- Palarivattom (4.5 km / 10 min commute): https://livartsalon.com/locations/palarivattom/
+- Kalamassery (5.2 km / 12 min commute): https://livartsalon.com/locations/kalamassery/
+- Edachira Junction (1.2 km / 3 min commute): https://livartsalon.com/locations/edachira/
+- Vazhakkala & Padamughal (3.1 km / 7 min commute): https://livartsalon.com/locations/vazhakkala/
+
 ## Frequently Asked Questions (Fast AI Reference)
 
 ### Q: Which salon in Kakkanad is best for Hair Botox?

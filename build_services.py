@@ -587,6 +587,188 @@ def build_sub_services():
               <li><strong>Step 4: Hyaluronic Serum Infusion:</strong> Floods the skin with potent antioxidants, peptides, and deep moisture for an unmistakable bridal glow.</li>
             </ul>
             """
+        },
+        {
+            "slug": "hair-botox-treatment",
+            "title": "Hair Botox Treatment in Kakkanad, Kochi | Anti-Frizz Repair | LivArt Salon",
+            "desc": "Best Hair Botox treatment in Kakkanad, Kochi at LivArt Salon. 100% formaldehyde-free capillary repair, eliminating 95% of frizz. Flat rate ₹5,999 (Member ₹4,499).",
+            "heading": "Capillary Hair Botox Anti-Aging Rejuvenation",
+            "price": "Flat ₹5,999 (Club LivArt Member ₹4,499)",
+            "category": "Hair Bond Repair & Anti-Frizz",
+            "img": "../../assets/images/instagram/DW1NAndDGuP.jpg",
+            "body": """
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              Kerala's persistent coastal humidity is infamous for causing chronic frizz, cuticle roughness, and premature dullness. The <strong>Capillary Hair Botox Treatment</strong> at LivArt Salon Kakkanad is our signature deep-conditioning therapy engineered specifically to eliminate humidity frizz while preserving 100% of your hair's natural bounce and movement.
+            </p>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">100% Formaldehyde-Free Formulation</h3>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">
+              Unlike traditional keratin or chemical straightening that breaks and alters disulphide bonds, Hair Botox acts as an organic filler. It infuses a potent blend of caviar oil, B5 vitamins, collagen, and amino acids directly into microscopic cuticle fissures.
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-6">
+              <li><strong>Zero Formaldehyde:</strong> Completely safe for pregnant, nursing, and chemically sensitive clients.</li>
+              <li><strong>Maintains Natural Volume:</strong> No flat, pin-straight artificial look; your natural waves and body remain beautifully intact.</li>
+              <li><strong>Long-Lasting Humidity Barrier:</strong> Endures 3 to 5 months through monsoon rains and tropical heat.</li>
+              <li><strong>Transparent Flat Rate:</strong> Flat ₹5,999 regardless of hair length (or ₹4,499 for Club LivArt members).</li>
+            </ul>
+            """
+        },
+        {
+            "slug": "bridal-makeup-artist",
+            "title": "Best Bridal Makeup Artist in Kakkanad, Kochi | Stephy Sebastian | LivArt",
+            "desc": "Award-winning bridal makeup artist in Kakkanad, Kochi. 4K Ultra-HD makeup, Christian, Hindu & Muslim wedding styling, and saree draping by Stephy Sebastian.",
+            "heading": "Bespoke 4K Ultra-HD Bridal Makeup Artistry",
+            "price": "From ₹25,000 (Member ₹18,750)",
+            "category": "Haute Couture Bridal Atelier",
+            "img": "../../assets/images/instagram/DYuASLuK_le.jpg",
+            "body": """
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              Your wedding day is a once-in-a-lifetime milestone where camera lenses, 4K video, and ceremonial spotlight capture every expression. Curated under the personal vision of founder <strong>Stephy Sebastian</strong>—former national educator for L'Oréal and Wella—LivArt's bridal atelier creates timeless looks tailored to your bone structure and bridal heritage.
+            </p>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">Bridal Traditions We Specialize In</h3>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-6">
+              <li><strong>Christian Bridal Couture:</strong> Dewy porcelain skin, soft romantic smokey eyes, and cathedral veil pinning designed to photograph luminously in church illumination.</li>
+              <li><strong>Hindu Muhurtham Radiance:</strong> Authentic South Indian temple gold eye shimmer, fresh fragrant jasmine braiding, and pin-tight Kanchipuram silk saree pleating.</li>
+              <li><strong>Muslim Nikah & Reception Glam:</strong> Flawless waterproof sculpted contouring, dramatic winged kohl liner, and regal dupatta placement.</li>
+            </ul>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">
+              All packages include pre-wedding skin prep, premium false lashes, bespoke hair styling, and precision saree draping.
+            </p>
+            """
+        },
+        {
+            "slug": "airbrush-bridal-makeup",
+            "title": "Airbrush Bridal Makeup in Kakkanad, Kochi | 16-Hour Waterproof | LivArt",
+            "desc": "Haute couture airbrush bridal makeup in Kakkanad, Kochi at LivArt. 16-hour sweat-proof, tear-proof, transfer-resistant micro-mist formulation by Stephy Sebastian.",
+            "heading": "Haute Couture Airbrush Waterproof Bridal Artistry",
+            "price": "₹50,000 (Indoor) / ₹60,000 (Outdoor)",
+            "category": "Waterproof Airbrush Luxury",
+            "img": "../../assets/images/instagram/DX6qGl_SKf1.jpg",
+            "body": """
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              For brides having outdoor lawn ceremonies, summer weddings, or energetic receptions, <strong>Airbrush Bridal Makeup</strong> represents the gold standard in cosmetic durability and high-definition perfection.
+            </p>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">Pneumatic Micro-Mist Technology</h3>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">
+              Instead of traditional brushes or sponges that can pull on the skin or cake under bright lighting, our master artists use a precision air compressor to diffuse millions of micro-fine silicone pigment droplets. The result is a feather-light, poreless veil that looks completely natural to the human eye while diffusing camera strobes.
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-6">
+              <li><strong>16-Hour Transfer-Proof Wear:</strong> Will not rub off onto silk sarees, groom's sherwani, or reception veils.</li>
+              <li><strong>100% Tear & Sweat Resistant:</strong> Completely immune to emotional tears, tropical Kerala humidity, and temple heat.</li>
+              <li><strong>Zero Flashback:</strong> Specially formulated without titanium dioxide flash-back reflectors.</li>
+            </ul>
+            """
+        },
+        {
+            "slug": "balayage-hair-colouring",
+            "title": "Balayage Hair Colouring in Kakkanad, Kochi | Hand-Painted Highlights | LivArt",
+            "desc": "Master balayage hair colouring in Kakkanad, Kochi at LivArt Salon. Seamless caramel, mocha, and blonde dimensions using ammonia-free L'Oreal Majirel & Inoa.",
+            "heading": "Couture Balayage & French Dimension Colouring",
+            "price": "From ₹2,500 (Full Balayage from ₹5,999)",
+            "category": "Couture Hair Colouring",
+            "img": "../../assets/images/instagram/DABMk4mtv8b.jpg",
+            "body": """
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              Traditional foil highlights often leave harsh zebra stripes and noticeable root demarcation lines as hair grows out. <strong>French Balayage</strong> at LivArt Salon Kakkanad is a freehand artistic technique where our certified colorists hand-sweep bespoke lighteners across individual ribbons of hair.
+            </p>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">Curated for Indian Hair Tones</h3>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">
+              Dark natural bases require sophisticated tonal neutrality. We specialize in rich caramel ribbons, honey bronze swirls, warm mocha root melts, and hazelnut transitions using ammonia-free <em>L'Oréal Majirel and Inoa</em> formulations enriched with protective Ionène G.
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-6">
+              <li>Low-maintenance soft grow-out requiring touch-ups only every 4 to 6 months.</li>
+              <li>Zero damage bond-protecting additives mixed into every lightening bowl.</li>
+              <li>Bespoke gloss toner seal that locks in high-shine luminosity.</li>
+            </ul>
+            """
+        },
+        {
+            "slug": "casmara-facial",
+            "title": "Casmara Spanish Luxury Facial in Kakkanad, Kochi | Alginate Masks | LivArt",
+            "desc": "Experience world-renowned Casmara luxury facials in Kakkanad at LivArt Salon. Spanish peel-off marine algae masks that lower skin temperature by 6°C to depuff and tone.",
+            "heading": "Casmara Spanish Alginate Peel-Off Luxury Facial",
+            "price": "From ₹5,000 (Member ₹3,750)",
+            "category": "European Luxury Skincare",
+            "img": "../../assets/images/instagram/DIoW2P5TF7G.jpg",
+            "body": """
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              Hailing from Valencia, Spain, <strong>Casmara</strong> is celebrated worldwide for its patented Algae Peel-Off facial masks. At LivArt Salon Kakkanad, we bring this premier European aesthetic ritual to Kochi's most discerning patrons.
+            </p>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">The -6°C Cryogenic Depuffing Effect</h3>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">
+              The standout signature of a Casmara treatment is its marine algae mask that molds perfectly over the face, eyelids, and lips. As it sets, the mask drops the skin's surface temperature by up to 6°C, performing lymphatic drainage, closing dilated pores, and eliminating under-eye fluid retention.
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-6">
+              <li><strong>Gold Mask 24K:</strong> 24-karat gold dust, minerals, and magnesium for immediate red-carpet tightening.</li>
+              <li><strong>Antioxidant & Goji Berry:</strong> Neutralizes free radical pollution damage and revives tired complexions.</li>
+              <li><strong>Purifying Oxygenating:</strong> Deep enzymatic oxygenation for congested, city-stressed skin.</li>
+            </ul>
+            """
+        },
+        {
+            "slug": "groom-makeup-package",
+            "title": "Groom Makeup & Wedding Grooming in Kakkanad, Kochi | LivArt Salon",
+            "desc": "Signature Black Diamond Groom wedding package in Kakkanad Kochi at LivArt. Natural matte camera-ready finish, beard architecture, haircut, D-tan, and massage for ₹7,500.",
+            "heading": "Black Diamond Groom Wedding Makeover & Styling",
+            "price": "₹7,500 (Member ₹5,625)",
+            "category": "Distinguished Groom Sanctuary",
+            "img": "../../assets/images/instagram/C7l9fP5P3u9.jpg",
+            "body": """
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              Modern grooms know that looking impeccable next to their radiant bride requires specialized masculine grooming. The <strong>Black Diamond Groom Package</strong> at LivArt Kakkanad delivers sophisticated, natural enhancement designed to look effortlessly handsome in person and non-reflective under camera flashes.
+            </p>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">The 6-Pillar Groom Transformation</h3>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-6">
+              <li><strong>Natural Matte Camera-Ready Complexion:</strong> Non-detectable skin evening, blemish neutralization, and oil-control setting (never looks cakey or makeup-heavy).</li>
+              <li><strong>Precision Structural Haircut:</strong> Tailored fade or layer architecture designed specifically for your wedding headwear or reception styling.</li>
+              <li><strong>Beard Architecture & Contouring:</strong> Sharp razor graduation, neckline definition, and beard hydration oil.</li>
+              <li><strong>Instant Facial D-Tan:</strong> Clears fatigue and collar sunlines for an even skin tone across neck and jaw.</li>
+              <li><strong>Relaxo Hot Oil Cranial & Shoulder Massage:</strong> Erases pre-wedding planning stress and relaxes upper back muscles.</li>
+              <li><strong>Executive Manicure & Pedicure:</strong> Clean, trimmed, and buffed hands for the ring ceremony.</li>
+            </ul>
+            """
+        },
+        {
+            "slug": "saree-draping-service",
+            "title": "Professional Saree Draping & Box Folding in Kakkanad, Kochi | LivArt",
+            "desc": "Expert saree draping in Kakkanad, Kochi. Pre-pleated box folding, on-client silk Kanchipuram and Kasavu saree draping with pin-tight security from ₹1,000.",
+            "heading": "Professional Saree Draping & Pre-Pleating Studio",
+            "price": "From ₹1,000 (Member from ₹750)",
+            "category": "Bridal Draping Craft",
+            "img": "../../assets/images/instagram/DULWym5CHa0.jpg",
+            "body": """
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              A magnificent silk Kanchipuram or authentic Kerala Kasavu saree can only realize its royal elegance when draped with millimeter precision. At LivArt Salon Kakkanad, our master draping artisans ensure your pleats fall cleanly, your pallu stays anchored, and your silhouette is contoured to perfection throughout long ceremonies.
+            </p>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">Our Specialized Draping Tiers</h3>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-6">
+              <li><strong>On-Client Couture Saree Draping (₹1,500):</strong> Custom on-body pleating, waist cinching, safety pin anchoring, and dupatta fixing.</li>
+              <li><strong>Pre-Pleated Box Folding (₹1,000):</strong> Bring your saree 1–2 days prior to your event; we press, measure, and box-fold every pleat with precision so you can step into it in under 3 minutes on wedding morning.</li>
+              <li><strong>Pre-Pleated Draping on Client (₹1,000):</strong> Swift dressing using previously ironed pleats.</li>
+              <li><strong>Group Draping for Bridesmaids & Family:</strong> Fast, coordinated styling for family members and bridesmaids.</li>
+            </ul>
+            """
+        },
+        {
+            "slug": "deluxe-pedicure-spa",
+            "title": "Deluxe Spa Pedicure & Foot Reflexology in Kakkanad | LivArt Salon Kochi",
+            "desc": "Best pedicure in Kakkanad Kochi. Herbal foot soak, dead-skin callus filing, organic scrub, and acupressure foot reflexology at LivArt Salon from ₹1,200.",
+            "heading": "Deluxe Foot Reflexology & Callus Pedicure Spa",
+            "price": "₹1,200 (Member ₹900)",
+            "category": "Hand & Foot Wellness",
+            "img": "../../assets/images/instagram/C88tG9iSEKp.jpg",
+            "body": """
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              Walking on hard city pavements and wearing formal footwear leads to heel calluses, dry cracked skin, and poor lower limb circulation. The <strong>Deluxe Foot Reflexology & Pedicure Spa</strong> at LivArt Kakkanad combines clinical foot hygiene with restorative therapeutic relaxation.
+            </p>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">The Restorative 5-Stage Foot Ritual</h3>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-6">
+              <li><strong>Stage 1: Antiseptic Herbal Soak:</strong> Warm aromatic water infused with Epsom salts softens tough epidermal calluses.</li>
+              <li><strong>Stage 2: Precision Callus Elimination:</strong> Painlessly files away dead heel fissures without harsh razors.</li>
+              <li><strong>Stage 3: Exfoliating Sugar Scrub:</strong> Polishes calves and feet, removing embedded city grime.</li>
+              <li><strong>Stage 4: Acupressure Foot Reflexology:</strong> 20 minutes of firm, targeted thumb and palm pressure along meridian nerve points, releasing bodily tension.</li>
+              <li><strong>Stage 5: Cuticle Conditioning & High-Gloss Buff:</strong> Nails trimmed, cuticles nourished with jojoba oil, and finished with clear buff or your choice of gel polish.</li>
+            </ul>
+            """
         }
     ]
 
