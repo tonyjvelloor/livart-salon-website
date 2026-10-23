@@ -805,8 +805,9 @@ def build_category_pages():
 # 4. REDIRECTS, ROBOTS.TXT, AND SITEMAP.XML
 # -------------------------------------------------------------
 def build_seo_server_files():
-    # 1. robots.txt
-    robots_content = f"""User-agent: *
+    # 1. robots.txt (Full AI Crawler & Search Engine Directives)
+    robots_content = f"""# Allow all search engines and AI crawlers
+User-agent: *
 Allow: /
 Disallow: /wp-admin/
 Disallow: /wp-login.php
@@ -814,7 +815,37 @@ Disallow: /wp-includes/
 Disallow: /aapaa/
 Disallow: /lp_business_gift
 
+# Explicit AI Search Crawler Allow Directives (AEO & GEO)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /pricing.md
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
 Sitemap: {BASE_URL}/sitemap.xml
+# AI Context Files:
+# {BASE_URL}/llms.txt
+# {BASE_URL}/pricing.md
 """
     with open(os.path.join(BASE_DIR, "robots.txt"), "w") as f:
         f.write(robots_content)
@@ -894,7 +925,9 @@ RewriteRule ^lp_business_gift.*$ - [G,L]
         ("/blog/", "0.8"),
         ("/category/hair/", "0.7"),
         ("/category/makeup/", "0.7"),
-        ("/category/skin-care/", "0.7")
+        ("/category/skin-care/", "0.7"),
+        ("/llms.txt", "0.8"),
+        ("/pricing.md", "0.8")
     ]
 
     for p in BLOG_POSTS:
@@ -906,7 +939,7 @@ RewriteRule ^lp_business_gift.*$ - [G,L]
     for path, prio in all_urls:
         sitemap_xml += f"""  <url>
     <loc>{BASE_URL}{path}</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>{prio}</priority>
   </url>

@@ -260,6 +260,10 @@ def render_head(title, description, canonical_path, extra_schema=None, root_pref
   <meta name="description" content="{description}" />
   <link rel="canonical" href="{BASE_URL}{canonical_path}" />
   
+  <!-- Machine-Readable AI Context & Pricing Standards (GEO / AEO) -->
+  <link rel="help" type="text/plain" href="{BASE_URL}/llms.txt" title="LLM Context Standard" />
+  <link rel="help" type="text/markdown" href="{BASE_URL}/pricing.md" title="Transparent Pricing Matrix" />
+
   <!-- Favicons & Touch Icons -->
   <link rel="icon" type="image/png" href="{root_prefix}favicon.png" sizes="32x32" />
   <link rel="icon" href="{root_prefix}favicon.ico" sizes="any" />
@@ -586,6 +590,8 @@ def render_footer(root_prefix="", extra_scripts=""):
       <div class="flex flex-wrap items-center gap-4 sm:gap-6 font-label-caps text-[10px] tracking-wider uppercase">
         <a href="{root_prefix}services/index.html" class="hover:text-champagne-gold">All Services</a>
         <a href="{root_prefix}packages/index.html" class="hover:text-champagne-gold">Packages</a>
+        <a href="{root_prefix}pricing.md" class="hover:text-champagne-gold">Rate Card (MD)</a>
+        <a href="{root_prefix}llms.txt" class="hover:text-champagne-gold">AI Context (LLMs)</a>
         <a href="{root_prefix}academy/index.html" class="text-champagne-gold hover:underline">Beauty Academy</a>
         <a href="{ACADEMY_URL}" target="_blank" rel="noopener noreferrer" class="text-metallic-gold-light hover:underline">livart.co.in ↗</a>
         <a href="{root_prefix}gallery/index.html" class="hover:text-champagne-gold">Instagram Feed</a>

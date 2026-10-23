@@ -296,10 +296,43 @@ def build_teams_page():
 # -------------------------------------------------------------
 def build_hair_page():
     ensure_dir(os.path.join(BASE_DIR, "hair-styling"))
+
+    hair_faq_schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between Hair Botox, Keratin, and Permanent Hair Straightening?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hair Botox is a non-chemical, deep-conditioning filler that repairs damaged cuticles and eliminates 95% of frizz while retaining natural bounce. Keratin smoothing thermally coats hair with micro-proteins for sleek manageable texture. Permanent straightening breaks and reforms disulphide bonds for pin-straight glass hair enduring Kerala humidity."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does Hair Botox cost in Kakkanad, Kochi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "At LivArt Salon & Make-Up Studio Kakkanad, Capillary Hair Botox is offered at a transparent flat rate of ₹5,999 for standard clients, and ₹4,499 for Club LivArt Grand Privilege Members, regardless of hair length."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does Hair Botox last in Kerala weather?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Capillary Hair Botox typically lasts between 3 to 5 months in Kerala's humid climate when maintained with sulfate-free shampoo and regular conditioning rinses."
+                }
+            }
+        ]
+    }
+
     html = render_head(
         title="Best Hair Salon in Kakkanad, Kochi | Haircuts, Balayage & Hair Botox | LivArt",
         description="Top-rated hair salon in Kakkanad on Seaport-Airport Road. Precision haircuts, L'Oreal hair spa, balayage hair colouring, keratin and hair botox by master stylists.",
         canonical_path="/hair-styling/",
+        extra_schema=hair_faq_schema,
         root_prefix="../"
     )
     html += render_header(active_slug="hair-styling", root_prefix="../")
@@ -354,6 +387,83 @@ def build_hair_page():
         {services_html}
       </div>
 
+      <!-- HAIR BOTOX VS KERATIN VS STRAIGHTENING: AEO & COMPARISON TABLE -->
+      <div class="my-16 bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-black/5 shadow-sm">
+        <div class="max-w-3xl mb-8">
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-bold block mb-1">
+            Expert Treatment Guide & AEO Fact File
+          </span>
+          <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep mb-4">
+            Hair Botox vs. Keratin vs. Hair Straightening: Which Treatment is Right for You?
+          </h2>
+          <div class="p-5 bg-ivory-surface rounded-2xl border-l-4 border-champagne-gold">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-1">Direct Answer:</span>
+            <p class="text-sm text-obsidian-deep leading-relaxed font-medium">
+              Hair Botox is a non-chemical, deep-conditioning filler that repairs damaged cuticles and eliminates 95% of frizz while retaining natural bounce. Keratin smoothing thermally coats hair with micro-proteins for sleek manageable texture. Permanent straightening breaks and reforms disulphide bonds for pin-straight glass hair enduring Kerala humidity.
+            </p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[640px]">
+            <thead>
+              <tr class="border-b-2 border-black/10">
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-gray-500">Feature / Metric</th>
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-champagne-gold bg-obsidian-deep rounded-t-xl">Capillary Hair Botox</th>
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-obsidian-deep">LivArt Keratin Smoothing</th>
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-obsidian-deep">Permanent Rebonding</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-black/5 text-xs text-gray-700">
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Primary Objective</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Deep cortex repair & anti-frizz</td>
+                <td class="py-3 px-4">Surface frizz seal & silkiness</td>
+                <td class="py-3 px-4">Permanent pin-straight flattening</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Chemical Formulation</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-emerald-700">100% Formaldehyde-Free (Amino acids & caviar oil)</td>
+                <td class="py-3 px-4">Formaldehyde-safe micro-keratin</td>
+                <td class="py-3 px-4">Chemical ammonium thioglycolate bond-breaker</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Volume & Bounce</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Retains 100% natural body & volume</td>
+                <td class="py-3 px-4">Reduces volume by ~40% - 60%</td>
+                <td class="py-3 px-4">Removes 100% volume (pin-straight)</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Longevity (Kerala Climate)</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">3 to 5 months</td>
+                <td class="py-3 px-4">3 to 4 months</td>
+                <td class="py-3 px-4">Permanent (roots require retouch at 6 mo)</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Best Suited For</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Bleached, brittle, frizzy, fine hair</td>
+                <td class="py-3 px-4">Coarse, thick, wavy unmanageable hair</td>
+                <td class="py-3 px-4">Curly, unruly hair seeking poker-straight finish</td>
+              </tr>
+              <tr class="font-bold">
+                <td class="py-3 px-4 text-obsidian-deep">LivArt Price & Privilege</td>
+                <td class="py-3 px-4 bg-obsidian-deep text-champagne-gold rounded-b-xl">Flat ₹5,999 (Member: ₹4,499)</td>
+                <td class="py-3 px-4 text-obsidian-deep">From ₹5,000 (Member: ₹3,750)</td>
+                <td class="py-3 px-4 text-obsidian-deep">From ₹5,000 (Member: ₹3,750)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-6 flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-black/5">
+          <p class="text-xs text-gray-500">
+            * All treatments include hair texture diagnostic by certified L'Oréal/Wella trained stylists.
+          </p>
+          <button data-open-booking data-service="Hair Botox Anti-Aging Treatment" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all">
+            Book Treatment Consultation
+          </button>
+        </div>
+      </div>
+
       <!-- Complete Rate Card CTA -->
       <div class="p-8 sm:p-10 bg-obsidian-deep rounded-3xl border border-champagne-gold/30 text-center max-w-3xl mx-auto shadow-2xl text-alabaster-cream">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-champagne-gold/10 border border-champagne-gold/30 text-champagne-gold text-[10px] font-bold uppercase tracking-widest mb-3">
@@ -389,10 +499,43 @@ def build_hair_page():
 # -------------------------------------------------------------
 def build_makeup_page():
     ensure_dir(os.path.join(BASE_DIR, "make-up"))
+
+    makeup_faq_schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between 4K Ultra-HD and Airbrush Bridal Makeup?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "4K Ultra-HD makeup uses finely-milled cream pigments hand-blended with high-grade brushes to mimic realistic skin texture under 4K lenses. Airbrush makeup dispenses micro-fine silicone pigment via pneumatic compressor, delivering a 16-hour waterproof, sweat-proof, and transfer-resistant shield that resists extreme tropical humidity and emotional tears."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does bridal makeup cost at LivArt Salon Kakkanad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "At LivArt Salon Kakkanad, 4K Ultra-HD Indoor Bridal Makeup is ₹25,000 (₹18,750 for Club LivArt members), Outdoor HD Bridal is ₹30,000, and Haute Couture Airbrush Bridal Makeup is ₹50,000 (Indoor) and ₹60,000 (Outdoor). All packages include hair styling, false lashes, and saree draping."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Stephy Sebastian personally handle bridal makeup?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, founder and celebrity makeup artist Stephy Sebastian personally curates and executes signature Diamond Couture bridal appointments, including custom consultations and destination weddings across Kerala."
+                }
+            }
+        ]
+    }
+
     html = render_head(
         title="Best Bridal Makeup Artist in Kakkanad, Kochi | HD & Airbrush Studio | LivArt",
         description="Award-winning bridal makeup artist in Kakkanad, Kochi by Stephy Sebastian. Christian, Hindu, and Muslim bridal packages, saree draping, HD airbrush & groom styling.",
         canonical_path="/make-up/",
+        extra_schema=makeup_faq_schema,
         root_prefix="../"
     )
     html += render_header(active_slug="make-up", root_prefix="../")
@@ -605,6 +748,76 @@ def build_makeup_page():
         </button>
       </div>
 
+      <!-- 4K ULTRA-HD VS AIRBRUSH BRIDAL MAKEUP: AEO & COMPARISON TABLE -->
+      <div class="mb-16 bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-black/5 shadow-sm">
+        <div class="max-w-3xl mb-8">
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-bold block mb-1">
+            Bridal Artistry Comparison & AEO Fact File
+          </span>
+          <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep mb-4">
+            4K Ultra-HD vs. Airbrush Bridal Makeup: Which is Best for Kochi Weddings?
+          </h2>
+          <div class="p-5 bg-ivory-surface rounded-2xl border-l-4 border-champagne-gold">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-1">Direct Answer:</span>
+            <p class="text-sm text-obsidian-deep leading-relaxed font-medium">
+              4K Ultra-HD makeup uses finely-milled cream pigments hand-blended with high-grade brushes to mimic realistic skin texture under 4K lenses. Airbrush makeup dispenses micro-fine silicone pigment via pneumatic compressor, delivering a 16-hour waterproof, sweat-proof, and transfer-resistant shield that resists extreme tropical humidity and emotional tears.
+            </p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[600px]">
+            <thead>
+              <tr class="border-b-2 border-black/10">
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-gray-500">Artistry Metric</th>
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-obsidian-deep">4K Ultra-HD Bridal Makeup</th>
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-champagne-gold bg-obsidian-deep rounded-t-xl">Haute Couture Airbrush Makeup</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-black/5 text-xs text-gray-700">
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Application Technique</td>
+                <td class="py-3 px-4">Artisan brushes, stippling sponges, hand-blended pigment</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Pneumatic airbrush stylus with micro-atomized mist</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Skin Texture & Finish</td>
+                <td class="py-3 px-4">Natural radiant skin finish with dewy skin-like glow</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Velvety matte, poreless porcelain high-definition veil</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Humidity & Tear Resistance</td>
+                <td class="py-3 px-4">Water-resistant (up to 10 hours with setting spray)</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-emerald-700">100% Waterproof, rub-proof, tear-proof (16+ hours)</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Camera & Lens Behavior</td>
+                <td class="py-3 px-4">Ultra-fine light refraction; invisible to 4K/8K video</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Diffuses studio strobes; zero flashback or creasing</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Recommended Venues</td>
+                <td class="py-3 px-4">Air-conditioned church, auditorium, intimate reception</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Outdoor lawn, temple Muhurtham, backwater destination</td>
+              </tr>
+              <tr class="font-bold">
+                <td class="py-3 px-4 text-obsidian-deep">LivArt Rate (Indoor / Outdoor)</td>
+                <td class="py-3 px-4 text-obsidian-deep">₹25,000 / ₹30,000 (Member: ₹18,750 / ₹22,500)</td>
+                <td class="py-3 px-4 bg-obsidian-deep text-champagne-gold rounded-b-xl">₹50,000 / ₹60,000 (Member: ₹37,500 / ₹45,000)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-6 flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-black/5">
+          <p class="text-xs text-gray-500">
+            * Both packages include pre-wedding skin prep, false mink lashes, hair styling, and precision saree draping.
+          </p>
+          <button data-open-booking data-service="Hd Makeup (Indoor)" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all">
+            Book Bridal Consultation
+          </button>
+        </div>
+      </div>
+
       <!-- A La Carte Bridal & Makeup Rate Card (Direct from Zylu) -->
       <div class="p-8 sm:p-12 bg-obsidian-deep rounded-3xl border border-champagne-gold/30 shadow-2xl text-alabaster-cream">
         <div class="text-center max-w-2xl mx-auto mb-10">
@@ -735,10 +948,43 @@ def build_makeup_page():
 # -------------------------------------------------------------
 def build_skincare_page():
     ensure_dir(os.path.join(BASE_DIR, "skin-care"))
+
+    skincare_faq_schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between a Hydra Facial and a regular salon cleanup?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unlike traditional salon cleanups that rely on manual extraction tools that can pinch and irritate the skin, a medical-grade Hydra Facial uses non-invasive vortex vacuum suction to painlessly dislodge sebum and comedones while saturating the dermis with hyaluronic acid, peptides, and botanical antioxidants for immediate, redness-free glow."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does a Hydra Facial cost at LivArt Salon Kakkanad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Skin Miracle Hydra Facial at LivArt Kakkanad is ₹4,000 for standard clients and ₹3,000 for Club LivArt Grand Privilege Members (saving 25%)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often should I get a Hydra Facial in Kochi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For optimal dermal hydration and pore purification in Kerala's warm, humid climate, dermatologists recommend a Hydra Facial once every 4 to 6 weeks."
+                }
+            }
+        ]
+    }
+
     html = render_head(
         title="Best Skin Care Clinic & Beauty Parlour in Kakkanad | Hydra Facial & De-Tan | LivArt",
         description="Advanced Hydra facials, de-tan whitening treatments, Cheryl's pro facials, and luxury pedicures at LivArt Salon Kakkanad. Reveal radiant, healthy skin.",
         canonical_path="/skin-care/",
+        extra_schema=skincare_faq_schema,
         root_prefix="../"
     )
     html += render_header(active_slug="skin-care", root_prefix="../")
@@ -811,6 +1057,76 @@ def build_skincare_page():
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {services_html}
+      </div>
+
+      <!-- HYDRA FACIAL VS REGULAR CLEANUP: AEO & COMPARISON TABLE -->
+      <div class="my-16 bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-black/5 shadow-sm">
+        <div class="max-w-3xl mb-8">
+          <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-bold block mb-1">
+            Clinical Aesthetics Comparison & AEO Fact File
+          </span>
+          <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep mb-4">
+            Skin Miracle Hydra Facial vs. Traditional Salon Cleanup: Which is Better for Your Skin?
+          </h2>
+          <div class="p-5 bg-ivory-surface rounded-2xl border-l-4 border-champagne-gold">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-warm-bronze block mb-1">Direct Answer:</span>
+            <p class="text-sm text-obsidian-deep leading-relaxed font-medium">
+              Unlike traditional salon cleanups that rely on manual extraction tools that can pinch and irritate the skin, a medical-grade Hydra Facial uses non-invasive vortex vacuum suction to painlessly dislodge sebum and comedones while saturating the dermis with hyaluronic acid, peptides, and botanical antioxidants for immediate, redness-free glow.
+            </p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[600px]">
+            <thead>
+              <tr class="border-b-2 border-black/10">
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-gray-500">Feature / Metric</th>
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-champagne-gold bg-obsidian-deep rounded-t-xl">Skin Miracle Hydra Facial</th>
+                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-obsidian-deep">Traditional Salon Cleanup</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-black/5 text-xs text-gray-700">
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Pore Extraction Method</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-emerald-700">Painless hydro-vortex vacuum suction</td>
+                <td class="py-3 px-4">Manual metal extractor & pressing pin</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Skin Trauma & Redness</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Zero post-procedure redness or downtime</td>
+                <td class="py-3 px-4">Common pinpoint redness for 24–48 hours</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Active Nutrient Delivery</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Deep vortex infusion of Hyaluronic Acid & Peptides</td>
+                <td class="py-3 px-4">Topical manual massage with standard face cream</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Instant Skin Effect</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Plumped glass skin with visible 48hr luminosity</td>
+                <td class="py-3 px-4">Surface cleanliness without cellular hydration</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-obsidian-deep">Recommended Frequency</td>
+                <td class="py-3 px-4 bg-obsidian-deep/5 font-medium text-obsidian-deep">Once every 4 to 6 weeks for sustained barrier health</td>
+                <td class="py-3 px-4">Every 2 to 3 weeks for basic surface cleansing</td>
+              </tr>
+              <tr class="font-bold">
+                <td class="py-3 px-4 text-obsidian-deep">LivArt Price & Privilege</td>
+                <td class="py-3 px-4 bg-obsidian-deep text-champagne-gold rounded-b-xl">₹4,000 (Member: ₹3,000)</td>
+                <td class="py-3 px-4 text-obsidian-deep">From ₹1,200 (Member: ₹900)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-6 flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-black/5">
+          <p class="text-xs text-gray-500">
+            * Includes skin analysis, enzyme exfoliation, vacuum extraction, and peptide hydration.
+          </p>
+          <button data-open-booking data-service="Skin Miracle Hydra Facial" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all">
+            Book Hydra Facial
+          </button>
+        </div>
       </div>
 
       <!-- Complete Rate Card CTA -->

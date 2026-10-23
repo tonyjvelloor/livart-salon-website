@@ -1,3 +1,4 @@
+# Allow all search engines and AI crawlers
 User-agent: *
 Allow: /
 Disallow: /wp-admin/
@@ -6,4 +7,34 @@ Disallow: /wp-includes/
 Disallow: /aapaa/
 Disallow: /lp_business_gift
 
+# Explicit AI Search Crawler Allow Directives (AEO & GEO)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /pricing.md
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
 Sitemap: https://livartsalon.com/sitemap.xml
+# AI Context Files:
+# https://livartsalon.com/llms.txt
+# https://livartsalon.com/pricing.md
