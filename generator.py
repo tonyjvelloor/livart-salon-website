@@ -33,8 +33,12 @@ LOCAL_BUSINESS_SCHEMA = {
         "LivArt Salon",
         "LivArt Beauty Parlour",
         "LivArt Salon Kakkanad",
+        "Best Salon in Kakkanad",
+        "Beauty Parlour Near Infopark",
+        "LivArt Nail Studio Kakkanad",
         "LivArt Hair and Makeup Studio",
-        "LivArt Bridal Studio Kakkanad"
+        "LivArt Bridal Studio Kakkanad",
+        "Best Spa in Kakkanad"
     ],
     "image": LOGO_URL,
     "@id": "https://livartsalon.com/#salon",
@@ -130,6 +134,25 @@ LOCAL_BUSINESS_SCHEMA = {
                     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cheryl's Cosmeceuticals Pro Facial Treatment"}},
                     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deluxe Foot Reflexology & Pedicure Spa"}},
                     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Herbal Waxing & Painless Eyebrow Threading"}}
+                ]
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Nail Art, Gel Extensions & Nail Studio",
+                "itemListElement": [
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Nail Art Studio Kakkanad"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Gel & Acrylic Nail Extensions Kakkanad"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bridal Nail Art & French Tips"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chrome & Ombre Nail Art"}}
+                ]
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Hair Spa & Therapeutic Scalp Wellness",
+                "itemListElement": [
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Best Hair Spa in Kakkanad"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "L'Oreal Scalp Therapy & Acupressure Head Massage"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deep Conditioning Spa Therapy Near Infopark"}}
                 ]
             }
         ]
@@ -510,12 +533,13 @@ def render_footer(root_prefix="", extra_scripts=""):
       <div class="flex flex-col gap-3">
         <span class="font-serif-luxury text-base text-metallic-gold-light tracking-wide">Signature Services</span>
         <ul class="flex flex-col gap-2 text-xs text-muted-slate">
-          <li><a href="{root_prefix}services/loreal-lustrous-hair-spa/index.html" class="hover:text-champagne-gold transition-colors">L'Oreal Lustrous Hair Spa (From Rs. 700)</a></li>
-          <li><a href="{root_prefix}services/livart-majestic-keratin-treatment/index.html" class="hover:text-champagne-gold transition-colors">Livart Majestic Keratin Treatment</a></li>
-          <li><a href="{root_prefix}services/livart-hair-straightening/index.html" class="hover:text-champagne-gold transition-colors">Permanent Hair Straightening</a></li>
-          <li><a href="{root_prefix}services/loreal-glossy-hair-colouring/index.html" class="hover:text-champagne-gold transition-colors">L'Oreal Glossy Hair Colouring & Balayage</a></li>
+          <li><a href="{root_prefix}services/loreal-lustrous-hair-spa/index.html" class="hover:text-champagne-gold transition-colors">Hair Spa in Kakkanad (From Rs. 1,200)</a></li>
+          <li><a href="{root_prefix}services/hair-botox-treatment/index.html" class="hover:text-champagne-gold transition-colors">Anti-Frizz Hair Botox Treatment</a></li>
+          <li><a href="{root_prefix}services/bridal-makeup-artist/index.html" class="hover:text-champagne-gold transition-colors">HD Bridal Makeup Studio Kakkanad</a></li>
+          <li><a href="{root_prefix}services/nail-art-kakkanad/index.html" class="hover:text-champagne-gold transition-colors">Nail Art & Gel Extensions (From Rs. 800)</a></li>
+          <li><a href="{root_prefix}services/livart-majestic-keratin-treatment/index.html" class="hover:text-champagne-gold transition-colors">Livart Majestic Keratin Smoothing</a></li>
           <li><a href="{root_prefix}services/skin-miracle-hydra-facial/index.html" class="hover:text-champagne-gold transition-colors">Skin Miracle Hydra Facial (Rs. 4,000)</a></li>
-          <li><a href="{root_prefix}make-up/index.html" class="hover:text-champagne-gold transition-colors">Bridal & Groom Couture Packages</a></li>
+          <li><a href="{root_prefix}services/livart-hair-straightening/index.html" class="hover:text-champagne-gold transition-colors">Permanent Hair Straightening</a></li>
           <li><a href="{root_prefix}services/index.html#catalog" class="text-champagne-gold font-bold hover:underline">Browse All 234 Services ↗</a></li>
         </ul>
       </div>

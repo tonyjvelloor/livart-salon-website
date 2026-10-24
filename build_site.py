@@ -436,6 +436,22 @@ def build_homepage():
                     "@type": "Answer",
                     "text": "You can book directly by calling +91 70120 59591 or messaging on WhatsApp. You can also use our instant booking button on the website or visit our salon on Seaport-Airport Road, Kakkanad. Walk-ins are welcomed, though advance booking is recommended for weekends and bridal trials."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Does LivArt Salon offer Nail Art, Gel Nail Extensions, and Acrylics in Kakkanad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, LivArt features a dedicated nail art studio in Kakkanad near Infopark. Our nail artists specialize in lightweight gel extensions, acrylic nail overlays, French tips, chrome glazes, ombré designs, and couture bridal nail art starting from ₹800. All instruments undergo hospital-grade autoclave sterilization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What relaxation therapies and head massage treatments are available at LivArt Spa Kakkanad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LivArt is renowned as Kakkanad’s top day spa and wellness destination. We offer L'Oréal deep conditioning hair spa therapies with acupressure cranial massage, deluxe foot reflexology pedicures, relaxing full head massage, herbal body waxing, and pain-free threading. Open 7 days a week for busy IT executives and residents."
+                }
             }
         ]
     }
@@ -452,8 +468,8 @@ def build_homepage():
     ]
     
     html = render_head(
-        title="Best Salon in Kakkanad, Kochi | Bridal Makeup, Hair & Beauty Parlour | LivArt",
-        description="Looking for the best salon in Kakkanad, Kochi? LivArt Salon & Beauty Parlour offers celebrity bridal makeup, hair botox, hydra facials, keratin & L'Oreal hair spa near Infopark. Rated 4.9★.",
+        title="LivArt Salon Kakkanad | Best Beauty Parlour & Hair Salon Near Infopark, Kochi",
+        description="Kakkanad's top-rated salon & beauty parlour near Infopark (4.9★). Celebrity bridal makeup studio, hair botox, balayage, hydra facials, hair spa & nail art. Book now!",
         canonical_path="/",
         extra_schema=extra_schemas
     )
@@ -490,7 +506,7 @@ def build_homepage():
             <span class="italic text-gold-gradient">for Radiant Hair & Bridal Artistry.</span>
           </h1>
           <p class="text-base sm:text-lg text-gray-300 max-w-xl mb-6 leading-relaxed">
-            LivArt Salon & Make-Up Studio is rated Kakkanad's best unisex salon and luxury beauty parlour on Seaport-Airport Road. Curated by master celebrity stylist Stephy Sebastian, we craft unforgettable bridal transformations, precision haircuts, balayage hair colouring, hair botox, and clinical Hydra facials just 5 minutes from Infopark and SmartCity Kochi.
+            LivArt Salon & Make-Up Studio is rated Kakkanad's best unisex salon and luxury beauty parlour on Seaport-Airport Road. Curated by master celebrity stylist Stephy Sebastian, we craft unforgettable bridal transformations, precision haircuts, balayage hair colouring, hair botox, nail art, and clinical Hydra facials just 5 minutes from Infopark and SmartCity Kochi.
           </p>
 
           <!-- Founder Quote -->
@@ -1288,7 +1304,7 @@ def build_homepage():
       </div>
 
       <!-- Proximity & Distinction Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         <!-- Card 1 -->
         <div class="bg-surface-container-low p-7 rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
@@ -1303,7 +1319,7 @@ def build_homepage():
           </div>
           <div class="pt-4 mt-4 border-t border-black/5 flex items-center gap-1 text-[11px] text-warm-bronze font-bold">
             <span class="material-symbols-outlined text-[14px]">near_me</span>
-            <span>Seaport-Airport Road Junction</span>
+            <span>Beauty Parlour Near Infopark</span>
           </div>
         </div>
 
@@ -1321,7 +1337,7 @@ def build_homepage():
           </div>
           <div class="pt-4 mt-4 border-t border-black/5 flex items-center gap-1 text-[11px] text-warm-bronze font-bold">
             <span class="material-symbols-outlined text-[14px]">diamond</span>
-            <span>Private Bridal Dressing Suite</span>
+            <span>Bridal Makeup Studio Kakkanad</span>
           </div>
         </div>
 
@@ -1339,11 +1355,47 @@ def build_homepage():
           </div>
           <div class="pt-4 mt-4 border-t border-black/5 flex items-center gap-1 text-[11px] text-warm-bronze font-bold">
             <span class="material-symbols-outlined text-[14px]">verified</span>
-            <span>100% Genuine L'Oréal Formulations</span>
+            <span>Hair Salon in Kakkanad</span>
           </div>
         </div>
 
-        <!-- Card 4 -->
+        <!-- Card 4: Nail Art Studio -->
+        <div class="bg-surface-container-low p-7 rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">brush</span>
+            </div>
+            <span class="font-label-caps text-[10px] text-warm-bronze tracking-widest uppercase font-bold block mb-1">Couture Nail Bar</span>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Nail Art & Gel Extensions</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Kakkanad's premier nail studio: breathable gel extensions, durable acrylic overlays, French tips, chrome finishes, and customized bridal nail art with hospital-grade autoclave sanitization.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-black/5 flex items-center gap-1 text-[11px] text-warm-bronze font-bold">
+            <span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+            <span><a href="services/nail-art-kakkanad/index.html" class="hover:underline">Nail Art Studio Kakkanad ↗</a></span>
+          </div>
+        </div>
+
+        <!-- Card 5: Day Spa & Wellness -->
+        <div class="bg-surface-container-low p-7 rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">spa</span>
+            </div>
+            <span class="font-label-caps text-[10px] text-warm-bronze tracking-widest uppercase font-bold block mb-1">Scalp & Body Relaxation</span>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Best Hair Spa & Scalp Therapy</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Unwind with therapeutic L'Oréal hair spa treatments, restorative acupressure head massages, and deluxe foot reflexology pedicures designed to melt away work-week stress.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-black/5 flex items-center gap-1 text-[11px] text-warm-bronze font-bold">
+            <span class="material-symbols-outlined text-[14px]">self_improvement</span>
+            <span><a href="services/loreal-lustrous-hair-spa/index.html" class="hover:underline">Best Spa in Kakkanad ↗</a></span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
         <div class="bg-surface-container-low p-7 rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-champagne-gold/20 text-warm-bronze flex items-center justify-center mb-5">
@@ -1498,6 +1550,28 @@ def build_homepage():
             </summary>
             <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
               You can call our concierge at <a href="tel:+917012059591" class="text-warm-bronze font-bold hover:underline">+91 70120 59591</a> or message via WhatsApp. You can also use the instant booking button on our website or visit us directly on Seaport-Airport Road. We welcome walk-in clients 7 days a week, though advance booking is advised for weekends and bridal consultations.
+            </div>
+          </details>
+
+          <!-- FAQ 7: Nail Art -->
+          <details class="faq-item group bg-surface-container-low rounded-xl p-5 border border-black/5 transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-serif-luxury text-base sm:text-lg font-bold text-obsidian-deep list-none select-none">
+              <span>Does LivArt Salon offer Nail Art, Gel Nail Extensions, and Acrylics in Kakkanad?</span>
+              <span class="faq-icon material-symbols-outlined text-warm-bronze transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+              Yes, LivArt features a dedicated nail art studio in Kakkanad near Infopark. Our certified technicians specialize in lightweight gel extensions, acrylic nail overlays, French tips, chrome glazes, ombré designs, and couture bridal nail art starting from ₹800. All instruments undergo hospital-grade autoclave sterilization. <a href="services/nail-art-kakkanad/index.html" class="text-warm-bronze font-bold hover:underline">View Nail Art Services & Pricing ↗</a>
+            </div>
+          </details>
+
+          <!-- FAQ 8: Spa -->
+          <details class="faq-item group bg-surface-container-low rounded-xl p-5 border border-black/5 transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-serif-luxury text-base sm:text-lg font-bold text-obsidian-deep list-none select-none">
+              <span>What relaxation therapies and head massage treatments are available at LivArt Spa Kakkanad?</span>
+              <span class="faq-icon material-symbols-outlined text-warm-bronze transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-black/5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+              LivArt is renowned as Kakkanad’s top day spa and wellness destination. We offer L'Oréal deep conditioning hair spa therapies with acupressure cranial massage, deluxe foot reflexology pedicures, relaxing full head massage, herbal body waxing, and pain-free threading. Open 7 days a week for busy IT executives and residents. <a href="services/loreal-lustrous-hair-spa/index.html" class="text-warm-bronze font-bold hover:underline">Explore Hair Spa & Scalp Therapy ↗</a>
             </div>
           </details>
         </div>

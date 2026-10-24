@@ -79,8 +79,8 @@ def build_services_page():
     }
 
     html = render_head(
-        title="Best Salon & Beauty Parlour Services in Kakkanad, Kochi | LivArt",
-        description="Complete salon service price menu at LivArt Kakkanad: Keratin smoothing, hair botox, bridal makeup, L'Oreal hair spa, Hydra facials & hair colouring near Infopark.",
+        title="Best Salon & Beauty Parlour in Kakkanad, Kochi | Services & Rates | LivArt",
+        description="Explore 2026 salon & beauty parlour service prices in Kakkanad near Infopark: Hair botox, bridal makeup, nail art, keratin, balayage & hydra facials. WhatsApp booking.",
         canonical_path="/services/",
         extra_schema=faq_schema,
         root_prefix="../"
@@ -114,159 +114,277 @@ def build_services_page():
         Best Salon & Beauty Parlour Services in Kakkanad, Kochi
       </h1>
       <p class="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        Welcome to LivArt Salon, your premier destination for luxury hair design, rejuvenating treatments, and radiant skincare on Seaport-Airport Road. Curated by master stylists with international experience.
+        Welcome to LivArt Salon, your premier destination for luxury hair design, rejuvenating treatments, nail art, and radiant skincare on Seaport-Airport Road. Curated by master stylists with international experience just 5 minutes from Infopark Kochi.
       </p>
     </div>
   </section>
 
-  <!-- 5 Signature Services Grid -->
+  <!-- SPECIALIZED SERVICES DIRECTORY (14 BESPOKE SPOKES) -->
   <section class="py-16 bg-surface-bright">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl mb-12">
+      <div class="max-w-3xl mb-12">
         <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-semibold block mb-1">
-          Signature Treatments
+          Specialized Treatment Hub
         </span>
-        <h2 class="font-serif-luxury text-3xl font-bold text-obsidian-deep">
-          Our Most Demanded Rejuvenation Rituals
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-obsidian-deep">
+          Signature Hair, Bridal, Skincare & Nail Artistry
         </h2>
+        <p class="text-sm text-gray-600 mt-2">
+          Click any signature ritual below for in-depth protocol details, ingredient science, transparent pricing matrices, and direct WhatsApp appointment reservation.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service 1: Keratin -->
-        <div class="bg-surface-container-low rounded-2xl p-7 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- 1. Hair Botox -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Hair Smoothing</span>
-              <span class="font-serif-luxury text-xl font-bold text-obsidian-deep">From Rs. 5,000</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Anti-Frizz Deep Repair</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹3,500</span>
             </div>
-            <h3 class="font-serif-luxury text-2xl font-bold text-obsidian-deep mb-2">Livart Majestic Keratin Treatment</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-6">
-              A luxurious and rejuvenating experience that transforms unruly hair into silky-smooth, frizz-free tresses that stay lustrous through humid Kerala weather.
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Hair Botox Treatment</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Restores moisture, seals open cuticles, and eliminates tropical frizz without chemical relaxers.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-black/5">
-            <a href="livart-majestic-keratin-treatment/index.html" class="text-xs font-bold text-obsidian-deep hover:text-warm-bronze uppercase tracking-wider flex items-center gap-1">
-              <span>View Details</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-            <button data-open-booking data-service="Livart Majestic Keratin Treatment (From Rs. 5000)" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all">
-              Book
-            </button>
-          </div>
+          <a href="hair-botox-treatment/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Treatment</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
         </div>
 
-        <!-- Service 2: Hair Straightening -->
-        <div class="bg-surface-container-low rounded-2xl p-7 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+        <!-- 2. Bridal Makeup Artist -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Thermal Rebonding</span>
-              <span class="font-serif-luxury text-xl font-bold text-obsidian-deep">From Rs. 4,000</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Celebrity Bridal</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹15,000</span>
             </div>
-            <h3 class="font-serif-luxury text-2xl font-bold text-obsidian-deep mb-2">Livart Hair Straightening</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-6">
-              Experience the magic of permanent hair straightening, designed to deliver sleek, stylish, pin-straight manageability while safeguarding natural moisture.
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">HD Bridal Makeup Artist</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Directed by Stephy Sebastian. Flawless 4K camera-ready bridal transformations for Hindu, Christian & Muslim ceremonies.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-black/5">
-            <a href="livart-hair-straightening/index.html" class="text-xs font-bold text-obsidian-deep hover:text-warm-bronze uppercase tracking-wider flex items-center gap-1">
-              <span>View Details</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-            <button data-open-booking data-service="Livart Permanent Hair Straightening (From Rs. 4000)" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all">
-              Book
-            </button>
-          </div>
+          <a href="bridal-makeup-artist/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Bridal</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
         </div>
 
-        <!-- Service 3: Hair Colouring -->
-        <div class="bg-surface-container-low rounded-2xl p-7 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+        <!-- 3. Airbrush Bridal -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Balayage & Tint</span>
-              <span class="font-serif-luxury text-xl font-bold text-obsidian-deep">From Rs. 3,000</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">16-Hour Waterproof</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹20,000</span>
             </div>
-            <h3 class="font-serif-luxury text-2xl font-bold text-obsidian-deep mb-2">L’Oreal Glossy Hair Colouring</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-6">
-              Indulge in vibrant multidimensional shades. Skilled color masters formulate ammonia-free L'Oreal palettes from caramel balayage to rich mocha tones.
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Airbrush Bridal Makeup</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Silicone-based micro-fine mist offering 16-hour humidity-proof, tear-proof endurance.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-black/5">
-            <a href="loreal-glossy-hair-colouring/index.html" class="text-xs font-bold text-obsidian-deep hover:text-warm-bronze uppercase tracking-wider flex items-center gap-1">
-              <span>View Details</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-            <button data-open-booking data-service="L'Oreal Glossy Hair Colouring (From Rs. 3000)" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all">
-              Book
-            </button>
-          </div>
+          <a href="airbrush-bridal-makeup/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Airbrush</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
         </div>
 
-        <!-- Service 4: Hair Spa -->
-        <div class="bg-surface-container-low rounded-2xl p-7 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+        <!-- 4. Nail Art & Extensions -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Scalp Therapy</span>
-              <span class="font-serif-luxury text-xl font-bold text-obsidian-deep">From Rs. 1,500</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Nail Studio Kakkanad</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹800</span>
             </div>
-            <h3 class="font-serif-luxury text-2xl font-bold text-obsidian-deep mb-2">L’Oreal Lustrous Hair Spa</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-6">
-              Treat your hair to the ultimate nourishment. A deeply hydrating steam therapy and acupressure scalp massage that revitalizes follicles and restores shine.
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Nail Art & Gel Extensions</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Gel extensions, acrylic nails, chrome glazes, French tips, and bridal nail art with autoclave hygiene.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-black/5">
-            <a href="loreal-lustrous-hair-spa/index.html" class="text-xs font-bold text-obsidian-deep hover:text-warm-bronze uppercase tracking-wider flex items-center gap-1">
-              <span>View Details</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-            <button data-open-booking data-service="Revitalizing Hair Spa (Rs. 1200)" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all">
-              Book
-            </button>
-          </div>
+          <a href="nail-art-kakkanad/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Nail Studio</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
         </div>
 
-        <!-- Service 5: Hydra Facial -->
-        <div class="bg-surface-container-low rounded-2xl p-7 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+        <!-- 5. Hair Spa Kakkanad -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Clinical Skincare</span>
-              <span class="font-serif-luxury text-xl font-bold text-obsidian-deep">Rs. 4,000</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Scalp Spa Sanctuary</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹1,200</span>
             </div>
-            <h3 class="font-serif-luxury text-2xl font-bold text-obsidian-deep mb-2">Skin Miracle Hydra Facial</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-6">
-              For radiant, glass-like skin: a deeply purifying vortex-infusion treatment extracting clogged impurities while saturating the dermis in hyaluronic serums.
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">L’Oreal Hair Spa & Massage</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Best hair spa in Kakkanad. Deep steam hydration and acupressure scalp massage to relieve stress.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-black/5">
-            <a href="skin-miracle-hydra-facial/index.html" class="text-xs font-bold text-obsidian-deep hover:text-warm-bronze uppercase tracking-wider flex items-center gap-1">
-              <span>View Details</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-            <button data-open-booking data-service="Skin Miracle Hydra Facial (Rs. 4000)" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all">
-              Book
-            </button>
-          </div>
+          <a href="loreal-lustrous-hair-spa/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Hair Spa</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
         </div>
 
-        <!-- Callout: View Full Menu -->
-        <div class="bg-obsidian-deep text-alabaster-cream rounded-2xl p-7 border border-white/10 shadow-xl flex flex-col justify-between">
+        <!-- 6. Keratin Smoothing -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
           <div>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-gold block mb-2">Complete Catalog</span>
-            <h3 class="font-serif-luxury text-2xl font-bold text-white mb-2">Looking for More Services?</h3>
-            <p class="text-xs text-gray-300 leading-relaxed mb-6">
-              Explore our dedicated sections for haircuts & styling, bridal couture packages, and clinical skincare rituals.
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Thermal Smoothing</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹5,000</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Majestic Keratin Smoothing</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Infuses micro-proteins into hair fibers for mirror shine, silky texture, and high humidity resistance.
             </p>
           </div>
-          <div class="flex flex-col gap-2">
-            <a href="../hair-styling/index.html" class="text-xs text-metallic-gold-light hover:underline flex items-center justify-between py-1.5 border-b border-white/10">
-              <span>Haircuts & Blowouts</span> <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </a>
-            <a href="../make-up/index.html" class="text-xs text-metallic-gold-light hover:underline flex items-center justify-between py-1.5 border-b border-white/10">
-              <span>Bridal & Groom Makeup</span> <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </a>
-            <a href="../skin-care/index.html" class="text-xs text-metallic-gold-light hover:underline flex items-center justify-between py-1.5">
-              <span>Skincare & Facials</span> <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </a>
+          <a href="livart-majestic-keratin-treatment/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Keratin</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 7. Balayage Colouring -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">French Highlights</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹4,500</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Dimensional Balayage</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Hand-painted sun-kissed gradients, honey caramel tints, and shadow roots with zero harsh regrowth lines.
+            </p>
           </div>
+          <a href="balayage-hair-colouring/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Balayage</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 8. Hydra Facial -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Clinical Aesthetics</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">₹4,000</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Skin Miracle Hydra Facial</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Vortex vacuum extraction of deep impurities combined with intensive hyaluronic peptide infusion.
+            </p>
+          </div>
+          <a href="skin-miracle-hydra-facial/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Hydra Facial</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 9. Casmara Facial -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Algae Mask Therapy</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">₹3,500</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Casmara Luxury Algae Facial</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Authentic Spanish marine algae peel-off mask that lowers skin temperature by 6°C, depuffing and firming contours.
+            </p>
+          </div>
+          <a href="casmara-facial/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Casmara</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 10. Hair Straightening -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Permanent Rebonding</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹4,000</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Permanent Straightening</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Transforms curly, frizzy, or coarse hair into glossy, pin-straight silk with Japanese rebonding formulations.
+            </p>
+          </div>
+          <a href="livart-hair-straightening/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Straightening</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 11. Deluxe Pedicure Spa -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Foot Reflexology</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">₹1,200</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Deluxe Pedicure Spa</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Restorative 5-stage foot ritual: herbal soak, callus filing, sugar scrub, and 20-min acupressure massage.
+            </p>
+          </div>
+          <a href="deluxe-pedicure-spa/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Pedicure</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 12. Groom Makeup Package -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Men's Wedding Grooming</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹5,500</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Groom Makeover Package</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Non-detectable HD skin evening, haircut architecture, beard sculpt, de-tan, and stress-relief massage.
+            </p>
+          </div>
+          <a href="groom-makeup-package/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Grooming</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 13. Saree Draping Service -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Pre-Pleating Studio</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹1,000</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">Bridal Saree Draping</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Pre-pleated box folding and on-body pin-tight draping for silk Kanchipuram and Kasavu sarees.
+            </p>
+          </div>
+          <a href="saree-draping-service/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Draping</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 14. L'Oreal Hair Colouring -->
+        <div class="bg-surface-container-low rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-warm-bronze bg-champagne-gold/15 px-2.5 py-1 rounded-full">Ammonia-Free Colour</span>
+              <span class="font-serif-luxury text-sm font-bold text-obsidian-deep">From ₹3,000</span>
+            </div>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mb-2">L'Oreal Glossy Hair Colouring</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Rich espresso, burgundy, and mocha tones formulated with nourishing pro-keratin protective oils.
+            </p>
+          </div>
+          <a href="loreal-glossy-hair-colouring/index.html" class="text-xs font-bold text-champagne-gold hover:text-obsidian-deep uppercase tracking-wider flex items-center justify-between pt-3 border-t border-black/5">
+            <span>Explore Colouring</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
         </div>
       </div>
     </div>
@@ -485,9 +603,9 @@ def build_sub_services():
     sub_pages = [
         {
             "slug": "loreal-lustrous-hair-spa",
-            "title": "Hair Spa in Kakkanad | L'Oreal Scalp Therapy & Relaxo Massage | LivArt Salon",
-            "desc": "Best hair spa in Kakkanad, Kochi. L'Oreal professional scalp therapy, steam deep-hydration & acupressure massage at LivArt Salon near Infopark from Rs. 1,200.",
-            "heading": "L’Oreal Lustrous Hair Spa Scalp Therapy",
+            "title": "Hair Spa in Kakkanad | Best Spa & Scalp Therapy Near Infopark | LivArt Salon",
+            "desc": "Looking for the best hair spa in Kakkanad? LivArt Salon offers L'Oreal deep conditioning hair spa, acupressure scalp massage & stress-relief therapy near Infopark from Rs. 1,200.",
+            "heading": "L’Oreal Lustrous Hair Spa & Relaxing Scalp Therapy",
             "price": "From Rs. 1,500 (Offer: Rs. 1,200)",
             "category": "Scalp & Hair Health",
             "img": "../../assets/images/instagram/DEXOFvGTyDZ.jpg",
@@ -768,6 +886,54 @@ def build_sub_services():
               <li><strong>Stage 4: Acupressure Foot Reflexology:</strong> 20 minutes of firm, targeted thumb and palm pressure along meridian nerve points, releasing bodily tension.</li>
               <li><strong>Stage 5: Cuticle Conditioning & High-Gloss Buff:</strong> Nails trimmed, cuticles nourished with jojoba oil, and finished with clear buff or your choice of gel polish.</li>
             </ul>
+            """
+        },
+        {
+            "slug": "nail-art-kakkanad",
+            "title": "Nail Art in Kakkanad | Gel Extensions, Acrylics & Nail Salon | LivArt",
+            "desc": "Top-rated nail art studio in Kakkanad near Infopark. Trendy gel nail extensions, acrylic nails, French tips, chrome & bridal nail art from Rs. 800 at LivArt Salon.",
+            "heading": "Nail Art, Gel Extensions & Nail Studio in Kakkanad",
+            "price": "From Rs. 800 (Extensions from Rs. 1,800)",
+            "category": "Nail Art & Aesthetics",
+            "img": "../../assets/images/instagram/DTc2O2fCFZI.jpg",
+            "body": """
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              Searching for the finest <strong>nail art in Kakkanad</strong> or a luxury <strong>nail salon near me</strong>? LivArt Salon & Beauty Parlour brings high-fashion nail artistry and durable nail enhancements to Kakkanad, situated right on Seaport-Airport Road near Infopark. From everyday elegant French tips to avant-garde chrome glazes and bespoke bridal nail artistry, our certified nail technicians deliver long-lasting, chip-resistant perfection.
+            </p>
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">Our Signature Nail Art & Extension Services</h3>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-6">
+              <li><strong>Gel Nail Extensions:</strong> Lightweight, ultra-natural extensions sculpted with flexible, breathable gel polymers that last 3 to 4 weeks without damaging natural nail beds.</li>
+              <li><strong>Durable Acrylic Nail Overlays:</strong> High-strength acrylic sculpting ideal for extending shorter nails and providing maximum structural endurance.</li>
+              <li><strong>Bridal & Festive Nail Art:</strong> Swarovski crystal embellishments, delicate lace stamping, ombré blush gradients, and 3D floral art designed to complement Kerala Christian, Hindu, and Muslim bridal attire.</li>
+              <li><strong>Glazed Donut & Chrome Finish:</strong> Ultra-modern reflective mirror chrome and pearl-glazed finishes trending across red carpets.</li>
+              <li><strong>Quick Gel Polish & Refills:</strong> 45-minute express UV gel manicures cured for instant scratch-proof shine with zero dry time.</li>
+            </ul>
+
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">Hospital-Grade Nail Hygiene & Autoclave Sterilization</h3>
+            <p class="text-base text-gray-700 leading-relaxed mb-4">
+              At LivArt, client safety is non-negotiable. Every metal cuticle pusher, nipper, and nail drill bit undergoes medical-grade autoclave sterilization between clients, and emery boards and buffers are strictly single-use. We use toxic-free, 9-free gel polishes that protect your natural nail plate from thinning or yellowing.
+            </p>
+
+            <h3 class="font-serif-luxury text-xl font-bold text-obsidian-deep mt-6 mb-3">Nail Art Price Menu at LivArt Kakkanad</h3>
+            <div class="overflow-x-auto my-4">
+              <table class="w-full text-left text-sm border border-black/10 rounded-xl overflow-hidden">
+                <thead class="bg-obsidian-deep text-alabaster-cream font-serif-luxury">
+                  <tr>
+                    <th class="p-3">Service</th>
+                    <th class="p-3">Standard Price</th>
+                    <th class="p-3">Member Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-black/5 bg-white">
+                  <tr><td class="p-3 font-medium">Classic Gel Polish (Hands/Feet)</td><td class="p-3">₹800</td><td class="p-3 font-semibold text-champagne-gold">₹650</td></tr>
+                  <tr><td class="p-3 font-medium">Custom Nail Art (Per Nail / 10 Nails)</td><td class="p-3">₹150 / ₹1,200</td><td class="p-3 font-semibold text-champagne-gold">₹100 / ₹950</td></tr>
+                  <tr><td class="p-3 font-medium">Full Set Gel Extensions</td><td class="p-3">₹1,800</td><td class="p-3 font-semibold text-champagne-gold">₹1,450</td></tr>
+                  <tr><td class="p-3 font-medium">Acrylic Nail Extensions Full Set</td><td class="p-3">₹2,200</td><td class="p-3 font-semibold text-champagne-gold">₹1,750</td></tr>
+                  <tr><td class="p-3 font-medium">Haute Couture Bridal Nail Art Package</td><td class="p-3">₹2,800</td><td class="p-3 font-semibold text-champagne-gold">₹2,200</td></tr>
+                  <tr><td class="p-3 font-medium">Extension Removal & Nourishing Therapy</td><td class="p-3">₹600</td><td class="p-3 font-semibold text-champagne-gold">₹450</td></tr>
+                </tbody>
+              </table>
+            </div>
             """
         }
     ]

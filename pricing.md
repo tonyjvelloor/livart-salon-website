@@ -84,7 +84,11 @@ Formulated with formaldehyde-safe, international hair repair complexes suited fo
 | :--- | :--- | :--- | :--- |
 | **Deluxe Spa Pedicure** | Herbal soak, dead-skin callus filing, sugar scrub, mask, and acupressure foot reflexology | ₹1,200 | ₹900 |
 | **Deluxe Spa Manicure** | Cuticle conditioning, nail shaping, exfoliating hand massage, and buff/polish | ₹900 | ₹675 |
-| **Gel Nail Polish Application** | Long-lasting, chip-resistant UV gel polish (up to 3 weeks wear) | ₹1,000 | ₹750 |
+| **Classic Gel Polish Application** | Long-lasting, chip-resistant UV gel polish (up to 3 weeks wear) | ₹800 | ₹650 |
+| **Full Set Gel Nail Extensions** | Lightweight, natural flexible gel polymers sculpted to length | ₹1,800 | ₹1,450 |
+| **Full Set Acrylic Nail Extensions** | High-strength acrylic sculpting for maximum endurance | ₹2,200 | ₹1,750 |
+| **Custom Nail Art & Chrome Glaze** | Mirror chrome finish, French ombré, Swarovski bridal accents | ₹150 / nail | ₹100 / nail |
+| **Haute Couture Bridal Nail Art Package** | Bespoke bridal nail enhancements matched to wedding attire | ₹2,800 | ₹2,200 |
 | **Rica Brazilian Waxing (Full Arms + Legs)** | Gentle liposoluble wax, pain-minimizing, colophony-free | ₹1,800 | ₹1,350 |
 | **Eyebrow Threading & Forehead Shaping** | Precision organic cotton thread architecture | ₹100 | ₹90 |
 

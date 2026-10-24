@@ -108,6 +108,7 @@ BLOG_POSTS = [
           <li><strong>Melted Chocolate & Mocha:</strong> Subtle, sophisticated corporate-friendly gradient.</li>
           <li><strong>Chestnut Auburn:</strong> Ideal for warm undertones looking for radiant depth.</li>
         </ul>
+        <p>Explore our bespoke <a href="../services/balayage-hair-colouring/index.html"><strong>Dimensional Balayage Hair Colouring in Kakkanad</strong></a> for pricing and technique details.</p>
         """
     },
     {
@@ -179,6 +180,7 @@ BLOG_POSTS = [
         <p>Despite its name, Hair Botox contains zero botulinum toxin. It is a deep-conditioning, anti-aging capillary treatment designed to 'fill in' cracks in hair fibers like cosmetic botox fills skin wrinkles.</p>
         <h3>Active Nourishing Agents</h3>
         <p>Formulated with caviar oil, collagen, amino acids, and vitamin E, Hair Botox restores structural elasticity to dry, heat-damaged, or over-processed hair.</p>
+        <p>Explore LivArt’s signature <a href="../services/hair-botox-treatment/index.html"><strong>Hair Botox Anti-Aging Treatment in Kakkanad</strong></a> for service inclusions and flat-rate pricing.</p>
         """
     },
     {
@@ -205,6 +207,7 @@ BLOG_POSTS = [
         "img": "assets/images/instagram/DRXFRQCEgpm.jpg",
         "content": """
         <p>Discover why the Skin Miracle Hydra Facial is Kakkanad's most booked pre-event aesthetic ritual. With zero downtime, pores are painlessly vacuumed clean while antioxidants infuse into fresh dermal layers.</p>
+        <p>Reserve your session at LivArt Salon: explore our <a href="../services/skin-miracle-hydra-facial/index.html"><strong>Skin Miracle Hydra Facial</strong></a> and <a href="../services/casmara-facial/index.html"><strong>Casmara Spanish Luxury Facials</strong></a>.</p>
         """
     },
     {
@@ -296,6 +299,7 @@ BLOG_POSTS = [
         "img": "assets/images/instagram/C88tG9iSEKp.jpg",
         "content": """
         <p>Your feet bear the weight of your entire day. Professional pedicures eliminate cracked heels, prevent fungal infections, and stimulate acupressure zones.</p>
+        <p>Discover our restorative <a href="../services/deluxe-pedicure-spa/index.html"><strong>Deluxe Foot Reflexology & Pedicure Spa</strong></a> and couture <a href="../services/nail-art-kakkanad/index.html"><strong>Nail Art & Gel Extensions Studio in Kakkanad</strong></a>.</p>
         """
     },
     {
@@ -322,6 +326,7 @@ BLOG_POSTS = [
         "img": "assets/images/instagram/DEXOFvGTyDZ.jpg",
         "content": """
         <p>A professional hair spa goes far beyond home conditioning. High-temperature steam opens the hair cuticle, driving active nutrients into the cortex while acupressure relieves cranial tension.</p>
+        <p>Indulge in the premier scalp therapy in town: explore <a href="../services/loreal-lustrous-hair-spa/index.html"><strong>L'Oréal Lustrous Hair Spa at LivArt Kakkanad</strong></a>.</p>
         """
     },
     {
@@ -335,6 +340,7 @@ BLOG_POSTS = [
         "img": "assets/images/instagram/C88tG9iSEKp.jpg",
         "content": """
         <p>Experience the ultimate foot pampering session at LivArt Salon Kakkanad. Our deluxe pedicure leaves your feet baby-soft and completely rejuvenated.</p>
+        <p>Book our <a href="../services/deluxe-pedicure-spa/index.html"><strong>Deluxe Spa Pedicure in Kakkanad</strong></a> or style your nails with our <a href="../services/nail-art-kakkanad/index.html"><strong>Nail Art & Extensions</strong></a>.</p>
         """
     },
     {
@@ -348,6 +354,7 @@ BLOG_POSTS = [
         "img": "assets/images/instagram/DULWym5CHa0.jpg",
         "content": """
         <p>Choosing your bridal artist is one of the most critical decisions of your wedding. Learn what portfolio cues to look for and how Stephy Sebastian personalizes bridal aesthetics.</p>
+        <p>Explore LivArt's bridal wing: <a href="../services/bridal-makeup-artist/index.html"><strong>HD Bridal Makeup Artist Kakkanad</strong></a> and <a href="../services/airbrush-bridal-makeup/index.html"><strong>16-Hour Waterproof Airbrush Bridal Makeup</strong></a>.</p>
         """
     },
     {
@@ -859,6 +866,7 @@ Sitemap: {BASE_URL}/sitemap.xml
 /services/loreal-lustrous-hair-spa /services/loreal-lustrous-hair-spa/ 301
 /services/livart-majestic-keratin-treatment /services/livart-majestic-keratin-treatment/ 301
 /services/skin-miracle-hydra-facial /services/skin-miracle-hydra-facial/ 301
+/services/nail-art-kakkanad /services/nail-art-kakkanad/ 301
 
 # 410 Gone for Russian/Ukrainian Gambling Spam & Injected Backdoors
 /kto-vladelec-kosmolot-obzor-sobstvennikov-kompanii/* / 410
@@ -932,6 +940,7 @@ RewriteRule ^lp_business_gift.*$ - [G,L]
         ("/services/hair-botox-treatment/", "0.9"),
         ("/services/bridal-makeup-artist/", "0.9"),
         ("/services/airbrush-bridal-makeup/", "0.9"),
+        ("/services/nail-art-kakkanad/", "0.9"),
         ("/services/balayage-hair-colouring/", "0.8"),
         ("/services/casmara-facial/", "0.8"),
         ("/services/groom-makeup-package/", "0.8"),
@@ -958,7 +967,7 @@ RewriteRule ^lp_business_gift.*$ - [G,L]
     for path, prio in all_urls:
         sitemap_xml += f"""  <url>
     <loc>{BASE_URL}{path}</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>{prio}</priority>
   </url>

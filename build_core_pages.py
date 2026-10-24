@@ -329,8 +329,8 @@ def build_hair_page():
     }
 
     html = render_head(
-        title="Best Hair Salon in Kakkanad, Kochi | Haircuts, Balayage & Hair Botox | LivArt",
-        description="Top-rated hair salon in Kakkanad on Seaport-Airport Road. Precision haircuts, L'Oreal hair spa, balayage hair colouring, keratin and hair botox by master stylists.",
+        title="Best Hair Salon in Kakkanad Near Infopark | Hair Botox, Keratin & Spa | LivArt",
+        description="Top hair salon in Kakkanad near Infopark. Anti-frizz hair botox, Majestic keratin smoothing, balayage colouring, L'Oreal hair spa & precision haircuts. Rated 4.9★.",
         canonical_path="/hair-styling/",
         extra_schema=hair_faq_schema,
         root_prefix="../"
@@ -532,8 +532,8 @@ def build_makeup_page():
     }
 
     html = render_head(
-        title="Best Bridal Makeup Artist in Kakkanad, Kochi | HD & Airbrush Studio | LivArt",
-        description="Award-winning bridal makeup artist in Kakkanad, Kochi by Stephy Sebastian. Christian, Hindu, and Muslim bridal packages, saree draping, HD airbrush & groom styling.",
+        title="Best Bridal Makeup in Kakkanad, Kochi | Makeup Studio Near Me | LivArt",
+        description="Top-rated bridal makeup studio in Kakkanad, Kochi by celebrity artist Stephy Sebastian. 4K Ultra-HD & airbrush bridal packages, saree draping & groom makeover. Book consultation.",
         canonical_path="/make-up/",
         extra_schema=makeup_faq_schema,
         root_prefix="../"
@@ -976,13 +976,29 @@ def build_skincare_page():
                     "@type": "Answer",
                     "text": "For optimal dermal hydration and pore purification in Kerala's warm, humid climate, dermatologists recommend a Hydra Facial once every 4 to 6 weeks."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Where can I get professional nail art and gel extensions in Kakkanad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LivArt Salon offers premier nail art and extensions on Seaport-Airport Road, Kakkanad near Infopark. We offer lightweight gel nail extensions, acrylic overlays, French manicures, chrome mirror glazes, and bridal nail art starting from ₹800."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is included in the Deluxe Pedicure Spa at LivArt Kakkanad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our Deluxe Pedicure Spa includes an antiseptic herbal foot soak, precision callus smoothing, exfoliating botanical sugar scrub, a 20-minute acupressure foot reflexology massage, and cuticle conditioning with high-gloss buff or gel polish."
+                }
             }
         ]
     }
 
     html = render_head(
-        title="Best Skin Care Clinic & Beauty Parlour in Kakkanad | Hydra Facial & De-Tan | LivArt",
-        description="Advanced Hydra facials, de-tan whitening treatments, Cheryl's pro facials, and luxury pedicures at LivArt Salon Kakkanad. Reveal radiant, healthy skin.",
+        title="Beauty Parlour & Skin Care in Kakkanad | Hydra Facial & Nail Art | LivArt",
+        description="Top beauty parlour in Kakkanad near Infopark. Medical Hydra facials, Casmara algae masks, de-tan treatments, gel nail art & foot spa pedicure. Rated 4.9★.",
         canonical_path="/skin-care/",
         extra_schema=skincare_faq_schema,
         root_prefix="../"
@@ -991,9 +1007,10 @@ def build_skincare_page():
 
     skin_services = [
         ("Skin Miracle Hydra Facial", "Our advanced vortex extraction and hyaluronic infusion facial that clears congestion and restores dewy glass-skin luminosity.", "Rs. 4,000 (Member Rs. 3,000)", "../assets/images/instagram/DRXFRQCEgpm.jpg"),
+        ("Nail Art & Gel Extensions", "Kakkanad's premier nail studio: lightweight gel extensions, acrylic nails, French tips, chrome mirror glazes, and couture bridal nail art with autoclave hygiene.", "From Rs. 800", "../assets/images/instagram/DTc2O2fCFZI.jpg"),
         ("De-Tan + Skin Miracle Combo", "Signature dual ritual that erases sun tanning, lightens pigment spots, and floods the dermis in brightening vitamins.", "From Rs. 2,499", "../assets/images/offers/offer-poster1.webp"),
         ("O3+ Whitening & Brightening Facial", "Clinical brightening formulation with high-potency Vitamin C and botanical actives to reverse tropical pigmentation and dullness.", "Rs. 3,000 (Member Rs. 2,250)", "../assets/images/instagram/DIYwMqNSFPo.jpg"),
-        ("Deluxe Manicure & Pedicure Spa", "Deep dead-skin exfoliation, cuticle conditioning, relaxing foot reflexology massage, and precision nail shaping.", "From Rs. 1,000 (Member Rs. 750)", "../assets/images/instagram/C88tG9iSEKp.jpg"),
+        ("Deluxe Manicure & Pedicure Spa", "5-stage restorative foot spa: antiseptic herbal soak, callus filing, sugar scrub, and 20-minute acupressure foot reflexology.", "From Rs. 1,000 (Member Rs. 750)", "../assets/images/instagram/C88tG9iSEKp.jpg"),
         ("Herbal Waxing & Threading", "Painless threading for brows and facial contours, alongside gentle honey and chocolate wax formulations that prevent irritation.", "From Rs. 100", "../assets/images/instagram/Da8Hb68SA5B.jpg"),
         ("Casmara Spanish Luxury Facials", "World-renowned Casmara algae peel-off masks, retinol renewal, and antioxidant purifying therapies from Spain.", "From Rs. 5,000", "../assets/images/instagram/DIoW2P5TF7G.jpg")
     ]
@@ -1126,6 +1143,52 @@ def build_skincare_page():
           <button data-open-booking data-service="Skin Miracle Hydra Facial" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all">
             Book Hydra Facial
           </button>
+        </div>
+      </div>
+
+      <!-- NAIL ART STUDIO & FOOT PEDICURE SPA SPOTLIGHT (TOP LOCAL RANKINGS) -->
+      <div class="my-16 bg-ivory-surface rounded-3xl p-8 sm:p-12 border border-black/5 shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div>
+            <span class="font-label-caps text-xs text-warm-bronze tracking-[0.2em] uppercase font-bold block mb-1">
+              Atelier Nail & Foot Sanctuary
+            </span>
+            <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-obsidian-deep">
+              Nail Art Studio & Deluxe Foot Spa in Kakkanad
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-xl">
+              Elevate your personal grooming with high-fashion nail extensions and medical-grade pedicure therapy just 5 minutes from Infopark Kochi.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="../services/nail-art-kakkanad/index.html" class="bg-obsidian-deep hover:bg-champagne-gold text-white hover:text-obsidian-deep px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all">
+              Nail Art Menu & Rates ↗
+            </a>
+            <a href="../services/deluxe-pedicure-spa/index.html" class="border border-black/20 hover:border-black text-obsidian-deep px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all">
+              Foot Reflexology Spa ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white rounded-2xl border border-black/5 shadow-sm">
+            <span class="material-symbols-outlined text-warm-bronze text-[28px] mb-2 block">brush</span>
+            <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-1">Gel & Acrylic Nail Extensions</h4>
+            <p class="text-xs text-gray-600 leading-relaxed mb-3">Breathable, lightweight gel extensions sculpted with durable polymers that last 3 to 4 weeks without damage.</p>
+            <span class="text-xs font-bold text-warm-bronze">From ₹1,800 • Member ₹1,450</span>
+          </div>
+          <div class="p-6 bg-white rounded-2xl border border-black/5 shadow-sm">
+            <span class="material-symbols-outlined text-warm-bronze text-[28px] mb-2 block">auto_awesome</span>
+            <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-1">Bridal & Chrome Nail Art</h4>
+            <p class="text-xs text-gray-600 leading-relaxed mb-3">Glazed donut chrome, French ombré, and Swarovski crystal embellishments styled for your wedding gown or saree.</p>
+            <span class="text-xs font-bold text-warm-bronze">From ₹800 • Member ₹650</span>
+          </div>
+          <div class="p-6 bg-white rounded-2xl border border-black/5 shadow-sm">
+            <span class="material-symbols-outlined text-warm-bronze text-[28px] mb-2 block">spa</span>
+            <h4 class="font-serif-luxury text-lg font-bold text-obsidian-deep mb-1">Deluxe Foot Reflexology Spa</h4>
+            <p class="text-xs text-gray-600 leading-relaxed mb-3">Antiseptic herbal soak, precision callus removal, organic sugar scrub, and 20-min meridian reflexology massage.</p>
+            <span class="text-xs font-bold text-warm-bronze">₹1,200 • Member ₹900</span>
+          </div>
         </div>
       </div>
 
